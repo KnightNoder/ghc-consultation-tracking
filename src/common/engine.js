@@ -1041,7 +1041,7 @@ skin_engine.addRule({
   },
 });
 
-const getProductIdFromEngine = async (stateObj) => {
+export const getProductIdFromEngine = async (stateObj) => {
   var productId = "";
   if (stateObj["Select category for consultation"] == "skin") {
     let facts = {
@@ -1078,5 +1078,3 @@ const getProductIdFromEngine = async (stateObj) => {
   console.log(productId, "prod id");
   return productId;
 };
-
-module.exports = { getProductIdFromEngine };
