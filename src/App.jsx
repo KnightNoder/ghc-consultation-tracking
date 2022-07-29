@@ -143,7 +143,7 @@ export default function App() {
         name: "category",
         type: "category",
         question: "Select category for consultation",
-        clickHandler: category_click_Handler,
+        clickHandler: choice_clickHandler,
         inputHandler: choice_clickHandler,
         CustomRadioComponent: { CustomRadio },
         state_Obj: stateObj,
@@ -755,7 +755,7 @@ export default function App() {
         name: "category",
         type: "category",
         question: "Select category for consultation",
-        clickHandler: clickHandler_clear,
+        clickHandler: choice_clickHandler,
         inputHandler: choice_clickHandler,
         CustomRadioComponent: { CustomRadio },
         state_Obj: stateObj,
@@ -1307,17 +1307,16 @@ export default function App() {
         clickHandler: choice_clickHandler,
         question: "Are you allergic to any of the ingredients below?",
         state_Obj: stateObj,
-        proceed_link: "?appointment=yes",
-        back_link: "?page=2&type=skin",
+        proceed_link: "?page=17&type=skin",
+        back_link: "?page=15&type=skin",
         delay_time: 5000,
         overlay_screen_text: `It's important to listen to our bodies and understand allergies before beginning any treatment.`,
         input_none: true,
         conditionMet: true,
-        conditionMet: true,
         options: [
           {
-            value: "Vitamin C ",
-            displayText: "Vitamin C ",
+            value: "Vitamin C",
+            displayText: "Vitamin C",
           },
           {
             value: "Salicylic Acid",
@@ -1345,8 +1344,8 @@ export default function App() {
         question: `Do you have any pre-existing problems?`,
         clickHandler: choice_clickHandler,
         state_Obj: stateObj,
-        proceed_link: "?page=18&type=weightloss",
-        back_link: "?page=16&type=weightloss",
+        proceed_link: "?page=18&type=skin",
+        back_link: "?page=16&type=skin",
         input_none: true,
         conditionMet: true,
         checkboxOptions: [
@@ -1402,11 +1401,370 @@ export default function App() {
         state_Obj: stateObj,
         proceed_link: "?appointment=yes",
         back_link: "?page=17&type=skin",
+        input_none: true,
         conditionMet: true,
         options: [
           {
             value: "Yes",
             displayText: "Yes",
+          },
+          {
+            value: "No",
+            displayText: "No",
+          },
+        ],
+      },
+    ],
+    weightloss1: [
+      {
+        name: "Weight loss page 1",
+        type: "category",
+        question: `Please enter your height and weight below`,
+        clickHandler: choice_clickHandler,
+        state_Obj: stateObj,
+        proceed_link: "?page=2&type=weightloss",
+        back_link: "?userinfo=yes",
+        input_none: true,
+        conditionMet: true,
+        delay_time: 5000,
+        overlay_screen_text: `Answer few questions so we can help`,
+        inputOptions: [
+          {
+            heading: "Height",
+            placeholder: "Height(in cms)",
+            requiredErrorText: "Please enter valid height to proceed",
+            value: stateObj["Height"],
+            inputMode: "numeric",
+            clickHandler: choice_clickHandler,
+            required: "*",
+          },
+          {
+            heading: "Weight",
+            placeholder: "Weight(in Kgs)",
+            requiredErrorText: "Please enter valid weight to proceed",
+            value: stateObj["Weight"],
+            inputMode: "numeric",
+            clickHandler: choice_clickHandler,
+            required: "*",
+          },
+        ],
+      },
+    ],
+    weightloss2: [
+      {
+        name: "Weight loss page 2",
+        type: "category",
+        question: `How often do you eat meals in a day (including tea, coffee, fruits, salads, 
+          and snacks)`,
+        clickHandler: choice_clickHandler,
+        state_Obj: stateObj,
+        proceed_link: "?page=3&type=weightloss",
+        back_link: "?page=1&type=weightloss",
+        overlay_screen_text:
+          "Measuring your weight everyday helps you lose weight faster",
+        delay_time: "5000",
+        input_none: true,
+        conditionMet: true,
+        options: [
+          {
+            value: `Greater than 6 times`,
+            displayText: `Greater than 6 times`,
+          },
+          {
+            value: "4-6 times",
+            displayText: "4-6 times",
+          },
+          {
+            value: "3 times",
+            displayText: "3 times",
+          },
+          {
+            value: "Less than 3 times",
+            displayText: "Less than 3 times",
+          },
+        ],
+      },
+    ],
+    weightloss3: [
+      {
+        name: "Weight loss page 3",
+        type: "category",
+        question: `Is anyone in your family overweight/Obese?`,
+        clickHandler: choice_clickHandler,
+        state_Obj: stateObj,
+        proceed_link: "?page=4&type=weightloss",
+        back_link: "?page=2&type=weightloss",
+        overlay_screen_text:
+          "Your metabolism is highly responsive to your daily routine and adjusts accordingly.",
+        delay_time: 5000,
+        conditionMet: true,
+        options: [
+          {
+            value: `Daily`,
+            displayText: `Daily`,
+          },
+          {
+            value: "Occasionally",
+            displayText: "Occasionally",
+          },
+          {
+            value: "Never",
+            displayText: "Never",
+          },
+        ],
+      },
+    ],
+    weightloss4: [
+      {
+        name: "weightloss page 4",
+        type: "category",
+        clickHandler: choice_clickHandler,
+        question: "How many litres of water do you drink per day?",
+        state_Obj: stateObj,
+        proceed_link: "?page=10&type=weightloss",
+        back_link: "?page=8&type=weightloss",
+        overlay_screen_text:
+          "We would love to get to know you better! Can you tell us more about your lifestyle?",
+        delay_time: 5000,
+        conditionMet: true,
+        options: [
+          {
+            value: "1-2 litres",
+            displayText: "1-2 litres",
+          },
+          {
+            value: "2-3 litres",
+            displayText: "2-3 litres",
+          },
+          {
+            value: "3-4 litres",
+            displayText: "3-4 litres",
+          },
+          {
+            value: "4-5 litres",
+            displayText: "4-5 litres",
+          },
+        ],
+      },
+    ],
+    weightloss5: [
+      {
+        name: "weight loss page 5",
+        type: "category",
+        clickHandler: choice_clickHandler,
+        question: "How often do you eat out?",
+        state_Obj: stateObj,
+        proceed_link: "?page=4&type=weightloss",
+        back_link: "?page=6&type=weightloss",
+        conditionMet: true,
+        overlay_screen_text:
+          "There's something special about outside food--tastier, love! Though homemade food is healthy :)",
+        delay_time: 5000,
+        options: [
+          {
+            value: "Once a week",
+            displayText: "Once a week",
+          },
+          {
+            value: "Multiple times a week",
+            displayText: "Multiple times a week",
+          },
+          {
+            value: "Never",
+            displayText: "Never",
+          },
+        ],
+      },
+    ],
+    weightloss6: [
+      {
+        name: "weightloss page 6",
+        type: "category",
+        clickHandler: choice_clickHandler,
+        question: "How often do you have junk food?",
+        state_Obj: stateObj,
+        proceed_link: "?page=7&type=weightloss",
+        back_link: "?page=5&type=weightloss",
+        conditionMet: true,
+        options: [
+          {
+            value: "Frequently",
+            displayText: "Frequently",
+          },
+          {
+            value: "Rarely",
+            displayText: "Rarely",
+          },
+          {
+            value: "Never",
+            displayText: "Never",
+          },
+        ],
+      },
+    ],
+    weightloss7: [
+      {
+        name: "weight loss page 7",
+        type: "category",
+        clickHandler: choice_clickHandler,
+        question: "How many hours do you sleep?",
+        state_Obj: stateObj,
+        proceed_link: "?page=8&type=weightloss",
+        back_link: "?page=6&type=weightloss",
+        overlay_screen_text:
+          "A good diet and sufficient rest are crucial to maintaining healthy skin.",
+        delay_time: 5000,
+        conditionMet: true,
+        options: [
+          {
+            value: "3-5 hours",
+            displayText: "3-5 hours",
+          },
+          {
+            value: "5-6 hours",
+            displayText: "5-6 hours",
+          },
+          {
+            value: "6-8 hours",
+            displayText: "6-8 hours",
+          },
+          {
+            value: "8-10 hours",
+            displayText: "8-10 hours",
+          },
+        ],
+      },
+    ],
+    weightloss8: [
+      {
+        name: "skin page 12",
+        type: "category",
+        clickHandler: choice_clickHandler,
+        question: "What type of diet do you follow?",
+        state_Obj: stateObj,
+        proceed_link: "?page=9&type=weightloss",
+        back_link: "?page=7&type=weightloss",
+        overlay_screen_text:
+          "Let's not tell your boss how many hours you worked yesterday.",
+        delay_time: 5000,
+        conditionMet: true,
+        options: [
+          {
+            value: "Vegetarian including milk products",
+            displayText: "Vegetarian including milk products",
+          },
+          {
+            value: "Vegetarian without milk products",
+            displayText: "Vegetarian without milk products",
+          },
+          {
+            value: "Non-vegetarian",
+            displayText: "Non-vegetarian",
+          },
+        ],
+      },
+    ],
+    weightloss9: [
+      {
+        name: "weight loss page 9",
+        type: "category",
+        clickHandler: choice_clickHandler,
+        question: "How many hours do you work in a day? ",
+        state_Obj: stateObj,
+        proceed_link: "?page=8&type=skin",
+        back_link: "?page=10&type=skin",
+        conditionMet: true,
+        options: [
+          {
+            value: "<9 hours",
+            displayText: "<9 hours",
+          },
+          {
+            value: "9-10 hours",
+            displayText: "9-10 hours",
+          },
+          {
+            value: "10-12 hours",
+            displayText: "10-12 hours",
+          },
+          {
+            value: "12 and above",
+            displayText: "12 and above",
+          },
+        ],
+      },
+    ],
+    weightloss10: [
+      {
+        name: "Weight loss page 10",
+        type: "category",
+        question: `How often do you smoke or drink?`,
+        clickHandler: choice_clickHandler,
+        state_Obj: stateObj,
+        proceed_link: "?page=11&type=weightloss",
+        back_link: "?page=9&type=weightloss",
+        input_none: true,
+        conditionMet: true,
+        options: [
+          {
+            value: `Daily`,
+            displayText: `Daily`,
+          },
+          {
+            value: "Occasionally",
+            displayText: "Occasionally",
+          },
+          {
+            value: "Never",
+            displayText: "Never",
+          },
+        ],
+      },
+    ],
+    weightloss11: [
+      {
+        name: "Weight loss page 11",
+        type: "category",
+        question: `How many days do you exercise in a week?`,
+        clickHandler: choice_clickHandler,
+        state_Obj: stateObj,
+        proceed_link: "?page=12&type=weightloss",
+        back_link: "?page=10&type=weightloss",
+        conditionMet: true,
+        options: [
+          {
+            value: `Don't work out at all`,
+            displayText: `Don't work out at all`,
+          },
+          {
+            value: "Daily",
+            displayText: "Daily",
+          },
+          {
+            value: "5-6 times a week",
+            displayText: "5-6 times a week",
+          },
+          {
+            value: "1-2 times a week",
+            displayText: "1-2 times a week",
+          },
+        ],
+      },
+    ],
+    weightloss12: [
+      {
+        name: "Weight loss page 12",
+        type: "category",
+        question: `Have you used weight management products before?`,
+        clickHandler: choice_clickHandler,
+        state_Obj: stateObj,
+        proceed_link: "?appointment=yes",
+        back_link: "?page=11&type=weightloss",
+        conditionMet: true,
+        options: [
+          {
+            value: `Yes`,
+            displayText: `Yes`,
           },
           {
             value: "No",
@@ -1425,9 +1783,33 @@ export default function App() {
         proceed_link: "?recommendation=yes",
         navigateTo: "-1",
         directNavigate: true,
-        delay_time: 0,
-        input_none: true,
         conditionMet: true,
+        options: [
+          {
+            value: "Yes, please ",
+            displayText: "Yes, please ",
+          },
+          {
+            value: "No, just tell me what to use",
+            displayText: "No, just tell me what to use",
+          },
+        ],
+      },
+    ],
+    recommendation: [
+      {
+        name: "Appointment page",
+        type: "recommendation",
+        clickHandler: choice_clickHandler,
+        stateObj: stateObj,
+        conditionMet: true,
+        data: {
+          bannerHeader: `Know what's right for you`,
+          bannerSubText:
+            "Get your self assessment done, Book an appointment with our expert, get a personalized treatment plan",
+          bannerImageSrc:
+            "https://cdn.shopify.com/s/files/1/0638/1391/0746/files/Doctor.png?v=1649252836",
+        },
         options: [
           {
             value: "Yes, please ",

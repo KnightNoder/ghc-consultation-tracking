@@ -22,11 +22,11 @@ const Callback = ({
   const [title_1, Set_title_1] = useState("");
   const [product_link_1, Set_link_1] = useState("");
 
-  // const [image_2, Set_image_2] = useState("");
-  // const [price_2, Set_price_2] = useState("");
-  // const [compare_at_price_2, Set_compare_at_price_2] = useState("");
-  // const [title_2, Set_title_2] = useState("");
-  // const [product_link_2, Set_link_2] = useState("");
+  const [image_2, Set_image_2] = useState("");
+  const [price_2, Set_price_2] = useState("");
+  const [compare_at_price_2, Set_compare_at_price_2] = useState("");
+  const [title_2, Set_title_2] = useState("");
+  const [product_link_2, Set_link_2] = useState("");
 
   const [bmi, Set_bmi] = useState("");
   const [disp, Set_disp] = useState(true);
@@ -62,7 +62,7 @@ const Callback = ({
           stateObj["Select category for consultation"] == "weightloss"
             ? "wellness"
             : stateObj["Select category for consultation"];
-
+        console.log(category, "category");
         const getData = async () => {
           var config = {
             method: "get",
@@ -92,37 +92,37 @@ const Callback = ({
               Set_link_1(`${variant_id_1}:1?checkout[shipping_address][first_name]=${stateObj["First Name"]}&
                    checkout[shipping_address][last_name]=${stateObj["Last Name"]}&
                    checkout[shipping_address][phone]=${stateObj["Phone Number"]}&${utm_tag}`);
-              // checkout[contact_email]=${stateObj[""]}
-              // Set_product_subtext(subtext)
+              // Set_product_subtext(subtext);
               Set_title_1(product_title_1);
               Set_image_1(img_src_1);
               Set_price_1(product_price_1);
               Set_compare_at_price_1(compare_price_1);
-              // Set_link(product_recommended[0]["handle"])
+              // Set_link(product_recommended[0]["handle"]);
 
-              // if (product_id_2) {
-              //   const product_recommended_2 = response.data["products"].filter(
-              //     (item) => item.id == product_id_2
-              //   );
-              //   console.log(product_recommended_2, "reco2");
-              //   let product_title_2 = product_recommended_2[0]["title"];
-              //   const product_price_2 =
-              //     product_recommended_2[0]["variants"][0]["price"];
-              //   const compare_price_2 =
-              //     product_recommended_2[0]["variants"][0]["compare_at_price"];
-              //   const img_src_2 = product_recommended_2[0]["images"][0]["src"];
-              //   const variant_id_2 = product_recommended_2[0]["variants"][0]["id"];
-              //   Set_link_2(`${variant_id_2}:1?checkout[shipping_address][first_name]=${stateObj[""]}&
-              //      checkout[shipping_address][last_name]=${stateObj[""]}&
-              //      checkout[shipping_address][phone]=${stateObj[""]}&
-              //      utm_source=website-consultation&utm_medium=long-consultation&utm_campaign=recommended-product`);
-              //   // checkout[contact_email]=${stateObj[""]}
-              //   // Set_product_subtext(subtext)
-              //   Set_title_2(product_title_2);
-              //   Set_image_2(img_src_2);
-              //   Set_price_2(product_price_2);
-              //   Set_compare_at_price_2(compare_price_2);
-              // }
+              if (product_id_2) {
+                const product_recommended_2 = response.data["products"].filter(
+                  (item) => item.id == product_id_2
+                );
+                console.log(product_recommended_2, "reco2");
+                let product_title_2 = product_recommended_2[0]["title"];
+                const product_price_2 =
+                  product_recommended_2[0]["variants"][0]["price"];
+                const compare_price_2 =
+                  product_recommended_2[0]["variants"][0]["compare_at_price"];
+                const img_src_2 = product_recommended_2[0]["images"][0]["src"];
+                const variant_id_2 =
+                  product_recommended_2[0]["variants"][0]["id"];
+                Set_link_2(`${variant_id_2}:1?checkout[shipping_address][first_name]=${stateObj[""]}&
+                   checkout[shipping_address][last_name]=${stateObj[""]}&
+                   checkout[shipping_address][phone]=${stateObj[""]}&
+                   utm_source=website-consultation&utm_medium=long-consultation&utm_campaign=recommended-product`);
+                // checkout[contact_email]=${stateObj[""]}
+                // Set_product_subtext(subtext)
+                Set_title_2(product_title_2);
+                Set_image_2(img_src_2);
+                Set_price_2(product_price_2);
+                Set_compare_at_price_2(compare_price_2);
+              }
             })
             .catch((error) => {
               console.log(error);
