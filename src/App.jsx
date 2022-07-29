@@ -159,10 +159,6 @@ export default function App() {
         conditionMet: true,
         options: [
           {
-            value: "hair",
-            displayText: "Hair",
-          },
-          {
             displayText: "Skin",
             value: "skin",
           },
@@ -770,10 +766,6 @@ export default function App() {
         conditionMet: true,
         conditionMet: true,
         options: [
-          {
-            value: "hair",
-            displayText: "Hair",
-          },
           {
             displayText: "Skin",
             value: "skin",
