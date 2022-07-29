@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.be4b3e94.css",
+    "main.js": "/static/js/main.16629598.js",
+    "static/media/HarmoniaSansProCyr-Bold.ttf": "/static/media/HarmoniaSansProCyr-Bold.aa72cf7f5530ecb257b1.ttf",
+    "static/media/HarmoniaSansProCyr-Regular.ttf": "/static/media/HarmoniaSansProCyr-Regular.dede1361379810144df9.ttf",
+    "index.html": "/index.html",
+    "main.be4b3e94.css.map": "/static/css/main.be4b3e94.css.map",
+    "main.16629598.js.map": "/static/js/main.16629598.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.be4b3e94.css",
+    "static/js/main.16629598.js"
+  ]
+}
