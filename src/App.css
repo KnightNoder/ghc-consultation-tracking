@@ -1,0 +1,320 @@
+
+@font-face {
+  font-family: harmonia-reg;
+  src: url(fonts/HarmoniaSansProCyr-Regular.ttf);
+}
+
+
+@font-face {
+  font-family: harmonia-bold;
+  src: url(fonts/HarmoniaSansProCyr-Bold.ttf);
+}
+
+/* html {
+} */
+
+:root {
+  /* --color-light: #e8c4d2; */
+  --border: #975169;
+  --buttonColor: #975169;
+  --hover: #F9E9EE;
+  /* --marsBlack:#000000; */
+  --saturnLight: #E8C4D2;
+  --priceText: #894255;
+  --newButtonTextColor: #975169;
+  --light:#fcdfcb;
+  --color-light: #e8c4d2;
+  --color-normal: #dfb5bc;
+  /* --color-lighest: #f9e9ee;
+  --color-dark: #975169;
+  --color-normal: #e0b5bc; */
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: harmonia-reg;
+}
+
+.back-button,.proceed-button,.assessment-image, .assessment,.generic-button ,.choice-container,.proceed-container{
+  /* border: solid 1px; */
+}
+
+.assessment h5{
+  font-family: harmonia-bold;
+}
+
+.error-text{
+  font-family: harmonia-reg;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--buttonColor);
+  margin-top: 2%;
+  margin-left: 1%;
+}
+
+
+.show-overlay-screen{
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  position: fixed;
+  top: 0px;
+  left:0px;
+  height: 100%;
+  width: 100%;
+  display: flex;  
+  justify-content: center;
+  align-items: center;
+  font-style: normal;
+  font-weight: 700;
+  text-align: center;
+  color: #FFFFFF; 
+  z-index:999;
+  flex-direction: column;
+  font-size: 35px;
+  padding: 0 18%;
+  line-height: 50px;
+}
+
+img {
+}
+
+.dont-show-radio{
+  visibility: hidden;
+}
+
+.show-radio{
+  visibility: visible;
+}
+
+.hide-overlay-screen{
+  display: none;
+}
+
+.progress-bar-saturn {
+  border: 1px solid #666;
+  height: 4px;
+  width: 79%;
+  margin: 7% 0;
+}
+
+.in {
+  animation: fill 4s linear 1;
+  height: 100%;
+  background-color: pink;
+}
+
+@keyframes fill {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.show-input {
+  display: block;
+}
+
+@media only screen and (max-width: 600px) {
+  .proceed-template-mobile {
+    display: block;
+  }
+  .proceed-template {
+    display: block;
+  }
+  
+  .assessment {
+    width: 100%;
+  }
+
+  .main-container{
+    margin-left: 0%;
+    margin-right: 0%;
+    padding-top: 0%;
+    display: flex;
+    flex-direction: column;
+    height: 700px;
+    overflow: auto
+  }
+  
+  .proceed-container{
+    flex:1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .header-block,.self-assessment-section,.assessment-image{
+    display: none;
+  }
+  
+  .self-assessment-cards{
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .choice-container {
+    flex: 5;
+    margin-left: 9%;
+    margin-right: 9%;
+    margin-top: 10%;
+    flex-direction: column;
+
+  }
+
+  .back-button{
+    justify-content: center;
+  }
+
+  .generic-button{
+    line-height: 48px;
+  }
+
+  .proceed-button{
+    padding-left: 0;
+    height: 50px;
+  }
+
+  .three{
+    font-size: 16px;
+  }
+
+  .choice-card{
+    width: 100%;
+  }
+
+  .scroll-div{
+    overflow: scroll;
+    height: 400px;
+  }
+
+  .scroll-div::-webkit-scrollbar{
+    color: red;
+  }
+
+  .no-display{
+    display:none
+  }
+
+  .show-overlay-screen {
+    font-size: 18px;
+    padding: 0 8%;
+    line-height: 30px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .product-checkout {
+    display: none;
+  }
+  .proceed-template-mobile {
+    display: none;
+  }
+  .proceed-template {
+    display: block;
+  }
+
+  .main-container{
+    display: flex;
+    flex-direction: column;
+    margin-left: 7%;
+    margin-right: 7%;
+    padding-top: 2%;
+    margin-bottom:10%
+  }
+  
+  .choice-container{
+    flex: 8;
+  }
+  
+  .proceed-container{
+    flex: 2;
+    margin-top: 2%;
+  }
+
+  .back-button {
+    justify-content: flex-end;
+  }
+
+  .generic-button{
+    height: 55px;
+  }
+
+  .get-started,.assessment-card-section{
+    display: none;
+  }
+
+  .choice-container{
+    display: flex;
+  }
+
+  .assessment-image{
+    flex:7;
+    /* border: solid 1px; */
+  }
+
+  .assessment{
+    margin: auto;
+    margin-top: 5%;
+    width: 30%;
+    /* border: solid 1px; */
+    /* padding-right: 5%; */
+  }
+
+  .assessment-card{
+    width: 25%;
+  }
+
+  .start-assessment-heading{
+    display: none;
+  }
+
+  .self-assessment-cards{
+    height: 300px;
+  }
+
+  .start-assessment{
+    flex: 2 1;
+    width: 100%;
+    background: var(--buttonColor) ;
+    border-top: 1px solid var(--buttonColor) ;
+    box-sizing: border-box;
+    border-radius: 0px 0px 24px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+  }
+
+  .assessment-card .content {
+    flex: 6 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  .assessment-container {
+    display: "flex";
+    flex-direction:column;
+    flex:3; 
+    margin-right: 8%
+  }
+
+  .main-image {
+    height: 550px;
+    width: 96%;
+  }
+
+}
