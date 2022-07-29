@@ -42,7 +42,7 @@ const Callback = ({
         if (stateObj["assessment_type"] == "6 mins") {
           var product_id_1 = product_id[0];
           var product_id_2 = product_id[1];
-          if (saturn_long_choice.category == "weight-management") {
+          if (stateObj["Select category for consultation"] == "weightloss") {
             var weight = parseInt(stateObj[""]);
             var height = parseInt(stateObj[""]);
             var BMI = parseInt((weight * 10000) / (height * height));
@@ -50,17 +50,23 @@ const Callback = ({
           }
         } else {
           product_id_1 = product_id;
-          if (stateObj["Select category for consultation"] == "Weightloss") {
+          if (stateObj["Select category for consultation"] == "weightloss") {
             var weight = parseInt(stateObj.Weight);
             var height = parseInt(stateObj.Height);
             var BMI = parseInt((weight * 10000) / (height * height));
             Set_bmi(BMI);
           }
         }
+
+        const category =
+          stateObj["Select category for consultation"] == "weightloss"
+            ? "wellness"
+            : stateObj["Select category for consultation"];
+
         const getData = async () => {
           var config = {
             method: "get",
-            url: `https://${process.env.REACT_APP_GET_PRODUCTS_BASE_URL}/${stateObj["Select category for consultation"]}/products.json`,
+            url: `https://${process.env.REACT_APP_GET_PRODUCTS_BASE_URL}/${category}/products.json`,
             headers: {
               "Content-Type": "application/json",
             },
@@ -126,7 +132,7 @@ const Callback = ({
         getData();
 
         const data = getSendMailData(stateObj["assessment_type"], stateObj);
-        console.log(data, "mail data");
+        // console.log(data, "mail data");
         const sendMail = async () => {
           const config = {
             method: "post",

@@ -1,4 +1,5 @@
 import "../css/InputCard.css";
+import { useEffect, useState } from "react";
 const InputCard = ({
   heading,
   placeholder,
@@ -11,6 +12,10 @@ const InputCard = ({
   validity,
   inputCheck,
 }) => {
+  const [inputValue, Set_inputValue] = useState("");
+  useEffect(() => {
+    Set_inputValue(value);
+  }, []);
   return (
     <>
       <h3 className="input-card-label">
@@ -29,12 +34,14 @@ const InputCard = ({
       </h3>
       <input
         className="input"
-        onChange={(e) => onchange(heading, e.target.value)}
-        value={value}
+        onChange={(e) => {
+          onchange(heading, e.target.value);
+          Set_inputValue(e.target.value);
+        }}
+        value={inputValue}
         inputMode={inputMode}
         type="text"
         placeholder={placeholder}
-        // onKeyDown={numberCheck}
       />
       <span
         style={!value ? { visibility: "visible" } : { visibility: "hidden" }}

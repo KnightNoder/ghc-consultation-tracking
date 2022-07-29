@@ -78,7 +78,7 @@ export default function App() {
   };
 
   const choice_clickHandler = (question, value) => {
-    if (question == "Age") value = parseInt(value);
+    console.log(question, value, "q and v");
     Set_stateObj((prevState) => {
       return { ...prevState, [question]: value };
     });
@@ -124,7 +124,6 @@ export default function App() {
     }
   };
 
-  // const link = `?page=1&type=${stateObj["Select category for consultation"]}`;
   const allPages_Saturn_Short = {
     assessment: [
       {
@@ -179,7 +178,6 @@ export default function App() {
         name: "userinfo",
         type: "category",
         question: "Fill up the details below :",
-        clickHandler: clickHandler_clear,
         state_Obj: stateObj,
         set_url_function: { redirect_to_set_query_params },
         proceed_link: `?page=1&type=${stateObj["Select category for consultation"]}`,
@@ -1501,8 +1499,6 @@ export default function App() {
       />
     ),
   };
-
-  const getBuilderFieldObjects = () => {};
 
   return (
     <div className="main-container">

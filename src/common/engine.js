@@ -1041,8 +1041,73 @@ skin_engine.addRule({
   },
 });
 
+//weightloss
+
+weightloss_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "BMI",
+        operator: "lessThanInclusive",
+        value: "22",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "7634556059870",
+    },
+  },
+});
+
+weightloss_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "BMI",
+        operator: "greaterThan",
+        value: "22",
+      },
+      {
+        fact: "BMI",
+        operator: "lessThanInclusive",
+        value: "25",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "7619064365278",
+    },
+  },
+});
+
+weightloss_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "BMI",
+        operator: "greaterThan",
+        value: "25",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "7630401143006",
+    },
+  },
+});
+
 export const getProductIdFromEngine = async (stateObj) => {
   var productId = "";
+  console.log(
+    stateObj["Select category for consultation"] == "weightloss",
+    "state obj"
+  );
   if (stateObj["Select category for consultation"] == "skin") {
     let facts = {
       "Are you allergic to any of the ingredients below?":
@@ -1063,18 +1128,21 @@ export const getProductIdFromEngine = async (stateObj) => {
       });
     });
   }
-  if (stateObj["Select category for consultation"] == "weightLoss") {
+  if (stateObj["Select category for consultation"] == "weightloss") {
     console.log("in weightloss");
     const weight = parseInt(stateObj["Weight"]);
     const height = parseInt(stateObj["Height"]);
-    const BMI = (weight * 10000) / (height * height);
-    await (async function () {
-      console.log("in async func");
-      if (BMI > 25) productId = "7630401143006";
-      else if (BMI > 22 && BMI <= 25) productId = "7619064365278";
-      else productId = "7634556059870";
-    })();
+    const bmi_value = (weight * 10000) / (height * height);
+    console.log(parseInt(bmi_value), "bmi value");
+    let facts = {
+      BMI: parseInt(bmi_value),
+    };
+    await weightloss_engine.run(facts).then(({ events }) => {
+      events.map((event) => {
+        // console.log(event.params.id);
+        productId = event.params.id;
+      });
+    });
   }
-  console.log(productId, "prod id");
   return productId;
 };
