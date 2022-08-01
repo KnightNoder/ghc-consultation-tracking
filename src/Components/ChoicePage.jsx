@@ -34,7 +34,6 @@ const ChoicePage = ({
     }, delay_time);
   }, []);
 
-  useEffect(() => {}, [state_Obj]);
   return (
     <>
       <div
