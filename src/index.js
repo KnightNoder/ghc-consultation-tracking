@@ -4,12 +4,12 @@ import "./index.css";
 import App from "./App.jsx";
 import { BrowserRouter } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
-
+import Test from "./test";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter basename="/">
     <App />
-    {/* <A /> */}
+    {/* <Test /> */}
   </BrowserRouter>
 );
 

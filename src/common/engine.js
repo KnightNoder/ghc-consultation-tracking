@@ -1,18 +1,388 @@
 const { Engine } = require("json-rules-engine");
 let hair_engine = new Engine();
+let hair_engine_long = new Engine();
 let skin_engine = new Engine();
+let skin_engine_long = new Engine();
 let weightloss_engine = new Engine();
 let weightloss_engine_long = new Engine();
-let skin_engine_long = new Engine();
-//Hair
+
+//Hair short
 
 hair_engine.addRule({
   conditions: {
-    any: [
+    all: [
       {
         fact: "What best describes your current hair condition?",
         operator: "equal",
         value: "Receding hairline",
+      },
+      {
+        fact: "What results are you looking for?",
+        operator: "equal",
+        value: "Regrowing your hair",
+      },
+      {
+        any: [
+          {
+            fact: "Does anyone in your family have hair loss?",
+            operator: "equal",
+            value: "No",
+          },
+          {
+            fact: "Does anyone in your family have hair loss?",
+            operator: "equal",
+            value: "Yes",
+          },
+        ],
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "7730670010590",
+    },
+  },
+});
+
+hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "What best describes your current hair condition?",
+        operator: "equal",
+        value: "Receding hairline",
+      },
+      {
+        fact: "What results are you looking for?",
+        operator: "equal",
+        value: "Preventing future hair loss",
+      },
+      {
+        any: [
+          {
+            fact: "Does anyone in your family have hair loss?",
+            operator: "equal",
+            value: "No",
+          },
+          {
+            fact: "Does anyone in your family have hair loss?",
+            operator: "equal",
+            value: "Yes",
+          },
+        ],
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "7730670010590",
+    },
+  },
+});
+
+hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "What best describes your current hair condition?",
+        operator: "equal",
+        value: "Receding hairline",
+      },
+      {
+        fact: "What results are you looking for?",
+        operator: "equal",
+        value: "Both regrowth & loss prevention",
+      },
+      {
+        any: [
+          {
+            fact: "Does anyone in your family have hair loss?",
+            operator: "equal",
+            value: "No",
+          },
+          {
+            fact: "Does anyone in your family have hair loss?",
+            operator: "equal",
+            value: "Yes",
+          },
+        ],
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "7730684985566",
+    },
+  },
+});
+
+//option 2
+
+hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "What best describes your current hair condition?",
+        operator: "equal",
+        value: "Thinning at the crown",
+      },
+      {
+        fact: "What results are you looking for?",
+        operator: "equal",
+        value: "Regrowing your hair",
+      },
+      {
+        any: [
+          {
+            fact: "Does anyone in your family have hair loss?",
+            operator: "equal",
+            value: "No",
+          },
+          {
+            fact: "Does anyone in your family have hair loss?",
+            operator: "equal",
+            value: "Yes",
+          },
+        ],
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "7730767626462",
+    },
+  },
+});
+
+hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "What best describes your current hair condition?",
+        operator: "equal",
+        value: "Thinning at the crown",
+      },
+      {
+        fact: "What results are you looking for?",
+        operator: "equal",
+        value: "Preventing future hair loss",
+      },
+      {
+        any: [
+          {
+            fact: "Does anyone in your family have hair loss?",
+            operator: "equal",
+            value: "No",
+          },
+          {
+            fact: "Does anyone in your family have hair loss?",
+            operator: "equal",
+            value: "Yes",
+          },
+        ],
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "7730767626462",
+    },
+  },
+});
+
+hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "What best describes your current hair condition?",
+        operator: "equal",
+        value: "Thinning at the crown",
+      },
+      {
+        fact: "What results are you looking for?",
+        operator: "equal",
+        value: "Both regrowth & loss prevention",
+      },
+      {
+        any: [
+          {
+            fact: "Does anyone in your family have hair loss?",
+            operator: "equal",
+            value: "No",
+          },
+          {
+            fact: "Does anyone in your family have hair loss?",
+            operator: "equal",
+            value: "Yes",
+          },
+        ],
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "7730743640286",
+    },
+  },
+});
+
+//option 3
+
+hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "What best describes your current hair condition?",
+        operator: "equal",
+        value: "Overall hair loss/thinning",
+      },
+      {
+        fact: "What results are you looking for?",
+        operator: "equal",
+        value: "Regrowing your hair",
+      },
+      {
+        any: [
+          {
+            fact: "Does anyone in your family have hair loss?",
+            operator: "equal",
+            value: "No",
+          },
+          {
+            fact: "Does anyone in your family have hair loss?",
+            operator: "equal",
+            value: "Yes",
+          },
+        ],
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "7730767626462",
+    },
+  },
+});
+
+hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "What best describes your current hair condition?",
+        operator: "equal",
+        value: "Overall hair loss/thinning",
+      },
+      {
+        fact: "What results are you looking for?",
+        operator: "equal",
+        value: "Preventing future hair loss",
+      },
+      {
+        any: [
+          {
+            fact: "Does anyone in your family have hair loss?",
+            operator: "equal",
+            value: "No",
+          },
+          {
+            fact: "Does anyone in your family have hair loss?",
+            operator: "equal",
+            value: "Yes",
+          },
+        ],
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "7730767626462",
+    },
+  },
+});
+
+hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "What best describes your current hair condition?",
+        operator: "equal",
+        value: "Overall hair loss/thinning",
+      },
+      {
+        fact: "What results are you looking for?",
+        operator: "equal",
+        value: "Both regrowth & loss prevention",
+      },
+      {
+        fact: "Does anyone in your family have hair loss?",
+        operator: "equal",
+        value: "No",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "7730743640286",
+    },
+  },
+});
+
+hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "What best describes your current hair condition?",
+        operator: "equal",
+        value: "Overall hair loss/thinning",
+      },
+      {
+        fact: "What results are you looking for?",
+        operator: "equal",
+        value: "Both regrowth & loss prevention",
+      },
+      {
+        fact: "Does anyone in your family have hair loss?",
+        operator: "equal",
+        value: "Yes",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "7730670010590",
+    },
+  },
+});
+
+//option 4
+
+hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "What best describes your current hair condition?",
+        operator: "equal",
+        value: "Receding + overall thinning",
+      },
+      {
+        fact: "What results are you looking for?",
+        operator: "equal",
+        value: "Regrowing your hair",
+      },
+      {
+        fact: "Does anyone in your family have hair loss?",
+        operator: "equal",
+        value: "No",
       },
     ],
   },
@@ -26,11 +396,21 @@ hair_engine.addRule({
 
 hair_engine.addRule({
   conditions: {
-    any: [
+    all: [
       {
         fact: "What best describes your current hair condition?",
         operator: "equal",
-        value: "Thinning at the crown",
+        value: "Receding + overall thinning",
+      },
+      {
+        fact: "What results are you looking for?",
+        operator: "equal",
+        value: "Preventing future hair loss",
+      },
+      {
+        fact: "Does anyone in your family have hair loss?",
+        operator: "equal",
+        value: "No",
       },
     ],
   },
@@ -48,10 +428,15 @@ hair_engine.addRule({
       {
         fact: "What best describes your current hair condition?",
         operator: "equal",
-        value: "Overall hair loss/thinning",
+        value: "Receding + overall thinning",
       },
       {
-        fact: "Do you have any past allergy reactions to medicines?",
+        fact: "What results are you looking for?",
+        operator: "equal",
+        value: "Both regrowth & loss prevention",
+      },
+      {
+        fact: "Does anyone in your family have hair loss?",
         operator: "equal",
         value: "No",
       },
@@ -61,6 +446,618 @@ hair_engine.addRule({
     type: "product id",
     params: {
       id: "6920192950436",
+    },
+  },
+});
+
+hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "What best describes your current hair condition?",
+        operator: "equal",
+        value: "Receding + overall thinning",
+      },
+      {
+        fact: "What results are you looking for?",
+        operator: "equal",
+        value: "Regrowing your hair",
+      },
+      {
+        fact: "Does anyone in your family have hair loss?",
+        operator: "equal",
+        value: "Yes",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "7730670010590",
+    },
+  },
+});
+
+hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "What best describes your current hair condition?",
+        operator: "equal",
+        value: "Receding + overall thinning",
+      },
+      {
+        fact: "What results are you looking for?",
+        operator: "equal",
+        value: "Preventing future hair loss",
+      },
+      {
+        fact: "Does anyone in your family have hair loss?",
+        operator: "equal",
+        value: "Yes",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "7730670010590",
+    },
+  },
+});
+
+hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "What best describes your current hair condition?",
+        operator: "equal",
+        value: "Receding + overall thinning",
+      },
+      {
+        fact: "What results are you looking for?",
+        operator: "equal",
+        value: "Both regrowth & loss prevention",
+      },
+      {
+        fact: "Does anyone in your family have hair loss?",
+        operator: "equal",
+        value: "Yes",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "7730670010590",
+    },
+  },
+});
+
+// Hair long
+
+hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "What best describes your current hair condition?",
+        operator: "equal",
+        value: "Receding hairline",
+      },
+      {
+        fact: "What results are you looking for?",
+        operator: "equal",
+        value: "Regrowing your hair",
+      },
+      {
+        any: [
+          {
+            fact: "Does anyone in your family have hair loss?",
+            operator: "equal",
+            value: "No",
+          },
+          {
+            fact: "Does anyone in your family have hair loss?",
+            operator: "equal",
+            value: "Yes",
+          },
+        ],
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7730670010590", "7730670010590"],
+    },
+  },
+});
+
+hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "What best describes your current hair condition?",
+        operator: "equal",
+        value: "Receding hairline",
+      },
+      {
+        fact: "What results are you looking for?",
+        operator: "equal",
+        value: "Preventing future hair loss",
+      },
+      {
+        any: [
+          {
+            fact: "Does anyone in your family have hair loss?",
+            operator: "equal",
+            value: "No",
+          },
+          {
+            fact: "Does anyone in your family have hair loss?",
+            operator: "equal",
+            value: "Yes",
+          },
+        ],
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7730670010590", "7730711527646"],
+    },
+  },
+});
+
+hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "What best describes your current hair condition?",
+        operator: "equal",
+        value: "Receding hairline",
+      },
+      {
+        fact: "What results are you looking for?",
+        operator: "equal",
+        value: "Both regrowth & loss prevention",
+      },
+      {
+        any: [
+          {
+            fact: "Does anyone in your family have hair loss?",
+            operator: "equal",
+            value: "No",
+          },
+          {
+            fact: "Does anyone in your family have hair loss?",
+            operator: "equal",
+            value: "Yes",
+          },
+        ],
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7730684985566", "7730703761630"],
+    },
+  },
+});
+
+//option 2
+
+hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "What best describes your current hair condition?",
+        operator: "equal",
+        value: "Thinning at the crown",
+      },
+      {
+        fact: "What results are you looking for?",
+        operator: "equal",
+        value: "Regrowing your hair",
+      },
+      {
+        any: [
+          {
+            fact: "Does anyone in your family have hair loss?",
+            operator: "equal",
+            value: "No",
+          },
+          {
+            fact: "Does anyone in your family have hair loss?",
+            operator: "equal",
+            value: "Yes",
+          },
+        ],
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7730767626462", "7730767626462"],
+    },
+  },
+});
+
+hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "What best describes your current hair condition?",
+        operator: "equal",
+        value: "Thinning at the crown",
+      },
+      {
+        fact: "What results are you looking for?",
+        operator: "equal",
+        value: "Preventing future hair loss",
+      },
+      {
+        any: [
+          {
+            fact: "Does anyone in your family have hair loss?",
+            operator: "equal",
+            value: "No",
+          },
+          {
+            fact: "Does anyone in your family have hair loss?",
+            operator: "equal",
+            value: "Yes",
+          },
+        ],
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7730767626462", "7730767626462"],
+    },
+  },
+});
+
+hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "What best describes your current hair condition?",
+        operator: "equal",
+        value: "Thinning at the crown",
+      },
+      {
+        fact: "What results are you looking for?",
+        operator: "equal",
+        value: "Both regrowth & loss prevention",
+      },
+      {
+        any: [
+          {
+            fact: "Does anyone in your family have hair loss?",
+            operator: "equal",
+            value: "No",
+          },
+          {
+            fact: "Does anyone in your family have hair loss?",
+            operator: "equal",
+            value: "Yes",
+          },
+        ],
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7730743640286", "7730703761630"],
+    },
+  },
+});
+
+//option 3
+
+hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "What best describes your current hair condition?",
+        operator: "equal",
+        value: "Overall hair loss/thinning",
+      },
+      {
+        fact: "What results are you looking for?",
+        operator: "equal",
+        value: "Regrowing your hair",
+      },
+      {
+        any: [
+          {
+            fact: "Does anyone in your family have hair loss?",
+            operator: "equal",
+            value: "No",
+          },
+          {
+            fact: "Does anyone in your family have hair loss?",
+            operator: "equal",
+            value: "Yes",
+          },
+        ],
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7730767626462", "7730767626462"],
+    },
+  },
+});
+
+hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "What best describes your current hair condition?",
+        operator: "equal",
+        value: "Overall hair loss/thinning",
+      },
+      {
+        fact: "What results are you looking for?",
+        operator: "equal",
+        value: "Preventing future hair loss",
+      },
+      {
+        any: [
+          {
+            fact: "Does anyone in your family have hair loss?",
+            operator: "equal",
+            value: "No",
+          },
+          {
+            fact: "Does anyone in your family have hair loss?",
+            operator: "equal",
+            value: "Yes",
+          },
+        ],
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7730767626462", "7730670010590"],
+    },
+  },
+});
+
+hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "What best describes your current hair condition?",
+        operator: "equal",
+        value: "Overall hair loss/thinning",
+      },
+      {
+        fact: "What results are you looking for?",
+        operator: "equal",
+        value: "Both regrowth & loss prevention",
+      },
+      {
+        fact: "Does anyone in your family have hair loss?",
+        operator: "equal",
+        value: "No",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7730743640286", "7730743640286"],
+    },
+  },
+});
+
+hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "What best describes your current hair condition?",
+        operator: "equal",
+        value: "Overall hair loss/thinning",
+      },
+      {
+        fact: "What results are you looking for?",
+        operator: "equal",
+        value: "Both regrowth & loss prevention",
+      },
+      {
+        fact: "Does anyone in your family have hair loss?",
+        operator: "equal",
+        value: "Yes",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7730670010590", "7730684985566"],
+    },
+  },
+});
+
+//option 4
+
+hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "What best describes your current hair condition?",
+        operator: "equal",
+        value: "Receding + overall thinning",
+      },
+      {
+        fact: "What results are you looking for?",
+        operator: "equal",
+        value: "Regrowing your hair",
+      },
+      {
+        fact: "Does anyone in your family have hair loss?",
+        operator: "equal",
+        value: "No",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7730743640286", "7730743640286"],
+    },
+  },
+});
+
+hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "What best describes your current hair condition?",
+        operator: "equal",
+        value: "Receding + overall thinning",
+      },
+      {
+        fact: "What results are you looking for?",
+        operator: "equal",
+        value: "Preventing future hair loss",
+      },
+      {
+        fact: "Does anyone in your family have hair loss?",
+        operator: "equal",
+        value: "No",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7730670010590", "7730684985566"],
+    },
+  },
+});
+
+hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "What best describes your current hair condition?",
+        operator: "equal",
+        value: "Receding + overall thinning",
+      },
+      {
+        fact: "What results are you looking for?",
+        operator: "equal",
+        value: "Both regrowth & loss prevention",
+      },
+      {
+        fact: "Does anyone in your family have hair loss?",
+        operator: "equal",
+        value: "No",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7730743640286", "7730670010590"],
+    },
+  },
+});
+
+hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "What best describes your current hair condition?",
+        operator: "equal",
+        value: "Receding + overall thinning",
+      },
+      {
+        fact: "What results are you looking for?",
+        operator: "equal",
+        value: "Regrowing your hair",
+      },
+      {
+        fact: "Does anyone in your family have hair loss?",
+        operator: "equal",
+        value: "Yes",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7730670010590", "7730684985566"],
+    },
+  },
+});
+
+hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "What best describes your current hair condition?",
+        operator: "equal",
+        value: "Receding + overall thinning",
+      },
+      {
+        fact: "What results are you looking for?",
+        operator: "equal",
+        value: "Preventing future hair loss",
+      },
+      {
+        fact: "Does anyone in your family have hair loss?",
+        operator: "equal",
+        value: "Yes",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7730670010590", "7730767626462"],
+    },
+  },
+});
+
+hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "What best describes your current hair condition?",
+        operator: "equal",
+        value: "Receding + overall thinning",
+      },
+      {
+        fact: "What results are you looking for?",
+        operator: "equal",
+        value: "Both regrowth & loss prevention",
+      },
+      {
+        fact: "Does anyone in your family have hair loss?",
+        operator: "equal",
+        value: "Yes",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7730670010590", "7730767626462"],
     },
   },
 });
@@ -2000,18 +2997,11 @@ export const getProductIdFromEngine = async (stateObj) => {
     return productId;
   } else {
     if (stateObj["Select category for consultation"] == "skin") {
-      console.log(
-        stateObj["Are you allergic to any of the ingredients below?"]
-      );
-      console.log(stateObj["What are you concerned about?"]);
-
       let facts = {
         "Are you allergic to any of the ingredients below?":
-          // stateObj["Are you allergic to any of the ingredients below?"],
-          "Vitamin C",
+          stateObj["Are you allergic to any of the ingredients below?"],
         "What are you concerned about?":
-          // stateObj["What are you concerned about?"],
-          "Open pores",
+          stateObj["What are you concerned about?"],
       };
       await skin_engine_long.run(facts).then(({ events }) => {
         events.map((event) => {
@@ -2021,7 +3011,6 @@ export const getProductIdFromEngine = async (stateObj) => {
       });
     }
     if (stateObj["Select category for consultation"] == "weightloss") {
-      console.log("in long weight loss");
       const weight = parseInt(stateObj["Weight"]);
       const height = parseInt(stateObj["Height"]);
       const bmi_value = (weight * 10000) / (height * height);
@@ -2030,6 +3019,21 @@ export const getProductIdFromEngine = async (stateObj) => {
         BMI: parseInt(bmi_value),
       };
       await weightloss_engine_long.run(facts).then(({ events }) => {
+        events.map((event) => {
+          productId = event.params.id;
+        });
+      });
+    }
+    if (stateObj["Select category for consultation"] == "hair") {
+      let facts = {
+        "What best describes your current hair condition":
+          stateObj["What best describes your current hair condition"],
+        "What results are you looking for?":
+          stateObj["What results are you looking for?"],
+        "Does anyone in your family have hair loss?":
+          stateObj["Does anyone in your family have hair loss?"],
+      };
+      await hair_engine.run(facts).then(({ events }) => {
         events.map((event) => {
           productId = event.params.id;
         });

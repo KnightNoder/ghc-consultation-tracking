@@ -186,7 +186,7 @@
     /* background: #FFF1EF; */
     /* background: #f9dfd1; */
     /* background: var(--saturnHover); */
-    background: var(--color-light);
+    background: var(--image-background);
     border-radius: 16px 16px 16px 16px;
     height: 100%;
 }

@@ -71,14 +71,14 @@ export default function App() {
       fields = allPages.assessment;
       Set_builder_fields(fields);
     }
-  }, [query_params, stateObj, search]);
+  }, [query_params, stateObj]);
 
   const redirect_to_set_query_params = (query) => {
     Set_query_params(window.location.search);
   };
 
   const choice_clickHandler = (question, value) => {
-    console.log(question, value, "q and v");
+    console.log(question, value, "input opts");
     Set_stateObj((prevState) => {
       return { ...prevState, [question]: value };
     });
@@ -165,6 +165,10 @@ export default function App() {
           {
             value: "weightloss",
             displayText: "Weight Management",
+          },
+          {
+            value: "hair",
+            displayText: "Hair",
           },
         ],
       },
@@ -773,6 +777,10 @@ export default function App() {
           {
             value: "weightloss",
             displayText: "Weight Management",
+          },
+          {
+            value: "hair",
+            displayText: "Hair",
           },
         ],
       },
@@ -1752,6 +1760,436 @@ export default function App() {
         state_Obj: stateObj,
         proceed_link: "?appointment=yes",
         back_link: "?page=11&type=weightloss",
+        conditionMet: true,
+        options: [
+          {
+            value: `Yes`,
+            displayText: `Yes`,
+          },
+          {
+            value: "No",
+            displayText: "No",
+          },
+        ],
+      },
+    ],
+    hair1: [
+      {
+        name: "hair page 1",
+        type: "category",
+        question: "What best describes your current hair condition?",
+        clickHandler: choice_clickHandler,
+        state_Obj: stateObj,
+        proceed_link: "?page=2&type=hair",
+        back_link: "?userinfo=yes",
+        delay_time: 0,
+        input_none: true,
+        conditionMet: true,
+        conditionMet: true,
+        options: [
+          {
+            value: "Receding hairline",
+            displayText: "Receding hairline",
+          },
+          {
+            value: "Thinning at the crown",
+            displayText: "Thinning at the crown",
+          },
+          {
+            value: "Overall hair loss/thinning",
+            displayText: "Overall hair loss/thinning",
+          },
+          {
+            value: "Receding + Overall thinning",
+            displayText: "Receding + Overall thinning",
+          },
+        ],
+      },
+    ],
+    hair2: [
+      {
+        name: "hair page 2",
+        type: "category",
+        question: "What results are you looking for?",
+        clickHandler: choice_clickHandler,
+        state_Obj: stateObj,
+        proceed_link: "?page=3&type=hair",
+        back_link: "?page=1&type=hair",
+        delay_time: 3000,
+        overlay_screen_text: ` Hair loss affects 60.5 % of the total Men population in India`,
+        conditionMet: true,
+        options: [
+          {
+            value: "Regrowing your hair",
+            displayText: "Regrowing your hair",
+          },
+          {
+            value: "Preventing future hair loss",
+            displayText: "Preventing future hair loss",
+          },
+          {
+            value: "Both regrowth & loss prevention",
+            displayText: "Both regrowth & loss prevention",
+          },
+        ],
+      },
+    ],
+    hair3: [
+      {
+        name: "hair page 3",
+        type: "category",
+        question: "Does anyone in your family have hair loss?",
+        clickHandler: choice_clickHandler,
+        state_Obj: stateObj,
+        proceed_link: "?page=4&type=hair",
+        back_link: "?page=2&type=hair",
+        conditionMet: true,
+        options: [
+          {
+            value: "Yes",
+            displayText: "Yes",
+          },
+          {
+            value: "No",
+            displayText: "No",
+          },
+        ],
+      },
+    ],
+    hair4: [
+      {
+        name: "hair page 4",
+        type: "category",
+        question:
+          "Do you have any upcoming functions in the family in the next 30 days?",
+        clickHandler: choice_clickHandler,
+        state_Obj: stateObj,
+        proceed_link: "?page=5&type=hair",
+        back_link: "?page=3&type=hair",
+        conditionMet: true,
+        options: [
+          {
+            value: "Yes",
+            displayText: "Yes",
+          },
+          {
+            value: "No",
+            displayText: "No",
+          },
+        ],
+      },
+    ],
+    hair5: [
+      {
+        name: "hair page 9",
+        type: "category",
+        clickHandler: choice_clickHandler,
+        question: "How many litres of water do you drink per day?",
+        state_Obj: stateObj,
+        proceed_link: "?page=6&type=hair",
+        back_link: "?page=4&type=hair",
+        conditionMet: true,
+        options: [
+          {
+            value: "1-2 litres",
+            displayText: "1-2 litres",
+          },
+          {
+            value: "2-3 litres",
+            displayText: "2-3 litres",
+          },
+          {
+            value: "3-4 litres",
+            displayText: "3-4 litres",
+          },
+          {
+            value: "4-5 litres",
+            displayText: "4-5 litres",
+          },
+        ],
+      },
+    ],
+    hair6: [
+      {
+        name: "hair page 10",
+        type: "category",
+        clickHandler: choice_clickHandler,
+        question: "How often do you eat out?",
+        state_Obj: stateObj,
+        proceed_link: "?page=7&type=hair",
+        back_link: "?page=5&type=hair",
+        conditionMet: true,
+        options: [
+          {
+            value: "Once a week",
+            displayText: "Once a week",
+          },
+          {
+            value: "Multiple times a week",
+            displayText: "Multiple times a week",
+          },
+          {
+            value: "Never",
+            displayText: "Never",
+          },
+        ],
+      },
+    ],
+    hair7: [
+      {
+        name: "skin page 10",
+        type: "category",
+        clickHandler: choice_clickHandler,
+        question: "How often do you have junk food?",
+        state_Obj: stateObj,
+        proceed_link: "?page=8&type=hair",
+        back_link: "?page=6&type=hair",
+        conditionMet: true,
+        options: [
+          {
+            value: "Frequently",
+            displayText: "Frequently",
+          },
+          {
+            value: "Rarely",
+            displayText: "Rarely",
+          },
+          {
+            value: "Never",
+            displayText: "Never",
+          },
+        ],
+      },
+    ],
+    hair8: [
+      {
+        name: "hair page 12",
+        type: "category",
+        clickHandler: choice_clickHandler,
+        question: "How many hours do you sleep?",
+        state_Obj: stateObj,
+        proceed_link: "?page=9&type=hair",
+        back_link: "?page=7&type=hair",
+        conditionMet: true,
+        options: [
+          {
+            value: "3-5 hours",
+            displayText: "3-5 hours",
+          },
+          {
+            value: "5-6 hours",
+            displayText: "5-6 hours",
+          },
+          {
+            value: "6-8 hours",
+            displayText: "6-8 hours",
+          },
+          {
+            value: "8-10 hours",
+            displayText: "8-10 hours",
+          },
+        ],
+      },
+    ],
+    hair9: [
+      {
+        name: "hair page 12",
+        type: "category",
+        clickHandler: choice_clickHandler,
+        question: "What type of diet do you follow?",
+        state_Obj: stateObj,
+        proceed_link: "?page=10&type=hair",
+        back_link: "?page=8&type=hair",
+        conditionMet: true,
+        options: [
+          {
+            value: "Vegetarian including milk products",
+            displayText: "Vegetarian including milk products",
+          },
+          {
+            value: "Vegetarian without milk products",
+            displayText: "Vegetarian without milk products",
+          },
+          {
+            value: "Non-vegetarian",
+            displayText: "Non-vegetarian",
+          },
+        ],
+      },
+    ],
+    hair10: [
+      {
+        name: "hair page 14",
+        type: "category",
+        clickHandler: choice_clickHandler,
+        question: "How many hours do you work in a day? ",
+        state_Obj: stateObj,
+        proceed_link: "?page=15&type=hair",
+        back_link: "?page=13&type=hair",
+        conditionMet: true,
+        options: [
+          {
+            value: "<9 hours",
+            displayText: "<9 hours",
+          },
+          {
+            value: "9-10 hours",
+            displayText: "9-10 hours",
+          },
+          {
+            value: "10-12 hours",
+            displayText: "10-12 hours",
+          },
+          {
+            value: "12 and above",
+            displayText: "12 and above",
+          },
+        ],
+      },
+    ],
+    hair11: [
+      {
+        name: "Hair page 3",
+        type: "category",
+        question: `How often do you smoke or drink?`,
+        clickHandler: choice_clickHandler,
+        CustomComponent: { CustomRadio },
+        state_Obj: stateObj,
+        proceed_link: "?page=12&type=hair",
+        back_link: "?page=10&type=hair",
+        input_none: true,
+        conditionMet: true,
+        options: [
+          {
+            value: `Daily`,
+            displayText: `Daily`,
+          },
+          {
+            value: "Occasionally",
+            displayText: "Occasionally",
+          },
+          {
+            value: "Never",
+            displayText: "Never",
+          },
+        ],
+      },
+    ],
+    hair12: [
+      {
+        name: "hair page 12",
+        type: "category",
+        clickHandler: choice_clickHandler,
+        question: "Since when are you facing hair loss?",
+        state_Obj: stateObj,
+        proceed_link: "?page=13&type=hair",
+        back_link: "?page=11&type=hair",
+        conditionMet: true,
+        options: [
+          {
+            value: "Days",
+            displayText: "Days",
+          },
+          {
+            value: "Months",
+            displayText: "Months",
+          },
+          {
+            value: "Years",
+            displayText: "Years",
+          },
+        ],
+      },
+    ],
+    hair13: [
+      {
+        name: "hair page 13",
+        type: "category",
+        clickHandler: choice_clickHandler,
+        question: "How was your hair pattern before hair loss? ",
+        state_Obj: stateObj,
+        proceed_link: "?page=14&type=hair",
+        back_link: "?page=12&type=hair",
+        conditionMet: true,
+        options: [
+          {
+            value: "Thick",
+            displayText: "Thick",
+          },
+          {
+            value: "Medium",
+            displayText: "Medium",
+          },
+          {
+            value: "Thin",
+            displayText: "Thin",
+          },
+        ],
+      },
+    ],
+    hair14: [
+      {
+        name: "Hair page 5",
+        type: "category",
+        question: `Do you have any pre-existing problems?`,
+        state_Obj: stateObj,
+        proceed_link: "?page=15&type=hair",
+        back_link: "?page=13&type=hair",
+        input_none: true,
+        conditionMet: true,
+        checkboxOptions: [
+          {
+            value:
+              stateObj[`Do you have any pre-existing problems?`]?.[
+                "Cholestrol"
+              ],
+            displayText: "Cholestrol",
+            onChange: checkBoxHandler,
+          },
+          {
+            value:
+              stateObj[`Do you have any pre-existing problems?`]?.["Thyroid"],
+            displayText: "Thyroid",
+            onChange: checkBoxHandler,
+          },
+          {
+            value:
+              stateObj[`Do you have any pre-existing problems?`]?.["Heart"],
+            displayText: "Heart",
+            onChange: checkBoxHandler,
+          },
+          {
+            value:
+              stateObj[`Do you have any pre-existing problems?`]?.["Diabetes"],
+            displayText: "Diabetes",
+            onChange: checkBoxHandler,
+          },
+          {
+            value:
+              stateObj[`Do you have any pre-existing problems?`]?.["Kidney"],
+            displayText: "Kidney",
+            onChange: checkBoxHandler,
+          },
+          {
+            value:
+              stateObj[`Do you have any pre-existing problems?`]?.[
+                "No such problems"
+              ],
+            displayText: "No such problems",
+            onChange: checkBoxHandler,
+          },
+        ],
+      },
+    ],
+    hair15: [
+      {
+        name: "Hair page 15",
+        type: "category",
+        question: `Have you used hair products before?`,
+        clickHandler: choice_clickHandler,
+        state_Obj: stateObj,
+        proceed_link: "?appointment=yes",
+        back_link: "?page=14&type=skin",
         conditionMet: true,
         options: [
           {

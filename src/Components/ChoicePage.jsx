@@ -33,6 +33,8 @@ const ChoicePage = ({
       Set_display_overlay_text(false);
     }, delay_time);
   }, []);
+
+  useEffect(() => {}, [state_Obj]);
   return (
     <>
       <div
@@ -73,7 +75,7 @@ const ChoicePage = ({
                     <CustomInputComponent
                       placeholder={option.placeholder}
                       requiredErrorText={option.requiredErrorText}
-                      value={option.value}
+                      input_value={option.value}
                       heading={option.heading}
                       onchange={(heading, value) =>
                         option.clickHandler(heading, value)

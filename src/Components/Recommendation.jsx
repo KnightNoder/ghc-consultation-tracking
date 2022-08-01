@@ -6,7 +6,7 @@ import GenericButton from "./GenericButton";
 import "../css/Recommendation.css";
 import { useEffect, useState } from "react";
 import "../css/ProceedTemplate.css";
-const { getProductId, getSendMailData } = require("../common/utils");
+const { getSendMailData } = require("../common/utils");
 const { getProductIdFromEngine } = require("../common/engine");
 const axios = require("axios");
 
@@ -35,6 +35,7 @@ const Callback = ({
 
   useEffect(() => {
     var product_id = "";
+    let category = "";
     const product_id_promise = getProductIdFromEngine(stateObj);
     product_id_promise
       .then((response) => {
@@ -58,11 +59,16 @@ const Callback = ({
           }
         }
 
-        const category =
-          stateObj["Select category for consultation"] == "weightloss"
-            ? "wellness"
-            : stateObj["Select category for consultation"];
-        console.log(category, "category");
+        if (stateObj["Select category for consultation"] == "weightloss") {
+          category = "wellness";
+        }
+        if (stateObj["Select category for consultation"] == "hair") {
+          category = "hair-products";
+        }
+        if (stateObj["Select category for consultation"] == "skin") {
+          category = "skin";
+        }
+        console.log(category, "cat");
         const getData = async () => {
           var config = {
             method: "get",
@@ -132,7 +138,7 @@ const Callback = ({
         getData();
 
         const data = getSendMailData(stateObj["assessment_type"], stateObj);
-        // console.log(data, "mail data");
+        console.log(data, "mail data");
         const sendMail = async () => {
           const config = {
             method: "post",

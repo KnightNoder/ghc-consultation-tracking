@@ -141,10 +141,23 @@ const getSendMailData = (assessment_type, stateObj) => {
   const questionnaire = [];
 
   for (const key in stateObj) {
-    questionnaire.push({
-      question: key,
-      answer: stateObj[key],
-    });
+    if (
+      key == "First Name" ||
+      key == "Last Name" ||
+      key == "Age" ||
+      key == "Email" ||
+      key == "Phone Number" ||
+      key == "assessment_type" ||
+      key == "Wasn’t that easy? Would you like a free consultation?"
+    ) {
+      console.log("or condition", key);
+    } else {
+      console.log("else condition", key);
+      questionnaire.push({
+        question: key,
+        answer: stateObj[key],
+      });
+    }
   }
 
   const data = JSON.stringify({

@@ -4,7 +4,7 @@ const InputCard = ({
   heading,
   placeholder,
   requiredErrorText,
-  value,
+  input_value,
   vibrate,
   required,
   onchange,
@@ -12,10 +12,6 @@ const InputCard = ({
   validity,
   inputCheck,
 }) => {
-  const [inputValue, Set_inputValue] = useState("");
-  useEffect(() => {
-    Set_inputValue(value);
-  }, []);
   return (
     <>
       <h3 className="input-card-label">
@@ -35,16 +31,18 @@ const InputCard = ({
       <input
         className="input"
         onChange={(e) => {
+          console.log(e.target.value);
           onchange(heading, e.target.value);
-          Set_inputValue(e.target.value);
         }}
-        value={inputValue}
+        value={input_value}
         inputMode={inputMode}
         type="text"
         placeholder={placeholder}
       />
       <span
-        style={!value ? { visibility: "visible" } : { visibility: "hidden" }}
+        style={
+          !input_value ? { visibility: "visible" } : { visibility: "hidden" }
+        }
         className="error-text"
         id="two"
       >
