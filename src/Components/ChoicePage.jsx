@@ -88,7 +88,6 @@ const ChoicePage = ({
                       onchange={(heading, value) =>
                         option.clickHandler(heading, value)
                       }
-                      // key={option.heading}
                       required={option.required}
                       inputMode={option.inputMode}
                       validity={option.validity}
@@ -146,7 +145,7 @@ const ChoicePage = ({
             <ProceedTemplate
               proceed_text="Proceed"
               back_text="Back"
-              conditionMet={conditionMet}
+              conditionMet={conditionMet || state_Obj[question]}
               choice={proceed_link}
               navigateTo={navigateTo}
               backLink={back_link}
