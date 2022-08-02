@@ -11,22 +11,14 @@ const InputCard = ({
   inputMode,
   validity,
   inputCheck,
+  // key,
 }) => {
+  console.log(validity, "validity");
   return (
     <>
       <h3 className="input-card-label">
         {heading}
-        <div
-          style={{
-            display: "inline-block",
-            fontSize: "20px",
-            color: "#EA2C2C",
-            marginLeft: "3px",
-          }}
-          className=""
-        >
-          {required}
-        </div>
+        <div className="required-symbol">{required}</div>
       </h3>
       <input
         className="input"
@@ -34,15 +26,14 @@ const InputCard = ({
           console.log(e.target.value);
           onchange(heading, e.target.value);
         }}
+        key={heading.replaceAll(" ", "_").toLowerCase()}
         value={input_value}
         inputMode={inputMode}
         type="text"
         placeholder={placeholder}
       />
       <span
-        style={
-          !input_value ? { visibility: "visible" } : { visibility: "hidden" }
-        }
+        style={!validity ? { visibility: "visible" } : { visibility: "hidden" }}
         className="error-text"
         id="two"
       >

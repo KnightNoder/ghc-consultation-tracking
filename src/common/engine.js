@@ -536,7 +536,7 @@ hair_engine.addRule({
 
 // Hair long
 
-hair_engine.addRule({
+hair_engine_long.addRule({
   conditions: {
     all: [
       {
@@ -573,7 +573,7 @@ hair_engine.addRule({
   },
 });
 
-hair_engine.addRule({
+hair_engine_long.addRule({
   conditions: {
     all: [
       {
@@ -610,7 +610,7 @@ hair_engine.addRule({
   },
 });
 
-hair_engine.addRule({
+hair_engine_long.addRule({
   conditions: {
     all: [
       {
@@ -649,7 +649,7 @@ hair_engine.addRule({
 
 //option 2
 
-hair_engine.addRule({
+hair_engine_long.addRule({
   conditions: {
     all: [
       {
@@ -686,7 +686,7 @@ hair_engine.addRule({
   },
 });
 
-hair_engine.addRule({
+hair_engine_long.addRule({
   conditions: {
     all: [
       {
@@ -723,7 +723,7 @@ hair_engine.addRule({
   },
 });
 
-hair_engine.addRule({
+hair_engine_long.addRule({
   conditions: {
     all: [
       {
@@ -762,7 +762,7 @@ hair_engine.addRule({
 
 //option 3
 
-hair_engine.addRule({
+hair_engine_long.addRule({
   conditions: {
     all: [
       {
@@ -799,7 +799,7 @@ hair_engine.addRule({
   },
 });
 
-hair_engine.addRule({
+hair_engine_long.addRule({
   conditions: {
     all: [
       {
@@ -836,7 +836,7 @@ hair_engine.addRule({
   },
 });
 
-hair_engine.addRule({
+hair_engine_long.addRule({
   conditions: {
     all: [
       {
@@ -864,7 +864,7 @@ hair_engine.addRule({
   },
 });
 
-hair_engine.addRule({
+hair_engine_long.addRule({
   conditions: {
     all: [
       {
@@ -894,7 +894,7 @@ hair_engine.addRule({
 
 //option 4
 
-hair_engine.addRule({
+hair_engine_long.addRule({
   conditions: {
     all: [
       {
@@ -922,7 +922,7 @@ hair_engine.addRule({
   },
 });
 
-hair_engine.addRule({
+hair_engine_long.addRule({
   conditions: {
     all: [
       {
@@ -950,7 +950,7 @@ hair_engine.addRule({
   },
 });
 
-hair_engine.addRule({
+hair_engine_long.addRule({
   conditions: {
     all: [
       {
@@ -978,7 +978,7 @@ hair_engine.addRule({
   },
 });
 
-hair_engine.addRule({
+hair_engine_long.addRule({
   conditions: {
     all: [
       {
@@ -1006,7 +1006,7 @@ hair_engine.addRule({
   },
 });
 
-hair_engine.addRule({
+hair_engine_long.addRule({
   conditions: {
     all: [
       {
@@ -1034,7 +1034,7 @@ hair_engine.addRule({
   },
 });
 
-hair_engine.addRule({
+hair_engine_long.addRule({
   conditions: {
     all: [
       {
@@ -1419,7 +1419,7 @@ skin_engine.addRule({
       {
         fact: "Are you allergic to any of the ingredients below?",
         operator: "equal",
-        value: "None",
+        value: "Salicylic Acid",
       },
       {
         fact: "What are you concerned about?",
@@ -1442,7 +1442,7 @@ skin_engine.addRule({
       {
         fact: "Are you allergic to any of the ingredients below?",
         operator: "equal",
-        value: "None",
+        value: "Salicylic Acid",
       },
       {
         fact: "What are you concerned about?",
@@ -1465,7 +1465,7 @@ skin_engine.addRule({
       {
         fact: "Are you allergic to any of the ingredients below?",
         operator: "equal",
-        value: "None",
+        value: "Salicylic Acid",
       },
       {
         fact: "What are you concerned about?",
@@ -1488,7 +1488,7 @@ skin_engine.addRule({
       {
         fact: "Are you allergic to any of the ingredients below?",
         operator: "equal",
-        value: "None",
+        value: "Salicylic Acid",
       },
       {
         fact: "What are you concerned about?",
@@ -1511,7 +1511,7 @@ skin_engine.addRule({
       {
         fact: "Are you allergic to any of the ingredients below?",
         operator: "equal",
-        value: "None",
+        value: "Salicylic Acid",
       },
       {
         fact: "What are you concerned about?",
@@ -1534,7 +1534,7 @@ skin_engine.addRule({
       {
         fact: "Are you allergic to any of the ingredients below?",
         operator: "equal",
-        value: "None",
+        value: "Salicylic Acid",
       },
       {
         fact: "What are you concerned about?",
@@ -1860,7 +1860,7 @@ skin_engine.addRule({
       {
         fact: "Are you allergic to any of the ingredients below?",
         operator: "equal",
-        value: "None",
+        value: "Kojic Acid",
       },
       {
         fact: "What are you concerned about?",
@@ -1885,7 +1885,7 @@ skin_engine.addRule({
       {
         fact: "Are you allergic to any of the ingredients below?",
         operator: "equal",
-        value: "None",
+        value: "Niacinamide",
       },
       {
         fact: "What are you concerned about?",
@@ -1908,7 +1908,7 @@ skin_engine.addRule({
       {
         fact: "Are you allergic to any of the ingredients below?",
         operator: "equal",
-        value: "None",
+        value: "Niacinamide",
       },
       {
         fact: "What are you concerned about?",
@@ -1931,7 +1931,7 @@ skin_engine.addRule({
       {
         fact: "Are you allergic to any of the ingredients below?",
         operator: "equal",
-        value: "None",
+        value: "Niacinamide",
       },
       {
         fact: "What are you concerned about?",
@@ -1954,7 +1954,7 @@ skin_engine.addRule({
       {
         fact: "Are you allergic to any of the ingredients below?",
         operator: "equal",
-        value: "None",
+        value: "Niacinamide",
       },
       {
         fact: "What are you concerned about?",
@@ -1977,7 +1977,7 @@ skin_engine.addRule({
       {
         fact: "Are you allergic to any of the ingredients below?",
         operator: "equal",
-        value: "None",
+        value: "Niacinamide",
       },
       {
         fact: "What are you concerned about?",
@@ -2000,7 +2000,7 @@ skin_engine.addRule({
       {
         fact: "Are you allergic to any of the ingredients below?",
         operator: "equal",
-        value: "None",
+        value: "Niacinamide",
       },
       {
         fact: "What are you concerned about?",
@@ -2023,7 +2023,7 @@ skin_engine.addRule({
       {
         fact: "Are you allergic to any of the ingredients below?",
         operator: "equal",
-        value: "None",
+        value: "Niacinamide",
       },
       {
         fact: "What are you concerned about?",
@@ -2939,7 +2939,7 @@ skin_engine_long.addRule({
       {
         fact: "Are you allergic to any of the ingredients below?",
         operator: "equal",
-        value: "None",
+        value: "Kojic Acid",
       },
       {
         fact: "What are you concerned about?",
@@ -2973,14 +2973,26 @@ export const getProductIdFromEngine = async (stateObj) => {
       });
     }
     if (stateObj["Select category for consultation"] == "hair") {
+      let facts = {
+        "What best describes your current hair condition?":
+          // stateObj["What best describes your current hair condition?"],
+          "Receding hairline",
+        "What results are you looking for?":
+          // stateObj["What results are you looking for?"],
+          "Both regrowth & loss prevention",
+        "Does anyone in your family have hair loss?":
+          // stateObj["Does anyone in your family have hair loss?"],
+          "Yes",
+      };
+      console.log(facts, "facs");
       await hair_engine.run(facts).then(({ events }) => {
         events.map((event) => {
+          console.log(event.params.id, "params id");
           productId = event.params.id;
         });
       });
     }
     if (stateObj["Select category for consultation"] == "weightloss") {
-      console.log("in weightloss");
       const weight = parseInt(stateObj["Weight"]);
       const height = parseInt(stateObj["Height"]);
       const bmi_value = (weight * 10000) / (height * height);

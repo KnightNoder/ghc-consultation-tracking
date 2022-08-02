@@ -51,7 +51,6 @@ export default function App() {
         stateObj["assessment_type"] == "30 sec" ? "Short" : "Long"
       }`
     );
-    // assessment_type == "30 sec" ? allPages_Saturn_Short : allPages_Saturn_Long;
     if (queryParams.get("type")) {
       fields = allPages[`${queryParams.get("type")}${queryParams.get("page")}`];
       Set_builder_fields(fields);
@@ -77,8 +76,32 @@ export default function App() {
     Set_query_params(window.location.search);
   };
 
+  const phone_number_check = () => {
+    let number = stateObj["Phone Number"];
+    if (number) {
+      if (
+        number.length == 10 &&
+        (number.startsWith("6") ||
+          number.startsWith("7") ||
+          number.startsWith("8") ||
+          number.startsWith("9"))
+      )
+        return true;
+    }
+  };
+
+  const email_check = () => {
+    let email = stateObj["Email"];
+    if (email) {
+      if (email.includes("@")) return true;
+    }
+  };
+
+  const age_check = () => {
+    let age = stateObj["Age"];
+    if (age > 0 && age < 200) return true;
+  };
   const choice_clickHandler = (question, value) => {
-    console.log(question, value, "input opts");
     Set_stateObj((prevState) => {
       return { ...prevState, [question]: value };
     });
@@ -145,18 +168,11 @@ export default function App() {
         question: "Select category for consultation",
         clickHandler: choice_clickHandler,
         inputHandler: choice_clickHandler,
-        CustomRadioComponent: { CustomRadio },
         state_Obj: stateObj,
         set_url_function: redirect_to_set_query_params,
         proceed_link: `?userinfo=yes`,
         back_link: "?assessment=yes",
-        heading: "Age",
-        required: "*",
-        placeholder: "Eg: 24",
-        requiredErrorText: "Please enter valid age to proceed",
-        input_none: true,
-        conditionMet: true,
-        conditionMet: true,
+        required: "true",
         options: [
           {
             displayText: "Skin",
@@ -185,11 +201,12 @@ export default function App() {
         overlay_screen_text: "Tell me about yourself",
         delay_time: "3000",
         conditionMet:
-          stateObj["Age"] &&
+          stateObj["Age"] > 0 &&
+          stateObj["Age"] < 200 &&
           stateObj["First Name"] &&
           stateObj["Last Name"] &&
-          stateObj["Phone Number"] &&
-          stateObj["Email"],
+          phone_number_check(stateObj["Phone Number"]) &&
+          email_check(stateObj["Email"]),
         inputOptions: [
           {
             placeholder: "Eg: John",
@@ -198,21 +215,23 @@ export default function App() {
             clickHandler: choice_clickHandler,
             required: "*",
             value: stateObj["First Name"],
-            validity: {},
+            validity: stateObj["First Name"],
           },
           {
             placeholder: "Eg: Doe",
             heading: "Last Name",
             clickHandler: choice_clickHandler,
             value: stateObj["Last Name"],
+            validity: "true",
           },
           {
             placeholder: "Eg: johndoe@ghc.health",
-            requiredErrorText: "Please enter valid first name",
+            requiredErrorText: "Please enter valid email",
             heading: "Email",
             clickHandler: choice_clickHandler,
             required: "*",
             value: stateObj["Email"],
+            validity: email_check(),
           },
           {
             placeholder: "Eg: 9876543210",
@@ -222,6 +241,7 @@ export default function App() {
             required: "*",
             value: stateObj["Phone Number"],
             inputMode: "numeric",
+            validity: phone_number_check(),
           },
           {
             placeholder: "Eg: Age",
@@ -231,6 +251,7 @@ export default function App() {
             value: stateObj["Age"],
             required: "*",
             inputMode: "numeric",
+            validity: age_check(),
           },
         ],
       },
@@ -245,9 +266,8 @@ export default function App() {
         proceed_link: "?page=2&type=hair",
         back_link: "?userinfo=yes",
         delay_time: 0,
-        input_none: true,
         conditionMet: true,
-        conditionMet: true,
+        required: "true",
         options: [
           {
             value: "Receding hairline",
@@ -277,9 +297,7 @@ export default function App() {
         state_Obj: stateObj,
         proceed_link: "?page=3&type=hair",
         back_link: "?page=1&type=hair",
-        delay_time: 3000,
-        overlay_screen_text: ` Hair loss affects 60.5 % of the total Men population in India`,
-        conditionMet: true,
+        required: "true",
         options: [
           {
             value: "Regrowing your hair",
@@ -305,13 +323,7 @@ export default function App() {
         state_Obj: stateObj,
         proceed_link: "?page=4&type=hair",
         back_link: "?page=2&type=hair",
-        delay_time: 3000,
-        overlay_screen_text: ` 50% of the male pattern baldness can be attributed due to  hereditary roots.
-        However, hereditary male pattern baldness is treatable by taking early 
-        preventive actions`,
-        input_none: true,
-        conditionMet: true,
-        conditionMet: true,
+        required: "true",
         options: [
           {
             value: "Yes",
@@ -326,33 +338,6 @@ export default function App() {
     ],
     hair4: [
       {
-        name: "hair page 4",
-        type: "category",
-        question: "Do you have any past allergy reactions to medicines?",
-        clickHandler: choice_clickHandler,
-        state_Obj: stateObj,
-        proceed_link: "?page=5&type=hair",
-        back_link: "?page=3&type=hair",
-        delay_time: 3000,
-        overlay_screen_text: ` Knowing your medical allergies helps us to suggest the best treatment 
-        plan for you`,
-        input_none: true,
-        conditionMet: true,
-        conditionMet: true,
-        options: [
-          {
-            value: "Yes",
-            displayText: "Yes",
-          },
-          {
-            value: "No",
-            displayText: "No",
-          },
-        ],
-      },
-    ],
-    hair5: [
-      {
         name: "hair page 5",
         type: "category",
         question:
@@ -361,12 +346,6 @@ export default function App() {
         state_Obj: stateObj,
         proceed_link: "?appointment=yes",
         back_link: "?page=4&type=hair",
-        delay_time: 3000,
-        overlay_screen_text: ` FACT: Every time we try a new medication it takes time for our body to 
-        react. Similarly, we can observe minimal hair loss when we start to use
-        minoxidil for a few days`,
-        input_none: true,
-        conditionMet: true,
         conditionMet: true,
         options: [
           {
@@ -392,9 +371,7 @@ export default function App() {
         back_link: "?userinfo=yes",
         delay_time: 3000,
         overlay_screen_text: `Answer a few questions so we can help`,
-        input_none: true,
-        conditionMet: true,
-        conditionMet: true,
+        required: "true",
         options: [
           {
             value: "Open pores",
@@ -470,9 +447,7 @@ export default function App() {
         back_link: "?page=2&type=skin",
         delay_time: 5000,
         overlay_screen_text: `It's important to listen to our bodies and understand allergies before beginning any treatment.`,
-        input_none: true,
-        conditionMet: true,
-        conditionMet: true,
+        required: "true",
         options: [
           {
             value: "Vitamin C",
@@ -506,7 +481,6 @@ export default function App() {
         state_Obj: stateObj,
         proceed_link: "?page=2&type=weightloss",
         back_link: "?userinfo=yes",
-        input_none: true,
         conditionMet: true,
         delay_time: 5000,
         overlay_screen_text: `Answer few questions so we can help`,
@@ -545,7 +519,6 @@ export default function App() {
         overlay_screen_text:
           "Measuring your weight everyday helps you lose weight faster",
         delay_time: "5000",
-        input_none: true,
         conditionMet: true,
         options: [
           {
@@ -577,7 +550,6 @@ export default function App() {
         state_Obj: stateObj,
         proceed_link: "?page=4&type=weightloss",
         back_link: "?page=2&type=weightloss",
-        input_none: true,
         conditionMet: true,
         options: [
           {
@@ -601,11 +573,9 @@ export default function App() {
         type: "category",
         question: `How many days do you exercise in a week?`,
         clickHandler: choice_clickHandler,
-        CustomComponent: { CustomRadio },
         state_Obj: stateObj,
         proceed_link: "?page=5&type=weightloss",
         back_link: "?page=3&type=weightloss",
-        input_none: true,
         conditionMet: true,
         options: [
           {
@@ -637,7 +607,6 @@ export default function App() {
         state_Obj: stateObj,
         proceed_link: "?appointment=yes",
         back_link: "?page=4&type=weightloss",
-        input_none: true,
         conditionMet: true,
         checkboxOptions: [
           {
@@ -693,9 +662,7 @@ export default function App() {
         proceed_link: "?recommendation=yes",
         navigateTo: "-1",
         directNavigate: true,
-        delay_time: 0,
-        input_none: true,
-        conditionMet: true,
+        required: "true",
         options: [
           {
             value: "Yes, please ",
@@ -860,9 +827,7 @@ export default function App() {
         back_link: "?userinfo=yes",
         delay_time: 3000,
         overlay_screen_text: `Answer a few questions so we can help`,
-        input_none: true,
-        conditionMet: true,
-        conditionMet: true,
+        required: "true",
         options: [
           {
             value: "Open pores",
@@ -1311,8 +1276,7 @@ export default function App() {
         back_link: "?page=15&type=skin",
         delay_time: 5000,
         overlay_screen_text: `It's important to listen to our bodies and understand allergies before beginning any treatment.`,
-        input_none: true,
-        conditionMet: true,
+        required: "true",
         options: [
           {
             value: "Vitamin C",
@@ -1703,7 +1667,6 @@ export default function App() {
         state_Obj: stateObj,
         proceed_link: "?page=11&type=weightloss",
         back_link: "?page=9&type=weightloss",
-        input_none: true,
         conditionMet: true,
         options: [
           {
@@ -1782,10 +1745,7 @@ export default function App() {
         state_Obj: stateObj,
         proceed_link: "?page=2&type=hair",
         back_link: "?userinfo=yes",
-        delay_time: 0,
-        input_none: true,
-        conditionMet: true,
-        conditionMet: true,
+        required: "true",
         options: [
           {
             value: "Receding hairline",
@@ -1817,7 +1777,7 @@ export default function App() {
         back_link: "?page=1&type=hair",
         delay_time: 3000,
         overlay_screen_text: ` Hair loss affects 60.5 % of the total Men population in India`,
-        conditionMet: true,
+        required: "true",
         options: [
           {
             value: "Regrowing your hair",
@@ -1843,7 +1803,7 @@ export default function App() {
         state_Obj: stateObj,
         proceed_link: "?page=4&type=hair",
         back_link: "?page=2&type=hair",
-        conditionMet: true,
+        required: "true",
         options: [
           {
             value: "Yes",
@@ -2280,6 +2240,7 @@ export default function App() {
       inputOptions,
       checkboxOptions,
       conditionMet,
+      required,
     }) => (
       <ChoicePage
         question={question}
@@ -2299,6 +2260,7 @@ export default function App() {
         inputOptions={inputOptions}
         checkboxOptions={checkboxOptions}
         conditionMet={conditionMet}
+        required={required}
       />
     ),
     recommendation: ({ stateObj, assessment_type, data }) => (

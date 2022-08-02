@@ -22,9 +22,9 @@ const ChoicePage = ({
   directNavigate,
   navigateTo,
   conditionMet,
-  // inputHandler,
   inputOptions,
   checkboxOptions,
+  required,
 }) => {
   const [display_overlay_text, Set_display_overlay_text] = useState(true);
   useEffect(() => {
@@ -49,6 +49,15 @@ const ChoicePage = ({
         </div> */}
         <div className="assessment">
           <h5>{question} </h5>
+          {required ? (
+            <div
+              className={` error-text-checkbox ${
+                !!state_Obj[question] ? "not-visible" : "visible"
+              }`}
+            >
+              Please answer the question to proceed
+            </div>
+          ) : null}
           {options
             ? options.map((option) => {
                 return (
@@ -58,7 +67,7 @@ const ChoicePage = ({
                       clickHandler={(question, value) =>
                         clickHandler(question, value)
                       }
-                      key={option.value}
+                      // key={option.value}
                       state_Obj={state_Obj}
                       question={question}
                     />
@@ -79,9 +88,10 @@ const ChoicePage = ({
                       onchange={(heading, value) =>
                         option.clickHandler(heading, value)
                       }
-                      key={option.value}
+                      // key={option.heading}
                       required={option.required}
                       inputMode={option.inputMode}
+                      validity={option.validity}
                     />
                   </>
                 );
@@ -97,7 +107,7 @@ const ChoicePage = ({
                       value={option.value}
                       text={option.displayText}
                       state_Obj={state_Obj}
-                      key={option.value}
+                      // key={option.displayText}
                       onchange={(text, value, question) =>
                         option.onChange(text, value, question)
                       }
@@ -136,7 +146,7 @@ const ChoicePage = ({
             <ProceedTemplate
               proceed_text="Proceed"
               back_text="Back"
-              conditionMet="true"
+              conditionMet={conditionMet}
               choice={proceed_link}
               navigateTo={navigateTo}
               backLink={back_link}
@@ -150,7 +160,7 @@ const ChoicePage = ({
         <ProceedTemplate
           proceed_text="Proceed"
           back_text="Back"
-          conditionMet={conditionMet}
+          conditionMet={conditionMet || state_Obj[question]}
           choice={proceed_link}
           navigateTo={navigateTo}
           backLink={back_link}

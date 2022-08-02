@@ -17,7 +17,6 @@ const GenericButton = ({
 }) => {
   const navigate = useNavigate();
   const navigateCheck = () => {
-    console.log("in navigate check");
     if (directNavigate) {
       console.log(directNavigate, "direct navigate");
       console.log(navigateTo, "navigate to");
