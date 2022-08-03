@@ -3001,7 +3001,6 @@ export const getProductIdFromEngine = async (stateObj) => {
       };
       await weightloss_engine.run(facts).then(({ events }) => {
         events.map((event) => {
-          console.log(event.params.id);
           productId = event.params.id;
         });
       });
@@ -3026,7 +3025,6 @@ export const getProductIdFromEngine = async (stateObj) => {
       const weight = parseInt(stateObj["Weight"]);
       const height = parseInt(stateObj["Height"]);
       const bmi_value = (weight * 10000) / (height * height);
-      console.log(parseInt(bmi_value), "bmi value");
       let facts = {
         BMI: parseInt(bmi_value),
       };
