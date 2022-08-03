@@ -6,7 +6,7 @@ import GenericButton from "./GenericButton";
 import "../css/Recommendation.css";
 import { useEffect, useState } from "react";
 import "../css/ProceedTemplate.css";
-const { getSendMailData } = require("../common/utils");
+const { sendMail, getSendMailData } = require("../common/utils");
 const { getProductIdFromEngine } = require("../common/engine");
 const axios = require("axios");
 
@@ -161,11 +161,10 @@ const Callback = ({
         console.log(error, "error");
       });
 
+    sendMail();
     setTimeout(() => {
       Set_disp(false);
     }, 4000);
-
-    sendMail();
   }, []);
 
   return (
