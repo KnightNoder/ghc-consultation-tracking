@@ -1190,7 +1190,7 @@ skin_engine.addRule({
       {
         fact: "What are you concerned about?",
         operator: "equal",
-        value: "Acne marks & spots",
+        value: "Spots & Marks",
       },
     ],
   },
@@ -1353,7 +1353,7 @@ skin_engine.addRule({
       {
         fact: "What are you concerned about?",
         operator: "equal",
-        value: "Acne marks & spots",
+        value: "Spots & Marks",
       },
     ],
   },
@@ -1516,7 +1516,7 @@ skin_engine.addRule({
       {
         fact: "What are you concerned about?",
         operator: "equal",
-        value: "Acne marks & spots",
+        value: "Spots & Marks",
       },
     ],
   },
@@ -1679,7 +1679,7 @@ skin_engine.addRule({
       {
         fact: "What are you concerned about?",
         operator: "equal",
-        value: "Acne marks & spots",
+        value: "Spots & Marks",
       },
     ],
   },
@@ -1842,7 +1842,7 @@ skin_engine.addRule({
       {
         fact: "What are you concerned about?",
         operator: "equal",
-        value: "Acne marks & spots",
+        value: "Spots & Marks",
       },
     ],
   },
@@ -2005,7 +2005,7 @@ skin_engine.addRule({
       {
         fact: "What are you concerned about?",
         operator: "equal",
-        value: "Acne marks & spots",
+        value: "Spots & Marks",
       },
     ],
   },
@@ -2269,7 +2269,7 @@ skin_engine_long.addRule({
       {
         fact: "What are you concerned about?",
         operator: "equal",
-        value: "Acne marks & spots",
+        value: "Spots & Marks",
       },
     ],
   },
@@ -2432,7 +2432,7 @@ skin_engine_long.addRule({
       {
         fact: "What are you concerned about?",
         operator: "equal",
-        value: "Acne marks & spots",
+        value: "Spots & Marks",
       },
     ],
   },
@@ -2595,7 +2595,7 @@ skin_engine_long.addRule({
       {
         fact: "What are you concerned about?",
         operator: "equal",
-        value: "Acne marks & spots",
+        value: "Spots & Marks",
       },
     ],
   },
@@ -2758,7 +2758,7 @@ skin_engine_long.addRule({
       {
         fact: "What are you concerned about?",
         operator: "equal",
-        value: "Acne marks & spots",
+        value: "Spots & Marks",
       },
     ],
   },
@@ -2921,7 +2921,7 @@ skin_engine_long.addRule({
       {
         fact: "What are you concerned about?",
         operator: "equal",
-        value: "Acne marks & spots",
+        value: "Spots & Marks",
       },
     ],
   },
