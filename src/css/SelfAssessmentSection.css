@@ -265,13 +265,13 @@
 }
 
 
-@media only screen and (min-width: 767px) {
+@media only screen and (min-width: 600px) {
     .start-assessment-heading,.get-started,.assessment-card-section {
         display: none;
     }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 600px) {
     .header-block, .self-assessment-section {
         display: none;
     }
