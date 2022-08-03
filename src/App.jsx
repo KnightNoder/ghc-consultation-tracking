@@ -605,11 +605,13 @@ export default function App() {
         type: "category",
         question: `Do you have any pre-existing problems?`,
         clickHandler: choice_clickHandler,
-        CustomComponent: { CustomRadio },
         state_Obj: stateObj,
         proceed_link: "?appointment=yes",
         back_link: "?page=4&type=weightloss",
-        conditionMet: true,
+        conditionMet: !!Object.values(
+          stateObj["Do you have any pre-existing problems?"]
+        ).filter((x) => x).length,
+        required: true,
         checkboxOptions: [
           {
             value:

@@ -140,7 +140,7 @@ const getProductId = (stateObj, assessment_type) => {
 const getSendMailData = (assessment_type, stateObj) => {
   const questionnaire = [];
 
-  for (const key in stateObj) {
+  for (let key in stateObj) {
     if (
       key == "First Name" ||
       key == "Last Name" ||
@@ -151,10 +151,21 @@ const getSendMailData = (assessment_type, stateObj) => {
       key == "Wasn’t that easy? Would you like a free consultation?"
     ) {
     } else {
-      questionnaire.push({
-        question: key,
-        answer: stateObj[key],
-      });
+      if (key == "Do you have any pre-existing problems?") {
+        const problems = Object.keys(
+          stateObj["Do you have any pre-existing problems?"]
+        );
+        key = problems.filter((problem) => {
+          return stateObj["Do you have any pre-existing problems?"][problem];
+        });
+        key = key.toString();
+      }
+      if (key) {
+        questionnaire.push({
+          question: key,
+          answer: stateObj[key],
+        });
+      }
     }
   }
 
