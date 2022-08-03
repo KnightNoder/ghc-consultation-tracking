@@ -180,7 +180,10 @@ const getSendMailData = (assessment_type, stateObj) => {
     phone: stateObj["Phone Number"],
     email: stateObj["Email"],
     consultation_type: assessment_type,
-    category: stateObj["Select category for consultation"],
+    category:
+      stateObj["Select category for consultation"] == "weightloss"
+        ? "Wellness"
+        : stateObj["Select category for consultation"],
     booking: stateObj["Wasn’t that easy? Would you like a free consultation?"],
     image: "",
     type: process.env.REACT_APP_BRAND.toLowerCase(),
