@@ -610,7 +610,7 @@ export default function App() {
         back_link: "?page=4&type=weightloss",
         conditionMet: !!Object.values(
           stateObj["Do you have any pre-existing problems?"]
-        ).filter((x) => x).length,
+        )?.filter((x) => x).length,
         required: true,
         checkboxOptions: [
           {
