@@ -322,7 +322,7 @@ export default function App() {
         state_Obj: stateObj,
         proceed_link: "?page=4&type=hair",
         back_link: "?page=2&type=hair",
-        required: "true",
+        conditionMet: true,
         options: [
           {
             value: "Yes",
@@ -345,7 +345,7 @@ export default function App() {
         state_Obj: stateObj,
         proceed_link: "?appointment=yes",
         back_link: "?page=4&type=hair",
-        conditionMet: true,
+        required: "true",
         options: [
           {
             value: "Yes",
@@ -612,7 +612,6 @@ export default function App() {
               stateObj["Do you have any pre-existing problems?"]
             )?.filter((x) => x).length
           : false,
-        required: true,
         checkboxOptions: [
           {
             value:
@@ -1813,7 +1812,7 @@ export default function App() {
         state_Obj: stateObj,
         proceed_link: "?page=4&type=hair",
         back_link: "?page=2&type=hair",
-        required: "true",
+        conditionMet: true,
         options: [
           {
             value: "Yes",
@@ -1836,7 +1835,7 @@ export default function App() {
         state_Obj: stateObj,
         proceed_link: "?page=5&type=hair",
         back_link: "?page=3&type=hair",
-        conditionMet: true,
+        required: "true",
         options: [
           {
             value: "Yes",

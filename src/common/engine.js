@@ -24,12 +24,12 @@ hair_engine.addRule({
       {
         any: [
           {
-            fact: "Does anyone in your family have hair loss?",
+            fact: "Do you have any upcoming functions in the family in the next 30 days?",
             operator: "equal",
             value: "No",
           },
           {
-            fact: "Does anyone in your family have hair loss?",
+            fact: "Do you have any upcoming functions in the family in the next 30 days?",
             operator: "equal",
             value: "Yes",
           },
@@ -61,12 +61,12 @@ hair_engine.addRule({
       {
         any: [
           {
-            fact: "Does anyone in your family have hair loss?",
+            fact: "Do you have any upcoming functions in the family in the next 30 days?",
             operator: "equal",
             value: "No",
           },
           {
-            fact: "Does anyone in your family have hair loss?",
+            fact: "Do you have any upcoming functions in the family in the next 30 days?",
             operator: "equal",
             value: "Yes",
           },
@@ -98,12 +98,12 @@ hair_engine.addRule({
       {
         any: [
           {
-            fact: "Does anyone in your family have hair loss?",
+            fact: "Do you have any upcoming functions in the family in the next 30 days?",
             operator: "equal",
             value: "No",
           },
           {
-            fact: "Does anyone in your family have hair loss?",
+            fact: "Do you have any upcoming functions in the family in the next 30 days?",
             operator: "equal",
             value: "Yes",
           },
@@ -137,12 +137,12 @@ hair_engine.addRule({
       {
         any: [
           {
-            fact: "Does anyone in your family have hair loss?",
+            fact: "Do you have any upcoming functions in the family in the next 30 days?",
             operator: "equal",
             value: "No",
           },
           {
-            fact: "Does anyone in your family have hair loss?",
+            fact: "Do you have any upcoming functions in the family in the next 30 days?",
             operator: "equal",
             value: "Yes",
           },
@@ -174,12 +174,12 @@ hair_engine.addRule({
       {
         any: [
           {
-            fact: "Does anyone in your family have hair loss?",
+            fact: "Do you have any upcoming functions in the family in the next 30 days?",
             operator: "equal",
             value: "No",
           },
           {
-            fact: "Does anyone in your family have hair loss?",
+            fact: "Do you have any upcoming functions in the family in the next 30 days?",
             operator: "equal",
             value: "Yes",
           },
@@ -211,12 +211,12 @@ hair_engine.addRule({
       {
         any: [
           {
-            fact: "Does anyone in your family have hair loss?",
+            fact: "Do you have any upcoming functions in the family in the next 30 days?",
             operator: "equal",
             value: "No",
           },
           {
-            fact: "Does anyone in your family have hair loss?",
+            fact: "Do you have any upcoming functions in the family in the next 30 days?",
             operator: "equal",
             value: "Yes",
           },
@@ -250,12 +250,12 @@ hair_engine.addRule({
       {
         any: [
           {
-            fact: "Does anyone in your family have hair loss?",
+            fact: "Do you have any upcoming functions in the family in the next 30 days?",
             operator: "equal",
             value: "No",
           },
           {
-            fact: "Does anyone in your family have hair loss?",
+            fact: "Do you have any upcoming functions in the family in the next 30 days?",
             operator: "equal",
             value: "Yes",
           },
@@ -287,12 +287,12 @@ hair_engine.addRule({
       {
         any: [
           {
-            fact: "Does anyone in your family have hair loss?",
+            fact: "Do you have any upcoming functions in the family in the next 30 days?",
             operator: "equal",
             value: "No",
           },
           {
-            fact: "Does anyone in your family have hair loss?",
+            fact: "Do you have any upcoming functions in the family in the next 30 days?",
             operator: "equal",
             value: "Yes",
           },
@@ -322,7 +322,7 @@ hair_engine.addRule({
         value: "Both regrowth & loss prevention",
       },
       {
-        fact: "Does anyone in your family have hair loss?",
+        fact: "Do you have any upcoming functions in the family in the next 30 days?",
         operator: "equal",
         value: "No",
       },
@@ -350,7 +350,7 @@ hair_engine.addRule({
         value: "Both regrowth & loss prevention",
       },
       {
-        fact: "Does anyone in your family have hair loss?",
+        fact: "Do you have any upcoming functions in the family in the next 30 days?",
         operator: "equal",
         value: "Yes",
       },
@@ -380,7 +380,7 @@ hair_engine.addRule({
         value: "Regrowing your hair",
       },
       {
-        fact: "Does anyone in your family have hair loss?",
+        fact: "Do you have any upcoming functions in the family in the next 30 days?",
         operator: "equal",
         value: "No",
       },
@@ -408,7 +408,7 @@ hair_engine.addRule({
         value: "Preventing future hair loss",
       },
       {
-        fact: "Does anyone in your family have hair loss?",
+        fact: "Do you have any upcoming functions in the family in the next 30 days?",
         operator: "equal",
         value: "No",
       },
@@ -436,7 +436,7 @@ hair_engine.addRule({
         value: "Both regrowth & loss prevention",
       },
       {
-        fact: "Does anyone in your family have hair loss?",
+        fact: "Do you have any upcoming functions in the family in the next 30 days?",
         operator: "equal",
         value: "No",
       },
@@ -464,7 +464,7 @@ hair_engine.addRule({
         value: "Regrowing your hair",
       },
       {
-        fact: "Does anyone in your family have hair loss?",
+        fact: "Do you have any upcoming functions in the family in the next 30 days?",
         operator: "equal",
         value: "Yes",
       },
@@ -492,7 +492,7 @@ hair_engine.addRule({
         value: "Preventing future hair loss",
       },
       {
-        fact: "Does anyone in your family have hair loss?",
+        fact: "Do you have any upcoming functions in the family in the next 30 days?",
         operator: "equal",
         value: "Yes",
       },
@@ -520,7 +520,7 @@ hair_engine.addRule({
         value: "Both regrowth & loss prevention",
       },
       {
-        fact: "Does anyone in your family have hair loss?",
+        fact: "Do you have any upcoming functions in the family in the next 30 days?",
         operator: "equal",
         value: "Yes",
       },
@@ -552,12 +552,12 @@ hair_engine_long.addRule({
       {
         any: [
           {
-            fact: "Does anyone in your family have hair loss?",
+            fact: "Do you have any upcoming functions in the family in the next 30 days?",
             operator: "equal",
             value: "No",
           },
           {
-            fact: "Does anyone in your family have hair loss?",
+            fact: "Do you have any upcoming functions in the family in the next 30 days?",
             operator: "equal",
             value: "Yes",
           },
@@ -589,12 +589,12 @@ hair_engine_long.addRule({
       {
         any: [
           {
-            fact: "Does anyone in your family have hair loss?",
+            fact: "Do you have any upcoming functions in the family in the next 30 days?",
             operator: "equal",
             value: "No",
           },
           {
-            fact: "Does anyone in your family have hair loss?",
+            fact: "Do you have any upcoming functions in the family in the next 30 days?",
             operator: "equal",
             value: "Yes",
           },
@@ -626,12 +626,12 @@ hair_engine_long.addRule({
       {
         any: [
           {
-            fact: "Does anyone in your family have hair loss?",
+            fact: "Do you have any upcoming functions in the family in the next 30 days?",
             operator: "equal",
             value: "No",
           },
           {
-            fact: "Does anyone in your family have hair loss?",
+            fact: "Do you have any upcoming functions in the family in the next 30 days?",
             operator: "equal",
             value: "Yes",
           },
@@ -665,12 +665,12 @@ hair_engine_long.addRule({
       {
         any: [
           {
-            fact: "Does anyone in your family have hair loss?",
+            fact: "Do you have any upcoming functions in the family in the next 30 days?",
             operator: "equal",
             value: "No",
           },
           {
-            fact: "Does anyone in your family have hair loss?",
+            fact: "Do you have any upcoming functions in the family in the next 30 days?",
             operator: "equal",
             value: "Yes",
           },
@@ -702,12 +702,12 @@ hair_engine_long.addRule({
       {
         any: [
           {
-            fact: "Does anyone in your family have hair loss?",
+            fact: "Do you have any upcoming functions in the family in the next 30 days?",
             operator: "equal",
             value: "No",
           },
           {
-            fact: "Does anyone in your family have hair loss?",
+            fact: "Do you have any upcoming functions in the family in the next 30 days?",
             operator: "equal",
             value: "Yes",
           },
@@ -739,12 +739,12 @@ hair_engine_long.addRule({
       {
         any: [
           {
-            fact: "Does anyone in your family have hair loss?",
+            fact: "Do you have any upcoming functions in the family in the next 30 days?",
             operator: "equal",
             value: "No",
           },
           {
-            fact: "Does anyone in your family have hair loss?",
+            fact: "Do you have any upcoming functions in the family in the next 30 days?",
             operator: "equal",
             value: "Yes",
           },
@@ -778,12 +778,12 @@ hair_engine_long.addRule({
       {
         any: [
           {
-            fact: "Does anyone in your family have hair loss?",
+            fact: "Do you have any upcoming functions in the family in the next 30 days?",
             operator: "equal",
             value: "No",
           },
           {
-            fact: "Does anyone in your family have hair loss?",
+            fact: "Do you have any upcoming functions in the family in the next 30 days?",
             operator: "equal",
             value: "Yes",
           },
@@ -815,12 +815,12 @@ hair_engine_long.addRule({
       {
         any: [
           {
-            fact: "Does anyone in your family have hair loss?",
+            fact: "Do you have any upcoming functions in the family in the next 30 days?",
             operator: "equal",
             value: "No",
           },
           {
-            fact: "Does anyone in your family have hair loss?",
+            fact: "Do you have any upcoming functions in the family in the next 30 days?",
             operator: "equal",
             value: "Yes",
           },
@@ -850,7 +850,7 @@ hair_engine_long.addRule({
         value: "Both regrowth & loss prevention",
       },
       {
-        fact: "Does anyone in your family have hair loss?",
+        fact: "Do you have any upcoming functions in the family in the next 30 days?",
         operator: "equal",
         value: "No",
       },
@@ -878,7 +878,7 @@ hair_engine_long.addRule({
         value: "Both regrowth & loss prevention",
       },
       {
-        fact: "Does anyone in your family have hair loss?",
+        fact: "Do you have any upcoming functions in the family in the next 30 days?",
         operator: "equal",
         value: "Yes",
       },
@@ -908,7 +908,7 @@ hair_engine_long.addRule({
         value: "Regrowing your hair",
       },
       {
-        fact: "Does anyone in your family have hair loss?",
+        fact: "Do you have any upcoming functions in the family in the next 30 days?",
         operator: "equal",
         value: "No",
       },
@@ -936,7 +936,7 @@ hair_engine_long.addRule({
         value: "Preventing future hair loss",
       },
       {
-        fact: "Does anyone in your family have hair loss?",
+        fact: "Do you have any upcoming functions in the family in the next 30 days?",
         operator: "equal",
         value: "No",
       },
@@ -964,7 +964,7 @@ hair_engine_long.addRule({
         value: "Both regrowth & loss prevention",
       },
       {
-        fact: "Does anyone in your family have hair loss?",
+        fact: "Do you have any upcoming functions in the family in the next 30 days?",
         operator: "equal",
         value: "No",
       },
@@ -992,7 +992,7 @@ hair_engine_long.addRule({
         value: "Regrowing your hair",
       },
       {
-        fact: "Does anyone in your family have hair loss?",
+        fact: "Do you have any upcoming functions in the family in the next 30 days?",
         operator: "equal",
         value: "Yes",
       },
@@ -1020,7 +1020,7 @@ hair_engine_long.addRule({
         value: "Preventing future hair loss",
       },
       {
-        fact: "Does anyone in your family have hair loss?",
+        fact: "Do you have any upcoming functions in the family in the next 30 days?",
         operator: "equal",
         value: "Yes",
       },
@@ -1048,7 +1048,7 @@ hair_engine_long.addRule({
         value: "Both regrowth & loss prevention",
       },
       {
-        fact: "Does anyone in your family have hair loss?",
+        fact: "Do you have any upcoming functions in the family in the next 30 days?",
         operator: "equal",
         value: "Yes",
       },
@@ -2047,8 +2047,8 @@ weightloss_engine.addRule({
     all: [
       {
         fact: "BMI",
-        operator: "lessThanInclusive",
-        value: "22",
+        operator: "greaterThan",
+        value: "25",
       },
     ],
   },
@@ -2065,11 +2065,6 @@ weightloss_engine.addRule({
     all: [
       {
         fact: "BMI",
-        operator: "greaterThan",
-        value: "22",
-      },
-      {
-        fact: "BMI",
         operator: "lessThanInclusive",
         value: "25",
       },
@@ -2078,25 +2073,7 @@ weightloss_engine.addRule({
   event: {
     type: "product id",
     params: {
-      id: "7619064365278",
-    },
-  },
-});
-
-weightloss_engine.addRule({
-  conditions: {
-    all: [
-      {
-        fact: "BMI",
-        operator: "greaterThan",
-        value: "25",
-      },
-    ],
-  },
-  event: {
-    type: "product id",
-    params: {
-      id: "7630401143006",
+      id: "7634556059870",
     },
   },
 });
@@ -2116,7 +2093,7 @@ weightloss_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7679735759070", "7634556059870"],
+      id: ["7634556059870", "7679735759070"],
     },
   },
 });
@@ -2134,7 +2111,7 @@ weightloss_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7679735759070", "7634556059870"],
+      id: ["7634556059870", "7679735759070"],
     },
   },
 });
@@ -2980,8 +2957,8 @@ export const getProductIdFromEngine = async (stateObj) => {
         "What results are you looking for?":
           // stateObj["What results are you looking for?"],
           "Both regrowth & loss prevention",
-        "Does anyone in your family have hair loss?":
-          // stateObj["Does anyone in your family have hair loss?"],
+        "Do you have any upcoming functions in the family in the next 30 days?":
+          // stateObj["Do you have any upcoming functions in the family in the next 30 days?"],
           "Yes",
       };
       console.log(facts, "facs");
@@ -3040,8 +3017,10 @@ export const getProductIdFromEngine = async (stateObj) => {
           stateObj["What best describes your current hair condition?"],
         "What results are you looking for?":
           stateObj["What results are you looking for?"],
-        "Does anyone in your family have hair loss?":
-          stateObj["Does anyone in your family have hair loss?"],
+        "Do you have any upcoming functions in the family in the next 30 days?":
+          stateObj[
+            "Do you have any upcoming functions in the family in the next 30 days?"
+          ],
       };
       await hair_engine_long.run(facts).then(({ events }) => {
         events.map((event) => {

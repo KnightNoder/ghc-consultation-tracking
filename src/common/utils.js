@@ -148,7 +148,8 @@ const getSendMailData = (assessment_type, stateObj) => {
       key == "Email" ||
       key == "Phone Number" ||
       key == "assessment_type" ||
-      key == "Wasn’t that easy? Would you like a free consultation?"
+      key == "Wasn’t that easy? Would you like a free consultation?" ||
+      key == "Select category for consultation"
     ) {
     } else {
       if (key == "Do you have any pre-existing problems?") {
@@ -159,8 +160,11 @@ const getSendMailData = (assessment_type, stateObj) => {
           return stateObj["Do you have any pre-existing problems?"][problem];
         });
         key = key.toString();
-      }
-      if (key) {
+        questionnaire.push({
+          question: "Do you have any pre-existing problems?",
+          answer: key,
+        });
+      } else {
         questionnaire.push({
           question: key,
           answer: stateObj[key],
