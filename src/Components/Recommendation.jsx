@@ -157,7 +157,7 @@ const Callback = ({
               console.log(error);
             });
         };
-        // sendMail();
+        sendMail();
       })
       .catch((error) => {
         console.log(error, "error");
