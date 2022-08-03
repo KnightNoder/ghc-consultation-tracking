@@ -165,7 +165,7 @@ const Callback = ({
       Set_disp(false);
     }, 4000);
 
-    // sendMail();
+    sendMail();
   }, []);
 
   return (
