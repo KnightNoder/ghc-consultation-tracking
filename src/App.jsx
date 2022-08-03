@@ -1994,8 +1994,8 @@ export default function App() {
         clickHandler: choice_clickHandler,
         question: "How many hours do you work in a day? ",
         state_Obj: stateObj,
-        proceed_link: "?page=15&type=hair",
-        back_link: "?page=13&type=hair",
+        proceed_link: "?page=11&type=hair",
+        back_link: "?page=9&type=hair",
         conditionMet: true,
         options: [
           {

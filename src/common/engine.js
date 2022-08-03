@@ -3036,8 +3036,8 @@ export const getProductIdFromEngine = async (stateObj) => {
     }
     if (stateObj["Select category for consultation"] == "hair") {
       let facts = {
-        "What best describes your current hair condition":
-          stateObj["What best describes your current hair condition"],
+        "What best describes your current hair condition?":
+          stateObj["What best describes your current hair condition?"],
         "What results are you looking for?":
           stateObj["What results are you looking for?"],
         "Does anyone in your family have hair loss?":
