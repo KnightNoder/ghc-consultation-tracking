@@ -397,7 +397,7 @@ export default function App() {
             displayText: "Spots & Marks",
           },
           {
-            value: "Dull skin (general skincare)",
+            value: "Dull skin",
             displayText: "Dull skin (general skincare)",
           },
         ],
