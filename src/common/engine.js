@@ -372,7 +372,7 @@ hair_engine.addRule({
       {
         fact: "What best describes your current hair condition?",
         operator: "equal",
-        value: "Receding + overall thinning",
+        value: "Receding + Overall thinning",
       },
       {
         fact: "What results are you looking for?",
@@ -400,7 +400,7 @@ hair_engine.addRule({
       {
         fact: "What best describes your current hair condition?",
         operator: "equal",
-        value: "Receding + overall thinning",
+        value: "Receding + Overall thinning",
       },
       {
         fact: "What results are you looking for?",
@@ -428,7 +428,7 @@ hair_engine.addRule({
       {
         fact: "What best describes your current hair condition?",
         operator: "equal",
-        value: "Receding + overall thinning",
+        value: "Receding + Overall thinning",
       },
       {
         fact: "What results are you looking for?",
@@ -456,7 +456,7 @@ hair_engine.addRule({
       {
         fact: "What best describes your current hair condition?",
         operator: "equal",
-        value: "Receding + overall thinning",
+        value: "Receding + Overall thinning",
       },
       {
         fact: "What results are you looking for?",
@@ -484,7 +484,7 @@ hair_engine.addRule({
       {
         fact: "What best describes your current hair condition?",
         operator: "equal",
-        value: "Receding + overall thinning",
+        value: "Receding + Overall thinning",
       },
       {
         fact: "What results are you looking for?",
@@ -512,7 +512,7 @@ hair_engine.addRule({
       {
         fact: "What best describes your current hair condition?",
         operator: "equal",
-        value: "Receding + overall thinning",
+        value: "Receding + Overall thinning",
       },
       {
         fact: "What results are you looking for?",
@@ -900,7 +900,7 @@ hair_engine_long.addRule({
       {
         fact: "What best describes your current hair condition?",
         operator: "equal",
-        value: "Receding + overall thinning",
+        value: "Receding + Overall thinning",
       },
       {
         fact: "What results are you looking for?",
@@ -928,7 +928,7 @@ hair_engine_long.addRule({
       {
         fact: "What best describes your current hair condition?",
         operator: "equal",
-        value: "Receding + overall thinning",
+        value: "Receding + Overall thinning",
       },
       {
         fact: "What results are you looking for?",
@@ -956,7 +956,7 @@ hair_engine_long.addRule({
       {
         fact: "What best describes your current hair condition?",
         operator: "equal",
-        value: "Receding + overall thinning",
+        value: "Receding + Overall thinning",
       },
       {
         fact: "What results are you looking for?",
@@ -984,7 +984,7 @@ hair_engine_long.addRule({
       {
         fact: "What best describes your current hair condition?",
         operator: "equal",
-        value: "Receding + overall thinning",
+        value: "Receding + Overall thinning",
       },
       {
         fact: "What results are you looking for?",
@@ -1012,7 +1012,7 @@ hair_engine_long.addRule({
       {
         fact: "What best describes your current hair condition?",
         operator: "equal",
-        value: "Receding + overall thinning",
+        value: "Receding + Overall thinning",
       },
       {
         fact: "What results are you looking for?",
@@ -1040,7 +1040,7 @@ hair_engine_long.addRule({
       {
         fact: "What best describes your current hair condition?",
         operator: "equal",
-        value: "Receding + overall thinning",
+        value: "Receding + Overall thinning",
       },
       {
         fact: "What results are you looking for?",
@@ -3043,7 +3043,7 @@ export const getProductIdFromEngine = async (stateObj) => {
         "Does anyone in your family have hair loss?":
           stateObj["Does anyone in your family have hair loss?"],
       };
-      await hair_engine.run(facts).then(({ events }) => {
+      await hair_engine_long.run(facts).then(({ events }) => {
         events.map((event) => {
           productId = event.params.id;
         });

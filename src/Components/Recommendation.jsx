@@ -44,6 +44,7 @@ const Callback = ({
         if (stateObj["assessment_type"] == "6 mins") {
           var product_id_1 = product_id[0];
           var product_id_2 = product_id[1];
+          console.log(product_id_1, product_id_2, "prods");
           if (stateObj["Select category for consultation"] == "weightloss") {
             var weight = parseInt(stateObj[""]);
             var height = parseInt(stateObj[""]);
