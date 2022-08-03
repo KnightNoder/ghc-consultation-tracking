@@ -1492,8 +1492,8 @@ export default function App() {
         clickHandler: choice_clickHandler,
         question: "How many litres of water do you drink per day?",
         state_Obj: stateObj,
-        proceed_link: "?page=10&type=weightloss",
-        back_link: "?page=8&type=weightloss",
+        proceed_link: "?page=5&type=weightloss",
+        back_link: "?page=3&type=weightloss",
         overlay_screen_text:
           "We would love to get to know you better! Can you tell us more about your lifestyle?",
         delay_time: 5000,
@@ -1525,8 +1525,8 @@ export default function App() {
         clickHandler: choice_clickHandler,
         question: "How often do you eat out?",
         state_Obj: stateObj,
-        proceed_link: "?page=4&type=weightloss",
-        back_link: "?page=6&type=weightloss",
+        proceed_link: "?page=6&type=weightloss",
+        back_link: "?page=4&type=weightloss",
         conditionMet: true,
         overlay_screen_text:
           "There's something special about outside food--tastier, love! Though homemade food is healthy :)",
@@ -1642,8 +1642,8 @@ export default function App() {
         clickHandler: choice_clickHandler,
         question: "How many hours do you work in a day? ",
         state_Obj: stateObj,
-        proceed_link: "?page=8&type=weightloss",
-        back_link: "?page=10&type=weightloss",
+        proceed_link: "?page=10&type=weightloss",
+        back_link: "?page=8&type=weightloss",
         conditionMet: true,
         options: [
           {
@@ -2180,7 +2180,7 @@ export default function App() {
         proceed_link: "?recommendation=yes",
         navigateTo: "-1",
         directNavigate: true,
-        conditionMet: true,
+        required: "true",
         options: [
           {
             value: "Yes, please ",
