@@ -187,7 +187,8 @@
     /* background: #f9dfd1; */
     /* background: var(--saturnHover); */
     background: var(--image-background);
-    border-radius: 16px 16px 16px 16px;
+    /* border-radius: 16px 16px 16px 16px; */
+    border-radius: 16px 0px 0px 16px;
     height: 100%;
 }
 
@@ -446,7 +447,7 @@
     }
 
     .product-card .image-section .image{
-        height: 100%;
+        height: 85%;
         width: 100%;
     }
 
