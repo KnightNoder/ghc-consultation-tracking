@@ -608,9 +608,11 @@ export default function App() {
         state_Obj: stateObj,
         proceed_link: "?appointment=yes",
         back_link: "?page=4&type=weightloss",
-        conditionMet: !!Object.values(
-          stateObj["Do you have any pre-existing problems?"]
-        )?.filter((x) => x).length,
+        conditionMet: stateObj["Do you have any pre-existing problems?"]
+          ? !!Object.values(
+              stateObj["Do you have any pre-existing problems?"]
+            )?.filter((x) => x).length
+          : false,
         required: true,
         checkboxOptions: [
           {
