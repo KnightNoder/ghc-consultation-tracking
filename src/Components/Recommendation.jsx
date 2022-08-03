@@ -40,6 +40,7 @@ const Callback = ({
     product_id_promise
       .then((response) => {
         product_id = response;
+        console.log(product_id, "prod id");
         if (stateObj["assessment_type"] == "6 mins") {
           var product_id_1 = product_id[0];
           var product_id_2 = product_id[1];
@@ -156,7 +157,7 @@ const Callback = ({
               console.log(error);
             });
         };
-        sendMail();
+        // sendMail();
       })
       .catch((error) => {
         console.log(error, "error");
