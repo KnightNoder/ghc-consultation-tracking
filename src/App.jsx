@@ -180,7 +180,7 @@ export default function App() {
           },
           {
             value: "weightloss",
-            displayText: "Weight Management",
+            displayText: "Wellness",
           },
           {
             value: "hair",
@@ -340,7 +340,7 @@ export default function App() {
         name: "hair page 5",
         type: "category",
         question:
-          "Do you have any upcoming functions in the family in the next 120 days?",
+          "Do you have any upcoming functions in the family in the next 30 days?",
         clickHandler: choice_clickHandler,
         state_Obj: stateObj,
         proceed_link: "?appointment=yes",
