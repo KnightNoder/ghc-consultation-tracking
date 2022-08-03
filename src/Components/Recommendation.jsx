@@ -156,12 +156,12 @@ const Callback = ({
               console.log(error);
             });
         };
+        sendMail();
       })
       .catch((error) => {
         console.log(error, "error");
       });
 
-    sendMail();
     setTimeout(() => {
       Set_disp(false);
     }, 4000);
