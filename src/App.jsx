@@ -199,7 +199,7 @@ export default function App() {
         proceed_link: `?page=1&type=${stateObj["Select category for consultation"]}`,
         back_link: "?category=yes",
         overlay_screen_text: "Tell me about yourself",
-        delay_time: "3000",
+        delay_time: "1000",
         conditionMet:
           stateObj["Age"] > 0 &&
           stateObj["Age"] < 200 &&
@@ -265,7 +265,6 @@ export default function App() {
         state_Obj: stateObj,
         proceed_link: "?page=2&type=hair",
         back_link: "?userinfo=yes",
-        delay_time: 0,
         conditionMet: true,
         required: "true",
         options: [
@@ -369,7 +368,7 @@ export default function App() {
         state_Obj: stateObj,
         proceed_link: "?page=2&type=skin",
         back_link: "?userinfo=yes",
-        delay_time: 3000,
+        delay_time: 1000,
         overlay_screen_text: `Answer a few questions so we can help`,
         required: "true",
         options: [
@@ -413,7 +412,7 @@ export default function App() {
         state_Obj: stateObj,
         proceed_link: "?page=3&type=skin",
         back_link: "?page=1&type=skin",
-        delay_time: 5000,
+        delay_time: 3000,
         overlay_screen_text: `Skin concerns are unique to each individual and one needs the right care
         to keep up with good skin health`,
         // overlay_screen_text: `It's important to listen to our bodies and understand allergies before beginning any treatment.`,
@@ -445,7 +444,7 @@ export default function App() {
         state_Obj: stateObj,
         proceed_link: "?appointment=yes",
         back_link: "?page=2&type=skin",
-        delay_time: 5000,
+        delay_time: 3000,
         overlay_screen_text: `It's important to listen to our bodies and understand allergies before beginning any treatment.`,
         required: "true",
         options: [
@@ -482,7 +481,7 @@ export default function App() {
         proceed_link: "?page=2&type=weightloss",
         back_link: "?userinfo=yes",
         conditionMet: stateObj["Height"] && stateObj["Weight"],
-        delay_time: 5000,
+        delay_time: 3000,
         overlay_screen_text: `Answer few questions so we can help`,
         inputOptions: [
           {
@@ -520,7 +519,7 @@ export default function App() {
         back_link: "?page=1&type=weightloss",
         overlay_screen_text:
           "Measuring your weight everyday helps you lose weight faster",
-        delay_time: "5000",
+        delay_time: "3000",
         conditionMet: true,
         options: [
           {
@@ -769,7 +768,7 @@ export default function App() {
         proceed_link: `?page=1&type=${stateObj["Select category for consultation"]}`,
         back_link: "?category=yes",
         overlay_screen_text: "Tell me about yourself",
-        delay_time: "3000",
+        delay_time: "1000",
         conditionMet:
           stateObj["Age"] &&
           stateObj["First Name"] &&
@@ -835,7 +834,7 @@ export default function App() {
         state_Obj: stateObj,
         proceed_link: "?page=2&type=skin",
         back_link: "?userinfo=yes",
-        delay_time: 3000,
+        delay_time: 1000,
         overlay_screen_text: `Answer a few questions so we can help`,
         required: "true",
         options: [
@@ -879,7 +878,7 @@ export default function App() {
         state_Obj: stateObj,
         proceed_link: "?page=3&type=skin",
         back_link: "?page=1&type=skin",
-        delay_time: 5000,
+        delay_time: 3000,
         overlay_screen_text: `Skin concerns are unique to each individual and one needs the right care
         to keep up with good skin health`,
         // overlay_screen_text: `It's important to listen to our bodies and understand allergies before beginning any treatment.`,
@@ -1081,7 +1080,7 @@ export default function App() {
         back_link: "?page=8&type=skin",
         overlay_screen_text:
           "We would love to get to know you better! Can you tell us more about your lifestyle?",
-        delay_time: 5000,
+        delay_time: 3000,
         conditionMet: true,
         options: [
           {
@@ -1114,7 +1113,7 @@ export default function App() {
         back_link: "?page=9&type=skin",
         conditionMet: true,
         overlay_screen_text: "There is nothing like mom's meals!",
-        delay_time: 3000,
+        delay_time: 1000,
         options: [
           {
             value: "Once a week",
@@ -1194,7 +1193,7 @@ export default function App() {
         back_link: "?page=12&type=skin",
         overlay_screen_text:
           "A good diet and sufficient rest are crucial to maintaining healthy skin.",
-        delay_time: 5000,
+        delay_time: 3000,
         conditionMet: true,
         options: [
           {
@@ -1227,7 +1226,7 @@ export default function App() {
         back_link: "?page=13&type=skin",
         overlay_screen_text:
           "Let's not tell your boss how many hours you worked yesterday.",
-        delay_time: 5000,
+        delay_time: 3000,
         conditionMet: true,
         options: [
           {
@@ -1284,7 +1283,7 @@ export default function App() {
         state_Obj: stateObj,
         proceed_link: "?page=17&type=skin",
         back_link: "?page=15&type=skin",
-        delay_time: 5000,
+        delay_time: 3000,
         overlay_screen_text: `It's important to listen to our bodies and understand allergies before beginning any treatment.`,
         required: "true",
         options: [
@@ -1399,7 +1398,7 @@ export default function App() {
         proceed_link: "?page=2&type=weightloss",
         back_link: "?userinfo=yes",
         conditionMet: stateObj["Height"] && stateObj["Weight"],
-        delay_time: 5000,
+        delay_time: 3000,
         overlay_screen_text: `Answer few questions so we can help`,
         inputOptions: [
           {
@@ -1437,7 +1436,7 @@ export default function App() {
         back_link: "?page=1&type=weightloss",
         overlay_screen_text:
           "Measuring your weight everyday helps you lose weight faster",
-        delay_time: "5000",
+        delay_time: "3000",
         input_none: true,
         conditionMet: true,
         options: [
@@ -1471,7 +1470,7 @@ export default function App() {
         back_link: "?page=2&type=weightloss",
         overlay_screen_text:
           "Your metabolism is highly responsive to your daily routine and adjusts accordingly.",
-        delay_time: 5000,
+        delay_time: 3000,
         conditionMet: true,
         options: [
           {
@@ -1500,7 +1499,7 @@ export default function App() {
         back_link: "?page=3&type=weightloss",
         overlay_screen_text:
           "We would love to get to know you better! Can you tell us more about your lifestyle?",
-        delay_time: 5000,
+        delay_time: 3000,
         conditionMet: true,
         options: [
           {
@@ -1534,7 +1533,7 @@ export default function App() {
         conditionMet: true,
         overlay_screen_text:
           "There's something special about outside food--tastier, love! Though homemade food is healthy :)",
-        delay_time: 5000,
+        delay_time: 3000,
         options: [
           {
             value: "Once a week",
@@ -1588,7 +1587,7 @@ export default function App() {
         back_link: "?page=6&type=weightloss",
         overlay_screen_text:
           "A good diet and sufficient rest are crucial to maintaining healthy skin.",
-        delay_time: 5000,
+        delay_time: 3000,
         conditionMet: true,
         options: [
           {
@@ -1621,7 +1620,7 @@ export default function App() {
         back_link: "?page=7&type=weightloss",
         overlay_screen_text:
           "Let's not tell your boss how many hours you worked yesterday.",
-        delay_time: 5000,
+        delay_time: 3000,
         conditionMet: true,
         options: [
           {
@@ -1786,7 +1785,7 @@ export default function App() {
         state_Obj: stateObj,
         proceed_link: "?page=3&type=hair",
         back_link: "?page=1&type=hair",
-        delay_time: 3000,
+        delay_time: 1000,
         overlay_screen_text: ` Hair loss affects 60.5 % of the total Men population in India`,
         required: "true",
         options: [
