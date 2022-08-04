@@ -101,6 +101,32 @@ export default function App() {
     let age = stateObj["Age"];
     if (age > 0 && age < 200) return true;
   };
+
+  const input_check = (e) => {
+    var key;
+    var keychar;
+
+    if (window.event) key = window.event.keyCode;
+    else if (e) key = e.which;
+    else return true;
+    keychar = String.fromCharCode(key);
+
+    // control keys
+    if (
+      key == 0 ||
+      key == 8 ||
+      key == 9 ||
+      key == 13 ||
+      key == 27 ||
+      key == 37 ||
+      key == 39 ||
+      key == 46
+    )
+      return true;
+    // numbers
+    else if ("0123456789".indexOf(keychar) > -1) return true;
+    else e.preventDefault();
+  };
   const choice_clickHandler = (question, value) => {
     Set_stateObj((prevState) => {
       return { ...prevState, [question]: value };
@@ -123,7 +149,6 @@ export default function App() {
   };
 
   const checkBoxHandler = (text, value, question) => {
-    console.log(question, "question");
     if (text == "No such problems") {
       Set_stateObj((prevState) => {
         return {
@@ -201,8 +226,8 @@ export default function App() {
         overlay_screen_text: "Tell me about yourself",
         delay_time: "1000",
         conditionMet:
-          stateObj["Age"] > 0 &&
-          stateObj["Age"] < 200 &&
+          parseInt(stateObj["Age"]) > 0 &&
+          parseInt(stateObj["Age"]) < 200 &&
           stateObj["First Name"] &&
           stateObj["Last Name"] &&
           phone_number_check(stateObj["Phone Number"]) &&
@@ -242,6 +267,7 @@ export default function App() {
             value: stateObj["Phone Number"],
             inputMode: "numeric",
             validity: phone_number_check(),
+            inputCheck: input_check,
           },
           {
             placeholder: "Eg: Age",
@@ -252,6 +278,7 @@ export default function App() {
             required: "*",
             inputMode: "numeric",
             validity: age_check(),
+            inputCheck: input_check,
           },
         ],
       },
@@ -493,6 +520,7 @@ export default function App() {
             clickHandler: choice_clickHandler,
             required: "*",
             validity: stateObj["Height"],
+            inputCheck: input_check,
           },
           {
             heading: "Weight",
@@ -503,6 +531,7 @@ export default function App() {
             clickHandler: choice_clickHandler,
             required: "*",
             validity: stateObj["Weight"],
+            inputCheck: input_check,
           },
         ],
       },
@@ -623,25 +652,30 @@ export default function App() {
           },
           {
             value:
-              stateObj[`Do you have any pre-existing problems?`]?.["Thyroid"],
+              stateObj[`Do you have any pre-existing problems?`]?.["Thyroid"] ||
+              false,
             displayText: "Thyroid",
             onChange: checkBoxHandler,
           },
           {
             value:
-              stateObj[`Do you have any pre-existing problems?`]?.["Heart"],
+              stateObj[`Do you have any pre-existing problems?`]?.["Heart"] ||
+              false,
             displayText: "Heart",
             onChange: checkBoxHandler,
           },
           {
             value:
-              stateObj[`Do you have any pre-existing problems?`]?.["Diabetes"],
+              stateObj[`Do you have any pre-existing problems?`]?.[
+                "Diabetes"
+              ] || false,
             displayText: "Diabetes",
             onChange: checkBoxHandler,
           },
           {
             value:
-              stateObj[`Do you have any pre-existing problems?`]?.["Kidney"],
+              stateObj[`Do you have any pre-existing problems?`]?.["Kidney"] ||
+              false,
             displayText: "Kidney",
             onChange: checkBoxHandler,
           },
@@ -649,7 +683,7 @@ export default function App() {
             value:
               stateObj[`Do you have any pre-existing problems?`]?.[
                 "No such problems"
-              ],
+              ] || false,
             displayText: "No such problems",
             onChange: checkBoxHandler,
           },
@@ -769,11 +803,12 @@ export default function App() {
         overlay_screen_text: "Tell me about yourself",
         delay_time: "1000",
         conditionMet:
-          stateObj["Age"] &&
+          parseInt(stateObj["Age"]) > 0 &&
+          parseInt(stateObj["Age"]) < 200 &&
           stateObj["First Name"] &&
           stateObj["Last Name"] &&
-          stateObj["Phone Number"] &&
-          stateObj["Email"],
+          phone_number_check(stateObj["Phone Number"]) &&
+          email_check(stateObj["Email"]),
         inputOptions: [
           {
             placeholder: "Eg: John",
@@ -793,7 +828,7 @@ export default function App() {
           },
           {
             placeholder: "Eg: johndoe@ghc.health",
-            requiredErrorText: "Please enter valid Email",
+            requiredErrorText: "Please enter valid email",
             heading: "Email",
             clickHandler: choice_clickHandler,
             required: "*",
@@ -806,19 +841,21 @@ export default function App() {
             heading: "Phone Number",
             clickHandler: choice_clickHandler,
             required: "*",
-            inputMode: "numeric",
             value: stateObj["Phone Number"],
+            inputMode: "numeric",
             validity: phone_number_check(),
+            inputCheck: input_check,
           },
           {
             placeholder: "Eg: Age",
             requiredErrorText: "Please enter valid age",
             heading: "Age",
             clickHandler: choice_clickHandler,
+            value: stateObj["Age"],
             required: "*",
             inputMode: "numeric",
-            value: stateObj["Age"],
             validity: age_check(),
+            inputCheck: input_check,
           },
         ],
       },
@@ -1409,6 +1446,7 @@ export default function App() {
             clickHandler: choice_clickHandler,
             required: "*",
             validity: stateObj["Height"],
+            inputCheck: input_check,
           },
           {
             heading: "Weight",
@@ -1419,6 +1457,7 @@ export default function App() {
             clickHandler: choice_clickHandler,
             required: "*",
             validity: stateObj["Weight"],
+            inputCheck: input_check,
           },
         ],
       },

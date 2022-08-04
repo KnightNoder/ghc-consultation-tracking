@@ -18,8 +18,6 @@ const GenericButton = ({
   const navigate = useNavigate();
   const navigateCheck = () => {
     if (directNavigate) {
-      console.log(directNavigate, "direct navigate");
-      console.log(navigateTo, "navigate to");
       navigate(parseInt(navigateTo), { replace: true });
       set_url_function("/" + parseInt(navigateTo));
     } else if (productNavigate) {

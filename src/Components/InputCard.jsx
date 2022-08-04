@@ -13,7 +13,6 @@ const InputCard = ({
   inputCheck,
   // key,
 }) => {
-  console.log(validity, "validity");
   return (
     <>
       <h3 className="input-card-label">
@@ -23,7 +22,6 @@ const InputCard = ({
       <input
         className="input"
         onChange={(e) => {
-          console.log(e.target.value);
           onchange(heading, e.target.value);
         }}
         key={heading.replaceAll(" ", "_").toLowerCase()}
@@ -31,6 +29,7 @@ const InputCard = ({
         inputMode={inputMode}
         type="text"
         placeholder={placeholder}
+        onKeyDown={inputCheck}
       />
       <span
         style={!validity ? { visibility: "visible" } : { visibility: "hidden" }}

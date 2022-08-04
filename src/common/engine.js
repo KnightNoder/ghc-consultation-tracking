@@ -2952,19 +2952,16 @@ export const getProductIdFromEngine = async (stateObj) => {
     if (stateObj["Select category for consultation"] == "hair") {
       let facts = {
         "What best describes your current hair condition?":
-          // stateObj["What best describes your current hair condition?"],
-          "Receding hairline",
+          stateObj["What best describes your current hair condition?"],
         "What results are you looking for?":
-          // stateObj["What results are you looking for?"],
-          "Both regrowth & loss prevention",
+          stateObj["What results are you looking for?"],
         "Do you have any upcoming functions in the family in the next 30 days?":
-          // stateObj["Do you have any upcoming functions in the family in the next 30 days?"],
-          "Yes",
+          stateObj[
+            "Do you have any upcoming functions in the family in the next 30 days?"
+          ],
       };
-      console.log(facts, "facs");
       await hair_engine.run(facts).then(({ events }) => {
         events.map((event) => {
-          console.log(event.params.id, "params id");
           productId = event.params.id;
         });
       });
@@ -2993,7 +2990,6 @@ export const getProductIdFromEngine = async (stateObj) => {
       };
       await skin_engine_long.run(facts).then(({ events }) => {
         events.map((event) => {
-          console.log(event.params.id);
           productId = event.params.id;
         });
       });

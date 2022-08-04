@@ -40,11 +40,9 @@ const Callback = ({
     product_id_promise
       .then((response) => {
         product_id = response;
-        console.log(product_id, "prod id");
         if (stateObj["assessment_type"] == "6 mins") {
           var product_id_1 = product_id[0];
           var product_id_2 = product_id[1];
-          console.log(product_id_1, product_id_2, "prods");
           if (stateObj["Select category for consultation"] == "weightloss") {
             var weight = parseInt(stateObj[""]);
             var height = parseInt(stateObj[""]);
@@ -70,7 +68,6 @@ const Callback = ({
         if (stateObj["Select category for consultation"] == "skin") {
           category = "skin";
         }
-        console.log(category, "cat");
         const getData = async () => {
           var config = {
             method: "get",
@@ -111,7 +108,6 @@ const Callback = ({
                 const product_recommended_2 = response.data["products"].filter(
                   (item) => item.id == product_id_2
                 );
-                console.log(product_recommended_2, "reco2");
                 let product_title_2 = product_recommended_2[0]["title"];
                 const product_price_2 =
                   product_recommended_2[0]["variants"][0]["price"];
@@ -140,7 +136,6 @@ const Callback = ({
         getData();
 
         const data = getSendMailData(stateObj["assessment_type"], stateObj);
-        console.log(data, "mail data");
         const sendMail = async () => {
           const config = {
             method: "post",

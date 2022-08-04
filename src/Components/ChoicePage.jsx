@@ -91,6 +91,7 @@ const ChoicePage = ({
                       required={option.required}
                       inputMode={option.inputMode}
                       validity={option.validity}
+                      inputCheck={option.inputCheck ? option.inputCheck : null}
                     />
                   </>
                 );
@@ -99,14 +100,13 @@ const ChoicePage = ({
 
           {checkboxOptions
             ? checkboxOptions.map((option) => {
-                console.log(option.value, "value");
                 return (
                   <>
                     <CheckBoxCard
                       value={option.value}
                       text={option.displayText}
                       state_Obj={state_Obj}
-                      // key={option.displayText}
+                      key={option.displayText}
                       onchange={(text, value, question) =>
                         option.onChange(text, value, question)
                       }
