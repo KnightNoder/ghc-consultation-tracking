@@ -646,21 +646,21 @@ export default function App() {
             value:
               stateObj[`Do you have any pre-existing problems?`]?.[
                 "Cholestrol"
-              ],
+              ] || 0,
             displayText: "Cholestrol",
             onChange: checkBoxHandler,
           },
           {
             value:
               stateObj[`Do you have any pre-existing problems?`]?.["Thyroid"] ||
-              false,
+              0,
             displayText: "Thyroid",
             onChange: checkBoxHandler,
           },
           {
             value:
               stateObj[`Do you have any pre-existing problems?`]?.["Heart"] ||
-              false,
+              0,
             displayText: "Heart",
             onChange: checkBoxHandler,
           },
@@ -668,14 +668,14 @@ export default function App() {
             value:
               stateObj[`Do you have any pre-existing problems?`]?.[
                 "Diabetes"
-              ] || false,
+              ] || 0,
             displayText: "Diabetes",
             onChange: checkBoxHandler,
           },
           {
             value:
               stateObj[`Do you have any pre-existing problems?`]?.["Kidney"] ||
-              false,
+              0,
             displayText: "Kidney",
             onChange: checkBoxHandler,
           },
@@ -683,7 +683,7 @@ export default function App() {
             value:
               stateObj[`Do you have any pre-existing problems?`]?.[
                 "No such problems"
-              ] || false,
+              ] || 0,
             displayText: "No such problems",
             onChange: checkBoxHandler,
           },

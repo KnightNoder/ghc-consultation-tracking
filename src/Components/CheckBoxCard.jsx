@@ -5,7 +5,6 @@ import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import RadioButtonUncheckedIcon from "@mui/icons-material/RadioButtonUnchecked";
 
 const CheckBoxCard = ({ text, onchange, value, question }) => {
-  console.log(value, "value");
   return (
     <>
       <div
