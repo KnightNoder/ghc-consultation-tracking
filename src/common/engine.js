@@ -389,7 +389,7 @@ hair_engine.addRule({
   event: {
     type: "product id",
     params: {
-      id: "6933666726052",
+      id: "7730670010590",
     },
   },
 });
@@ -417,7 +417,7 @@ hair_engine.addRule({
   event: {
     type: "product id",
     params: {
-      id: "6920580530340",
+      id: "7730670010590",
     },
   },
 });
@@ -445,7 +445,7 @@ hair_engine.addRule({
   event: {
     type: "product id",
     params: {
-      id: "6920192950436",
+      id: "7730670010590",
     },
   },
 });
