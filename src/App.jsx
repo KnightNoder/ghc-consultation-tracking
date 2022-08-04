@@ -172,6 +172,24 @@ export default function App() {
     }
   };
 
+  const getBackPage = () => {
+    if (stateObj["assessment_type"] == "30 sec") {
+      if (stateObj["Select category for consultation"] == "skin")
+        return "?page=3&type=skin";
+      if (stateObj["Select category for consultation"] == "weightloss")
+        return "?page=5&type=weightloss";
+      if (stateObj["Select category for consultation"] == "hair")
+        return "?page=4&type=hair";
+    } else {
+      if (stateObj["Select category for consultation"] == "skin")
+        return "?page=18&type=skin";
+      if (stateObj["Select category for consultation"] == "weightloss")
+        return "?page=12&type=weightloss";
+      if (stateObj["Select category for consultation"] == "hair")
+        return "?page=15&type=hair";
+    }
+  };
+
   const allPages_Saturn_Short = {
     assessment: [
       {
@@ -371,7 +389,7 @@ export default function App() {
         clickHandler: choice_clickHandler,
         state_Obj: stateObj,
         proceed_link: "?appointment=yes",
-        back_link: "?page=4&type=hair",
+        back_link: "?page=3&type=hair",
         required: "true",
         options: [
           {
@@ -698,8 +716,7 @@ export default function App() {
         question: "Wasn’t that easy? Would you like a free consultation?",
         state_Obj: stateObj,
         proceed_link: "?recommendation=yes",
-        navigateTo: "-1",
-        directNavigate: true,
+        back_link: getBackPage(),
         required: "true",
         options: [
           {
@@ -2219,8 +2236,7 @@ export default function App() {
         question: "Wasn’t that easy? Would you like a free consultation?",
         state_Obj: stateObj,
         proceed_link: "?recommendation=yes",
-        navigateTo: "-1",
-        directNavigate: true,
+        back_link: getBackPage(),
         required: "true",
         options: [
           {
