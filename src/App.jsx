@@ -336,18 +336,30 @@ export default function App() {
           {
             value: "Receding hairline",
             displayText: "Receding hairline",
+            image_exists: true,
+            image:
+              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/Receding_hairline.png?v=1659691999",
           },
           {
             value: "Thinning at the crown",
             displayText: "Thinning at the crown",
+            image_exists: true,
+            image:
+              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/Crown_thinning.png?v=1659691999",
           },
           {
             value: "Overall hair loss/thinning",
             displayText: "Overall hair loss/thinning",
+            image_exists: true,
+            image:
+              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/Overall_hair_loss_thinning.png?v=1659692000",
           },
           {
             value: "Receding + Overall thinning",
             displayText: "Receding + Overall thinning",
+            image_exists: true,
+            image:
+              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/Receding_Overall_thinning.png?v=1659691999",
           },
         ],
       },
@@ -1928,18 +1940,30 @@ export default function App() {
           {
             value: "Receding hairline",
             displayText: "Receding hairline",
+            image_exists: true,
+            image:
+              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/Receding_hairline.png?v=1659691999",
           },
           {
             value: "Thinning at the crown",
             displayText: "Thinning at the crown",
+            image_exists: true,
+            image:
+              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/Crown_thinning.png?v=1659691999",
           },
           {
             value: "Overall hair loss/thinning",
             displayText: "Overall hair loss/thinning",
+            image_exists: true,
+            image:
+              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/Overall_hair_loss_thinning.png?v=1659692000",
           },
           {
             value: "Receding + Overall thinning",
             displayText: "Receding + Overall thinning",
+            image_exists: true,
+            image:
+              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/Receding_Overall_thinning.png?v=1659691999",
           },
         ],
       },
@@ -2560,18 +2584,30 @@ export default function App() {
           {
             value: "Receding hairline",
             displayText: "Receding hairline",
+            image_exists: true,
+            image:
+              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/Receding_hairline.png?v=1659691999",
           },
           {
             value: "Thinning at the crown",
             displayText: "Thinning at the crown",
+            image_exists: true,
+            image:
+              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/Crown_thinning.png?v=1659691999",
           },
           {
             value: "Overall hair loss/thinning",
             displayText: "Overall hair loss/thinning",
+            image_exists: true,
+            image:
+              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/Overall_hair_loss_thinning.png?v=1659692000",
           },
           {
             value: "Receding + Overall thinning",
             displayText: "Receding + Overall thinning",
+            image_exists: true,
+            image:
+              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/Receding_Overall_thinning.png?v=1659691999",
           },
         ],
       },

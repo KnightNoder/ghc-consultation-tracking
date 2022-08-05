@@ -10,6 +10,13 @@ const CustomRadio = ({
   question,
   key,
 }) => {
+  const ImageStyle = {
+    display: "block",
+  };
+
+  const NoImageStyle = {
+    display: "none",
+  };
   return (
     <>
       <div
@@ -34,6 +41,12 @@ const CustomRadio = ({
             checked={state_Obj[question] == option.value}
             key={key}
           />
+        </div>
+        <div
+          className="two"
+          style={option.image_exists ? ImageStyle : NoImageStyle}
+        >
+          <img src={option.image} className="image-section" alt="" />
         </div>
         <div
           className={`three ${

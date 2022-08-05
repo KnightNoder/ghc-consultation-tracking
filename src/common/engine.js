@@ -6,6 +6,17 @@ let skin_engine_long = new Engine();
 let weightloss_engine = new Engine();
 let weightloss_engine_long = new Engine();
 
+let mars_hair_engine = new Engine();
+let mars_hair_engine_long = new Engine();
+let mars_skin_engine = new Engine();
+let mars_skin_engine_long = new Engine();
+let mars_weightloss_engine = new Engine();
+let mars_weightloss_engine_long = new Engine();
+let mars_performance_engine = new Engine();
+let mars_performance_engine_long = new Engine();
+let mars_beard_engine_long = new Engine();
+let mars_beard_engine = new Engine();
+
 //Hair short
 
 hair_engine.addRule({
@@ -2933,97 +2944,1240 @@ skin_engine_long.addRule({
   },
 });
 
+// Mars recommendations
+
+// Vitamin C
+mars_hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "Vitamin C",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Open pores",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "7637440266488",
+    },
+  },
+});
+
+mars_hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "Vitamin C",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Pigmentation",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "7524810391800",
+    },
+  },
+});
+
+mars_hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "Vitamin C",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Active Acne",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "6826093478052",
+    },
+  },
+});
+
+mars_hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "Vitamin C",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Aging",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "6825877635236",
+    },
+  },
+});
+
+mars_hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "Vitamin C",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Dark circles",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "7637452128504",
+    },
+  },
+});
+
+mars_hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "Vitamin C",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Acne marks & spots",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "6826093478052",
+    },
+  },
+});
+
+mars_hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "Vitamin C",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Dull Skin",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "7516963406072",
+    },
+  },
+});
+
+//Skin- None
+
+mars_hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "None",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Open pores",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "7637440266488",
+    },
+  },
+});
+
+mars_hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "None",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Pigmentation",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "7524810391800",
+    },
+  },
+});
+
+mars_hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "None",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Active Acne",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "6826093478052",
+    },
+  },
+});
+
+mars_hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "None",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Aging",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "6825877635236",
+    },
+  },
+});
+
+mars_hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "None",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Dark circles",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "7637452128504",
+    },
+  },
+});
+
+mars_hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "None",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Acne marks & spots",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "6826093478052",
+    },
+  },
+});
+
+mars_hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "None",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Dull Skin",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "7516963406072",
+    },
+  },
+});
+
+// Salicylic acid
+
+mars_hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "None",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Open pores",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "7637440266488",
+    },
+  },
+});
+
+mars_hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "None",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Pigmentation",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "7524810391800",
+    },
+  },
+});
+
+mars_hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "None",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Active Acne",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "6826093478052",
+    },
+  },
+});
+
+mars_hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "None",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Aging",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "6825877635236",
+    },
+  },
+});
+
+mars_hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "None",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Dark circles",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "7637452128504",
+    },
+  },
+});
+
+mars_hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "None",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Acne marks & spots",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "6826093478052",
+    },
+  },
+});
+
+mars_hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "None",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Dull Skin",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "7516963406072",
+    },
+  },
+});
+
+// Retinol
+
+mars_hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "None",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Open pores",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "7637440266488",
+    },
+  },
+});
+
+mars_hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "None",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Pigmentation",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "7524810391800",
+    },
+  },
+});
+
+mars_hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "None",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Active Acne",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "6826093478052",
+    },
+  },
+});
+
+mars_hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "None",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Aging",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "6825877635236",
+    },
+  },
+});
+
+mars_hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "None",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Dark circles",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "7637452128504",
+    },
+  },
+});
+
+mars_hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "None",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Acne marks & spots",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "6826093478052",
+    },
+  },
+});
+
+mars_hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "None",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Dull Skin",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "7516963406072",
+    },
+  },
+});
+
+// Kojic Acid
+
+mars_hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "None",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Open pores",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "7637440266488",
+    },
+  },
+});
+
+mars_hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "None",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Pigmentation",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "7524810391800",
+    },
+  },
+});
+
+mars_hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "None",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Active Acne",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "6826093478052",
+    },
+  },
+});
+
+mars_hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "None",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Aging",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "6825877635236",
+    },
+  },
+});
+
+mars_hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "None",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Dark circles",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "7637452128504",
+    },
+  },
+});
+
+mars_hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "None",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Acne marks & spots",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "6826093478052",
+    },
+  },
+});
+
+mars_hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "None",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Dull Skin",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "7516963406072",
+    },
+  },
+});
+
+// Niacinamide
+
+mars_hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "None",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Open pores",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "7637440266488",
+    },
+  },
+});
+
+mars_hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "None",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Pigmentation",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "7524810391800",
+    },
+  },
+});
+
+mars_hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "None",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Active Acne",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "6826093478052",
+    },
+  },
+});
+
+mars_hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "None",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Aging",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "6825877635236",
+    },
+  },
+});
+
+mars_hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "None",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Dark circles",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "7637452128504",
+    },
+  },
+});
+
+mars_hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "None",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Acne marks & spots",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "6826093478052",
+    },
+  },
+});
+
+mars_hair_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "None",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Dull Skin",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "7516963406072",
+    },
+  },
+});
+
 export const getProductIdFromEngine = async (stateObj) => {
   var productId = "";
-  if (stateObj["assessment_type"] == "30 sec") {
-    if (stateObj["Select category for consultation"] == "skin") {
-      let facts = {
-        "Are you allergic to any of the ingredients below?":
-          stateObj["Are you allergic to any of the ingredients below?"],
-        "What are you concerned about?":
-          stateObj["What are you concerned about?"],
-      };
-      await skin_engine.run(facts).then(({ events }) => {
-        events.map((event) => {
-          productId = event.params.id;
+  const assessment_type = stateObj["assessment_type"];
+  const category = stateObj["Select category for consultation"];
+  if (process.env.REACT_APP_BRAND == "Saturn") {
+    if (assessment_type == "30 sec") {
+      if (stateObj["Select category for consultation"] == "skin") {
+        let facts = {
+          "Are you allergic to any of the ingredients below?":
+            stateObj["Are you allergic to any of the ingredients below?"],
+          "What are you concerned about?":
+            stateObj["What are you concerned about?"],
+        };
+        await skin_engine.run(facts).then(({ events }) => {
+          events.map((event) => {
+            productId = event.params.id;
+          });
         });
-      });
-    }
-    if (stateObj["Select category for consultation"] == "hair") {
-      let facts = {
-        "What best describes your current hair condition?":
-          stateObj["What best describes your current hair condition?"],
-        "What results are you looking for?":
-          stateObj["What results are you looking for?"],
-        "Do you have any upcoming functions in the family in the next 30 days?":
-          stateObj[
-            "Do you have any upcoming functions in the family in the next 30 days?"
-          ],
-      };
-      await hair_engine.run(facts).then(({ events }) => {
-        events.map((event) => {
-          productId = event.params.id;
+      }
+      if (stateObj["Select category for consultation"] == "hair") {
+        let facts = {
+          "What best describes your current hair condition?":
+            stateObj["What best describes your current hair condition?"],
+          "What results are you looking for?":
+            stateObj["What results are you looking for?"],
+          "Do you have any upcoming functions in the family in the next 30 days?":
+            stateObj[
+              "Do you have any upcoming functions in the family in the next 30 days?"
+            ],
+        };
+        await hair_engine.run(facts).then(({ events }) => {
+          events.map((event) => {
+            productId = event.params.id;
+          });
         });
-      });
-    }
-    if (stateObj["Select category for consultation"] == "weightloss") {
-      const weight = parseInt(stateObj["Weight"]);
-      const height = parseInt(stateObj["Height"]);
-      const bmi_value = (weight * 10000) / (height * height);
-      let facts = {
-        BMI: parseInt(bmi_value),
-      };
-      await weightloss_engine.run(facts).then(({ events }) => {
-        events.map((event) => {
-          productId = event.params.id;
+      }
+      if (stateObj["Select category for consultation"] == "weightloss") {
+        const weight = parseInt(stateObj["Weight"]);
+        const height = parseInt(stateObj["Height"]);
+        const bmi_value = (weight * 10000) / (height * height);
+        let facts = {
+          BMI: parseInt(bmi_value),
+        };
+        await weightloss_engine.run(facts).then(({ events }) => {
+          events.map((event) => {
+            productId = event.params.id;
+          });
         });
-      });
+      }
+      return productId;
+    } else {
+      if (category == "skin") {
+        let facts = {
+          "Are you allergic to any of the ingredients below?":
+            stateObj["Are you allergic to any of the ingredients below?"],
+          "What are you concerned about?":
+            stateObj["What are you concerned about?"],
+        };
+        await skin_engine_long.run(facts).then(({ events }) => {
+          events.map((event) => {
+            productId = event.params.id;
+          });
+        });
+      }
+      if (category == "weightloss") {
+        const weight = parseInt(stateObj["Weight"]);
+        const height = parseInt(stateObj["Height"]);
+        const bmi_value = (weight * 10000) / (height * height);
+        let facts = {
+          BMI: parseInt(bmi_value),
+        };
+        await weightloss_engine_long.run(facts).then(({ events }) => {
+          events.map((event) => {
+            productId = event.params.id;
+          });
+        });
+      }
+      if (category == "hair") {
+        let facts = {
+          "What best describes your current hair condition?":
+            stateObj["What best describes your current hair condition?"],
+          "What results are you looking for?":
+            stateObj["What results are you looking for?"],
+          "Do you have any upcoming functions in the family in the next 30 days?":
+            stateObj[
+              "Do you have any upcoming functions in the family in the next 30 days?"
+            ],
+        };
+        await hair_engine_long.run(facts).then(({ events }) => {
+          events.map((event) => {
+            productId = event.params.id;
+          });
+        });
+      }
+      return productId;
     }
-    return productId;
   } else {
-    if (stateObj["Select category for consultation"] == "skin") {
-      let facts = {
-        "Are you allergic to any of the ingredients below?":
-          stateObj["Are you allergic to any of the ingredients below?"],
-        "What are you concerned about?":
-          stateObj["What are you concerned about?"],
-      };
-      await skin_engine_long.run(facts).then(({ events }) => {
-        events.map((event) => {
-          productId = event.params.id;
+    if (assessment_type == "30 sec") {
+      if (category == "skin") {
+        let facts = {
+          "Are you allergic to any of the ingredients below?":
+            stateObj["Are you allergic to any of the ingredients below?"],
+          "What are you concerned about?":
+            stateObj["What are you concerned about?"],
+        };
+        await skin_engine.run(facts).then(({ events }) => {
+          events.map((event) => {
+            productId = event.params.id;
+          });
         });
-      });
-    }
-    if (stateObj["Select category for consultation"] == "weightloss") {
-      const weight = parseInt(stateObj["Weight"]);
-      const height = parseInt(stateObj["Height"]);
-      const bmi_value = (weight * 10000) / (height * height);
-      let facts = {
-        BMI: parseInt(bmi_value),
-      };
-      await weightloss_engine_long.run(facts).then(({ events }) => {
-        events.map((event) => {
-          productId = event.params.id;
+      }
+      if (category == "hair") {
+        let facts = {
+          "What best describes your current hair condition?":
+            stateObj["What best describes your current hair condition?"],
+          "What results are you looking for?":
+            stateObj["What results are you looking for?"],
+          "Do you have any upcoming functions in the family in the next 30 days?":
+            stateObj[
+              "Do you have any upcoming functions in the family in the next 30 days?"
+            ],
+        };
+        await hair_engine.run(facts).then(({ events }) => {
+          events.map((event) => {
+            productId = event.params.id;
+          });
         });
-      });
-    }
-    if (stateObj["Select category for consultation"] == "hair") {
-      let facts = {
-        "What best describes your current hair condition?":
-          stateObj["What best describes your current hair condition?"],
-        "What results are you looking for?":
-          stateObj["What results are you looking for?"],
-        "Do you have any upcoming functions in the family in the next 30 days?":
-          stateObj[
-            "Do you have any upcoming functions in the family in the next 30 days?"
-          ],
-      };
-      await hair_engine_long.run(facts).then(({ events }) => {
-        events.map((event) => {
-          productId = event.params.id;
+      }
+      if (category == "weightloss") {
+        const weight = parseInt(stateObj["Weight"]);
+        const height = parseInt(stateObj["Height"]);
+        const bmi_value = (weight * 10000) / (height * height);
+        let facts = {
+          BMI: parseInt(bmi_value),
+        };
+        await weightloss_engine.run(facts).then(({ events }) => {
+          events.map((event) => {
+            productId = event.params.id;
+          });
         });
-      });
+      }
+      if (category == "beard") {
+        let facts = {
+          "What best describes your current hair condition?":
+            stateObj["What best describes your current hair condition?"],
+          "What results are you looking for?":
+            stateObj["What results are you looking for?"],
+          "Do you have any upcoming functions in the family in the next 30 days?":
+            stateObj[
+              "Do you have any upcoming functions in the family in the next 30 days?"
+            ],
+        };
+        await hair_engine.run(facts).then(({ events }) => {
+          events.map((event) => {
+            productId = event.params.id;
+          });
+        });
+      }
+      if (category == "performance") {
+        let facts = {
+          "What best describes your current hair condition?":
+            stateObj["What best describes your current hair condition?"],
+          "What results are you looking for?":
+            stateObj["What results are you looking for?"],
+          "Do you have any upcoming functions in the family in the next 30 days?":
+            stateObj[
+              "Do you have any upcoming functions in the family in the next 30 days?"
+            ],
+        };
+        await hair_engine.run(facts).then(({ events }) => {
+          events.map((event) => {
+            productId = event.params.id;
+          });
+        });
+      }
+      return productId;
+    } else {
+      if (category == "skin") {
+        let facts = {
+          "Are you allergic to any of the ingredients below?":
+            stateObj["Are you allergic to any of the ingredients below?"],
+          "What are you concerned about?":
+            stateObj["What are you concerned about?"],
+        };
+        await skin_engine_long.run(facts).then(({ events }) => {
+          events.map((event) => {
+            productId = event.params.id;
+          });
+        });
+      }
+      if (category == "weightloss") {
+        const weight = parseInt(stateObj["Weight"]);
+        const height = parseInt(stateObj["Height"]);
+        const bmi_value = (weight * 10000) / (height * height);
+        let facts = {
+          BMI: parseInt(bmi_value),
+        };
+        await weightloss_engine_long.run(facts).then(({ events }) => {
+          events.map((event) => {
+            productId = event.params.id;
+          });
+        });
+      }
+      if (category == "hair") {
+        let facts = {
+          "What best describes your current hair condition?":
+            stateObj["What best describes your current hair condition?"],
+          "What results are you looking for?":
+            stateObj["What results are you looking for?"],
+          "Do you have any upcoming functions in the family in the next 30 days?":
+            stateObj[
+              "Do you have any upcoming functions in the family in the next 30 days?"
+            ],
+        };
+        await hair_engine_long.run(facts).then(({ events }) => {
+          events.map((event) => {
+            productId = event.params.id;
+          });
+        });
+      }
+      if (category == "beard") {
+        let facts = {
+          "What best describes your current hair condition?":
+            stateObj["What best describes your current hair condition?"],
+          "What results are you looking for?":
+            stateObj["What results are you looking for?"],
+          "Do you have any upcoming functions in the family in the next 30 days?":
+            stateObj[
+              "Do you have any upcoming functions in the family in the next 30 days?"
+            ],
+        };
+        await hair_engine_long.run(facts).then(({ events }) => {
+          events.map((event) => {
+            productId = event.params.id;
+          });
+        });
+      }
+      if (category == "performance") {
+        let facts = {
+          "What best describes your current hair condition?":
+            stateObj["What best describes your current hair condition?"],
+          "What results are you looking for?":
+            stateObj["What results are you looking for?"],
+          "Do you have any upcoming functions in the family in the next 30 days?":
+            stateObj[
+              "Do you have any upcoming functions in the family in the next 30 days?"
+            ],
+        };
+        await hair_engine_long.run(facts).then(({ events }) => {
+          events.map((event) => {
+            productId = event.params.id;
+          });
+        });
+      }
+      return productId;
     }
-    return productId;
   }
 };

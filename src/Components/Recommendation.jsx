@@ -193,9 +193,8 @@ const Callback = ({
                 Thank you for filling out the assessment!
               </div>
               {stateObj[
-                "Wasn’t that easy? Would you like a free consultation?" ==
-                  "Yes, please"
-              ] ? (
+                "Wasn’t that easy? Would you like a free consultation?"
+              ] == "Yes, please" ? (
                 <div className="designation">
                   One of our physician’s assistants will call you shortly.
                 </div>
@@ -203,7 +202,12 @@ const Callback = ({
                 <div className="designation"> </div>
               )}
               <div className="designation">
-                {true ? "Meanwhile," : ""} Check out our recommended products.
+                {stateObj[
+                  "Wasn’t that easy? Would you like a free consultation?"
+                ] == "Yes, please"
+                  ? "Meanwhile,"
+                  : ""}{" "}
+                Check out our recommended products.
               </div>
             </div>
           </div>

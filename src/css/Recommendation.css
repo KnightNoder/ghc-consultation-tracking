@@ -465,3 +465,17 @@
         color: black
     }
 }
+
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+    .product-card .details .heading {
+        font-size: 16px;
+    }
+
+    .product-card .image-section{
+        flex: 4
+    }
+
+    .reco-1 {
+        padding: 0 26%;
+    }
+}
