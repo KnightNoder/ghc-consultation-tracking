@@ -3,6 +3,7 @@ import ProceedTemplate from "./ProceedTemplate";
 import "../css/ChoicePage.css";
 import "../css/ChoiceCard.css";
 import ImageCard from "./ImageCard";
+import ProgressBarComp from "./ProgressBarComp";
 import { useState, useEffect } from "react";
 import CheckBoxCard from "./CheckBoxCard";
 
@@ -25,6 +26,9 @@ const ChoicePage = ({
   inputOptions,
   checkboxOptions,
   required,
+  progress_bar,
+  progress_bar_text,
+  progress_step,
 }) => {
   const [display_overlay_text, Set_display_overlay_text] = useState(true);
   useEffect(() => {
@@ -43,7 +47,19 @@ const ChoicePage = ({
       >
         {overlay_screen_text}
       </div>
-      <div className="choice-container">
+      <div className="choice-container" style={{ display: "block" }}>
+        {progress_bar ? (
+          <div className="progress-bar-saturn-step">
+            <ProgressBarComp
+              progress_step={progress_step}
+              img_1="https://cdn.shopify.com/s/files/1/0607/6029/3588/files/skin-1.png?v=1655109040"
+              img_2="https://cdn.shopify.com/s/files/1/0607/6029/3588/files/skin-2.png?v=1655109040"
+              img_3="https://cdn.shopify.com/s/files/1/0607/6029/3588/files/skin-3.png?v=1655109040"
+              img_4="https://cdn.shopify.com/s/files/1/0607/6029/3588/files/skin-4.png?v=1655109040"
+              text={progress_bar_text}
+            />
+          </div>
+        ) : null}
         {/* <div className="assessment-image"> 
           <ImageCard />
         </div> */}

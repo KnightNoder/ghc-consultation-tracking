@@ -42,6 +42,22 @@
   /* border: solid 1px; */
 }
 
+.indexedStep {
+  align-items: center;
+  background-color: hsla(0,0%,83%,.8);
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  font-size: 12px;
+  height: 20px;
+  justify-content: center;
+  width: 20px;
+}
+
+.indexedStep.accomplished {
+  background-color: var(--border);
+}
+
 .assessment h5{
   font-family: harmonia-bold;
 }
@@ -146,6 +162,20 @@ img {
 }
 
 @media only screen and (max-width: 600px) {
+  .progress-bar-saturn-step {
+    margin-top: 5%;
+  }
+
+  .progress-bar-container {
+    margin: 0 8%;
+    text-align: center;
+  }
+
+  .progress-bar-text {
+    font-size: 15px;
+    margin-top: 3%;
+  }
+
   .proceed-template-mobile {
     display: block;
   }
@@ -155,6 +185,7 @@ img {
   
   .assessment {
     width: 100%;
+    margin-top: 3%;
   }
 
   .main-container{
@@ -341,6 +372,37 @@ img {
     width: 96%;
   }
 
+  .show-overlay-screen{
+    font-size: 36px;
+    line-height: 60px;
+    padding: 0 13%
+  }
+
+  .product-checkout{
+    display: none;
+  }
+
+  .progress-bar-image{
+    height:0px;
+    width:0px
+  }
+
+
+  .progress-bar-saturn-step {
+    margin-top: 3%;
+  }
+
+  .progress-bar-container {
+    margin: 0 10%;
+    text-align: center
+  }
+  
+  .progress-bar-text {
+    width: 85%;
+    margin-left: 6%;
+    margin-top: 1%;
+    font-size: 15px
+  }
 }
 
 
