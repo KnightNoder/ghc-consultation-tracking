@@ -338,28 +338,28 @@ export default function App() {
             displayText: "Receding hairline",
             image_exists: true,
             image:
-              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/Receding_hairline.png?v=1659691999",
+              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/receding.png?v=1659695198",
           },
           {
             value: "Thinning at the crown",
             displayText: "Thinning at the crown",
             image_exists: true,
             image:
-              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/Crown_thinning.png?v=1659691999",
+              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/crown_thin.png?v=1659695198",
           },
           {
             value: "Overall hair loss/thinning",
             displayText: "Overall hair loss/thinning",
             image_exists: true,
             image:
-              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/Overall_hair_loss_thinning.png?v=1659692000",
+              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/overall.png?v=1659695198",
           },
           {
             value: "Receding + Overall thinning",
             displayText: "Receding + Overall thinning",
             image_exists: true,
             image:
-              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/Receding_Overall_thinning.png?v=1659691999",
+              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/receding_thin.png?v=1659695198",
           },
         ],
       },
@@ -1942,28 +1942,28 @@ export default function App() {
             displayText: "Receding hairline",
             image_exists: true,
             image:
-              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/Receding_hairline.png?v=1659691999",
+              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/receding.png?v=1659695198",
           },
           {
             value: "Thinning at the crown",
             displayText: "Thinning at the crown",
             image_exists: true,
             image:
-              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/Crown_thinning.png?v=1659691999",
+              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/crown_thin.png?v=1659695198",
           },
           {
             value: "Overall hair loss/thinning",
             displayText: "Overall hair loss/thinning",
             image_exists: true,
             image:
-              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/Overall_hair_loss_thinning.png?v=1659692000",
+              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/overall.png?v=1659695198",
           },
           {
             value: "Receding + Overall thinning",
             displayText: "Receding + Overall thinning",
             image_exists: true,
             image:
-              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/Receding_Overall_thinning.png?v=1659691999",
+              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/receding_thin.png?v=1659695198",
           },
         ],
       },
@@ -1977,8 +1977,6 @@ export default function App() {
         state_Obj: stateObj,
         proceed_link: "?page=3&type=hair",
         back_link: "?page=1&type=hair",
-        delay_time: 1000,
-        overlay_screen_text: ` Hair loss affects 60.5 % of the total Men population in India`,
         required: "true",
         progress_bar: true,
         progress_bar_text: "My Hair",
@@ -2586,28 +2584,28 @@ export default function App() {
             displayText: "Receding hairline",
             image_exists: true,
             image:
-              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/Receding_hairline.png?v=1659691999",
+              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/receding.png?v=1659695198",
           },
           {
             value: "Thinning at the crown",
             displayText: "Thinning at the crown",
             image_exists: true,
             image:
-              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/Crown_thinning.png?v=1659691999",
+              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/crown_thin.png?v=1659695198",
           },
           {
             value: "Overall hair loss/thinning",
             displayText: "Overall hair loss/thinning",
             image_exists: true,
             image:
-              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/Overall_hair_loss_thinning.png?v=1659692000",
+              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/overall.png?v=1659695198",
           },
           {
             value: "Receding + Overall thinning",
             displayText: "Receding + Overall thinning",
             image_exists: true,
             image:
-              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/Receding_Overall_thinning.png?v=1659691999",
+              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/receding_thin.png?v=1659695198",
           },
         ],
       },
@@ -3123,7 +3121,7 @@ export default function App() {
         proceed_link: "?page=4&type=performance",
         back_link: "?page=2&type=performance",
         delay_time: 3000,
-        overlay_screen_text: `40% of men experience symptoms like this by the age of 40`,
+        overlay_screen_text: `40% of Men experience symptoms like this by the age of 40`,
         required: true,
         options: [
           {
@@ -3155,7 +3153,7 @@ export default function App() {
         proceed_link: "?page=5&type=performance",
         back_link: "?page=3&type=performance",
         delay_time: 3000,
-        overlay_screen_text: `30-40% of the men experience this at some point in their lives
+        overlay_screen_text: `30-40% of the Men experience this at some point in their lives
 
         Understanding more about your condition helps us suggest the 
         best-suited plan for you`,
