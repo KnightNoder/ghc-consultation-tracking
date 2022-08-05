@@ -202,6 +202,15 @@ export default function App() {
     }
   };
 
+  const getProgressBarText = () => {
+    const category = stateObj["Select category for consultation"];
+    if (process.env.REACT_APP_BRAND == "Saturn") {
+      if (category == "skin") return "My Skin";
+      if (category == "weightloss") return "My Wellness";
+      if (category == "hair") return "My Hair";
+    }
+  };
+
   const allPages_Saturn_Short = {
     assessment: [
       {
@@ -799,9 +808,10 @@ export default function App() {
         required: "*",
         placeholder: "Eg: 24",
         requiredErrorText: "Please enter valid age to proceed",
-        input_none: true,
         conditionMet: true,
-        conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: getProgressBarText(),
+        progress_step: "11",
         options: [
           {
             displayText: "Skin",
@@ -809,7 +819,7 @@ export default function App() {
           },
           {
             value: "weightloss",
-            displayText: "Weight Management",
+            displayText: "Wellness",
           },
           {
             value: "hair",
@@ -837,6 +847,9 @@ export default function App() {
           stateObj["Last Name"] &&
           phone_number_check(stateObj["Phone Number"]) &&
           email_check(stateObj["Email"]),
+        progress_bar: true,
+        progress_bar_text: getProgressBarText(),
+        progress_step: "22",
         inputOptions: [
           {
             placeholder: "Eg: John",
