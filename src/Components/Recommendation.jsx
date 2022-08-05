@@ -182,7 +182,11 @@ const Callback = ({
       <div className="recommendation-section">
         <div className="doctor-info2" style={{ marginTop: "0%" }}>
           <div className="logo">
-            <img src={logo} className="image" alt="" />
+            <img
+              src="https://cdn.shopify.com/s/files/1/0607/6029/3588/files/saturn.png?v=1659701745"
+              className="image"
+              alt=""
+            />
           </div>
           <div className="details2">
             {/* <div className="image-section">
