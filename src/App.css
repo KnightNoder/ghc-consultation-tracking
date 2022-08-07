@@ -162,8 +162,27 @@ img {
 }
 
 @media only screen and (max-width: 600px) {
+
+  .mobile-carousel {
+    display: block;
+  }
+
+  .no-mobile-carousel {
+    display: none;
+  }
+
+  .carousel .control-dots {
+    margin: 0 !important;
+  }
   .progress-bar-saturn-step {
     margin-top: 5%;
+  }
+
+  .carousel.carousel-slider .control-arrow{
+    background-color: var(--buttonColor) !important;
+    border-color: var(--buttonColor) !important; 
+    bottom: 45% !important;
+    top: 45% !important;
   }
 
   .progress-bar-container {
@@ -264,6 +283,14 @@ img {
 }
 
 @media only screen and (min-width: 600px) {
+  .mobile-carousel {
+    display: none;
+  }
+
+  .no-mobile-carousel {
+    display: block;
+  }
+
   .product-checkout {
     display: none;
   }

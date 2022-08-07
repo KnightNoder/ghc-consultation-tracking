@@ -370,6 +370,7 @@
     .details .heading, .details .price{
         margin-left: 5%;
         margin-right: 5%;
+        text-align: left; 
     }
 
     .product-card .image-section{

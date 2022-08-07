@@ -309,7 +309,7 @@ export default function App() {
             inputCheck: input_check,
           },
           {
-            placeholder: "Eg: Age",
+            placeholder: "Eg: 25",
             requiredErrorText: "Please enter valid age",
             heading: "Age",
             clickHandler: choice_clickHandler,
@@ -5543,6 +5543,7 @@ export default function App() {
       },
     ],
   };
+
   const mappings = {
     assessment: ({ data }) => (
       <LandingPage

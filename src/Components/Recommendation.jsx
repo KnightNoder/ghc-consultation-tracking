@@ -6,6 +6,8 @@ import GenericButton from "./GenericButton";
 import "../css/Recommendation.css";
 import { useEffect, useState } from "react";
 import "../css/ProceedTemplate.css";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from "react-responsive-carousel";
 const { sendMail, getSendMailData } = require("../common/utils");
 const { getProductIdFromEngine } = require("../common/engine");
 const axios = require("axios");
@@ -167,7 +169,7 @@ const Callback = ({
   return (
     <>
       <div
-        className={`${false ? "show-overlay-screen" : "hide-overlay-screen"}`}
+        className={`${disp ? "show-overlay-screen" : "hide-overlay-screen"}`}
       >
         Our best minds are curating a personalized wellness plan for you
         <div className="progress-bar-saturn">
@@ -248,53 +250,102 @@ const Callback = ({
               ""
             )}
           </div>
+          <div className="mobile-carousel">
+            <Carousel>
+              <div className="product-card">
+                <div className="image-section">
+                  <img
+                    src={image_1}
+                    className="image"
+                    alt="Product1"
+                    srcset=""
+                  />
+                </div>
+                <div className="details">
+                  <div className="reco-1">Highly Recommended</div>
+                  <div className="heading">
+                    {title_1}
+                    {/* Completete Hair Treatment */}
+                  </div>
+                  {/* <div className="subtext"> */}
+                  {/* {product_subtext} */}
+                  {/* Treats all hair concerns and improves overall hair growth */}
+                  {/* </div> */}
+                  <div className="price">
+                    Rs.{price_1}{" "}
+                    {compare_at_price_1 ? (
+                      <span className="strike-text">
+                        &nbsp;&nbsp;<strike>Rs.{compare_at_price_1}</strike>
+                      </span>
+                    ) : null}
+                  </div>
+                  <div
+                    className={`${
+                      stateObj["assessment_type"] == "30 sec"
+                        ? "no-display"
+                        : ""
+                    } buy-button product-checkout-button`}
+                  >
+                    <GenericButton
+                      productNavigate="true"
+                      productLink={product_link_1}
+                      radiusBottom="true"
+                      text={"Buy Now"}
+                    />
+                  </div>
+                </div>
+              </div>
 
-          <div className="product-card">
-            <div className="image-section">
-              <img src={image_1} className="image" alt="Product1" srcset="" />
-            </div>
-            <div className="details">
-              <div className="reco-1">Highly Recommended</div>
-              <div className="heading">
-                {title_1}
-                {/* Completete Hair Treatment */}
-              </div>
-              {/* <div className="subtext"> */}
-              {/* {product_subtext} */}
-              {/* Treats all hair concerns and improves overall hair growth */}
-              {/* </div> */}
-              <div className="price">
-                Rs.{price_1}{" "}
-                {compare_at_price_1 ? (
-                  <span className="strike-text">
-                    &nbsp;&nbsp;<strike>Rs.{compare_at_price_1}</strike>
-                  </span>
-                ) : null}
-              </div>
-              <div
-                className={`${
-                  stateObj["assessment_type"] == "30 sec" ? "no-display" : ""
-                } buy-button product-checkout-button`}
-              >
-                <GenericButton
-                  productNavigate="true"
-                  productLink={product_link_1}
-                  radiusBottom="true"
-                  text={"Buy Now"}
-                />
-              </div>
-            </div>
+              {stateObj["assessment_type"] == "6 mins" ? (
+                <div className="product-card">
+                  <div className="image-section">
+                    <img
+                      src={image_2}
+                      className="image"
+                      alt="Product1"
+                      srcset=""
+                    />
+                  </div>
+                  <div className="details">
+                    <div className="reco-1">Recommended</div>
+                    <div className="heading">
+                      {title_2}
+                      {/* Completete Hair Treatment */}
+                    </div>
+                    {/* <div className="subtext"> */}
+                    {/* {product_subtext} */}
+                    {/* Treats all hair concerns and improves overall hair growth */}
+                    {/* </div> */}
+                    <div className="price">
+                      Rs.{price_2}{" "}
+                      {compare_at_price_2 ? (
+                        <span className="strike-text">
+                          &nbsp;&nbsp;<strike>Rs.{compare_at_price_2}</strike>
+                        </span>
+                      ) : null}
+                    </div>
+                    <div className="buy-button product-checkout-button">
+                      <GenericButton
+                        productNavigate="true"
+                        productLink={product_link_2}
+                        radiusBottom="true"
+                        text={"Buy Now"}
+                      />
+                    </div>
+                  </div>
+                </div>
+              ) : null}
+            </Carousel>
           </div>
-
-          {stateObj["assessment_type"] == "6 mins" ? (
+          <div className="no-mobile-carousel">
             <div className="product-card">
               <div className="image-section">
-                <img src={image_2} className="image" alt="Product1" srcset="" />
+                <img src={image_1} className="image" alt="Product1" srcset="" />
               </div>
               <div className="details">
-                <div className="reco-1">Recommended</div>
+                <div className="reco-1">Highly Recommended</div>
                 <div className="heading">
-                  {title_2}
+                  {title_1}
                   {/* Completete Hair Treatment */}
                 </div>
                 {/* <div className="subtext"> */}
@@ -302,24 +353,68 @@ const Callback = ({
                 {/* Treats all hair concerns and improves overall hair growth */}
                 {/* </div> */}
                 <div className="price">
-                  Rs.{price_2}{" "}
-                  {compare_at_price_2 ? (
+                  Rs.{price_1}{" "}
+                  {compare_at_price_1 ? (
                     <span className="strike-text">
-                      &nbsp;&nbsp;<strike>Rs.{compare_at_price_2}</strike>
+                      &nbsp;&nbsp;<strike>Rs.{compare_at_price_1}</strike>
                     </span>
                   ) : null}
                 </div>
-                <div className="buy-button product-checkout-button">
+                <div
+                  className={`${
+                    stateObj["assessment_type"] == "30 sec" ? "no-display" : ""
+                  } buy-button product-checkout-button`}
+                >
                   <GenericButton
                     productNavigate="true"
-                    productLink={product_link_2}
+                    productLink={product_link_1}
                     radiusBottom="true"
                     text={"Buy Now"}
                   />
                 </div>
               </div>
             </div>
-          ) : null}
+
+            {stateObj["assessment_type"] == "6 mins" ? (
+              <div className="product-card">
+                <div className="image-section">
+                  <img
+                    src={image_2}
+                    className="image"
+                    alt="Product1"
+                    srcset=""
+                  />
+                </div>
+                <div className="details">
+                  <div className="reco-1">Recommended</div>
+                  <div className="heading">
+                    {title_2}
+                    {/* Completete Hair Treatment */}
+                  </div>
+                  {/* <div className="subtext"> */}
+                  {/* {product_subtext} */}
+                  {/* Treats all hair concerns and improves overall hair growth */}
+                  {/* </div> */}
+                  <div className="price">
+                    Rs.{price_2}{" "}
+                    {compare_at_price_2 ? (
+                      <span className="strike-text">
+                        &nbsp;&nbsp;<strike>Rs.{compare_at_price_2}</strike>
+                      </span>
+                    ) : null}
+                  </div>
+                  <div className="buy-button product-checkout-button">
+                    <GenericButton
+                      productNavigate="true"
+                      productLink={product_link_2}
+                      radiusBottom="true"
+                      text={"Buy Now"}
+                    />
+                  </div>
+                </div>
+              </div>
+            ) : null}
+          </div>
         </div>
         {stateObj["assessment_type"] == "30 sec" ? (
           <div className="product-checkout">
