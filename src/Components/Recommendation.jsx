@@ -229,7 +229,7 @@ const CallBack = ({
             )}
           </div>
           <div className="mobile-carousel">
-            <Carousel>
+            {/* <Carousel> */}
               <div className="product-card">
                 <div className="image-section">
                   <img
@@ -303,7 +303,7 @@ const CallBack = ({
                   </div>
                 </div>
               ) : null}
-            </Carousel>
+            {/* </Carousel> */}
           </div>
           <div className="no-mobile-carousel">
             <div className="product-card">
