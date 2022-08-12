@@ -2053,41 +2053,41 @@ skin_engine.addRule({
 
 //weightloss
 
-// weightloss_engine.addRule({
-//   conditions: {
-//     all: [
-//       {
-//         fact: "What best describes your current body condition?",
-//         operator: "equal",
-//         value: "OverWeight/Obese",
-//       },
-//     ],
-//   },
-//   event: {
-//     type: "product id",
-//     params: {
-//       id: "7634556059870",
-//     },
-//   },
-// });
+weightloss_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "BMI",
+        operator: "greaterThan",
+        value: "25",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "7634556059870",
+    },
+  },
+});
 
-// weightloss_engine.addRule({
-//   conditions: {
-//     all: [
-//       {
-//         fact: "BMI",
-//         operator: "lessThanInclusive",
-//         value: "25",
-//       },
-//     ],
-//   },
-//   event: {
-//     type: "product id",
-//     params: {
-//       id: "7634556059870",
-//     },
-//   },
-// });
+weightloss_engine.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "BMI",
+        operator: "lessThanInclusive",
+        value: "25",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "7634556059870",
+    },
+  },
+});
 
 // weightloss long
 
@@ -2128,7 +2128,7 @@ weightloss_engine_long.addRule({
 });
 
 
-// Lon
+// Long
 
 //skin long
 
@@ -3849,25 +3849,17 @@ export const getProductIdFromEngine = async (stateObj) => {
         });
       }
       if (category == "weightloss") {
-        // const answer_one =
-        //   stateObj["What best describes your current body condition?"];
-        // const answer_two =
-        //   stateObj[
-        //     "Do you have any past allergic reactions to any of the below components?"
-        //   ];
-        //   const body_conditions = Object.keys(answer_one).filter((x) => answer_one(x) == true);
-        //   const past_allergies = Object.keys(answer_two).filter((x) => answer_two(x) == true);
-        //   console.log(body_conditions,'body conditions');
-        //   console.log(past_allergies,'past allergies');
-        //   let facts = {
-        //     "What best describes your current body condition?": body_conditions,
-        //     "Do you have any past allergic reactions to any of the below components?": past_allergies 
-        //   }
-        // await weightloss_engine.run(facts).then(({ events }) => {
-        //   events.map((event) => {
-        //     productId = event.params.id;
-        //   });
-        // });
+        const weight = parseInt(stateObj["Weight"]);
+        const height = parseInt(stateObj["Height"]);
+        const bmi_value = (weight * 10000) / (height * height);
+        let facts = {
+          BMI: parseInt(bmi_value),
+        };
+        await weightloss_engine.run(facts).then(({ events }) => {
+          events.map((event) => {
+            productId = event.params.id;
+          });
+        });
       }
       return productId;
     } else {
@@ -3885,13 +3877,12 @@ export const getProductIdFromEngine = async (stateObj) => {
         });
       }
       if (category == "weightloss") {
-        const question_one =
-          stateObj["What best describes your current body condition?"];
-        const question_two =
-          stateObj[
-            "Do you have any past allergic reactions to any of the below components?"
-          ];
-        
+        const weight = parseInt(stateObj["Weight"]);
+        const height = parseInt(stateObj["Height"]);
+        const bmi_value = (weight * 10000) / (height * height);
+        let facts = {
+          BMI: parseInt(bmi_value),
+        };
         await weightloss_engine_long.run(facts).then(({ events }) => {
           events.map((event) => {
             productId = event.params.id;
