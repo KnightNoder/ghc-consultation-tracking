@@ -2,9 +2,11 @@ import { useState } from "react";
 import "../css/ChoiceCard.css";
 import Checkbox from "@mui/material/Checkbox";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
+import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
+import CheckBoxIcon from "@mui/icons-material/CheckBox";
 import RadioButtonUncheckedIcon from "@mui/icons-material/RadioButtonUnchecked";
 
-const CheckBoxCard = ({ text, onchange, value, question }) => {
+const CheckBoxCard = ({ text, onchange, value, question,key }) => {
   return (
     <>
       <div
@@ -15,13 +17,10 @@ const CheckBoxCard = ({ text, onchange, value, question }) => {
       >
         <div className="one">
           <Checkbox
-            icon={<RadioButtonUncheckedIcon fontSize="small" />}
+            icon={<CheckBoxOutlineBlankIcon fontSize="small" />}
             disableRipple
             checkedIcon={
-              <CheckCircleOutlineIcon
-                backgroundcolor="white"
-                fontSize="small"
-              />
+              <CheckBoxIcon backgroundcolor="white" fontSize="small" />
             }
             sx={{
               color: "#000000",
@@ -29,8 +28,9 @@ const CheckBoxCard = ({ text, onchange, value, question }) => {
                 color: "#975169",
               },
             }}
-            checked={value}
+            checked={value || false}
             fontSize="small"
+            key={key}
           />
         </div>
         <div

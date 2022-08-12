@@ -149,7 +149,7 @@ export default function App() {
   };
 
   const checkBoxHandler = (text, value, question) => {
-    if (text == "No such problems") {
+    if (text == "No such problems" || text == "None") {
       Set_stateObj((prevState) => {
         return {
           ...prevState,
@@ -166,6 +166,7 @@ export default function App() {
             ...prevState[question],
             [text]: value,
             ["No such problems"]: false,
+            ["None"]: false,
           },
         };
       });
@@ -178,7 +179,7 @@ export default function App() {
     if (process.env.REACT_APP_BRAND == "Saturn") {
       if (assessment_type == "30 sec") {
         if (category == "skin") return "?page=3&type=skin";
-        if (category == "weightloss") return "?page=5&type=weightloss";
+        if (category == "weightloss") return "?page=4&type=weightloss";
         if (category == "hair") return "?page=4&type=hair";
       } else {
         if (category == "skin") return "?page=18&type=skin";
@@ -268,7 +269,6 @@ export default function App() {
           parseInt(stateObj["Age"]) > 0 &&
           parseInt(stateObj["Age"]) < 200 &&
           stateObj["First Name"] &&
-          stateObj["Last Name"] &&
           phone_number_check(stateObj["Phone Number"]) &&
           email_check(stateObj["Email"]),
         inputOptions: [
@@ -590,107 +590,81 @@ export default function App() {
       {
         name: "Weight loss page 2",
         type: "category",
-        question: `How often do you eat meals in a day (including tea, coffee, fruits, salads, 
-          and snacks)`,
+        question: `What best describes your current body condition?`,
         clickHandler: choice_clickHandler,
         state_Obj: stateObj,
         proceed_link: "?page=3&type=weightloss",
         back_link: "?page=1&type=weightloss",
         overlay_screen_text:
           "Measuring your weight everyday helps you lose weight faster",
-        delay_time: "3000",
-        conditionMet: true,
-        options: [
+        required: "true",
+        checkboxOptions: [
           {
-            value: `Greater than 6 times`,
-            displayText: `Greater than 6 times`,
+            value:
+              stateObj[`What best describes your current body condition?`]?.[
+                "OverWeight/Obese"
+              ] || 0,
+            displayText: "OverWeight/Obese",
+            onChange: checkBoxHandler,
           },
           {
-            value: "4-6 times",
-            displayText: "4-6 times",
+            value:
+              stateObj[`What best describes your current body condition?`]?.[
+                "Weak bones/muscles"
+              ] || 0,
+            displayText: "Weak bones/muscles",
+            onChange: checkBoxHandler,
           },
           {
-            value: "3 times",
-            displayText: "3 times",
+            value:
+              stateObj[`What best describes your current body condition?`]?.[
+                "Weak Joints"
+              ] || 0,
+            displayText: "Weak Joints",
+            onChange: checkBoxHandler,
           },
           {
-            value: "Less than 3 times",
-            displayText: "Less than 3 times",
-          },
-        ],
-      },
-    ],
-    weightloss3: [
-      {
-        name: "Weight loss page 3",
-        type: "category",
-        question: `How often do you smoke or drink?`,
-        clickHandler: choice_clickHandler,
-        CustomComponent: { CustomRadio },
-        state_Obj: stateObj,
-        proceed_link: "?page=4&type=weightloss",
-        back_link: "?page=2&type=weightloss",
-        conditionMet: true,
-        options: [
-          {
-            value: `Daily`,
-            displayText: `Daily`,
+            value:
+              stateObj[`What best describes your current body condition?`]?.[
+                "Knee/Shoulder/Joint Pain"
+              ] || 0,
+            displayText: "Knee/Shoulder/Joint Pain",
+            onChange: checkBoxHandler,
           },
           {
-            value: "Occasionally",
-            displayText: "Occasionally",
+            value:
+              stateObj[`What best describes your current body condition?`]?.[
+                "Body Fatigue"
+              ] || 0,
+            displayText: "Body Fatigue",
+            onChange: checkBoxHandler,
           },
           {
-            value: "Never",
-            displayText: "Never",
-          },
-        ],
-      },
-    ],
-    weightloss4: [
-      {
-        name: "Weight loss page 2",
-        type: "category",
-        question: `How many days do you exercise in a week?`,
-        clickHandler: choice_clickHandler,
-        state_Obj: stateObj,
-        proceed_link: "?page=5&type=weightloss",
-        back_link: "?page=3&type=weightloss",
-        conditionMet: true,
-        options: [
-          {
-            value: `Don't work out at all`,
-            displayText: `Don't work out at all`,
-          },
-          {
-            value: "Daily",
-            displayText: "Daily",
-          },
-          {
-            value: "5-6 times a week",
-            displayText: "5-6 times a week",
-          },
-          {
-            value: "1-2 times a week",
-            displayText: "1-2 times a week",
+            value:
+              stateObj[`What best describes your current body condition?`]?.[
+                "Stretch Marks on the skin"
+              ] || 0,
+            displayText: "Stretch Marks on the skin",
+            onChange: checkBoxHandler,
           },
         ],
       },
     ],
-    weightloss5: [
+    weightloss3: [ 
       {
         name: "Weight loss page 5",
         type: "category",
         question: `Do you have any pre-existing problems?`,
         clickHandler: choice_clickHandler,
         state_Obj: stateObj,
-        proceed_link: "?appointment=yes",
-        back_link: "?page=4&type=weightloss",
+        proceed_link: "?page=4&type=weightloss",
+        back_link: "?page=2&type=weightloss",
         conditionMet: stateObj["Do you have any pre-existing problems?"]
           ? !!Object.values(
               stateObj["Do you have any pre-existing problems?"]
             )?.filter((x) => x).length
           : false,
+        required: true,
         checkboxOptions: [
           {
             value:
@@ -740,6 +714,82 @@ export default function App() {
         ],
       },
     ],
+    weightloss4: [
+      {
+        name: "Weight loss page 4",
+        type: "category",
+        question: `Do you have any past allergic reactions to any of the below components?`,
+        clickHandler: choice_clickHandler,
+        state_Obj: stateObj,
+        proceed_link: "?appointment=yes",
+        back_link: "?page=3&type=weightloss",
+        required: "true",
+        checkboxOptions: [
+          {
+            value:
+              stateObj[
+                `Do you have any past allergic reactions to any of the below components?`
+              ]?.["Glucosamine"] || 0,
+            displayText: `Glucosamine`,
+            onChange: checkBoxHandler,
+          },
+          {
+            value:
+              stateObj[
+                `Do you have any past allergic reactions to any of the below components?`
+              ]?.["Chondroitin"] || 0,
+            displayText: `Chondroitin`,
+            onChange: checkBoxHandler,
+          },
+          {
+            value:
+              stateObj[
+                `Do you have any past allergic reactions to any of the below components?`
+              ]?.["Methylsulfonylmethane(MSM)"] || 0,
+            displayText: `Methylsulfonylmethane(MSM)`,
+            onChange: checkBoxHandler,
+          },
+          {
+            value:
+              stateObj[
+                `Do you have any past allergic reactions to any of the below components?`
+              ]?.["None"] || 0,
+            displayText: `None`,
+            onChange: checkBoxHandler,
+          },
+        ],
+      },
+    ],
+    weightloss5: [
+      {
+        name: "Weight loss page 4",
+        type: "category",
+        question: `How many days do you exercise in a week?`,
+        clickHandler: choice_clickHandler,
+        state_Obj: stateObj,
+        proceed_link: "?appointment=yes",
+        back_link: "?page=4&type=weightloss",
+        conditionMet: true,
+        options: [
+          {
+            value: `Don't work out at all`,
+            displayText: `Don't work out at all`,
+          },
+          {
+            value: "Daily",
+            displayText: "Daily",
+          },
+          {
+            value: "5-6 times a week",
+            displayText: "5-6 times a week",
+          },
+          {
+            value: "1-2 times a week",
+            displayText: "1-2 times a week",
+          },
+        ],
+      },
+    ],
     appointment: [
       {
         name: "Appointment page",
@@ -752,8 +802,8 @@ export default function App() {
         required: "true",
         options: [
           {
-            value: "Yes, please ",
-            displayText: "Yes, please ",
+            value: "Yes, please",
+            displayText: "Yes, please",
           },
           {
             value: "No, just tell me what to use",
@@ -764,11 +814,9 @@ export default function App() {
     ],
     recommendation: [
       {
-        name: "Appointment page",
+        name: "Recommendation page",
         type: "recommendation",
-        clickHandler: choice_clickHandler,
         stateObj: stateObj,
-        conditionMet: true,
         data: {
           bannerHeader: `Know what's right for you`,
           bannerSubText:
@@ -776,16 +824,6 @@ export default function App() {
           bannerImageSrc:
             "https://cdn.shopify.com/s/files/1/0638/1391/0746/files/Doctor.png?v=1649252836",
         },
-        options: [
-          {
-            value: "Yes, please ",
-            displayText: "Yes, please ",
-          },
-          {
-            value: "No, just tell me what to use",
-            displayText: "No, just tell me what to use",
-          },
-        ],
       },
     ],
   };
@@ -856,7 +894,6 @@ export default function App() {
           parseInt(stateObj["Age"]) > 0 &&
           parseInt(stateObj["Age"]) < 200 &&
           stateObj["First Name"] &&
-          stateObj["Last Name"] &&
           phone_number_check(stateObj["Phone Number"]) &&
           email_check(stateObj["Email"]),
         progress_bar: true,
@@ -900,7 +937,7 @@ export default function App() {
             inputCheck: input_check,
           },
           {
-            placeholder: "Eg: Age",
+            placeholder: "Eg: 25",
             requiredErrorText: "Please enter valid age",
             heading: "Age",
             clickHandler: choice_clickHandler,
@@ -1570,14 +1607,81 @@ export default function App() {
     ],
     weightloss2: [
       {
+        name: "Weight loss page 3",
+        type: "category",
+        question: `What best describes your current body condition?`,
+        state_Obj: stateObj,
+        proceed_link: "?page=3&type=weightloss",
+        back_link: "?page=1&type=weightloss",
+        overlay_screen_text:
+          "Your metabolism is highly responsive to your daily routine and adjusts accordingly.",
+        delay_time: 3000,
+        conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Wellness",
+        progress_step: "44",
+        checkboxOptions: [
+          {
+            value:
+              stateObj[`What best describes your current body condition?`]?.[
+                "OverWeight/Obese"
+              ] || 0,
+            displayText: "OverWeight/Obese",
+            onChange: checkBoxHandler,
+          },
+          {
+            value:
+              stateObj[`What best describes your current body condition?`]?.[
+                "Weak bones/muscles"
+              ] || 0,
+            displayText: "Weak bones/muscles",
+            onChange: checkBoxHandler,
+          },
+          {
+            value:
+              stateObj[`What best describes your current body condition?`]?.[
+                "Weak Joints"
+              ] || 0,
+            displayText: "Weak Joints",
+            onChange: checkBoxHandler,
+          },
+          {
+            value:
+              stateObj[`What best describes your current body condition?`]?.[
+                "Knee/Shoulder/Joint Pain"
+              ] || 0,
+            displayText: "Knee/Shoulder/Joint Pain",
+            onChange: checkBoxHandler,
+          },
+          {
+            value:
+              stateObj[`What best describes your current body condition?`]?.[
+                "Body Fatigue"
+              ] || 0,
+            displayText: "Body Fatigue",
+            onChange: checkBoxHandler,
+          },
+          {
+            value:
+              stateObj[`What best describes your current body condition?`]?.[
+                "Stretch Marks on the skin"
+              ] || 0,
+            displayText: "Stretch Marks on the skin",
+            onChange: checkBoxHandler,
+          },
+        ],
+      },
+    ],
+    weightloss3: [
+      {
         name: "Weight loss page 2",
         type: "category",
         question: `How often do you eat meals in a day (including tea, coffee, fruits, salads, 
           and snacks)`,
         clickHandler: choice_clickHandler,
         state_Obj: stateObj,
-        proceed_link: "?page=3&type=weightloss",
-        back_link: "?page=1&type=weightloss",
+        proceed_link: "?page=4&type=weightloss",
+        back_link: "?page=2&type=weightloss",
         overlay_screen_text:
           "Measuring your weight everyday helps you lose weight faster",
         delay_time: "3000",
@@ -1585,7 +1689,7 @@ export default function App() {
         conditionMet: true,
         progress_bar: true,
         progress_bar_text: "My Wellness",
-        progress_step: "49.5",
+        progress_step: "55",
         options: [
           {
             value: `Greater than 6 times`,
@@ -1602,38 +1706,6 @@ export default function App() {
           {
             value: "Less than 3 times",
             displayText: "Less than 3 times",
-          },
-        ],
-      },
-    ],
-    weightloss3: [
-      {
-        name: "Weight loss page 3",
-        type: "category",
-        question: `Is anyone in your family overweight/Obese?`,
-        clickHandler: choice_clickHandler,
-        state_Obj: stateObj,
-        proceed_link: "?page=4&type=weightloss",
-        back_link: "?page=2&type=weightloss",
-        overlay_screen_text:
-          "Your metabolism is highly responsive to your daily routine and adjusts accordingly.",
-        delay_time: 3000,
-        conditionMet: true,
-        progress_bar: true,
-        progress_bar_text: "My Wellness",
-        progress_step: "66",
-        options: [
-          {
-            value: `Daily`,
-            displayText: `Daily`,
-          },
-          {
-            value: "Occasionally",
-            displayText: "Occasionally",
-          },
-          {
-            value: "Never",
-            displayText: "Never",
           },
         ],
       },
@@ -1900,13 +1972,54 @@ export default function App() {
     ],
     weightloss12: [
       {
+        name: "Weight loss page 4",
+        type: "category",
+        question: `Do you have any past allergic reactions to any of the below components?`,
+        clickHandler: choice_clickHandler,
+        state_Obj: stateObj,
+        proceed_link: "?page=13&type=weightloss",
+        back_link: "?page=11&type=weightloss",
+        required: "true",
+        progress_bar: true,
+        progress_bar_text: "My Wellness",
+        progress_step: "100",
+        checkboxOptions: [
+          {
+            value:
+              stateObj[
+                `Do you have any past allergic reactions to any of the below components?`
+              ]?.["Glucosamine"] || 0,
+            displayText: `Glucosamine`,
+            onChange: checkBoxHandler,
+          },
+          {
+            value:
+              stateObj[
+                `Do you have any past allergic reactions to any of the below components?`
+              ]?.["Chondroitin"] || 0,
+            displayText: `Chondroitin`,
+            onChange: checkBoxHandler,
+          },
+          {
+            value:
+              stateObj[
+                `Do you have any past allergic reactions to any of the below components?`
+              ]?.["Methylsulfonylmethane(MSM)"] || 0,
+            displayText: `Methylsulfonylmethane(MSM)`,
+            onChange: checkBoxHandler,
+          },
+        ],
+      },
+    ],
+    weightloss13: [
+      {
         name: "Weight loss page 12",
         type: "category",
-        question: `Have you used weight management products before?`,
+        question: `Have you used any healthcare/nutritional products before?`,
         clickHandler: choice_clickHandler,
         state_Obj: stateObj,
         proceed_link: "?appointment=yes",
-        back_link: "?page=11&type=weightloss",
+        back_link: "?page=12&type=weightloss",
         conditionMet: true,
         progress_bar: true,
         progress_bar_text: "My Wellness",
@@ -2418,8 +2531,8 @@ export default function App() {
         required: "true",
         options: [
           {
-            value: "Yes, please ",
-            displayText: "Yes, please ",
+            value: "Yes, please",
+            displayText: "Yes, please",
           },
           {
             value: "No, just tell me what to use",
@@ -2442,16 +2555,6 @@ export default function App() {
           bannerImageSrc:
             "https://cdn.shopify.com/s/files/1/0638/1391/0746/files/Doctor.png?v=1649252836",
         },
-        options: [
-          {
-            value: "Yes, please ",
-            displayText: "Yes, please ",
-          },
-          {
-            value: "No, just tell me what to use",
-            displayText: "No, just tell me what to use",
-          },
-        ],
       },
     ],
   };
@@ -5599,10 +5702,9 @@ export default function App() {
         progress_step={progress_step}
       />
     ),
-    recommendation: ({ stateObj, assessment_type, data }) => (
+    recommendation: ({ stateObj, data }) => (
       <Recommendation
         stateObj={stateObj}
-        assessment_type={assessment_type}
         bannerHeader={data.bannerHeader}
         bannerSubText={data.bannerSubText}
         bannerImageSrc={data.bannerImageSrc}

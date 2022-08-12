@@ -10,6 +10,11 @@
   src: url(fonts/HarmoniaSansProCyr-Bold.ttf);
 }
 
+@font-face {
+  font-family: harmonia-light;
+  src: url(fonts/HarmoniaSansProCyr-Regular.ttf);
+}
+
 /* html {
 } */
 

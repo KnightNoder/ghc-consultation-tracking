@@ -7,12 +7,12 @@ import "../css/Recommendation.css";
 import { useEffect, useState } from "react";
 import "../css/ProceedTemplate.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from "react-responsive-carousel";
+import { Carousel } from 'react-responsive-carousel';
 const { sendMail, getSendMailData } = require("../common/utils");
 const { getProductIdFromEngine } = require("../common/engine");
 const axios = require("axios");
 
-const Callback = ({
+const CallBack = ({
   stateObj,
   bannerHeader,
   bannerSubText,
@@ -32,16 +32,16 @@ const Callback = ({
 
   const [bmi, Set_bmi] = useState("");
   const [disp, Set_disp] = useState(true);
-  const [variant_id, Set_variant_id] = useState("");
-  const [product_subtext, Set_product_subtext] = useState("");
 
   useEffect(() => {
+    console.log('in use effect')
     var product_id = "";
     let category = "";
     const product_id_promise = getProductIdFromEngine(stateObj);
     product_id_promise
       .then((response) => {
         product_id = response;
+        console.log(product_id,'prod id')
         if (stateObj["assessment_type"] == "6 mins") {
           var product_id_1 = product_id[0];
           var product_id_2 = product_id[1];
@@ -173,7 +173,7 @@ const Callback = ({
       >
         Our best minds are curating a personalized wellness plan for you
         <div className="progress-bar-saturn">
-          <div class="in"></div>
+          <div className="in"></div>
         </div>
       </div>
       <Header
@@ -191,9 +191,6 @@ const Callback = ({
             />
           </div>
           <div className="details2">
-            {/* <div className="image-section">
-                        <img src={doctor} className='image' alt="" />
-                    </div> */}
             <div className="name-designation">
               <div className="name">
                 Thank you for filling out the assessment!
@@ -217,25 +214,6 @@ const Callback = ({
               </div>
             </div>
           </div>
-          {/* <h2>
-                    Audio Consultation
-                </h2> */}
-          {/* <div className="details" style={{marginTop:"10%"}}> 
-                    <div className="image-section">
-                        <img src={phone} className='image-call' alt="" />
-                    </div>
-                    <div className="name-designation">
-                        <div className="booking" style={{color: "#12B435"}}>
-                            Booking confirmed
-                        </div>
-                        <div className="booking">
-                            Date: 7 May 2022
-                        </div>
-                        <div className="booking">
-                            Time: 12:30 p.m
-                        </div>
-                    </div>
-                </div> */}
         </div>
         <div className="product-info">
           <div className="product-header">
@@ -265,12 +243,7 @@ const Callback = ({
                   <div className="reco-1">Highly Recommended</div>
                   <div className="heading">
                     {title_1}
-                    {/* Completete Hair Treatment */}
                   </div>
-                  {/* <div className="subtext"> */}
-                  {/* {product_subtext} */}
-                  {/* Treats all hair concerns and improves overall hair growth */}
-                  {/* </div> */}
                   <div className="price">
                     Rs.{price_1}{" "}
                     {compare_at_price_1 ? (
@@ -310,12 +283,7 @@ const Callback = ({
                     <div className="reco-1">Recommended</div>
                     <div className="heading">
                       {title_2}
-                      {/* Completete Hair Treatment */}
                     </div>
-                    {/* <div className="subtext"> */}
-                    {/* {product_subtext} */}
-                    {/* Treats all hair concerns and improves overall hair growth */}
-                    {/* </div> */}
                     <div className="price">
                       Rs.{price_2}{" "}
                       {compare_at_price_2 ? (
@@ -346,12 +314,7 @@ const Callback = ({
                 <div className="reco-1">Highly Recommended</div>
                 <div className="heading">
                   {title_1}
-                  {/* Completete Hair Treatment */}
                 </div>
-                {/* <div className="subtext"> */}
-                {/* {product_subtext} */}
-                {/* Treats all hair concerns and improves overall hair growth */}
-                {/* </div> */}
                 <div className="price">
                   Rs.{price_1}{" "}
                   {compare_at_price_1 ? (
@@ -389,12 +352,7 @@ const Callback = ({
                   <div className="reco-1">Recommended</div>
                   <div className="heading">
                     {title_2}
-                    {/* Completete Hair Treatment */}
                   </div>
-                  {/* <div className="subtext"> */}
-                  {/* {product_subtext} */}
-                  {/* Treats all hair concerns and improves overall hair growth */}
-                  {/* </div> */}
                   <div className="price">
                     Rs.{price_2}{" "}
                     {compare_at_price_2 ? (
@@ -431,7 +389,10 @@ const Callback = ({
         ) : null}
       </div>
     </>
+    // <>
+    // Hello
+    // </>
   );
 };
 
-export default Callback;
+export default CallBack;

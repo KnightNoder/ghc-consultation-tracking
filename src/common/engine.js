@@ -1407,7 +1407,7 @@ skin_engine.addRule({
       {
         fact: "Are you allergic to any of the ingredients below?",
         operator: "equal",
-        value: "None",
+        value: "Salicylic Acid",
       },
       {
         fact: "What are you concerned about?",
@@ -2053,41 +2053,41 @@ skin_engine.addRule({
 
 //weightloss
 
-weightloss_engine.addRule({
-  conditions: {
-    all: [
-      {
-        fact: "BMI",
-        operator: "greaterThan",
-        value: "25",
-      },
-    ],
-  },
-  event: {
-    type: "product id",
-    params: {
-      id: "7634556059870",
-    },
-  },
-});
+// weightloss_engine.addRule({
+//   conditions: {
+//     all: [
+//       {
+//         fact: "What best describes your current body condition?",
+//         operator: "equal",
+//         value: "OverWeight/Obese",
+//       },
+//     ],
+//   },
+//   event: {
+//     type: "product id",
+//     params: {
+//       id: "7634556059870",
+//     },
+//   },
+// });
 
-weightloss_engine.addRule({
-  conditions: {
-    all: [
-      {
-        fact: "BMI",
-        operator: "lessThanInclusive",
-        value: "25",
-      },
-    ],
-  },
-  event: {
-    type: "product id",
-    params: {
-      id: "7634556059870",
-    },
-  },
-});
+// weightloss_engine.addRule({
+//   conditions: {
+//     all: [
+//       {
+//         fact: "BMI",
+//         operator: "lessThanInclusive",
+//         value: "25",
+//       },
+//     ],
+//   },
+//   event: {
+//     type: "product id",
+//     params: {
+//       id: "7634556059870",
+//     },
+//   },
+// });
 
 // weightloss long
 
@@ -2127,124 +2127,12 @@ weightloss_engine_long.addRule({
   },
 });
 
+
+// Lon
+
 //skin long
 
 // None
-
-skin_engine_long.addRule({
-  conditions: {
-    all: [
-      {
-        fact: "Are you allergic to any of the ingredients below?",
-        operator: "equal",
-        value: "None",
-      },
-      {
-        fact: "What are you concerned about?",
-        operator: "equal",
-        value: "Open pores",
-      },
-    ],
-  },
-  event: {
-    type: "product id",
-    params: {
-      id: ["7602721095902", "7658081157342"],
-    },
-  },
-});
-
-skin_engine_long.addRule({
-  conditions: {
-    all: [
-      {
-        fact: "Are you allergic to any of the ingredients below?",
-        operator: "equal",
-        value: "None",
-      },
-      {
-        fact: "What are you concerned about?",
-        operator: "equal",
-        value: "Pigmentation",
-      },
-    ],
-  },
-  event: {
-    type: "product id",
-    params: {
-      id: ["7602716573918", "7658065002718"],
-    },
-  },
-});
-
-skin_engine_long.addRule({
-  conditions: {
-    all: [
-      {
-        fact: "Are you allergic to any of the ingredients below?",
-        operator: "equal",
-        value: "None",
-      },
-      {
-        fact: "What are you concerned about?",
-        operator: "equal",
-        value: "Active Acne",
-      },
-    ],
-  },
-  event: {
-    type: "product id",
-    params: {
-      id: ["7489917878494", "7489917878494"],
-    },
-  },
-});
-
-skin_engine_long.addRule({
-  conditions: {
-    all: [
-      {
-        fact: "Are you allergic to any of the ingredients below?",
-        operator: "equal",
-        value: "None",
-      },
-      {
-        fact: "What are you concerned about?",
-        operator: "equal",
-        value: "Aging",
-      },
-    ],
-  },
-  event: {
-    type: "product id",
-    params: {
-      id: ["7602723160286", "7679711412446"],
-    },
-  },
-});
-
-skin_engine_long.addRule({
-  conditions: {
-    all: [
-      {
-        fact: "Are you allergic to any of the ingredients below?",
-        operator: "equal",
-        value: "None",
-      },
-      {
-        fact: "What are you concerned about?",
-        operator: "equal",
-        value: "Dark circles",
-      },
-    ],
-  },
-  event: {
-    type: "product id",
-    params: {
-      id: ["7602723160286", "7602712576222"],
-    },
-  },
-});
 
 skin_engine_long.addRule({
   conditions: {
@@ -3924,12 +3812,13 @@ mars_hair_engine.addRule({
 });
 
 export const getProductIdFromEngine = async (stateObj) => {
+  console.log('in engine');
   var productId = "";
   const assessment_type = stateObj["assessment_type"];
   const category = stateObj["Select category for consultation"];
   if (process.env.REACT_APP_BRAND == "Saturn") {
     if (assessment_type == "30 sec") {
-      if (stateObj["Select category for consultation"] == "skin") {
+      if (category == "skin") {
         let facts = {
           "Are you allergic to any of the ingredients below?":
             stateObj["Are you allergic to any of the ingredients below?"],
@@ -3942,7 +3831,7 @@ export const getProductIdFromEngine = async (stateObj) => {
           });
         });
       }
-      if (stateObj["Select category for consultation"] == "hair") {
+      if (category == "hair") {
         let facts = {
           "What best describes your current hair condition?":
             stateObj["What best describes your current hair condition?"],
@@ -3959,18 +3848,26 @@ export const getProductIdFromEngine = async (stateObj) => {
           });
         });
       }
-      if (stateObj["Select category for consultation"] == "weightloss") {
-        const weight = parseInt(stateObj["Weight"]);
-        const height = parseInt(stateObj["Height"]);
-        const bmi_value = (weight * 10000) / (height * height);
-        let facts = {
-          BMI: parseInt(bmi_value),
-        };
-        await weightloss_engine.run(facts).then(({ events }) => {
-          events.map((event) => {
-            productId = event.params.id;
-          });
-        });
+      if (category == "weightloss") {
+        // const answer_one =
+        //   stateObj["What best describes your current body condition?"];
+        // const answer_two =
+        //   stateObj[
+        //     "Do you have any past allergic reactions to any of the below components?"
+        //   ];
+        //   const body_conditions = Object.keys(answer_one).filter((x) => answer_one(x) == true);
+        //   const past_allergies = Object.keys(answer_two).filter((x) => answer_two(x) == true);
+        //   console.log(body_conditions,'body conditions');
+        //   console.log(past_allergies,'past allergies');
+        //   let facts = {
+        //     "What best describes your current body condition?": body_conditions,
+        //     "Do you have any past allergic reactions to any of the below components?": past_allergies 
+        //   }
+        // await weightloss_engine.run(facts).then(({ events }) => {
+        //   events.map((event) => {
+        //     productId = event.params.id;
+        //   });
+        // });
       }
       return productId;
     } else {
@@ -3988,12 +3885,13 @@ export const getProductIdFromEngine = async (stateObj) => {
         });
       }
       if (category == "weightloss") {
-        const weight = parseInt(stateObj["Weight"]);
-        const height = parseInt(stateObj["Height"]);
-        const bmi_value = (weight * 10000) / (height * height);
-        let facts = {
-          BMI: parseInt(bmi_value),
-        };
+        const question_one =
+          stateObj["What best describes your current body condition?"];
+        const question_two =
+          stateObj[
+            "Do you have any past allergic reactions to any of the below components?"
+          ];
+        
         await weightloss_engine_long.run(facts).then(({ events }) => {
           events.map((event) => {
             productId = event.params.id;
