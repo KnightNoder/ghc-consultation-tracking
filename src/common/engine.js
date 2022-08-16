@@ -2055,13 +2055,36 @@ skin_engine.addRule({
 
 weightloss_engine.addRule({
   conditions: {
-    all: [
+    all: [ 
       {
-        fact: "BMI",
-        operator: "greaterThan",
-        value: "25",
-      },
-    ],
+        fact: 'body_conditions_array',
+        operator: 'contains', 
+        value: 'OverWeight/Obese',
+      },{
+        any : [
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"Glucosamine"
+          },
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"Chondroitin"
+          },
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"Methylsulfonylmethane(MSM)"
+          },
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"None"
+          }
+        ]
+      }
+    ]
   },
   event: {
     type: "product id",
@@ -2073,56 +2096,950 @@ weightloss_engine.addRule({
 
 weightloss_engine.addRule({
   conditions: {
-    all: [
-      {
-        fact: "BMI",
-        operator: "lessThanInclusive",
-        value: "25",
+    all: [ 
+      {        
+        fact: 'body_conditions_array',
+        operator: 'contains', 
+        value: 'Stretch Marks on the skin',
       },
-    ],
+      {
+        any : [
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"Glucosamine"
+          },
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"Chondroitin"
+          },
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"Methylsulfonylmethane(MSM)"
+          },
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"None"
+          }
+        ]
+      }
+    ]
   },
   event: {
     type: "product id",
     params: {
-      id: "7634556059870",
+      id: "7688497692894",
     },
   },
+});
+
+weightloss_engine.addRule({
+  conditions: {
+    all: [ 
+      {        
+        any:[
+          {
+            fact: 'body_conditions_array',
+            operator: 'contains', 
+            value: 'Weak bones/muscles',
+          },
+          {
+            fact: 'body_conditions_array',
+            operator: 'contains', 
+            value: 'Body Fatigue',
+          }
+        ]
+      },
+      {
+        any : [
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"Glucosamine"
+          },
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"Chondroitin"
+          },
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"Methylsulfonylmethane(MSM)"
+          },
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"None"
+          }
+        ]
+      }
+    ]
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "7619064365278",
+    },
+  },
+});
+
+weightloss_engine.addRule({   
+  conditions: {
+    all: [ 
+      {        
+        any:[
+          {
+            fact: 'body_conditions_array',
+            operator: 'contains', 
+            value: 'Weak Joints',
+          },
+          {
+            fact: 'body_conditions_array',
+            operator: 'contains', 
+            value: 'Knee/Shoulder/Joint Pain',
+          }
+        ]
+      },
+      {
+        any : [
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"Glucosamine"
+          },
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"Chondroitin"
+          },
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"Methylsulfonylmethane(MSM)"
+          },
+        ]
+      }
+    ]
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "7619064365278",
+    },
+  },
+});
+
+weightloss_engine.addRule({
+  conditions: {
+    all: [ 
+      {        
+        any:[
+          {
+            fact: 'body_conditions_array',
+            operator: 'contains', 
+            value: 'Weak Joints',
+          },
+          {
+            fact: 'body_conditions_array',
+            operator: 'contains', 
+            value: 'Knee/Shoulder/Joint Pain',
+          }
+        ]
+      },
+      {
+        all : [
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"None"
+          }
+        ]
+      }
+    ]
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "7630401143006",
+    },
+  },
+});
+
+weightloss_engine.addRule({
+  conditions: {
+    all: [ 
+      {
+        fact: 'body_conditions_array',
+        operator: 'contains', 
+        value: 'OverWeight/Obese',
+      },
+      {
+        any:[
+            {
+              fact: 'body_conditions_array',
+              operator: 'contains', 
+              value: 'Weak Joints',
+            },
+            {
+              fact: 'body_conditions_array',
+              operator: 'contains', 
+              value: 'Knee/Shoulder/Joint Pain',
+            }
+        ]
+      },
+      {
+        all : [
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"None"
+          }
+        ]
+      }
+    ]
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "7630401143006",
+    },
+  },
+});
+
+weightloss_engine.addRule({
+  conditions: {
+    all: [ 
+      {
+        fact: 'body_conditions_array',
+        operator: 'contains', 
+        value: 'OverWeight/Obese',
+      },
+      {
+        any:[
+            {
+              fact: 'body_conditions_array',
+              operator: 'contains', 
+              value: 'Weak Joints',
+            },
+            {
+              fact: 'body_conditions_array',
+              operator: 'contains', 
+              value: 'Knee/Shoulder/Joint Pain',
+            }
+        ]
+      },
+      {
+        any : [
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"Glucosamine"
+          },
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"Chondroitin"
+          },
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"Methylsulfonylmethane(MSM)"
+          },
+        ]
+      }
+    ]
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "7619064365278",
+    },
+  },
+});
+
+weightloss_engine.addRule({
+  conditions: {
+    all: [ 
+      {
+        fact: 'body_conditions_array',
+        operator: 'contains', 
+        value: 'OverWeight/Obese',
+      },
+      {
+        any:[
+            {
+              fact: 'body_conditions_array',
+              operator: 'contains', 
+              value: 'Weak Joints',
+            },
+            {
+              fact: 'body_conditions_array',
+              operator: 'contains', 
+              value: 'Knee/Shoulder/Joint Pain',
+            }
+        ]
+      },
+      {
+        any:[
+          {
+            fact: 'body_conditions_array',
+            operator: 'contains', 
+            value: 'Weak bones/muscles',
+          },
+          {
+            fact: 'body_conditions_array',
+            operator: 'contains', 
+            value: 'Body Fatigue',
+          }
+        ]
+      },
+      {
+        all : [
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"None"
+          }
+        ]
+      }
+    ]
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "7630401143006",
+    },
+  },
+  priority: 100
+});
+
+weightloss_engine.addRule({
+  conditions: {
+    all: [ 
+      {
+        fact: 'body_conditions_array',
+        operator: 'contains', 
+        value: 'OverWeight/Obese',
+      },
+      {
+        any:[
+            {
+              fact: 'body_conditions_array',
+              operator: 'contains', 
+              value: 'Weak Joints',
+            },
+            {
+              fact: 'body_conditions_array',
+              operator: 'contains', 
+              value: 'Knee/Shoulder/Joint Pain',
+            }
+        ]
+      },
+      {
+        any:[
+          {
+            fact: 'body_conditions_array',
+            operator: 'contains', 
+            value: 'Weak bones/muscles',
+          },
+          {
+            fact: 'body_conditions_array',
+            operator: 'contains', 
+            value: 'Body Fatigue',
+          }
+        ]
+      },
+      {
+        any : [
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"Glucosamine"
+          },
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"Chondroitin"
+          },
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"Methylsulfonylmethane(MSM)"
+          },
+        ]
+      }
+    ]
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "7619064365278",
+    },
+  },
+  priority: 100
+});
+
+weightloss_engine.addRule({
+  conditions: {
+    all: [ 
+      {
+        any:[
+            {
+              fact: 'body_conditions_array',
+              operator: 'contains', 
+              value: 'Weak Joints',
+            },
+            {
+              fact: 'body_conditions_array',
+              operator: 'contains', 
+              value: 'Knee/Shoulder/Joint Pain',
+            }
+        ]
+      },
+      {
+        any:[
+          {
+            fact: 'body_conditions_array',
+            operator: 'contains', 
+            value: 'Weak bones/muscles',
+          },
+          {
+            fact: 'body_conditions_array',
+            operator: 'contains', 
+            value: 'Body Fatigue',
+          }
+        ]
+      },
+      {
+        any : [
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"Glucosamine"
+          },
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"Chondroitin"
+          },
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"Methylsulfonylmethane(MSM)"
+          },
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"None"
+          },
+        ]
+      }
+    ]
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: "7679735759070",
+    },
+  },
+  priority: 100
 });
 
 // weightloss long
 
 weightloss_engine_long.addRule({
   conditions: {
-    all: [
+    all: [ 
       {
-        fact: "BMI",
-        operator: "greaterThan",
-        value: "25",
-      },
-    ],
+        fact: 'body_conditions_array',
+        operator: 'contains', 
+        value: 'OverWeight/Obese',
+      },{
+        any : [
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"Glucosamine"
+          },
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"Chondroitin"
+          },
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"Methylsulfonylmethane(MSM)"
+          },
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"None"
+          }
+        ]
+      }
+    ]
   },
   event: {
     type: "product id",
     params: {
-      id: ["7634556059870", "7679735759070"],
+      id: ["7634556059870","7634556059870"],
     },
   },
 });
 
 weightloss_engine_long.addRule({
   conditions: {
-    all: [
-      {
-        fact: "BMI",
-        operator: "lessThanInclusive",
-        value: "25",
+    all: [ 
+      {        
+        fact: 'body_conditions_array',
+        operator: 'contains', 
+        value: 'Stretch Marks on the skin',
       },
-    ],
+      {
+        any : [
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"Glucosamine"
+          },
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"Chondroitin"
+          },
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"Methylsulfonylmethane(MSM)"
+          },
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"None"
+          }
+        ]
+      }
+    ]
   },
   event: {
     type: "product id",
     params: {
-      id: ["7634556059870", "7679735759070"],
+      id: ["7688497692894","7688497692894"],
+    },
+  },
+});
+
+weightloss_engine_long.addRule({
+  conditions: {
+    all: [ 
+      {        
+        any:[
+          {
+            fact: 'body_conditions_array',
+            operator: 'contains', 
+            value: 'Weak bones/muscles',
+          },
+          {
+            fact: 'body_conditions_array',
+            operator: 'contains', 
+            value: 'Body Fatigue',
+          }
+        ]
+      },
+      {
+        any : [
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"Glucosamine"
+          },
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"Chondroitin"
+          },
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"Methylsulfonylmethane(MSM)"
+          },
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"None"
+          }
+        ]
+      }
+    ]
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7619064365278","7619064365278"],
+    },
+  },
+});
+
+weightloss_engine_long.addRule({   
+  conditions: {
+    all: [ 
+      {        
+        any:[
+          {
+            fact: 'body_conditions_array',
+            operator: 'contains', 
+            value: 'Weak Joints',
+          },
+          {
+            fact: 'body_conditions_array',
+            operator: 'contains', 
+            value: 'Knee/Shoulder/Joint Pain',
+          }
+        ]
+      },
+      {
+        any : [
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"Glucosamine"
+          },
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"Chondroitin"
+          },
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"Methylsulfonylmethane(MSM)"
+          },
+        ]
+      }
+    ]
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7619064365278","7619064365278"],
+    },
+  },
+});
+
+weightloss_engine_long.addRule({
+  conditions: {
+    all: [ 
+      {        
+        any:[
+          {
+            fact: 'body_conditions_array',
+            operator: 'contains', 
+            value: 'Weak Joints',
+          },
+          {
+            fact: 'body_conditions_array',
+            operator: 'contains', 
+            value: 'Knee/Shoulder/Joint Pain',
+          }
+        ]
+      },
+      {
+        all : [
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"None"
+          }
+        ]
+      }
+    ]
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7630401143006","7630401143006"],
+    },
+  },
+});
+
+weightloss_engine_long.addRule({
+  conditions: {
+    all: [ 
+      {
+        fact: 'body_conditions_array',
+        operator: 'contains', 
+        value: 'OverWeight/Obese',
+      },
+      {
+        any:[
+            {
+              fact: 'body_conditions_array',
+              operator: 'contains', 
+              value: 'Weak Joints',
+            },
+            {
+              fact: 'body_conditions_array',
+              operator: 'contains', 
+              value: 'Knee/Shoulder/Joint Pain',
+            }
+        ]
+      },
+      {
+        all : [
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"None"
+          }
+        ]
+      }
+    ]
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7679735759070" ,"7630401143006"],
+    },
+  },
+});
+
+weightloss_engine_long.addRule({
+  conditions: {
+    all: [ 
+      {
+        fact: 'body_conditions_array',
+        operator: 'contains', 
+        value: 'OverWeight/Obese',
+      },
+      {
+        any:[
+            {
+              fact: 'body_conditions_array',
+              operator: 'contains', 
+              value: 'Weak Joints',
+            },
+            {
+              fact: 'body_conditions_array',
+              operator: 'contains', 
+              value: 'Knee/Shoulder/Joint Pain',
+            }
+        ]
+      },
+      {
+        any : [
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"Glucosamine"
+          },
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"Chondroitin"
+          },
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"Methylsulfonylmethane(MSM)"
+          },
+        ]
+      }
+    ]
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7679735759070","7619064365278"],
+    },
+  },
+});
+
+weightloss_engine_long.addRule({
+  conditions: {
+    all: [ 
+      {
+        fact: 'body_conditions_array',
+        operator: 'contains', 
+        value: 'OverWeight/Obese',
+      },
+      {
+        any:[
+            {
+              fact: 'body_conditions_array',
+              operator: 'contains', 
+              value: 'Weak Joints',
+            },
+            {
+              fact: 'body_conditions_array',
+              operator: 'contains', 
+              value: 'Knee/Shoulder/Joint Pain',
+            }
+        ]
+      },
+      {
+        any:[
+          {
+            fact: 'body_conditions_array',
+            operator: 'contains', 
+            value: 'Weak bones/muscles',
+          },
+          {
+            fact: 'body_conditions_array',
+            operator: 'contains', 
+            value: 'Body Fatigue',
+          }
+        ]
+      },
+      {
+        all : [
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"None"
+          }
+        ]
+      }
+    ]
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7679735759070","7630401143006"],
+    },
+  },
+});
+
+weightloss_engine_long.addRule({
+  conditions: {
+    all: [ 
+      {
+        fact: 'body_conditions_array',
+        operator: 'contains', 
+        value: 'OverWeight/Obese',
+      },
+      {
+        any:[
+            {
+              fact: 'body_conditions_array',
+              operator: 'contains', 
+              value: 'Weak Joints',
+            },
+            {
+              fact: 'body_conditions_array',
+              operator: 'contains', 
+              value: 'Knee/Shoulder/Joint Pain',
+            }
+        ]
+      },
+      {
+        any:[
+          {
+            fact: 'body_conditions_array',
+            operator: 'contains', 
+            value: 'Weak bones/muscles',
+          },
+          {
+            fact: 'body_conditions_array',
+            operator: 'contains', 
+            value: 'Body Fatigue',
+          }
+        ]
+      },
+      {
+        any : [
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"Glucosamine"
+          },
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"Chondroitin"
+          },
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"Methylsulfonylmethane(MSM)"
+          },
+        ]
+      }
+    ]
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7679735759070","7619064365278"],
+    },
+  },
+});
+
+weightloss_engine_long.addRule({
+  conditions: {
+    all: [ 
+      {
+        any:[
+            {
+              fact: 'body_conditions_array',
+              operator: 'contains', 
+              value: 'Weak Joints',
+            },
+            {
+              fact: 'body_conditions_array',
+              operator: 'contains', 
+              value: 'Knee/Shoulder/Joint Pain',
+            }
+        ]
+      },
+      {
+        any:[
+          {
+            fact: 'body_conditions_array',
+            operator: 'contains', 
+            value: 'Weak bones/muscles',
+          },
+          {
+            fact: 'body_conditions_array',
+            operator: 'contains', 
+            value: 'Body Fatigue',
+          }
+        ]
+      },
+      {
+        any : [
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"Glucosamine"
+          },
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"Chondroitin"
+          },
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"Methylsulfonylmethane(MSM)"
+          },
+          {
+            fact:'past_allergies_array',
+            operator:'contains',
+            value:"None"
+          },
+        ]
+      }
+    ]
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7679735759070","7679735759070"],
     },
   },
 });
@@ -3812,7 +4729,6 @@ mars_hair_engine.addRule({
 });
 
 export const getProductIdFromEngine = async (stateObj) => {
-  console.log('in engine');
   var productId = "";
   const assessment_type = stateObj["assessment_type"];
   const category = stateObj["Select category for consultation"];
@@ -3849,14 +4765,18 @@ export const getProductIdFromEngine = async (stateObj) => {
         });
       }
       if (category == "weightloss") {
-        const weight = parseInt(stateObj["Weight"]);
-        const height = parseInt(stateObj["Height"]);
-        const bmi_value = (weight * 10000) / (height * height);
+        const body_conditions_object = stateObj["What best describes your current body condition?"];
+        const past_allergies_object = stateObj["Do you have any past allergic reactions to any of the below components?"];
+        const body_conditions = Object.keys(body_conditions_object).filter((x) => body_conditions_object[x] == true)
+        const past_allergies = Object.keys(past_allergies_object).filter((x) => past_allergies_object[x] == true)
+        console.log(body_conditions,past_allergies,'arrays');
         let facts = {
-          BMI: parseInt(bmi_value),
+          body_conditions_array : body_conditions,
+          past_allergies_array : past_allergies
         };
         await weightloss_engine.run(facts).then(({ events }) => {
           events.map((event) => {
+            console.log(event.params.id,'id')
             productId = event.params.id;
           });
         });
@@ -3877,11 +4797,13 @@ export const getProductIdFromEngine = async (stateObj) => {
         });
       }
       if (category == "weightloss") {
-        const weight = parseInt(stateObj["Weight"]);
-        const height = parseInt(stateObj["Height"]);
-        const bmi_value = (weight * 10000) / (height * height);
+        const body_conditions_object = stateObj["What best describes your current body condition?"];
+        const past_allergies_object = stateObj["Do you have any past allergic reactions to any of the below components?"];
+        const body_conditions = Object.keys(body_conditions_object).filter((x) => body_conditions_object[x] == true)
+        const past_allergies = Object.keys(past_allergies_object).filter((x) => past_allergies_object[x] == true)
         let facts = {
-          BMI: parseInt(bmi_value),
+          body_conditions_array : body_conditions,
+          past_allergies_array : past_allergies
         };
         await weightloss_engine_long.run(facts).then(({ events }) => {
           events.map((event) => {
@@ -3943,6 +4865,14 @@ export const getProductIdFromEngine = async (stateObj) => {
       if (category == "weightloss") {
         const weight = parseInt(stateObj["Weight"]);
         const height = parseInt(stateObj["Height"]);
+        const body_conditions = stateObj["What best describes your current body condition?"];
+        const past_allergic_reactions = 
+        stateObj["Do you have any past allergic reactions to any of the below components?"];
+
+        const body_conditions_array = Object.values(
+          stateObj["Do you have any pre-existing problems?"]
+        )?.filter((x) => x)
+
         const bmi_value = (weight * 10000) / (height * height);
         let facts = {
           BMI: parseInt(bmi_value),

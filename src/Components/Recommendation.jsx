@@ -34,7 +34,6 @@ const CallBack = ({
   const [disp, Set_disp] = useState(true);
 
   useEffect(() => {
-    console.log('in use effect')
     var product_id = "";
     let category = "";
     const product_id_promise = getProductIdFromEngine(stateObj);
@@ -138,6 +137,7 @@ const CallBack = ({
         getData();
 
         const data = getSendMailData(stateObj["assessment_type"], stateObj);
+        console.log(data,'mail data');
         const sendMail = async () => {
           const config = {
             method: "post",

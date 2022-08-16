@@ -26,11 +26,16 @@ const ChoicePage = ({
   inputOptions,
   checkboxOptions,
   required,
+  required_check,
   progress_bar,
   progress_bar_text,
   progress_step,
 }) => {
+  console.log(required_check,conditionMet, 'vals');
   const [display_overlay_text, Set_display_overlay_text] = useState(true);
+  if(required_check){
+    state_Obj[question] = state_Obj[question] ? state_Obj[question] : {}; 
+  }
   useEffect(() => {
     window.scrollTo(0, 0);
     setTimeout(() => {
@@ -65,10 +70,19 @@ const ChoicePage = ({
         </div> */}
         <div className="assessment">
           <h5>{question} </h5>
-          {required ? (
+          {required  ? (
             <div
               className={` error-text-checkbox ${
                 !!state_Obj[question] ? "not-visible" : "visible"
+              }`}
+            >
+              Please answer the question to proceed
+            </div>
+          ) : null}
+          { !!(required_check && state_Obj[question])  ? (
+            <div
+              className={` error-text-checkbox ${
+                Object.values(state_Obj[question])?.filter((x) => x == true).length ? "not-visible" : "visible"
               }`}
             >
               Please answer the question to proceed
@@ -161,7 +175,8 @@ const ChoicePage = ({
             <ProceedTemplate
               proceed_text="Proceed"
               back_text="Back"
-              conditionMet={conditionMet || state_Obj[question]}
+              conditionMet={!required_check ? (conditionMet || state_Obj[question]): 
+                (Object.values(state_Obj[question])?.filter((x) => x == true).length) }
               choice={proceed_link}
               navigateTo={navigateTo}
               backLink={back_link}
@@ -175,7 +190,8 @@ const ChoicePage = ({
         <ProceedTemplate
           proceed_text="Proceed"
           back_text="Back"
-          conditionMet={conditionMet || state_Obj[question]}
+          conditionMet={!required_check ? (conditionMet || state_Obj[question]): 
+            (Object.values(state_Obj[question])?.filter((x) => x == true).length)}
           choice={proceed_link}
           navigateTo={navigateTo}
           backLink={back_link}

@@ -597,7 +597,7 @@ export default function App() {
         back_link: "?page=1&type=weightloss",
         overlay_screen_text:
           "Measuring your weight everyday helps you lose weight faster",
-        required: "true",
+        required_check: true,
         checkboxOptions: [
           {
             value:
@@ -659,12 +659,7 @@ export default function App() {
         state_Obj: stateObj,
         proceed_link: "?page=4&type=weightloss",
         back_link: "?page=2&type=weightloss",
-        conditionMet: stateObj["Do you have any pre-existing problems?"]
-          ? !!Object.values(
-              stateObj["Do you have any pre-existing problems?"]
-            )?.filter((x) => x).length
-          : false,
-        required: true,
+        conditionMet: true,
         checkboxOptions: [
           {
             value:
@@ -723,7 +718,9 @@ export default function App() {
         state_Obj: stateObj,
         proceed_link: "?appointment=yes",
         back_link: "?page=3&type=weightloss",
-        required: "true",
+        required: false,
+        conditionMet: false,
+        required_check: true,
         checkboxOptions: [
           {
             value:
@@ -1616,10 +1613,10 @@ export default function App() {
         overlay_screen_text:
           "Your metabolism is highly responsive to your daily routine and adjusts accordingly.",
         delay_time: 3000,
-        conditionMet: true,
         progress_bar: true,
         progress_bar_text: "My Wellness",
         progress_step: "44",
+        required_check: true,
         checkboxOptions: [
           {
             value:
@@ -1979,10 +1976,10 @@ export default function App() {
         state_Obj: stateObj,
         proceed_link: "?page=13&type=weightloss",
         back_link: "?page=11&type=weightloss",
-        required: "true",
         progress_bar: true,
         progress_bar_text: "My Wellness",
         progress_step: "100",
+        required_check: true,
         checkboxOptions: [
           {
             value:
@@ -2006,6 +2003,14 @@ export default function App() {
                 `Do you have any past allergic reactions to any of the below components?`
               ]?.["Methylsulfonylmethane(MSM)"] || 0,
             displayText: `Methylsulfonylmethane(MSM)`,
+            onChange: checkBoxHandler,
+          },
+          {
+            value:
+              stateObj[
+                `Do you have any past allergic reactions to any of the below components?`
+              ]?.["None"] || 0,
+            displayText: `None`,
             onChange: checkBoxHandler,
           },
         ],
@@ -5674,6 +5679,7 @@ export default function App() {
       checkboxOptions,
       conditionMet,
       required,
+      required_check,
       progress_bar,
       progress_bar_text,
       progress_step,
@@ -5697,6 +5703,7 @@ export default function App() {
         checkboxOptions={checkboxOptions}
         conditionMet={conditionMet}
         required={required}
+        required_check={required_check}
         progress_bar={progress_bar}
         progress_bar_text={progress_bar_text}
         progress_step={progress_step}

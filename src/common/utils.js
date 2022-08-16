@@ -141,6 +141,7 @@ const getSendMailData = (assessment_type, stateObj) => {
   const questionnaire = [];
 
   for (let key in stateObj) {
+    console.log(key,stateObj[key],'keys');
     if (
       key == "First Name" ||
       key == "Last Name" ||
@@ -152,17 +153,19 @@ const getSendMailData = (assessment_type, stateObj) => {
       key == "Select category for consultation"
     ) {
     } else {
-      if (key == "Do you have any pre-existing problems?") {
-        const problems = Object.keys(
-          stateObj["Do you have any pre-existing problems?"]
+      if (key == "Do you have any pre-existing problems?" || key == "What best describes your current body condition?" 
+      || key == "Do you have any past allergic reactions to any of the below components?"){
+        let problems = Object.keys(
+          stateObj[key]
         );
-        key = problems.filter((problem) => {
-          return stateObj["Do you have any pre-existing problems?"][problem];
+        problems = problems.filter((problem) => {
+          return stateObj[key][problem] == true;
         });
-        key = key.toString();
+        problems = problems.toString();
+        console.log(key,problems,'else others');
         questionnaire.push({
-          question: "Do you have any pre-existing problems?",
-          answer: key,
+          question: key,
+          answer: problems,
         });
       } else {
         questionnaire.push({
@@ -175,7 +178,7 @@ const getSendMailData = (assessment_type, stateObj) => {
 
   const data = JSON.stringify({
     firstName: stateObj["First Name"],
-    lastName: stateObj["Last Name"],
+    lastName: stateObj["Last Name"] || "",
     age: stateObj["Age"],
     phone: stateObj["Phone Number"],
     email: stateObj["Email"],
@@ -184,7 +187,8 @@ const getSendMailData = (assessment_type, stateObj) => {
       stateObj["Select category for consultation"] == "weightloss"
         ? "Wellness"
         : stateObj["Select category for consultation"],
-    booking: stateObj["Wasn’t that easy? Would you like a free consultation?"],
+    booking: stateObj["Wasn’t that easy? Would you like a free consultation?"] == "Yes, please" ? 
+    "Free consultation" : "Not free consultation",
     image: "",
     type: process.env.REACT_APP_BRAND.toLowerCase(),
     user_survey: questionnaire,
