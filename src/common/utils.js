@@ -188,7 +188,7 @@ const getSendMailData = (assessment_type, stateObj) => {
         ? "Wellness"
         : stateObj["Select category for consultation"],
     booking: stateObj["Wasn’t that easy? Would you like a free consultation?"] == "Yes, please" ? 
-    "Free consultation" : "Not free consultation",
+    "Free consultation" : "Free recommendation",
     image: "",
     type: process.env.REACT_APP_BRAND.toLowerCase(),
     user_survey: questionnaire,

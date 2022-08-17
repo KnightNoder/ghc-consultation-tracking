@@ -3062,6 +3062,121 @@ skin_engine_long.addRule({
       {
         fact: "What are you concerned about?",
         operator: "equal",
+        value: "Open pores",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7602721095902", "7451599274206"],
+    },
+  },
+});
+
+skin_engine_long.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "None",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Pigmentation",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7602716573918", "7658065002718"],
+    },
+  },
+});
+
+skin_engine_long.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "None",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Active Acne",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7489917878494", "7489915977950"],
+    },
+  },
+});
+
+skin_engine_long.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "None",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Aging",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7602723160286", "7679711412446"],
+    },
+  },
+});
+
+skin_engine_long.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "None",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Dark circles",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7602723160286", "7602712576222"],
+    },
+  },
+});
+
+skin_engine_long.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "None",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
         value: "Spots & Marks",
       },
     ],
@@ -3069,7 +3184,7 @@ skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7602716573918", "7489917550814"],
+      id: ["7602716573918", "7602716573918"],
     },
   },
 });
@@ -3117,7 +3232,7 @@ skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7658081157342", "7658081157342"],
+      id: ["7451599274206", "7451599274206"],
     },
   },
 });
@@ -3163,7 +3278,7 @@ skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7489917878494", "7489917878494"],
+      id: ["7489917878494", "7489915977950"],
     },
   },
 });
@@ -3186,7 +3301,7 @@ skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7602723160286", "7489916829918"],
+      id: ["7602723160286", "7515411415262"],
     },
   },
 });
@@ -3209,7 +3324,7 @@ skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7602723160286", "7602712576222"],
+      id: ["7602723160286", "7515411415262"],
     },
   },
 });
@@ -3232,7 +3347,7 @@ skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7602716573918", "7489917550814"],
+      id: ["7602716573918", "7602716573918"],
     },
   },
 });
@@ -3255,7 +3370,7 @@ skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7658081157342", "7530237690078"],
+      id: ["7451599274206", "7530237690078"],
     },
   },
 });
@@ -3280,7 +3395,7 @@ skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7602721095902", "7658081157342"],
+      id: ["7602721095902", "7451599274206"],
     },
   },
 });
@@ -3326,7 +3441,7 @@ skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7658081157342", "7658081157342"],
+      id: ["7451599274206", "7451599274206"],
     },
   },
 });
@@ -3395,7 +3510,7 @@ skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7658065002718", "7658065002718"],
+      id: ["7658065002718", "7602716573918"],
     },
   },
 });
@@ -3418,7 +3533,7 @@ skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7602721095902", "7489917550814"],
+      id: ["7602721095902", "7530240245982"],
     },
   },
 });
@@ -3443,7 +3558,7 @@ skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: "7602721095902",
+      id: ["7602721095902","7451599274206"],
     },
   },
 });
@@ -3489,7 +3604,7 @@ skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7489917878494", "7489917878494"],
+      id: ["7489917878494", "7489915977950"],
     },
   },
 });
@@ -3512,7 +3627,7 @@ skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7658065002718", "7530240245982"],
+      id: ["7602723160286", "7530240245982"],
     },
   },
 });
@@ -3535,7 +3650,7 @@ skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7602716573918", "7530241163486"],
+      id: ["7602723160286", "7530241163486"],
     },
   },
 });
@@ -3558,7 +3673,7 @@ skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7602716573918", "7489917550814"],
+      id: ["7602716573918", "7602716573918"],
     },
   },
 });
@@ -3606,7 +3721,7 @@ skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7602721095902", "7658081157342"],
+      id: ["7602721095902", "7451599274206"],
     },
   },
 });
@@ -3652,7 +3767,7 @@ skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7489917878494", "7489917550814"],
+      id: ["7489917550814", "7602716573918"],
     },
   },
 });
@@ -3721,7 +3836,7 @@ skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7602721095902", "7489917550814"],
+      id: ["7602721095902", "7602716573918"],
     },
   },
 });
@@ -3748,6 +3863,7 @@ skin_engine_long.addRule({
     },
   },
 });
+
 
 // Mars recommendations
 

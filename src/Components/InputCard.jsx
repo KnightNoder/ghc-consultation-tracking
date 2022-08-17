@@ -13,6 +13,7 @@ const InputCard = ({
   inputCheck,
   // key,
 }) => {
+  
   return (
     <>
       <h3 className="input-card-label">

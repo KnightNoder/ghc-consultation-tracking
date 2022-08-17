@@ -31,7 +31,6 @@ const ChoicePage = ({
   progress_bar_text,
   progress_step,
 }) => {
-  console.log(required_check,conditionMet, 'vals');
   const [display_overlay_text, Set_display_overlay_text] = useState(true);
   if(required_check){
     state_Obj[question] = state_Obj[question] ? state_Obj[question] : {}; 
@@ -106,8 +105,27 @@ const ChoicePage = ({
               })
             : null}
 
-          {inputOptions
-            ? inputOptions.map((option) => {
+          {checkboxOptions
+            ? checkboxOptions.map((option) => {
+                return (
+                  <>
+                    <CheckBoxCard
+                      value={option.value}
+                      text={option.displayText}
+                      state_Obj={state_Obj}
+                      key={option.displayText}
+                      onchange={(text, value, question) =>
+                        option.onChange(text, value, question)
+                      }
+                      question={question}
+                    />
+                  </>
+                );
+              })
+            : null}
+
+            {inputOptions
+              ? inputOptions.map((option) => {
                 return (
                   <>
                     <CustomInputComponent
@@ -122,25 +140,7 @@ const ChoicePage = ({
                       inputMode={option.inputMode}
                       validity={option.validity}
                       inputCheck={option.inputCheck ? option.inputCheck : null}
-                    />
-                  </>
-                );
-              })
-            : null}
-
-          {checkboxOptions
-            ? checkboxOptions.map((option) => {
-                return (
-                  <>
-                    <CheckBoxCard
-                      value={option.value}
-                      text={option.displayText}
-                      state_Obj={state_Obj}
-                      key={option.displayText}
-                      onchange={(text, value, question) =>
-                        option.onChange(text, value, question)
-                      }
-                      question={question}
+                      disable={option.disable}
                     />
                   </>
                 );

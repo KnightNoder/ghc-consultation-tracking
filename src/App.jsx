@@ -120,7 +120,17 @@ export default function App() {
       key == 27 ||
       key == 37 ||
       key == 39 ||
-      key == 46
+      key == 46 || 
+      key == 96 ||
+      key == 97 ||
+      key == 98 ||
+      key == 99 ||
+      key == 100 ||
+      key == 101 ||
+      key == 102 ||
+      key == 103 ||
+      key == 104 ||
+      key == 105
     )
       return true;
     // numbers
@@ -706,7 +716,24 @@ export default function App() {
             displayText: "No such problems",
             onChange: checkBoxHandler,
           },
+          {
+            value:
+              stateObj[`Do you have any pre-existing problems?`]?.[
+                "Others"
+              ] || 0,
+            displayText: "Others",
+            onChange: checkBoxHandler,
+          }
         ],
+        inputOptions: [
+          {
+            heading: "Other problems",
+            clickHandler: choice_clickHandler,
+            value: stateObj["Other problems"],
+            // disable: !Object.keys(stateObj[`Do you have any pre-existing problems?`])?.filter((x) => 
+            // stateObj[`Do you have any pre-existing problems?`][x] == true )?.includes("Others")
+          },
+        ]
       },
     ],
     weightloss4: [
@@ -1533,7 +1560,24 @@ export default function App() {
             displayText: "Indigestion",
             onChange: checkBoxHandler,
           },
+          {
+            value:
+              stateObj[`Do you have any pre-existing problems?`]?.[
+                "Others"
+              ],
+            displayText: "Others",
+            onChange: checkBoxHandler,
+          },
         ],
+        inputOptions: [
+          {
+            heading: "Other problems",
+            clickHandler: choice_clickHandler,
+            value: stateObj["Other problems"],
+            // disable: !Object.keys(stateObj[`Do you have any pre-existing problems?`])?.filter((x) => 
+            // stateObj[`Do you have any pre-existing problems?`][x] == true )?.includes("Others")
+          },
+        ]
       },
     ],
     skin18: [
@@ -1559,6 +1603,16 @@ export default function App() {
             displayText: "No",
           },
         ],
+        inputOptions: [
+          {
+            heading: "Allergic skin products used",
+            clickHandler: choice_clickHandler,
+            placeholder:"List all the products here",
+            value: stateObj["Allergic skin products used"],
+            // disable: !Object.keys(stateObj[`Do you have any pre-existing problems?`])?.filter((x) => 
+            // stateObj[`Do you have any pre-existing problems?`][x] == true )?.includes("Others")
+          },
+        ]
       },
     ],
     weightloss1: [
@@ -2039,6 +2093,16 @@ export default function App() {
             displayText: "No",
           },
         ],
+        inputOptions: [
+          {
+            placeholder:"List all products here",
+            heading: "Healthcare products used",
+            clickHandler: choice_clickHandler,
+            value: stateObj["Healthcare products used"],
+            // disable: !Object.keys(stateObj[`Do you have any pre-existing problems?`])?.filter((x) => 
+            // stateObj[`Do you have any pre-existing problems?`][x] == true )?.includes("Others")
+          },
+        ]
       },
     ],
     hair1: [
@@ -2496,7 +2560,24 @@ export default function App() {
             displayText: "No such problems",
             onChange: checkBoxHandler,
           },
+          {
+            value:
+              stateObj[`Do you have any pre-existing problems?`]?.[
+                "Others"
+              ],
+            displayText: "Others",
+            onChange: checkBoxHandler,
+          },
         ],
+        inputOptions: [
+          {
+            heading: "Other problems",
+            clickHandler: choice_clickHandler,
+            value: stateObj["Other problems"],
+            // disable: !Object.keys(stateObj[`Do you have any pre-existing problems?`])?.filter((x) => 
+            // stateObj[`Do you have any pre-existing problems?`][x] == true )?.includes("Others")
+          },
+        ]
       },
     ],
     hair15: [
