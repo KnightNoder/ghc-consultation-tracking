@@ -141,6 +141,7 @@ const ChoicePage = ({
                       validity={option.validity}
                       inputCheck={option.inputCheck ? option.inputCheck : null}
                       disable={option.disable}
+                      invisible={option.invisible}
                     />
                   </>
                 );

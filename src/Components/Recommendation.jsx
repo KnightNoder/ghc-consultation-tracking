@@ -40,34 +40,38 @@ const CallBack = ({
     product_id_promise
       .then((response) => {
         product_id = response;
-        console.log(product_id,'prod id')
+        console.log(product_link_1, product_link_2,'links');
+        console.log(stateObj["assessment_type"] == "6 mins" && product_link_1 != product_link_2)
         if (stateObj["assessment_type"] == "6 mins") {
           var product_id_1 = product_id[0];
           var product_id_2 = product_id[1];
-          if (stateObj["Select category for consultation"] == "weightloss") {
-            var weight = parseInt(stateObj[""]);
-            var height = parseInt(stateObj[""]);
-            var BMI = parseInt((weight * 10000) / (height * height));
-            Set_bmi(BMI);
-          }
         } else {
-          product_id_1 = product_id;
-          if (stateObj["Select category for consultation"] == "weightloss") {
-            var weight = parseInt(stateObj.Weight);
-            var height = parseInt(stateObj.Height);
-            var BMI = parseInt((weight * 10000) / (height * height));
-            Set_bmi(BMI);
-          }
+          var product_id_1 = product_id;
+          
+        }
+        if (stateObj["Select category for consultation"] == "weightloss") {
+          var weight = parseInt(stateObj["Weight"]);
+          var height = parseInt(stateObj["Height"]);
+          var BMI = parseInt((weight * 10000) / (height * height));
+          Set_bmi(BMI);
         }
 
         if (stateObj["Select category for consultation"] == "weightloss") {
           category = "wellness";
         }
         if (stateObj["Select category for consultation"] == "hair") {
-          category = "hair-products";
+          category = (process.env.REACT_APP_BRAND == 'Saturn') ? "hair-products" : "hair-1"
         }
         if (stateObj["Select category for consultation"] == "skin") {
           category = "skin";
+        }
+
+        if (stateObj["Select category for consultation"] == "beard") {
+          category = "beard";
+        }
+
+        if (stateObj["Select category for consultation"] == "performance") {
+          category = "performance";
         }
         const getData = async () => {
           var config = {
@@ -165,7 +169,7 @@ const CallBack = ({
       Set_disp(false);
     }, 4000);
   }, []);
-
+  console.log(process.env.REACT_APP_BRAND,'brand')
   return (
     <>
       <div
@@ -185,7 +189,9 @@ const CallBack = ({
         <div className="doctor-info2" style={{ marginTop: "0%" }}>
           <div className="logo">
             <img
-              src="https://cdn.shopify.com/s/files/1/0607/6029/3588/files/saturn.png?v=1659701745"
+              src= { process.env.REACT_APP_BRAND == 'Saturn' ? "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/saturn.png?v=1659701745" : 
+              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/mars-logo.png?v=1661108668"
+            }
               className="image"
               alt=""
             />
@@ -269,7 +275,7 @@ const CallBack = ({
                 </div>
               </div>
 
-              {stateObj["assessment_type"] == "6 mins" ? (
+              {(stateObj["assessment_type"] == "6 mins" && product_link_1 != product_link_2)? (
                 <div className="product-card">
                   <div className="image-section">
                     <img
@@ -338,7 +344,7 @@ const CallBack = ({
               </div>
             </div>
 
-            {stateObj["assessment_type"] == "6 mins" ? (
+            {(stateObj["assessment_type"] == "6 mins" && title_1 != title_2 )? (
               <div className="product-card">
                 <div className="image-section">
                   <img

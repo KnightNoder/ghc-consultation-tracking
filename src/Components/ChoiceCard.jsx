@@ -32,9 +32,9 @@ const ChoiceCard = ({
         <div className={`one ${show ? "dont-show-radio" : "show-radio"}`}>
           <Radio
             sx={{
-              color: "#CACACA",
+              color: `var(--border)`,
               "&.Mui-checked": {
-                color: "#975169",
+                color: `var(--border)`,
               },
               "& .MuiSvgIcon-root": {
                 fontSize: 15,

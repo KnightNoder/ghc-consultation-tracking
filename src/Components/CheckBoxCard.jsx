@@ -23,9 +23,9 @@ const CheckBoxCard = ({ text, onchange, value, question,key }) => {
               <CheckBoxIcon backgroundcolor="white" fontSize="small" />
             }
             sx={{
-              color: "#000000",
+              color: `var(--border)`,
               "&.Mui-checked": {
-                color: "#975169",
+                color: `var(--border)`,
               },
             }}
             checked={value || false}

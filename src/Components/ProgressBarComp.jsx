@@ -85,8 +85,8 @@ const ProgressBarComp = ({
           className="progress-bar-text"
           style={{ display: "flex", justifyContent: "space-between" }}
         >
-          <div>Basic Details</div>
           <div>{text}</div>
+          <div>Basic Details</div>
           <div>Life Style</div>
           <div>Health</div>
         </div>

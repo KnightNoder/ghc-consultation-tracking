@@ -1,11 +1,11 @@
 .generic-button{
-    background: var(--buttonColor);
+    background: var(--border);
     font-style: normal;
     font-weight: 500;
     line-height: 100%;
     text-align: center;
     color: #FFFFFF;
-    border: 1px solid var(--buttonColor);
+    border: 1px solid var(--border);
     box-sizing: border-box;
     /* box-shadow: 0px 4px 10px #A6CAD1; */
     border-radius: 5px;
@@ -22,7 +22,7 @@
     font-weight: 700;
     font-size: 18px;
     line-height: 21px;
-    color: var(--marsBlack);
+    color: #000000;
 }
 
 @media only screen and (max-width: 600px){

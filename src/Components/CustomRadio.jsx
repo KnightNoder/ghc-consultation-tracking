@@ -29,9 +29,9 @@ const CustomRadio = ({
         <div className={`one show-radio`}>
           <Radio
             sx={{
-              color: "#975169",
+              color: `var(--border)`,
               "&.Mui-checked": {
-                color: "#975169",
+                color: `var(--border)`,
               },
               "& .MuiSvgIcon-root": {
                 fontSize: 15,

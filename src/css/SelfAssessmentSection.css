@@ -40,7 +40,7 @@
 }
 
 .stopwatch{
-    border: 1px solid var(--buttonColor);
+    border: 1px solid var(--border);
     box-sizing: border-box;
     border-radius: 24px;
     height: 60%;
@@ -116,13 +116,13 @@
 
 .assessment-card:hover {
     background: var(--hover);
-    border: 1px solid var(--buttonColor);
+    border: 1px solid var(--border);
     box-sizing: border-box;
     border-radius: 24px;
 }
 
 .assessment-card:hover .start-assessment{
-    background: var(--buttonColor);
+    background: var(--border);
     border-radius: 0px 0px 24px 24px;
     color: white;
 }
@@ -211,7 +211,7 @@
 }
 .assessment-card-small .submit{
     flex: .5;
-    background: var(--buttonColor);
+    background: var(--border);
     border-radius: 8px;
     margin-left: 4%;
     margin-right: 4%;

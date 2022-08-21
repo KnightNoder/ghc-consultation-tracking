@@ -25,12 +25,12 @@ export default function App() {
   useEffect(() => {
     Set_query_params(window.location.search);
     document.documentElement.style.setProperty(
-      "--buttonColor",
-      process.env.REACT_APP_BUTTON_COLOR
+      "--border",
+      process.env.REACT_APP_COLOR_BORDER
     );
     document.documentElement.style.setProperty(
-      "--color-lighest",
-      process.env.REACT_APP_COLOR_LIGHEST
+      "--hover",
+      process.env.REACT_APP_COLOR_HOVER
     );
     document.documentElement.style.setProperty(
       "--color-light",
@@ -38,7 +38,11 @@ export default function App() {
     );
     document.documentElement.style.setProperty(
       "--color-normal",
-      process.env.REACT_APP_COLOR_LIGHT
+      process.env.REACT_APP_COLOR_NORMAL
+    );
+    document.documentElement.style.setProperty(
+      "--color-dark",
+      process.env.REACT_APP_COLOR_DARK
     );
   }, []);
 
@@ -46,6 +50,7 @@ export default function App() {
     const queryParams = new URLSearchParams(query_params);
     window.localStorage.setItem("stateObj", JSON.stringify(stateObj));
     let allPages = [];
+    console.log(process.env.REACT_APP_BRAND,'brand')
     allPages = eval(
       `allPages_${process.env.REACT_APP_BRAND}_${
         stateObj["assessment_type"] == "30 sec" ? "Short" : "Long"
@@ -137,6 +142,7 @@ export default function App() {
     else if ("0123456789".indexOf(keychar) > -1) return true;
     else e.preventDefault();
   };
+  
   const choice_clickHandler = (question, value) => {
     Set_stateObj((prevState) => {
       return { ...prevState, [question]: value };
@@ -230,7 +236,7 @@ export default function App() {
         data: {
           bannerHeader: `Know what's right for you`,
           bannerSubText:
-            "Get your self assessment done, Book an appointment with our expert, get a personalized treatment plan",
+            "Get your self assessment done, Book an appointment with our expert, get a personalized treatment plan.",
           bannerImageSrc:
             "https://cdn.shopify.com/s/files/1/0638/1391/0746/files/Doctor.png?v=1649252836",
         },
@@ -727,11 +733,13 @@ export default function App() {
         ],
         inputOptions: [
           {
-            heading: "Other problems",
+            heading: "Specify",
             clickHandler: choice_clickHandler,
             value: stateObj["Other problems"],
             // disable: !Object.keys(stateObj[`Do you have any pre-existing problems?`])?.filter((x) => 
             // stateObj[`Do you have any pre-existing problems?`][x] == true )?.includes("Others")
+            invisible: !(stateObj[`Do you have any pre-existing problems?`]?.[
+              "Others"] == (true || undefined)) 
           },
         ]
       },
@@ -844,7 +852,7 @@ export default function App() {
         data: {
           bannerHeader: `Know what's right for you`,
           bannerSubText:
-            "Get your self assessment done, Book an appointment with our expert, get a personalized treatment plan",
+            "Get your self assessment done, Book an appointment with our expert, get a personalized treatment plan.",
           bannerImageSrc:
             "https://cdn.shopify.com/s/files/1/0638/1391/0746/files/Doctor.png?v=1649252836",
         },
@@ -860,7 +868,7 @@ export default function App() {
         data: {
           bannerHeader: `Know what's right for you`,
           bannerSubText:
-            "Get your self assessment done, Book an appointment with our expert, get a personalized treatment plan",
+            "Get your self assessment done, Book an appointment with our expert, get a personalized treatment plan.",
           bannerImageSrc:
             "https://cdn.shopify.com/s/files/1/0638/1391/0746/files/Doctor.png?v=1649252836",
         },
@@ -1016,8 +1024,8 @@ export default function App() {
             displayText: "Spots & Marks",
           },
           {
-            value: "Dull skin (general skincare)",
-            displayText: "Dull skin (general skincare)",
+            value: "Dull Skin (general skincare)",
+            displayText: "Dull Skin (general skincare)",
           },
         ],
       },
@@ -1571,11 +1579,13 @@ export default function App() {
         ],
         inputOptions: [
           {
-            heading: "Other problems",
+            heading: "Specify",
             clickHandler: choice_clickHandler,
             value: stateObj["Other problems"],
             // disable: !Object.keys(stateObj[`Do you have any pre-existing problems?`])?.filter((x) => 
             // stateObj[`Do you have any pre-existing problems?`][x] == true )?.includes("Others")
+            invisible: !(stateObj[`Do you have any pre-existing problems?`]?.[
+              "Others"] == (true || undefined))
           },
         ]
       },
@@ -1609,8 +1619,7 @@ export default function App() {
             clickHandler: choice_clickHandler,
             placeholder:"List all the products here",
             value: stateObj["Allergic skin products used"],
-            // disable: !Object.keys(stateObj[`Do you have any pre-existing problems?`])?.filter((x) => 
-            // stateObj[`Do you have any pre-existing problems?`][x] == true )?.includes("Others")
+            invisible: !(stateObj["Have you ever had side effects from skin products?"] == "Yes")
           },
         ]
       },
@@ -1896,49 +1905,17 @@ export default function App() {
     ],
     weightloss8: [
       {
-        name: "skin page 12",
-        type: "category",
-        clickHandler: choice_clickHandler,
-        question: "What type of diet do you follow?",
-        state_Obj: stateObj,
-        proceed_link: "?page=9&type=weightloss",
-        back_link: "?page=7&type=weightloss",
-        overlay_screen_text:
-          "Let's not tell your boss how many hours you worked yesterday.",
-        delay_time: 3000,
-        conditionMet: true,
-        progress_bar: true,
-        progress_bar_text: "My Wellness",
-        progress_step: "88",
-        options: [
-          {
-            value: "Vegetarian including milk products",
-            displayText: "Vegetarian including milk products",
-          },
-          {
-            value: "Vegetarian without milk products",
-            displayText: "Vegetarian without milk products",
-          },
-          {
-            value: "Non-vegetarian",
-            displayText: "Non-vegetarian",
-          },
-        ],
-      },
-    ],
-    weightloss9: [
-      {
         name: "weight loss page 9",
         type: "category",
         clickHandler: choice_clickHandler,
         question: "How many hours do you work in a day? ",
         state_Obj: stateObj,
-        proceed_link: "?page=10&type=weightloss",
-        back_link: "?page=8&type=weightloss",
+        proceed_link: "?page=9&type=weightloss",
+        back_link: "?page=7&type=weightloss",
         conditionMet: true,
         progress_bar: true,
         progress_bar_text: "My Wellness",
-        progress_step: "93.5",
+        progress_step: "88",
         options: [
           {
             value: "<9 hours",
@@ -1959,6 +1936,38 @@ export default function App() {
         ],
       },
     ],
+    weightloss9: [
+      {
+        name: "skin page 12",
+        type: "category",
+        clickHandler: choice_clickHandler,
+        question: "What type of diet do you follow?",
+        state_Obj: stateObj,
+        proceed_link: "?page=10&type=weightloss",
+        back_link: "?page=8&type=weightloss",
+        overlay_screen_text:
+          "Let's not tell your boss how many hours you worked yesterday.",
+        delay_time: 3000,
+        conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Wellness",
+        progress_step: "93.5",
+        options: [
+          {
+            value: "Vegetarian including milk products",
+            displayText: "Vegetarian including milk products",
+          },
+          {
+            value: "Vegetarian without milk products",
+            displayText: "Vegetarian without milk products",
+          },
+          {
+            value: "Non-vegetarian",
+            displayText: "Non-vegetarian",
+          },
+        ],
+      },
+    ],  
     weightloss10: [
       {
         name: "Weight loss page 10",
@@ -2099,6 +2108,7 @@ export default function App() {
             heading: "Healthcare products used",
             clickHandler: choice_clickHandler,
             value: stateObj["Healthcare products used"],
+            invisible: !(stateObj["Have you used any healthcare/nutritional products before?"] == "Yes")
             // disable: !Object.keys(stateObj[`Do you have any pre-existing problems?`])?.filter((x) => 
             // stateObj[`Do you have any pre-existing problems?`][x] == true )?.includes("Others")
           },
@@ -2571,11 +2581,11 @@ export default function App() {
         ],
         inputOptions: [
           {
-            heading: "Other problems",
+            heading: "Specify",
             clickHandler: choice_clickHandler,
             value: stateObj["Other problems"],
-            // disable: !Object.keys(stateObj[`Do you have any pre-existing problems?`])?.filter((x) => 
-            // stateObj[`Do you have any pre-existing problems?`][x] == true )?.includes("Others")
+            invisible: !(stateObj[`Do you have any pre-existing problems?`]?.[
+              "Others"] == (true || undefined))
           },
         ]
       },
@@ -2603,6 +2613,15 @@ export default function App() {
             displayText: "No",
           },
         ],
+        inputOptions: [
+          {
+            placeholder:"List all products here",
+            heading: "Healthcare products used",
+            clickHandler: choice_clickHandler,
+            value: stateObj["Healthcare products used"],
+            invisible: (stateObj["Have you used hair products before?"] == "No")
+          },
+        ]
       },
     ],
     appointment: [
@@ -2637,7 +2656,7 @@ export default function App() {
         data: {
           bannerHeader: `Know what's right for you`,
           bannerSubText:
-            "Get your self assessment done, Book an appointment with our expert, get a personalized treatment plan",
+            "Get your self assessment done, Book an appointment with our expert, get a personalized treatment plan.",
           bannerImageSrc:
             "https://cdn.shopify.com/s/files/1/0638/1391/0746/files/Doctor.png?v=1649252836",
         },
@@ -2683,6 +2702,14 @@ export default function App() {
           {
             value: "hair",
             displayText: "Hair",
+          },
+          {
+            value: "performance",
+            displayText: "Performance",
+          },
+          {
+            value: "beard",
+            displayText: "Beard",
           },
         ],
       },
@@ -3422,7 +3449,7 @@ export default function App() {
         data: {
           bannerHeader: `Know what's right for you`,
           bannerSubText:
-            "Get your self assessment done, Book an appointment with our expert, get a personalized treatment plan",
+            "Get your self assessment done, Book an appointment with our expert, get a personalized treatment plan.",
           bannerImageSrc:
             "https://cdn.shopify.com/s/files/1/0638/1391/0746/files/Doctor.png?v=1649252836",
         },
@@ -3448,7 +3475,7 @@ export default function App() {
         data: {
           bannerHeader: `Know what's right for you`,
           bannerSubText:
-            "Get your self assessment done, Book an appointment with our expert, get a personalized treatment plan",
+            "Get your self assessment done, Book an appointment with our expert, get a personalized treatment plan.",
           bannerImageSrc:
             "https://cdn.shopify.com/s/files/1/0638/1391/0746/files/Doctor.png?v=1649252836",
         },
@@ -4451,8 +4478,8 @@ export default function App() {
             displayText: "Spots & Marks",
           },
           {
-            value: "Dull skin (general skincare)",
-            displayText: "Dull skin (general skincare)",
+            value: "Dull Skin (general skincare)",
+            displayText: "Dull Skin (general skincare)",
           },
         ],
       },
@@ -5334,6 +5361,7 @@ export default function App() {
             displayText: "No",
           },
         ],
+         
       },
     ],
     performance1: [
@@ -5715,7 +5743,7 @@ export default function App() {
         data: {
           bannerHeader: `Know what's right for you`,
           bannerSubText:
-            "Get your self assessment done, Book an appointment with our expert, get a personalized treatment plan",
+            "Get your self assessment done, Book an appointment with our expert, get a personalized treatment plan.",
           bannerImageSrc:
             "https://cdn.shopify.com/s/files/1/0638/1391/0746/files/Doctor.png?v=1649252836",
         },

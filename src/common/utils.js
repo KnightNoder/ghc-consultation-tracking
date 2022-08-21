@@ -141,7 +141,6 @@ const getSendMailData = (assessment_type, stateObj) => {
   const questionnaire = [];
 
   for (let key in stateObj) {
-    console.log(key,stateObj[key],'keys');
     if (
       key == "First Name" ||
       key == "Last Name" ||
@@ -162,16 +161,23 @@ const getSendMailData = (assessment_type, stateObj) => {
           return stateObj[key][problem] == true;
         });
         problems = problems.toString();
-        console.log(key,problems,'else others');
         questionnaire.push({
           question: key,
           answer: problems,
         });
       } else {
-        questionnaire.push({
-          question: key,
-          answer: stateObj[key],
-        });
+        if(key == "Specify"){
+          key = "Other problems"
+          questionnaire.push({
+            question: key,
+            answer: stateObj["Specify"],
+          });
+        } else {
+          questionnaire.push({
+            question: key,
+            answer: stateObj[key],
+          });
+        }
       }
     }
   }

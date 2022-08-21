@@ -35,8 +35,9 @@
 }
 
 .selectStyle {
-  background-color: var(--hover);
-  border: 1px solid var(--buttonColor);
+  /* background-color: var(--hover); */
+  background-color: #F9E9EE;
+  border: 1px solid var(--border);
   box-sizing: border-box;
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.12);
   border-radius: 6px;
@@ -59,7 +60,7 @@
 .selectTextStyle {
   font-style: normal;
   font-weight: 500;
-  color: var(--buttonColor);
+  color: var(--border);
 }
 
 .deselectTextStyle {

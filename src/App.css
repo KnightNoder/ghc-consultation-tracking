@@ -15,27 +15,6 @@
   src: url(fonts/HarmoniaSansProCyr-Regular.ttf);
 }
 
-/* html {
-} */
-
-:root {
-  /* --color-light: #e8c4d2; */
-  --border: #975169;
-  --buttonColor: #975169;
-  --hover: #F9E9EE;
-  /* --marsBlack:#000000; */
-  --saturnLight: #E8C4D2;
-  --priceText: #894255;
-  --newButtonTextColor: #975169;
-  --light:#fcdfcb;
-  --color-light: #e8c4d2;
-  --color-normal: #dfb5bc;
-  --image-background: #dfb5bc
-  /* --color-lighest: #f9e9ee;
-  --color-dark: #975169;
-  --color-normal: #e0b5bc; */
-}
-
 * {
   padding: 0;
   margin: 0;
@@ -73,7 +52,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
-  color: var(--buttonColor);
+  color: var(--border);
   margin-top: 2%;
   margin-left: 1%;
 }
@@ -118,7 +97,7 @@ img {
 }
 
 .progress-bar-saturn {
-  border: 1px solid #666;
+  border: 1px solid var(--border);
   height: 4px;
   width: 79%;
   margin: 7% 0;
@@ -127,7 +106,7 @@ img {
 .in {
   animation: fill 4s linear 1;
   height: 100%;
-  background-color: pink;
+  background-color: var(--color-dark);
 }
 
 @keyframes fill {
@@ -184,8 +163,8 @@ img {
   }
 
   .carousel.carousel-slider .control-arrow{
-    background-color: var(--buttonColor) !important;
-    border-color: var(--buttonColor) !important; 
+    background-color: var(--border) !important;
+    border-color: var(--border) !important; 
     bottom: 45% !important;
     top: 45% !important;
   }
@@ -368,8 +347,8 @@ img {
   .start-assessment{
     flex: 2 1;
     width: 100%;
-    background: var(--buttonColor) ;
-    border-top: 1px solid var(--buttonColor) ;
+    background: var(--border) ;
+    border-top: 1px solid var(--border) ;
     box-sizing: border-box;
     border-radius: 0px 0px 24px 24px;
     display: flex;
@@ -431,7 +410,7 @@ img {
   
   .progress-bar-text {
     width: 85%;
-    margin-left: 6%;
+    margin-left: 8%;
     margin-top: 1%;
     font-size: 15px
   }

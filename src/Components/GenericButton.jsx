@@ -22,7 +22,11 @@ const GenericButton = ({
       set_url_function("/" + parseInt(navigateTo));
     } else if (productNavigate) {
       const redirectToCheckout = async () => {
-        window.open(`https://saturn-saturn.myshopify.com/cart/${productLink}`);
+        if(process.env.REACT_APP_BRAND == 'Saturn'){
+          window.open(`https://saturn-saturn.myshopify.com/cart/${productLink}`);
+        } else {
+          window.open(`https://saturn-saturn.myshopify.com/cart/${productLink}`);
+        }
       };
       redirectToCheckout();
     } else {

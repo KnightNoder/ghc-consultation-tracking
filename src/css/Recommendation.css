@@ -146,7 +146,7 @@
 }
 
 .product-header .bmi{
-    background: var(--saturnLight);
+    background: var(--color-dark);
     border-radius: 16px;
     width: 25%;
     display: flex;
@@ -160,7 +160,7 @@
 }
 
 .bmi .bmi-number{
-    background: var(--buttonColor);
+    background: var(--border);
     height: 40px;
     width: 40px;
     border-radius: 50%;
@@ -186,7 +186,7 @@
     /* background: #FFF1EF; */
     /* background: #f9dfd1; */
     /* background: var(--saturnHover); */
-    background: var(--image-background);
+    background: var(--color-normal);
     /* border-radius: 16px 16px 16px 16px; */
     border-radius: 16px 0px 0px 16px;
     height: 100%;
@@ -399,6 +399,7 @@
         align-items: center;
         justify-content: center;
         border-radius: 20px;
+        margin-left: 2%;
     }
 
     .product-header h3{

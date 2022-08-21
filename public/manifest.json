@@ -21,5 +21,11 @@
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background_color": "#ffffff",
+  "permissions": [
+    "http://prex-prex-prex.myshopify.com.com/*",
+    "https://prex-prex-prex.myshopify.com.com/*",
+    "http://www.example.com/*",
+    "https://www.example.com/*"
+ ]
 }
