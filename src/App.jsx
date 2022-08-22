@@ -2631,7 +2631,7 @@ export default function App() {
             heading: "Healthcare products used",
             clickHandler: choice_clickHandler,
             value: stateObj["Healthcare products used"],
-            invisible: (stateObj["Have you used hair products before?"] == "No")
+            invisible: !(stateObj["Have you used hair products before?"] == "Yes")
           },
         ]
       },
