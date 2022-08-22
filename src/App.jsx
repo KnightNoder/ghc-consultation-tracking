@@ -225,6 +225,7 @@ export default function App() {
       if (category == "skin") return "My Skin";
       if (category == "weightloss") return "My Wellness";
       if (category == "hair") return "My Hair";
+      if (category == undefined) return "Category"
     }
   };
 
@@ -1024,7 +1025,7 @@ export default function App() {
             displayText: "Spots & Marks",
           },
           {
-            value: "Dull Skin (general skincare)",
+            value: "Dull Skin",
             displayText: "Dull Skin (general skincare)",
           },
         ],
@@ -1574,6 +1575,14 @@ export default function App() {
                 "Others"
               ],
             displayText: "Others",
+            onChange: checkBoxHandler,
+          },
+          {
+            value:
+              stateObj[`Do you have any pre-existing problems?`]?.[
+                "No such problems"
+              ],
+            displayText: "No such problems",
             onChange: checkBoxHandler,
           },
         ],
@@ -4478,7 +4487,7 @@ export default function App() {
             displayText: "Spots & Marks",
           },
           {
-            value: "Dull Skin (general skincare)",
+            value: "Dull Skin",
             displayText: "Dull Skin (general skincare)",
           },
         ],
