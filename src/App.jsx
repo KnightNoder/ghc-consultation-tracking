@@ -1921,6 +1921,9 @@ export default function App() {
         state_Obj: stateObj,
         proceed_link: "?page=9&type=weightloss",
         back_link: "?page=7&type=weightloss",
+        overlay_screen_text:
+          "Let's not tell your boss how many hours you worked yesterday.",
+        delay_time: 3000,
         conditionMet: true,
         progress_bar: true,
         progress_bar_text: "My Wellness",
