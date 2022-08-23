@@ -6441,7 +6441,7 @@ mars_skin_engine_long.addRule({
         {
           fact: "How is your beard condition currently?",
           operator: "equal",
-          value: "Very less",
+          value: "Very less beard",
         },
       ]  
     },
@@ -6493,26 +6493,21 @@ mars_skin_engine_long.addRule({
 
   // long
 
-  // 1A/C
+  // 1A
   mars_beard_engine_long.addRule({
     conditions: {
       all:[
         {
-          fact: "How is your beard condition currently?",
+          fact: "What exactly are you looking for?",
           operator: "equal",
-          value: "Patchy beard",
-        },
-        {
-          fact: "How is your beard condition currently?",
-          operator: "equal",
-          value: "Very less",
+          value: "Beard Growth",
         },
       ]  
     },
     event: {
       type: "product id",
       params: {
-        id: ["6791716405412","6791716405412"],
+        id: ["6980058677412","6791716405412"]
       },
     },
   });
@@ -6522,43 +6517,25 @@ mars_skin_engine_long.addRule({
     conditions: {
       all:[
         {
-          fact: "How is your beard condition currently?",
+          fact: "What exactly are you looking for?",
           operator: "equal",
-          value: "No Beard",
+          value: "Beard Care",
         },
       ]  
     },
     event: {
       type: "product id",
       params: {
-        id: ["6611416645796","6611416645796"]
+        id: ["6743341072548","6741236973732"]
       },
     },
   });
 
-  //1D
-  mars_beard_engine_long.addRule({
-    conditions: {
-      all:[
-        {
-          fact: "How is your beard condition currently?",
-          operator: "equal",
-          value: "Excellent",
-        },
-      ]  
-    },
-    event: {
-      type: "product id",
-      params: {
-        id: ["6791716405412","6791716405412"]
-      },
-    },
-  });
 
   // Performance
 
   // 3 OR 2 is 1 AND 4 is 1 or 3
-  mars_performance_engine_long.addRule({
+  mars_performance_engine.addRule({
     conditions: {
       all:[
         {
@@ -6599,7 +6576,7 @@ mars_skin_engine_long.addRule({
     },
   })
   // 3 OR 2 is 1 AND 4 is 2
-  mars_performance_engine_long.addRule({
+  mars_performance_engine.addRule({
     conditions: {
       all:[
         {
@@ -6632,7 +6609,7 @@ mars_skin_engine_long.addRule({
   })
 
   // 3 OR 2 is 2 AND 4 is 1 or 3
-  mars_performance_engine_long.addRule({
+  mars_performance_engine.addRule({
     conditions: {
       all:[
         {
@@ -6673,7 +6650,7 @@ mars_skin_engine_long.addRule({
     },
   })
   // 3 OR 2 is 2 AND 4 is 2
-  mars_performance_engine_long.addRule({
+  mars_performance_engine.addRule({
     conditions: {
       all:[
         {
@@ -6706,7 +6683,7 @@ mars_skin_engine_long.addRule({
   })
 
   // 3 and 2 is 3 AND 4 is any
-  mars_performance_engine_long.addRule({
+  mars_performance_engine.addRule({
     conditions: {
       all:[
         {
@@ -6748,8 +6725,8 @@ mars_skin_engine_long.addRule({
     },
   })
 
-  // 3 is 4 and  2 is 3 AND 4 is any
-  mars_performance_engine_long.addRule({
+  // 3 is 4 and  2 is 3 or 4 AND 4 is any
+  mars_performance_engine.addRule({
     conditions: {
       all:[
         {
@@ -6758,9 +6735,18 @@ mars_skin_engine_long.addRule({
           value: "Occasionally",
         },
         {
-          fact: "How often are you climaxing sooner than you would like during sex?",
-          operator: "equal",
-          value: "No issues with ejaculation",
+          any:[
+            {
+              fact: "How often are you climaxing sooner than you would like during sex?",
+              operator: "equal",
+              value: "No issues with ejaculation"
+            },
+            {
+              fact: "How often are you climaxing sooner than you would like during sex?",
+              operator: "equal",
+              value: "Rarely"
+            }
+          ]
         },
         {
           any:[
@@ -7249,8 +7235,8 @@ export const getProductIdFromEngine = async (stateObj) => {
       }
       if (category == "beard") {
         let facts = {
-          "How is your beard condition currently?":
-            stateObj["How is your beard condition currently?"]
+          "What exactly are you looking for?":
+            stateObj["What exactly are you looking for?"]
         };
         await mars_beard_engine_long.run(facts).then(({ events }) => {
           events.map((event) => {

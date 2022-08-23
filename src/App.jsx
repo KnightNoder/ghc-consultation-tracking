@@ -204,16 +204,16 @@ export default function App() {
     } else {
       if (assessment_type == "30 sec") {
         if (category == "skin") return "?page=3&type=skin";
-        if (category == "weightloss") return "?page=5&type=weightloss";
-        if (category == "hair") return "?page=4&type=hair";
-        if (category == "beard") return "?page=4&type=beard";
-        if (category == "performance") return "?page=4&type=performance";
+        if (category == "weightloss") return "?page=4&type=weightloss";
+        if (category == "hair") return "?page=5&type=hair";
+        if (category == "beard") return "?page=3&type=beard";
+        if (category == "performance") return "?page=5&type=performance";
       } else {
         if (category == "skin") return "?page=18&type=skin";
-        if (category == "weightloss") return "?page=12&type=weightloss";
+        if (category == "weightloss") return "?page=13&type=weightloss";
         if (category == "hair") return "?page=16&type=hair";
-        if (category == "beard") return "?page=4&type=beard";
-        if (category == "performance") return "?page=4&type=performance";
+        if (category == "beard") return "?page=15&type=beard";
+        if (category == "performance") return "?page=18&type=performance";
       }
     }
   };
@@ -2687,7 +2687,7 @@ export default function App() {
         data: {
           bannerHeader: `Know what's right for you`,
           bannerSubText:
-            "Get your self assessment done, Book an appointment with our expert, get a personalized treatment plan",
+            "Get your self assessment done, Book an appointment with our expert, get a personalized treatment plan.",
           bannerImageSrc:
             "https://cdn.shopify.com/s/files/1/0638/1391/0746/files/Doctor.png?v=1649252836",
         },
@@ -3309,11 +3309,11 @@ export default function App() {
           },
           {
             value: "No Beard",
-            displayText: "No Beard",
+            displayText: "No beard",
           },
           {
             value: "Very less",
-            displayText: "Very less (Only mustaches and chin hair)",
+            displayText: "Very less beard (Only mustaches and chin hair)",
           },
           {
             value: "Excellent",
@@ -4243,6 +4243,7 @@ export default function App() {
         state_Obj: stateObj,
         proceed_link: "?page=2&type=beard",
         back_link: "?userinfo=yes",
+        required: "true",
         conditionMet: true,
         progress_bar: true,
         progress_bar_text: "My Beard",
@@ -4268,7 +4269,6 @@ export default function App() {
         state_Obj: stateObj,
         proceed_link: "?page=3&type=beard",
         back_link: "?page=1&type=beard",
-        required: "true",
         progress_bar: true,
         progress_bar_text: "My Beard",
         progress_step: "41.5",
