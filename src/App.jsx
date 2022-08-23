@@ -50,7 +50,6 @@ export default function App() {
     const queryParams = new URLSearchParams(query_params);
     window.localStorage.setItem("stateObj", JSON.stringify(stateObj));
     let allPages = [];
-    console.log(process.env.REACT_APP_BRAND,'brand')
     allPages = eval(
       `allPages_${process.env.REACT_APP_BRAND}_${
         stateObj["assessment_type"] == "30 sec" ? "Short" : "Long"
@@ -225,6 +224,13 @@ export default function App() {
       if (category == "skin") return "My Skin";
       if (category == "weightloss") return "My Wellness";
       if (category == "hair") return "My Hair";
+      if (category == undefined) return "Category"
+    } else {
+      if (category == "skin") return "My Skin";
+      if (category == "weightloss") return "My Wellness";
+      if (category == "hair") return "My Hair";
+      if (category == "beard") return "My Beard";
+      if (category == "performance") return "My Performance";
       if (category == undefined) return "Category"
     }
   };
@@ -2738,7 +2744,6 @@ export default function App() {
           parseInt(stateObj["Age"]) > 0 &&
           parseInt(stateObj["Age"]) < 200 &&
           stateObj["First Name"] &&
-          stateObj["Last Name"] &&
           phone_number_check(stateObj["Phone Number"]) &&
           email_check(stateObj["Email"]),
         inputOptions: [
@@ -2809,28 +2814,28 @@ export default function App() {
             displayText: "Receding hairline",
             image_exists: true,
             image:
-              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/receding.png?v=1659695198",
+              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/hair-one.png?v=1661159739",
           },
           {
             value: "Thinning at the crown",
             displayText: "Thinning at the crown",
             image_exists: true,
             image:
-              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/crown_thin.png?v=1659695198",
+              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/hair-two.png?v=1661159739",
           },
           {
             value: "Overall hair loss/thinning",
             displayText: "Overall hair loss/thinning",
             image_exists: true,
             image:
-              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/overall.png?v=1659695198",
+              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/hair-three.png?v=1661159739",
           },
           {
             value: "Receding + Overall thinning",
             displayText: "Receding + Overall thinning",
             image_exists: true,
             image:
-              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/receding_thin.png?v=1659695198",
+              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/hair-two.png?v=1661159739",
           },
         ],
       },
@@ -2872,6 +2877,10 @@ export default function App() {
         state_Obj: stateObj,
         proceed_link: "?page=4&type=hair",
         back_link: "?page=2&type=hair",
+        delay_time: 3000,
+        overlay_screen_text: `50% of the male pattern baldness can be attributed due to  hereditary roots.
+        However, hereditary male pattern baldness is treatable by taking early 
+        preventive actions`,
         conditionMet: true,
         options: [
           {
@@ -2894,6 +2903,9 @@ export default function App() {
         state_Obj: stateObj,
         proceed_link: "?page=5&type=hair",
         back_link: "?page=3&type=hair",
+        delay_time: 3000,
+        overlay_screen_text: `Knowing your medical allergies helps us to suggest the best treatment 
+        plan for you`,
         conditionMet: true,
         options: [
           {
@@ -2912,11 +2924,15 @@ export default function App() {
         name: "hair page 5",
         type: "category",
         question:
-          "Do you have any upcoming functions in the family in the next 30 days?",
+          "Do you have any upcoming functions in the family in the next 60 days?",
         clickHandler: choice_clickHandler,
         state_Obj: stateObj,
         proceed_link: "?appointment=yes",
         back_link: "?page=4&type=hair",
+        delay_time: 3000,
+        overlay_screen_text: `FACT: Every time we try a new medication it takes time for our body to 
+        react. Similarly, we can observe minimal hair loss when we start to use
+        minoxidil for a few days`,
         required: "true",
         options: [
           {
@@ -2972,8 +2988,7 @@ export default function App() {
       {
         name: "Weight loss page 2",
         type: "category",
-        question: `How often do you eat meals in a day (including tea, coffee, fruits, salads, 
-          and snacks)`,
+        question: `What best describes your current body condition?`,
         clickHandler: choice_clickHandler,
         state_Obj: stateObj,
         proceed_link: "?page=3&type=weightloss",
@@ -2982,71 +2997,77 @@ export default function App() {
           "Measuring your weight everyday helps you lose weight faster",
         delay_time: "3000",
         input_none: true,
-        conditionMet: true,
-        options: [
+        required_check: true,
+        checkboxOptions: [
           {
-            value: `Greater than 6 times`,
-            displayText: `Greater than 6 times`,
+            value:
+              stateObj[`What best describes your current body condition?`]?.[
+                "OverWeight/Obese"
+              ] || 0,
+            displayText: "OverWeight/Obese",
+            onChange: checkBoxHandler,
           },
           {
-            value: "4-6 times",
-            displayText: "4-6 times",
+            value:
+              stateObj[`What best describes your current body condition?`]?.[
+                "Weak bones/muscles"
+              ] || 0,
+            displayText: "Weak bones/muscles",
+            onChange: checkBoxHandler,
           },
           {
-            value: "3 times",
-            displayText: "3 times",
+            value:
+              stateObj[`What best describes your current body condition?`]?.[
+                "Weak Joints"
+              ] || 0,
+            displayText: "Weak Joints",
+            onChange: checkBoxHandler,
           },
           {
-            value: "Less than 3 times",
-            displayText: "Less than 3 times",
+            value:
+              stateObj[`What best describes your current body condition?`]?.[
+                "Knee/Shoulder/Joint Pain"
+              ] || 0,
+            displayText: "Knee/Shoulder/Joint Pain",
+            onChange: checkBoxHandler,
+          },
+          {
+            value:
+              stateObj[`What best describes your current body condition?`]?.[
+                "Body Fatigue"
+              ] || 0,
+            displayText: "Body Fatigue",
+            onChange: checkBoxHandler,
+          },
+          {
+            value:
+              stateObj[`What best describes your current body condition?`]?.[
+                "Stress/Hormonal Imbalance"
+              ] || 0,
+            displayText: "Stress/Hormonal Imbalance",
+            onChange: checkBoxHandler,
+          },
+          {
+            value:
+              stateObj[`What best describes your current body condition?`]?.[
+                "Stretch Marks on the skin"
+              ] || 0,
+            displayText: "Stretch Marks on the skin",
+            onChange: checkBoxHandler,
           },
         ],
       },
     ],
-    weightloss3: [
+    weightloss3: [ 
       {
-        name: "Weight loss page 3",
-        type: "category",
-        question: `How many days do you exercise in a week?`,
-        clickHandler: choice_clickHandler,
-        state_Obj: stateObj,
-        proceed_link: "?page=3&type=weightloss",
-        back_link: "?page=2&type=weightloss",
-        conditionMet: true,
-        options: [
-          {
-            value: `Don't work out at all`,
-            displayText: `Don't work out at all`,
-          },
-          {
-            value: "Daily",
-            displayText: "Daily",
-          },
-          {
-            value: "5-6 times a week",
-            displayText: "5-6 times a week",
-          },
-          {
-            value: "1-2 times a week",
-            displayText: "1-2 times a week",
-          },
-        ],
-      },
-    ],
-    weightloss4: [
-      {
-        name: "Weight loss page 4",
+        name: "Weight loss page 5",
         type: "category",
         question: `Do you have any pre-existing problems?`,
         clickHandler: choice_clickHandler,
         state_Obj: stateObj,
-        proceed_link: "?appointment=yes",
-        back_link: "?page=3&type=weightloss",
-        conditionMet: stateObj["Do you have any pre-existing problems?"]
-          ? !!Object.values(
-              stateObj["Do you have any pre-existing problems?"]
-            )?.filter((x) => x).length
-          : false,
+        proceed_link: "?page=4&type=weightloss",
+        back_link: "?page=2&type=weightloss",
+        conditionMet: true,
         checkboxOptions: [
           {
             value:
@@ -3091,6 +3112,73 @@ export default function App() {
                 "No such problems"
               ] || 0,
             displayText: "No such problems",
+            onChange: checkBoxHandler,
+          },
+          {
+            value:
+              stateObj[`Do you have any pre-existing problems?`]?.[
+                "Others"
+              ] || 0,
+            displayText: "Others",
+            onChange: checkBoxHandler,
+          }
+        ],
+        inputOptions: [
+          {
+            heading: "Specify",
+            clickHandler: choice_clickHandler,
+            value: stateObj["Other problems"],
+            // disable: !Object.keys(stateObj[`Do you have any pre-existing problems?`])?.filter((x) => 
+            // stateObj[`Do you have any pre-existing problems?`][x] == true )?.includes("Others")
+            invisible: !(stateObj[`Do you have any pre-existing problems?`]?.[
+              "Others"] == (true || undefined)) 
+          },
+        ]
+      },
+    ],
+    weightloss4: [
+      {
+        name: "Weight loss page 4",
+        type: "category",
+        question: `Do you have any past allergic reactions to any of the below components?`,
+        clickHandler: choice_clickHandler,
+        state_Obj: stateObj,
+        proceed_link: "?appointment=yes",
+        back_link: "?page=3&type=weightloss",
+        required: false,
+        conditionMet: false,
+        required_check: true,
+        checkboxOptions: [
+          {
+            value:
+              stateObj[
+                `Do you have any past allergic reactions to any of the below components?`
+              ]?.["Glucosamine"] || 0,
+            displayText: `Glucosamine`,
+            onChange: checkBoxHandler,
+          },
+          {
+            value:
+              stateObj[
+                `Do you have any past allergic reactions to any of the below components?`
+              ]?.["Chondroitin"] || 0,
+            displayText: `Chondroitin`,
+            onChange: checkBoxHandler,
+          },
+          {
+            value:
+              stateObj[
+                `Do you have any past allergic reactions to any of the below components?`
+              ]?.["Methylsulfonylmethane(MSM)"] || 0,
+            displayText: `Methylsulfonylmethane(MSM)`,
+            onChange: checkBoxHandler,
+          },
+          {
+            value:
+              stateObj[
+                `Do you have any past allergic reactions to any of the below components?`
+              ]?.["None"] || 0,
+            displayText: `None`,
             onChange: checkBoxHandler,
           },
         ],
@@ -3243,6 +3331,9 @@ export default function App() {
         state_Obj: stateObj,
         proceed_link: "?page=3&type=beard",
         back_link: "?page=1&type=beard",
+        delay_time: 3000,
+        overlay_screen_text: `The speed of your beard growth is controlled by things like your
+        genetics, your levels of testosterone and DHT, your lifestyle habits.`,
         conditionMet: true,
         options: [
           {
@@ -3258,22 +3349,22 @@ export default function App() {
     ],
     beard3: [
       {
-        name: "beard page 2",
+        name: "beard page 3",
         type: "category",
-        question: "Does anyone in your family have beard growth issues?",
+        question: "How do you trim your beard?",
         clickHandler: choice_clickHandler,
         state_Obj: stateObj,
-        proceed_link: "?page=3&type=beard",
-        back_link: "?page=1&type=beard",
+        proceed_link: "?appointment=yes",
+        back_link: "?page=2&type=beard",
         conditionMet: true,
         options: [
           {
-            value: "Yes",
-            displayText: "Yes",
+            value: "I generally shave my beard",
+            displayText: "I generally shave my beard",
           },
           {
-            value: "No",
-            displayText: "No",
+            value: "I use a trimmer to shape it up",
+            displayText: "I use a trimmer to shape it up",
           },
         ],
       },
@@ -3340,12 +3431,12 @@ export default function App() {
         name: "performance page 3",
         type: "category",
         question:
-          "How often are you climaxing sooner than you would like during sex? ",
+          "How often are you climaxing sooner than you would like during sex?",
         clickHandler: choice_clickHandler,
         state_Obj: stateObj,
         proceed_link: "?page=4&type=performance",
         back_link: "?page=2&type=performance",
-        delay_time: 3000,
+        delay_time: 1000,
         overlay_screen_text: `40% of Men experience symptoms like this by the age of 40`,
         required: true,
         options: [
@@ -3378,8 +3469,7 @@ export default function App() {
         proceed_link: "?page=5&type=performance",
         back_link: "?page=3&type=performance",
         delay_time: 3000,
-        overlay_screen_text: `30-40% of the Men experience this at some point in their lives
-
+        overlay_screen_text: `30-40% of the Men experience this at some point in their lives.
         Understanding more about your condition helps us suggest the 
         best-suited plan for you`,
         required: true,
@@ -3438,8 +3528,8 @@ export default function App() {
         required: "true",
         options: [
           {
-            value: "Yes, please ",
-            displayText: "Yes, please ",
+            value: "Yes, please",
+            displayText: "Yes, please",
           },
           {
             value: "No, just tell me what to use",
@@ -3502,6 +3592,9 @@ export default function App() {
         proceed_link: `?userinfo=yes`,
         back_link: "?assessment=yes",
         required: "true",
+        progress_bar: true,
+        progress_bar_text: getProgressBarText(),
+        progress_step: "11",
         options: [
           {
             displayText: "Skin",
@@ -3514,6 +3607,14 @@ export default function App() {
           {
             value: "hair",
             displayText: "Hair",
+          },
+          {
+            value: "performance",
+            displayText: "Performance",
+          },
+          {
+            value: "beard",
+            displayText: "Beard",
           },
         ],
       },
@@ -3533,9 +3634,11 @@ export default function App() {
           parseInt(stateObj["Age"]) > 0 &&
           parseInt(stateObj["Age"]) < 200 &&
           stateObj["First Name"] &&
-          stateObj["Last Name"] &&
           phone_number_check(stateObj["Phone Number"]) &&
           email_check(stateObj["Email"]),
+        progress_bar: true,
+        progress_bar_text: getProgressBarText(),
+        progress_step: "22",
         inputOptions: [
           {
             placeholder: "Eg: John",
@@ -3598,22 +3701,37 @@ export default function App() {
         back_link: "?userinfo=yes",
         conditionMet: true,
         required: "true",
+        progress_bar: true,
+        progress_bar_text: "My Hair",
+        progress_step: "33",
         options: [
           {
             value: "Receding hairline",
             displayText: "Receding hairline",
+            image_exists: true,
+            image:
+              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/hair-one.png?v=1661159739",
           },
           {
             value: "Thinning at the crown",
             displayText: "Thinning at the crown",
+            image_exists: true,
+            image:
+              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/hair-two.png?v=1661159739",
           },
           {
             value: "Overall hair loss/thinning",
             displayText: "Overall hair loss/thinning",
+            image_exists: true,
+            image:
+              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/hair-three.png?v=1661159739",
           },
           {
             value: "Receding + Overall thinning",
             displayText: "Receding + Overall thinning",
+            image_exists: true,
+            image:
+              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/hair-two.png?v=1661159739",
           },
         ],
       },
@@ -3628,8 +3746,11 @@ export default function App() {
         proceed_link: "?page=3&type=hair",
         back_link: "?page=1&type=hair",
         delay_time: 1000,
-        overlay_screen_text: ` Hair loss affects 60.5 % of the total Men population in India`,
+        overlay_screen_text: `Hair loss affects 60.5 % of the total Men population in India`,
         required: "true",
+        progress_bar: true,
+        progress_bar_text: "My Hair",
+        progress_step: "41.25",
         options: [
           {
             value: "Regrowing your hair",
@@ -3656,6 +3777,13 @@ export default function App() {
         proceed_link: "?page=4&type=hair",
         back_link: "?page=2&type=hair",
         conditionMet: true,
+        delay_time: 3000,
+        overlay_screen_text: `50% of the male pattern baldness can be attributed due to  hereditary roots.
+        However, hereditary male pattern baldness is treatable by taking early 
+        preventive actions`,
+        progress_bar: true,
+        progress_bar_text: "My Hair",
+        progress_step: "49.5",
         options: [
           {
             value: "Yes",
@@ -3678,6 +3806,13 @@ export default function App() {
         proceed_link: "?page=5&type=hair",
         back_link: "?page=3&type=hair",
         conditionMet: true,
+        delay_time: 1000,
+        overlay_screen_text: `Knowing your medical allergies helps us to suggest the best treatment 
+        plan for you`,
+        delay_time: 1000,
+        progress_bar: true,
+        progress_bar_text: "My Hair",
+        progress_step: "57.75",
         options: [
           {
             value: "Yes",
@@ -3695,12 +3830,18 @@ export default function App() {
         name: "hair page 5",
         type: "category",
         question:
-          "Do you have any upcoming functions in the family in the next 30 days?",
+          "Do you have any upcoming functions in the family in the next 60 days?",
         clickHandler: choice_clickHandler,
         state_Obj: stateObj,
         proceed_link: "?page=6&type=hair",
         back_link: "?page=4&type=hair",
         required: "true",
+        overlay_screen_text: `FACT: Every time we try a new medication it takes time for our body to 
+        react. Similarly, we can observe minimal hair loss when we start to use
+        minoxidil for a few days`,
+        progress_bar: true,
+        progress_bar_text: "My Hair",
+        progress_step: "66",
         options: [
           {
             value: "Yes",
@@ -3723,6 +3864,9 @@ export default function App() {
         proceed_link: "?page=7&type=hair",
         back_link: "?page=5&type=hair",
         conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Hair",
+        progress_step: "71.5",
         options: [
           {
             value: "1-2 litres",
@@ -3753,6 +3897,9 @@ export default function App() {
         proceed_link: "?page=8&type=hair",
         back_link: "?page=9&type=hair",
         conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Hair",
+        progress_step: "77",
         options: [
           {
             value: "Once a week",
@@ -3779,6 +3926,9 @@ export default function App() {
         proceed_link: "?page=9&type=hair",
         back_link: "?page=7&type=hair",
         conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Hair",
+        progress_step: "82.5",
         options: [
           {
             value: "Frequently",
@@ -3805,6 +3955,9 @@ export default function App() {
         proceed_link: "?page=10&type=hair",
         back_link: "?page=8&type=hair",
         conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Hair",
+        progress_step: "88",
         options: [
           {
             value: "3-5 hours",
@@ -3835,6 +3988,9 @@ export default function App() {
         proceed_link: "?page=11&type=hair",
         back_link: "?page=9&type=hair",
         conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Hair",
+        progress_step: "93.5",
         options: [
           {
             value: "Vegetarian including milk products",
@@ -3861,6 +4017,9 @@ export default function App() {
         proceed_link: "?page=12&type=hair",
         back_link: "?page=10&type=hair",
         conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Hair",
+        progress_step: "97",
         options: [
           {
             value: "<9 hours",
@@ -3891,6 +4050,9 @@ export default function App() {
         proceed_link: "?page=13&type=hair",
         back_link: "?page=11&type=hair",
         conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Hair",
+        progress_step: "100",
         options: [
           {
             value: `Daily`,
@@ -3917,6 +4079,9 @@ export default function App() {
         proceed_link: "?page=14&type=hair",
         back_link: "?page=12&type=hair",
         conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Hair",
+        progress_step: "100",
         options: [
           {
             value: "Days",
@@ -3943,6 +4108,9 @@ export default function App() {
         proceed_link: "?page=15&type=hair",
         back_link: "?page=13&type=hair",
         conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Hair",
+        progress_step: "100",
         options: [
           {
             value: "Thick",
@@ -3968,6 +4136,9 @@ export default function App() {
         proceed_link: "?page=16&type=hair",
         back_link: "?page=14&type=hair",
         conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Hair",
+        progress_step: "100",
         checkboxOptions: [
           {
             value:
@@ -4009,7 +4180,24 @@ export default function App() {
             displayText: "No such problems",
             onChange: checkBoxHandler,
           },
+          {
+            value:
+              stateObj[`Do you have any pre-existing problems?`]?.[
+                "Others"
+              ],
+            displayText: "Others",
+            onChange: checkBoxHandler,
+          },
         ],
+        inputOptions: [
+          {
+            heading: "Specify",
+            clickHandler: choice_clickHandler,
+            value: stateObj["Other problems"],
+            invisible: !(stateObj[`Do you have any pre-existing problems?`]?.[
+              "Others"] == (true || undefined))
+          },
+        ]
       },
     ],
     hair16: [
@@ -4022,6 +4210,9 @@ export default function App() {
         proceed_link: "?appointment=yes",
         back_link: "?page=14&type=skin",
         conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Hair",
+        progress_step: "100",
         options: [
           {
             value: `Yes`,
@@ -4032,6 +4223,15 @@ export default function App() {
             displayText: "No",
           },
         ],
+        inputOptions: [
+          {
+            placeholder:"List all products here",
+            heading: "Healthcare products used",
+            clickHandler: choice_clickHandler,
+            value: stateObj["Healthcare products used"],
+            invisible: !(stateObj["Have you used hair products before?"] == "Yes")
+          },
+        ]
       },
     ],
     beard1: [
@@ -4044,6 +4244,9 @@ export default function App() {
         proceed_link: "?page=2&type=beard",
         back_link: "?userinfo=yes",
         conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Beard",
+        progress_step: "33",
         options: [
           {
             value: "Beard Growth",
@@ -4066,6 +4269,9 @@ export default function App() {
         proceed_link: "?page=3&type=beard",
         back_link: "?page=1&type=beard",
         required: "true",
+        progress_bar: true,
+        progress_bar_text: "My Beard",
+        progress_step: "41.5",
         options: [
           {
             value: "Patchy beard",
@@ -4096,6 +4302,9 @@ export default function App() {
         proceed_link: "?page=4&type=beard",
         back_link: "?page=2&type=beard",
         conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Beard",
+        progress_step: "49",
         options: [
           {
             value: "Yes",
@@ -4118,6 +4327,9 @@ export default function App() {
         proceed_link: "?page=5&type=beard",
         back_link: "?page=3&type=beard",
         conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Beard",
+        progress_step: "57.5",
         options: [
           {
             value: "I generally shave my beard",
@@ -4141,6 +4353,9 @@ export default function App() {
         proceed_link: "?page=6&type=beard",
         back_link: "?page=4&type=beard",
         conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Beard",
+        progress_step: "66",
         options: [
           {
             value: "Yes",
@@ -4163,6 +4378,9 @@ export default function App() {
         proceed_link: "?page=7&type=beard",
         back_link: "?page=5&type=beard",
         conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Beard",
+        progress_step: "71.5",
         options: [
           {
             value: "1-2 litres",
@@ -4193,6 +4411,9 @@ export default function App() {
         proceed_link: "?page=8&type=beard",
         back_link: "?page=9&type=beard",
         conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Beard",
+        progress_step: "77",
         options: [
           {
             value: "Once a week",
@@ -4219,6 +4440,9 @@ export default function App() {
         proceed_link: "?page=9&type=beard",
         back_link: "?page=7&type=beard",
         conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Beard",
+        progress_step: "82.5",
         options: [
           {
             value: "Frequently",
@@ -4245,6 +4469,9 @@ export default function App() {
         proceed_link: "?page=10&type=beard",
         back_link: "?page=8&type=beard",
         conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Beard",
+        progress_step: "88",
         options: [
           {
             value: "3-5 hours",
@@ -4275,6 +4502,9 @@ export default function App() {
         proceed_link: "?page=11&type=beard",
         back_link: "?page=9&type=beard",
         conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Beard",
+        progress_step: "93.5",
         options: [
           {
             value: "Vegetarian including milk products",
@@ -4301,6 +4531,9 @@ export default function App() {
         proceed_link: "?page=12&type=beard",
         back_link: "?page=10&type=beard",
         conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Beard",
+        progress_step: "96",
         options: [
           {
             value: "<9 hours",
@@ -4331,6 +4564,9 @@ export default function App() {
         proceed_link: "?page=13&type=beard",
         back_link: "?page=11&type=beard",
         conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Beard",
+        progress_step: "100",
         options: [
           {
             value: `Daily`,
@@ -4357,6 +4593,9 @@ export default function App() {
         proceed_link: "?page=14&type=beard",
         back_link: "?page=12&type=beard",
         conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Beard",
+        progress_step: "100",
         options: [
           {
             value: "Days",
@@ -4382,6 +4621,9 @@ export default function App() {
         proceed_link: "?page=15&type=beard",
         back_link: "?page=13&type=beard",
         conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Beard",
+        progress_step: "100",
         checkboxOptions: [
           {
             value:
@@ -4423,7 +4665,24 @@ export default function App() {
             displayText: "No such problems",
             onChange: checkBoxHandler,
           },
+          {
+            value:
+              stateObj[`Do you have any pre-existing problems?`]?.[
+                "Others"
+              ],
+            displayText: "Others",
+            onChange: checkBoxHandler,
+          },
         ],
+        inputOptions: [
+          {
+            heading: "Specify",
+            clickHandler: choice_clickHandler,
+            value: stateObj["Other problems"],
+            invisible: !(stateObj[`Do you have any pre-existing problems?`]?.[
+              "Others"] == (true || undefined))
+          },
+        ]
       },
     ],
     beard15: [
@@ -4436,6 +4695,9 @@ export default function App() {
         proceed_link: "?appointment=yes",
         back_link: "?page=14&type=beard",
         conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Beard",
+        progress_step: "100",
         options: [
           {
             value: `Yes`,
@@ -4446,6 +4708,15 @@ export default function App() {
             displayText: "No",
           },
         ],
+        inputOptions: [
+          {
+            placeholder:"List all products here",
+            heading: "Healthcare products used",
+            clickHandler: choice_clickHandler,
+            value: stateObj["Healthcare products used"],
+            invisible: !(stateObj["Have you used beard products before?"] == "Yes")
+          },
+        ]
       },
     ],
     skin1: [
@@ -4461,6 +4732,9 @@ export default function App() {
         delay_time: 1000,
         overlay_screen_text: `Answer a few questions so we can help`,
         required: "true",
+        progress_bar: true,
+        progress_bar_text: "My Skin",
+        progress_step: "33",
         options: [
           {
             value: "Open pores",
@@ -4508,7 +4782,9 @@ export default function App() {
         // overlay_screen_text: `It's important to listen to our bodies and understand allergies before beginning any treatment.`,
         input_none: true,
         conditionMet: true,
-        conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Skin",
+        progress_step: "37.5",
         options: [
           {
             value: "Oily",
@@ -4535,6 +4811,9 @@ export default function App() {
         proceed_link: "?page=4&type=skin",
         back_link: "?page=2&type=skin",
         conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Skin",
+        progress_step: "42",
         options: [
           {
             value: "Once a week",
@@ -4569,6 +4848,9 @@ export default function App() {
         proceed_link: "?page=5&type=skin",
         back_link: "?page=3&type=skin",
         conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Skin",
+        progress_step: "46.5",
         options: [
           {
             value: "Chin",
@@ -4595,6 +4877,9 @@ export default function App() {
         proceed_link: "?page=6&type=skin",
         back_link: "?page=4&type=skin",
         conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Skin",
+        progress_step: "51",
         options: [
           {
             value: "Yes",
@@ -4617,6 +4902,9 @@ export default function App() {
         proceed_link: "?page=7&type=skin",
         back_link: "?page=5&type=skin",
         conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Skin",
+        progress_step: "55.5",
         options: [
           {
             value: "Yes",
@@ -4639,6 +4927,9 @@ export default function App() {
         proceed_link: "?page=8&type=skin",
         back_link: "?page=6&type=skin",
         conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Skin",
+        progress_step: "60",
         options: [
           {
             value: "No wrinkles",
@@ -4669,6 +4960,9 @@ export default function App() {
         proceed_link: "?page=9&type=skin",
         back_link: "?page=7&type=skin",
         conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Skin",
+        progress_step: "66",
         options: [
           {
             value: "Around the eyes",
@@ -4706,6 +5000,9 @@ export default function App() {
           "We would love to get to know you better! Can you tell us more about your lifestyle?",
         delay_time: 3000,
         conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Skin",
+        progress_step: "71.5",
         options: [
           {
             value: "1-2 litres",
@@ -4738,6 +5035,9 @@ export default function App() {
         conditionMet: true,
         overlay_screen_text: "There is nothing like mom's meals!",
         delay_time: 1000,
+        progress_bar: true,
+        progress_bar_text: "My Skin",
+        progress_step: "77",
         options: [
           {
             value: "Once a week",
@@ -4764,6 +5064,9 @@ export default function App() {
         proceed_link: "?page=12&type=skin",
         back_link: "?page=10&type=skin",
         conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Skin",
+        progress_step: "82.5",
         options: [
           {
             value: "Frequently",
@@ -4790,6 +5093,9 @@ export default function App() {
         proceed_link: "?page=13&type=skin",
         back_link: "?page=11&type=skin",
         conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Skin",
+        progress_step: "88",
         options: [
           {
             value: "Vegetarian including milk products",
@@ -4819,6 +5125,9 @@ export default function App() {
           "A good diet and sufficient rest are crucial to maintaining healthy skin.",
         delay_time: 3000,
         conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Skin",
+        progress_step: "93.5",
         options: [
           {
             value: "3-5 hours",
@@ -4852,6 +5161,9 @@ export default function App() {
           "Let's not tell your boss how many hours you worked yesterday.",
         delay_time: 3000,
         conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Skin",
+        progress_step: "96",
         options: [
           {
             value: "<9 hours",
@@ -4882,6 +5194,9 @@ export default function App() {
         proceed_link: "?page=16&type=skin",
         back_link: "?page=14&type=skin",
         conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Skin",
+        progress_step: "100",
         options: [
           {
             value: "Daily",
@@ -4910,6 +5225,9 @@ export default function App() {
         delay_time: 3000,
         overlay_screen_text: `It's important to listen to our bodies and understand allergies before beginning any treatment.`,
         required: "true",
+        progress_bar: true,
+        progress_bar_text: "My Skin",
+        progress_step: "100",
         options: [
           {
             value: "Vitamin C",
@@ -4945,13 +5263,16 @@ export default function App() {
         back_link: "?page=16&type=skin",
         input_none: true,
         conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Skin",
+        progress_step: "100",
         checkboxOptions: [
           {
             value:
               stateObj[`Do you have any pre-existing problems?`]?.[
-                "Hypertension"
+                "Cholestrol"
               ],
-            displayText: "Hypertension",
+            displayText: "Cholestrol",
             onChange: checkBoxHandler,
           },
           {
@@ -4981,12 +5302,29 @@ export default function App() {
           {
             value:
               stateObj[`Do you have any pre-existing problems?`]?.[
-                "Indigestion"
+                "No such problems"
               ],
-            displayText: "Indigestion",
+            displayText: "No such problems",
+            onChange: checkBoxHandler,
+          },
+          {
+            value:
+              stateObj[`Do you have any pre-existing problems?`]?.[
+                "Others"
+              ],
+            displayText: "Others",
             onChange: checkBoxHandler,
           },
         ],
+        inputOptions: [
+          {
+            heading: "Specify",
+            clickHandler: choice_clickHandler,
+            value: stateObj["Other problems"],
+            invisible: !(stateObj[`Do you have any pre-existing problems?`]?.[
+              "Others"] == (true || undefined))
+          },
+        ]
       },
     ],
     skin18: [
@@ -4998,8 +5336,10 @@ export default function App() {
         state_Obj: stateObj,
         proceed_link: "?appointment=yes",
         back_link: "?page=17&type=skin",
-        input_none: true,
         conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Skin",
+        progress_step: "100",
         options: [
           {
             value: "Yes",
@@ -5010,6 +5350,15 @@ export default function App() {
             displayText: "No",
           },
         ],
+        inputOptions: [
+          {
+            placeholder:"List all products here",
+            heading: "Healthcare products used",
+            clickHandler: choice_clickHandler,
+            value: stateObj["Healthcare products used"],
+            invisible: !(stateObj["Have you ever had side effects from skin products?"] == "Yes")
+          },
+        ]
       },
     ],
     weightloss1: [
@@ -5024,6 +5373,9 @@ export default function App() {
         conditionMet: stateObj["Height"] && stateObj["Weight"],
         delay_time: 3000,
         overlay_screen_text: `Answer few questions so we can help`,
+        progress_bar: true,
+        progress_bar_text: "My Wellness",
+        progress_step: "33",
         inputOptions: [
           {
             heading: "Height",
@@ -5052,19 +5404,89 @@ export default function App() {
     ],
     weightloss2: [
       {
+        name: "Weight loss page 3",
+        type: "category",
+        question: `What best describes your current body condition?`,
+        state_Obj: stateObj,
+        proceed_link: "?page=3&type=weightloss",
+        back_link: "?page=1&type=weightloss",
+        overlay_screen_text:
+          "Your metabolism is highly responsive to your daily routine and adjusts accordingly.",
+        delay_time: 3000,
+        progress_bar: true,
+        progress_bar_text: "My Wellness",
+        progress_step: "44",
+        required_check: true,
+        checkboxOptions: [
+          {
+            value:
+              stateObj[`What best describes your current body condition?`]?.[
+                "OverWeight/Obese"
+              ] || 0,
+            displayText: "OverWeight/Obese",
+            onChange: checkBoxHandler,
+          },
+          {
+            value:
+              stateObj[`What best describes your current body condition?`]?.[
+                "Weak bones/muscles"
+              ] || 0,
+            displayText: "Weak bones/muscles",
+            onChange: checkBoxHandler,
+          },
+          {
+            value:
+              stateObj[`What best describes your current body condition?`]?.[
+                "Weak Joints"
+              ] || 0,
+            displayText: "Weak Joints",
+            onChange: checkBoxHandler,
+          },
+          {
+            value:
+              stateObj[`What best describes your current body condition?`]?.[
+                "Knee/Shoulder/Joint Pain"
+              ] || 0,
+            displayText: "Knee/Shoulder/Joint Pain",
+            onChange: checkBoxHandler,
+          },
+          {
+            value:
+              stateObj[`What best describes your current body condition?`]?.[
+                "Body Fatigue"
+              ] || 0,
+            displayText: "Body Fatigue",
+            onChange: checkBoxHandler,
+          },
+          {
+            value:
+              stateObj[`What best describes your current body condition?`]?.[
+                "Stretch Marks on the skin"
+              ] || 0,
+            displayText: "Stretch Marks on the skin",
+            onChange: checkBoxHandler,
+          },
+        ],
+      },
+    ],
+    weightloss3: [
+      {
         name: "Weight loss page 2",
         type: "category",
         question: `How often do you eat meals in a day (including tea, coffee, fruits, salads, 
           and snacks)`,
         clickHandler: choice_clickHandler,
         state_Obj: stateObj,
-        proceed_link: "?page=3&type=weightloss",
-        back_link: "?page=1&type=weightloss",
+        proceed_link: "?page=4&type=weightloss",
+        back_link: "?page=2&type=weightloss",
         overlay_screen_text:
           "Measuring your weight everyday helps you lose weight faster",
         delay_time: "3000",
         input_none: true,
         conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Wellness",
+        progress_step: "55",
         options: [
           {
             value: `Greater than 6 times`,
@@ -5085,35 +5507,6 @@ export default function App() {
         ],
       },
     ],
-    weightloss3: [
-      {
-        name: "Weight loss page 3",
-        type: "category",
-        question: `Is anyone in your family overweight/Obese?`,
-        clickHandler: choice_clickHandler,
-        state_Obj: stateObj,
-        proceed_link: "?page=4&type=weightloss",
-        back_link: "?page=2&type=weightloss",
-        overlay_screen_text:
-          "Your metabolism is highly responsive to your daily routine and adjusts accordingly.",
-        delay_time: 3000,
-        conditionMet: true,
-        options: [
-          {
-            value: `Daily`,
-            displayText: `Daily`,
-          },
-          {
-            value: "Occasionally",
-            displayText: "Occasionally",
-          },
-          {
-            value: "Never",
-            displayText: "Never",
-          },
-        ],
-      },
-    ],
     weightloss4: [
       {
         name: "weightloss page 4",
@@ -5127,6 +5520,9 @@ export default function App() {
           "We would love to get to know you better! Can you tell us more about your lifestyle?",
         delay_time: 3000,
         conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Wellness",
+        progress_step: "66",
         options: [
           {
             value: "1-2 litres",
@@ -5160,6 +5556,9 @@ export default function App() {
         overlay_screen_text:
           "There's something special about outside food--tastier, love! Though homemade food is healthy :)",
         delay_time: 3000,
+        progress_bar: true,
+        progress_bar_text: "My Wellness",
+        progress_step: "71.5",
         options: [
           {
             value: "Once a week",
@@ -5186,6 +5585,9 @@ export default function App() {
         proceed_link: "?page=7&type=weightloss",
         back_link: "?page=5&type=weightloss",
         conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Wellness",
+        progress_step: "77",
         options: [
           {
             value: "Frequently",
@@ -5215,6 +5617,9 @@ export default function App() {
           "A good diet and sufficient rest are crucial to maintaining healthy skin.",
         delay_time: 3000,
         conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Wellness",
+        progress_step: "82.5",
         options: [
           {
             value: "3-5 hours",
@@ -5237,10 +5642,10 @@ export default function App() {
     ],
     weightloss8: [
       {
-        name: "skin page 12",
+        name: "weight loss page 9",
         type: "category",
         clickHandler: choice_clickHandler,
-        question: "What type of diet do you follow?",
+        question: "How many hours do you work in a day? ",
         state_Obj: stateObj,
         proceed_link: "?page=9&type=weightloss",
         back_link: "?page=7&type=weightloss",
@@ -5248,32 +5653,9 @@ export default function App() {
           "Let's not tell your boss how many hours you worked yesterday.",
         delay_time: 3000,
         conditionMet: true,
-        options: [
-          {
-            value: "Vegetarian including milk products",
-            displayText: "Vegetarian including milk products",
-          },
-          {
-            value: "Vegetarian without milk products",
-            displayText: "Vegetarian without milk products",
-          },
-          {
-            value: "Non-vegetarian",
-            displayText: "Non-vegetarian",
-          },
-        ],
-      },
-    ],
-    weightloss9: [
-      {
-        name: "weight loss page 9",
-        type: "category",
-        clickHandler: choice_clickHandler,
-        question: "How many hours do you work in a day? ",
-        state_Obj: stateObj,
-        proceed_link: "?page=10&type=weightloss",
-        back_link: "?page=8&type=weightloss",
-        conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Wellness",
+        progress_step: "88",
         options: [
           {
             value: "<9 hours",
@@ -5294,6 +5676,35 @@ export default function App() {
         ],
       },
     ],
+    weightloss9: [
+      {
+        name: "skin page 12",
+        type: "category",
+        clickHandler: choice_clickHandler,
+        question: "What type of diet do you follow?",
+        state_Obj: stateObj,
+        proceed_link: "?page=10&type=weightloss",
+        back_link: "?page=8&type=weightloss",
+        conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Wellness",
+        progress_step: "93.5",
+        options: [
+          {
+            value: "Vegetarian including milk products",
+            displayText: "Vegetarian including milk products",
+          },
+          {
+            value: "Vegetarian without milk products",
+            displayText: "Vegetarian without milk products",
+          },
+          {
+            value: "Non-vegetarian",
+            displayText: "Non-vegetarian",
+          },
+        ],
+      },
+    ],  
     weightloss10: [
       {
         name: "Weight loss page 10",
@@ -5304,6 +5715,9 @@ export default function App() {
         proceed_link: "?page=11&type=weightloss",
         back_link: "?page=9&type=weightloss",
         conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Wellness",
+        progress_step: "100",
         options: [
           {
             value: `Daily`,
@@ -5330,6 +5744,9 @@ export default function App() {
         proceed_link: "?page=12&type=weightloss",
         back_link: "?page=10&type=weightloss",
         conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Wellness",
+        progress_step: "100",
         options: [
           {
             value: `Don't work out at all`,
@@ -5352,14 +5769,66 @@ export default function App() {
     ],
     weightloss12: [
       {
+        name: "Weight loss page 4",
+        type: "category",
+        question: `Do you have any past allergic reactions to any of the below components?`,
+        clickHandler: choice_clickHandler,
+        state_Obj: stateObj,
+        proceed_link: "?page=13&type=weightloss",
+        back_link: "?page=11&type=weightloss",
+        progress_bar: true,
+        progress_bar_text: "My Wellness",
+        progress_step: "100",
+        required_check: true,
+        checkboxOptions: [
+          {
+            value:
+              stateObj[
+                `Do you have any past allergic reactions to any of the below components?`
+              ]?.["Glucosamine"] || 0,
+            displayText: `Glucosamine`,
+            onChange: checkBoxHandler,
+          },
+          {
+            value:
+              stateObj[
+                `Do you have any past allergic reactions to any of the below components?`
+              ]?.["Chondroitin"] || 0,
+            displayText: `Chondroitin`,
+            onChange: checkBoxHandler,
+          },
+          {
+            value:
+              stateObj[
+                `Do you have any past allergic reactions to any of the below components?`
+              ]?.["Methylsulfonylmethane(MSM)"] || 0,
+            displayText: `Methylsulfonylmethane(MSM)`,
+            onChange: checkBoxHandler,
+          },
+          {
+            value:
+              stateObj[
+                `Do you have any past allergic reactions to any of the below components?`
+              ]?.["None"] || 0,
+            displayText: `None`,
+            onChange: checkBoxHandler,
+          },
+        ],
+      },
+    ],
+    weightloss13: [
+      {
         name: "Weight loss page 12",
         type: "category",
-        question: `Have you used weight management products before?`,
+        question: `Have you used any healthcare/nutritional products before?`,
         clickHandler: choice_clickHandler,
         state_Obj: stateObj,
         proceed_link: "?appointment=yes",
-        back_link: "?page=11&type=weightloss",
+        back_link: "?page=12&type=weightloss",
         conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Wellness",
+        progress_step: "100",
         options: [
           {
             value: `Yes`,
@@ -5370,7 +5839,17 @@ export default function App() {
             displayText: "No",
           },
         ],
-         
+        inputOptions: [
+          {
+            placeholder:"List all products here",
+            heading: "Healthcare products used",
+            clickHandler: choice_clickHandler,
+            value: stateObj["Healthcare products used"],
+            invisible: !(stateObj["Have you used any healthcare/nutritional products before?"] == "Yes")
+            // disable: !Object.keys(stateObj[`Do you have any pre-existing problems?`])?.filter((x) => 
+            // stateObj[`Do you have any pre-existing problems?`][x] == true )?.includes("Others")
+          },
+        ]
       },
     ],
     performance1: [
@@ -5383,6 +5862,9 @@ export default function App() {
         proceed_link: "?page=2&type=performance",
         back_link: "?userinfo=yes",
         conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Performance",
+        progress_step: "33",
         options: [
           {
             value: `Low (Don’t feel like doing it)`,
@@ -5409,12 +5891,11 @@ export default function App() {
         state_Obj: stateObj,
         proceed_link: "?page=3&type=performance",
         back_link: "?page=1&type=performance",
-        delay_time: 3000,
-        overlay_screen_text: ` FACT: Every time we try a new medication it takes time for our body to 
-        react. Similarly, we can observe minimal hair loss when we start to use
-        minoxidil for a few days`,
         input_none: true,
-        conditionMet: true,
+        required: true,
+        progress_bar: true,
+        progress_bar_text: "My Performance",
+        progress_step: "41.5",
         options: [
           {
             value: `Every time`,
@@ -5445,12 +5926,12 @@ export default function App() {
         state_Obj: stateObj,
         proceed_link: "?page=4&type=performance",
         back_link: "?page=2&type=performance",
-        delay_time: 3000,
-        overlay_screen_text: ` FACT: Every time we try a new medication it takes time for our body to 
-        react. Similarly, we can observe minimal hair loss when we start to use
-        minoxidil for a few days`,
-        input_none: true,
-        conditionMet: true,
+        required: true,
+        delay_time: 1000,
+        overlay_screen_text: `40% of Men experience symptoms like this by the age of 40`,
+        progress_bar: true,
+        progress_bar_text: "My Performance",
+        progress_step: "49",
         options: [
           {
             value: `Every time`,
@@ -5480,12 +5961,15 @@ export default function App() {
         state_Obj: stateObj,
         proceed_link: "?page=5&type=performance",
         back_link: "?page=3&type=performance",
-        delay_time: 3000,
-        overlay_screen_text: ` FACT: Every time we try a new medication it takes time for our body to 
-        react. Similarly, we can observe minimal hair loss when we start to use
-        minoxidil for a few days`,
         input_none: true,
-        conditionMet: true,
+        required: true,
+        delay_time: 3000,
+        overlay_screen_text: `30-40% of the Men experience this at some point in their lives.
+        Understanding more about your condition helps us suggest the 
+        best-suited plan for you`,
+        progress_bar: true,
+        progress_bar_text: "My Performance",
+        progress_step: "57.5",
         options: [
           {
             value: `Yes`,
@@ -5514,6 +5998,12 @@ export default function App() {
         proceed_link: "?page=6&type=performance",
         back_link: "?page=4&type=performance",
         conditionMet: true,
+        delay_time: 3000,
+        overlay_screen_text: `Knowing your physical strength during intercourse helps us 
+        navigate to the right treatment for you`,
+        progress_bar: true,
+        progress_bar_text: "My Performance",
+        progress_step: "66",
         options: [
           {
             value: `Yes`,
@@ -5536,6 +6026,9 @@ export default function App() {
         proceed_link: "?page=7&type=performance",
         back_link: "?page=5&type=performance",
         conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Performance",
+        progress_step: "71.5",
         options: [
           {
             value: "1-2 litres",
@@ -5566,6 +6059,9 @@ export default function App() {
         proceed_link: "?page=8&type=performance",
         back_link: "?page=6&type=performance",
         conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Performance",
+        progress_step: "77",
         options: [
           {
             value: "Once a week",
@@ -5592,6 +6088,9 @@ export default function App() {
         proceed_link: "?page=9&type=performance",
         back_link: "?page=7&type=performance",
         conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Performance",
+        progress_step: "82.5",
         options: [
           {
             value: "Frequently",
@@ -5616,8 +6115,11 @@ export default function App() {
         question: "What type of diet do you follow?",
         state_Obj: stateObj,
         proceed_link: "?page=10&type=performance",
-        back_link: "?page=9&type=performance",
+        back_link: "?page=8&type=performance",
         conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Performance",
+        progress_step: "88",
         options: [
           {
             value: "Vegetarian including milk products",
@@ -5644,6 +6146,9 @@ export default function App() {
         proceed_link: "?page=11&type=performance",
         back_link: "?page=9&type=performance",
         conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Performance",
+        progress_step: "93.5",
         options: [
           {
             value: "3-5 hours",
@@ -5674,6 +6179,9 @@ export default function App() {
         proceed_link: "?page=12&type=performance",
         back_link: "?page=10&type=performance",
         conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Performance",
+        progress_step: "96",
         options: [
           {
             value: "<9 hours",
@@ -5704,6 +6212,9 @@ export default function App() {
         proceed_link: "?page=13&type=performance",
         back_link: "?page=11&type=performance",
         conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Performance",
+        progress_step: "100",
         options: [
           {
             value: "Daily",
@@ -5720,6 +6231,191 @@ export default function App() {
         ],
       },
     ],
+    performance13: [
+      {
+        name: "performance page 15",
+        type: "category",
+        clickHandler: choice_clickHandler,
+        question: "Since how long you are married?",
+        state_Obj: stateObj,
+        proceed_link: "?page=14&type=performance",
+        back_link: "?page=12&type=performance",
+        conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Performance",
+        progress_step: "100",
+        options: [
+          {
+            value: "Days",
+            displayText: "Days",
+          },
+          {
+            value: "Months",
+            displayText: "Months",
+          },
+          {
+            value: "Years",
+            displayText: "Years",
+          },
+        ],
+      },
+    ],
+    performance14: [
+      {
+        name: "performance page 5",
+        type: "category",
+        question:
+          "Do you want to increase sexual performance duration?",
+        clickHandler: choice_clickHandler,
+        state_Obj: stateObj,
+        proceed_link: "?page=15&type=performance",
+        back_link: "?page=13&type=performance",
+        conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Performance",
+        progress_step: "100",
+        options: [
+          {
+            value: `Yes`,
+            displayText: `Yes`,
+          },
+          {
+            value: "No",
+            displayText: "No",
+          },
+        ],
+      },
+    ],
+    performance15: [
+      {
+        name: "performance page 5",
+        type: "category",
+        question:
+          "Do you have observed Erectile dysfunction problem?",
+        clickHandler: choice_clickHandler,
+        state_Obj: stateObj,
+        proceed_link: "?page=16&type=performance",
+        back_link: "?page=14&type=performance",
+        conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Performance",
+        progress_step: "100",
+        options: [
+          {
+            value: `Yes`,
+            displayText: `Yes`,
+          },
+          {
+            value: "No",
+            displayText: "No",
+          },
+        ],
+        inputOptions: [
+          {
+            placeholder:"Input in days,months or years",
+            heading: "Since how long",
+            clickHandler: choice_clickHandler,
+            value: stateObj["Since how long"],
+            invisible: !(stateObj["Do you have observed Erectile dysfunction problem?"] == "Yes")
+          },
+        ]
+      },
+    ],
+    performance16: [
+      {
+        name: "performance page 5",
+        type: "category",
+        question:
+          "Do you have observed Pre-mature ejactulation problem?",
+        clickHandler: choice_clickHandler,
+        state_Obj: stateObj,
+        proceed_link: "?page=17&type=performance",
+        back_link: "?page=15&type=performance",
+        conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Performance",
+        progress_step: "100",
+        options: [
+          {
+            value: `Yes`,
+            displayText: `Yes`,
+          },
+          {
+            value: "No",
+            displayText: "No",
+          },
+        ],
+        inputOptions: [
+          {
+            placeholder:"Input in days,months or years",
+            heading: "Since how long",
+            clickHandler: choice_clickHandler,
+            value: stateObj["Since how long"],
+            invisible: !(stateObj["Do you have observed Pre-mature ejactulation problem?"] == "Yes")
+          },
+        ]
+      },
+    ],
+    performance17: [
+      {
+        name: "performance page 5",
+        type: "category",
+        question:
+          "Do you have observed Premature ejaculation problem?",
+        clickHandler: choice_clickHandler,
+        state_Obj: stateObj,
+        proceed_link: "?page=18&type=performance",
+        back_link: "?page=16&type=performance",
+        conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Performance",
+        progress_step: "100",
+        options: [
+          {
+            value: `Yes`,
+            displayText: `Yes`,
+          },
+          {
+            value: "No",
+            displayText: "No",
+          },
+        ],
+      },
+    ],
+    performance18: [
+      {
+        name: "Hair page 15",
+        type: "category",
+        question: `Have you used performance care products before?`,
+        clickHandler: choice_clickHandler,
+        state_Obj: stateObj,
+        proceed_link: "?appointment=yes",
+        back_link: "?page=17&type=performance",
+        conditionMet: true,
+        progress_bar: true,
+        progress_bar_text: "My Performance",
+        progress_step: "100",
+        options: [
+          {
+            value: `Yes`,
+            displayText: `Yes`,
+          },
+          {
+            value: "No",
+            displayText: "No",
+          },
+        ],
+        inputOptions: [
+          {
+            placeholder:"List all products here",
+            heading: "Healthcare products used",
+            clickHandler: choice_clickHandler,
+            value: stateObj["Healthcare products used"],
+            invisible: !(stateObj["Have you used performance care products before?"] == "Yes")
+          },
+        ]
+      },
+    ],
     appointment: [
       {
         name: "Appointment page",
@@ -5732,8 +6428,8 @@ export default function App() {
         required: "true",
         options: [
           {
-            value: "Yes, please ",
-            displayText: "Yes, please ",
+            value: "Yes, please",
+            displayText: "Yes, please",
           },
           {
             value: "No, just tell me what to use",
@@ -5742,6 +6438,7 @@ export default function App() {
         ],
       },
     ],
+    
     recommendation: [
       {
         name: "Appointment page",

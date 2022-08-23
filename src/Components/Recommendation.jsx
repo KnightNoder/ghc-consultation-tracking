@@ -40,8 +40,6 @@ const CallBack = ({
     product_id_promise
       .then((response) => {
         product_id = response;
-        console.log(product_link_1, product_link_2,'links');
-        console.log(stateObj["assessment_type"] == "6 mins" && product_link_1 != product_link_2)
         if (stateObj["assessment_type"] == "6 mins") {
           var product_id_1 = product_id[0];
           var product_id_2 = product_id[1];
@@ -73,6 +71,7 @@ const CallBack = ({
         if (stateObj["Select category for consultation"] == "performance") {
           category = "performance";
         }
+
         const getData = async () => {
           var config = {
             method: "get",
@@ -169,7 +168,6 @@ const CallBack = ({
       Set_disp(false);
     }, 4000);
   }, []);
-  console.log(process.env.REACT_APP_BRAND,'brand')
   return (
     <>
       <div
@@ -275,7 +273,7 @@ const CallBack = ({
                 </div>
               </div>
 
-              {(stateObj["assessment_type"] == "6 mins" && product_link_1 != product_link_2)? (
+              {(stateObj["assessment_type"] == "6 mins" && title_1 != title_1)? (
                 <div className="product-card">
                   <div className="image-section">
                     <img
