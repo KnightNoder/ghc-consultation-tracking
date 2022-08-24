@@ -5874,12 +5874,12 @@ mars_skin_engine_long.addRule({
         {
           any: [
             {
-              fact: "Do you have any upcoming functions in the family in the next 30 days?",
+              fact: "Do you have any upcoming functions in the family in the next 60 days?",
               operator: "equal",
               value: "No",
             },
             {
-              fact: "Do you have any upcoming functions in the family in the next 30 days?",
+              fact: "Do you have any upcoming functions in the family in the next 60 days?",
               operator: "equal",
               value: "Yes",
             },
@@ -5912,12 +5912,12 @@ mars_skin_engine_long.addRule({
         {
           any: [
             {
-              fact: "Do you have any upcoming functions in the family in the next 30 days?",
+              fact: "Do you have any upcoming functions in the family in the next 60 days?",
               operator: "equal",
               value: "No",
             },
             {
-              fact: "Do you have any upcoming functions in the family in the next 30 days?",
+              fact: "Do you have any upcoming functions in the family in the next 60 days?",
               operator: "equal",
               value: "Yes",
             },
@@ -5961,7 +5961,7 @@ mars_skin_engine_long.addRule({
           
         },
         {
-          fact: "Do you have any upcoming functions in the family in the next 30 days?",
+          fact: "Do you have any upcoming functions in the family in the next 60 days?",
           operator: "equal",
           value: "Yes",
         },
@@ -6000,7 +6000,7 @@ mars_skin_engine_long.addRule({
           
         },
         {
-          fact: "Do you have any upcoming functions in the family in the next 30 days?",
+          fact: "Do you have any upcoming functions in the family in the next 60 days?",
           operator: "equal",
           value: "No",
         },
@@ -6031,12 +6031,12 @@ mars_skin_engine_long.addRule({
         {
           any: [
             {
-              fact: "Do you have any upcoming functions in the family in the next 30 days?",
+              fact: "Do you have any upcoming functions in the family in the next 60 days?",
               operator: "equal",
               value: "No",
             },
             {
-              fact: "Do you have any upcoming functions in the family in the next 30 days?",
+              fact: "Do you have any upcoming functions in the family in the next 60 days?",
               operator: "equal",
               value: "Yes",
             },
@@ -6087,12 +6087,12 @@ mars_skin_engine_long.addRule({
         {
           any: [
             {
-              fact: "Do you have any upcoming functions in the family in the next 30 days?",
+              fact: "Do you have any upcoming functions in the family in the next 60 days?",
               operator: "equal",
               value: "No",
             },
             {
-              fact: "Do you have any upcoming functions in the family in the next 30 days?",
+              fact: "Do you have any upcoming functions in the family in the next 60 days?",
               operator: "equal",
               value: "Yes",
             },
@@ -6193,12 +6193,12 @@ mars_skin_engine_long.addRule({
         {
           any: [
             {
-              fact: "Do you have any upcoming functions in the family in the next 30 days?",
+              fact: "Do you have any upcoming functions in the family in the next 60 days?",
               operator: "equal",
               value: "No",
             },
             {
-              fact: "Do you have any upcoming functions in the family in the next 30 days?",
+              fact: "Do you have any upcoming functions in the family in the next 60 days?",
               operator: "equal",
               value: "Yes",
             },
@@ -6231,12 +6231,12 @@ mars_skin_engine_long.addRule({
         {
           any: [
             {
-              fact: "Do you have any upcoming functions in the family in the next 30 days?",
+              fact: "Do you have any upcoming functions in the family in the next 60 days?",
               operator: "equal",
               value: "No",
             },
             {
-              fact: "Do you have any upcoming functions in the family in the next 30 days?",
+              fact: "Do you have any upcoming functions in the family in the next 60 days?",
               operator: "equal",
               value: "Yes",
             },
@@ -6280,7 +6280,7 @@ mars_skin_engine_long.addRule({
           
         },
         {
-          fact: "Do you have any upcoming functions in the family in the next 30 days?",
+          fact: "Do you have any upcoming functions in the family in the next 60 days?",
           operator: "equal",
           value: "Yes",
         },
@@ -6319,7 +6319,7 @@ mars_skin_engine_long.addRule({
           
         },
         {
-          fact: "Do you have any upcoming functions in the family in the next 30 days?",
+          fact: "Do you have any upcoming functions in the family in the next 60 days?",
           operator: "equal",
           value: "No",
         },
@@ -6350,12 +6350,12 @@ mars_skin_engine_long.addRule({
         {
           any: [
             {
-              fact: "Do you have any upcoming functions in the family in the next 30 days?",
+              fact: "Do you have any upcoming functions in the family in the next 60 days?",
               operator: "equal",
               value: "No",
             },
             {
-              fact: "Do you have any upcoming functions in the family in the next 30 days?",
+              fact: "Do you have any upcoming functions in the family in the next 60 days?",
               operator: "equal",
               value: "Yes",
             },
@@ -6406,12 +6406,12 @@ mars_skin_engine_long.addRule({
         {
           any: [
             {
-              fact: "Do you have any upcoming functions in the family in the next 30 days?",
+              fact: "Do you have any upcoming functions in the family in the next 60 days?",
               operator: "equal",
               value: "No",
             },
             {
-              fact: "Do you have any upcoming functions in the family in the next 30 days?",
+              fact: "Do you have any upcoming functions in the family in the next 60 days?",
               operator: "equal",
               value: "Yes",
             },
@@ -6432,7 +6432,7 @@ mars_skin_engine_long.addRule({
   // 1A/C
   mars_beard_engine.addRule({
     conditions: {
-      all:[
+      any:[
         {
           fact: "How is your beard condition currently?",
           operator: "equal",
@@ -7100,9 +7100,9 @@ export const getProductIdFromEngine = async (stateObj) => {
             stateObj["What best describes your current hair condition?"],
           "What results are you looking for?":
             stateObj["What results are you looking for?"],
-          "Do you have any upcoming functions in the family in the next 30 days?":
+          "Do you have any upcoming functions in the family in the next 60 days?":
             stateObj[
-              "Do you have any upcoming functions in the family in the next 30 days?"
+              "Do you have any upcoming functions in the family in the next 60 days?"
             ],
         };
         await hair_engine_long.run(facts).then(({ events }) => {
