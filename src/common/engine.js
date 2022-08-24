@@ -3381,7 +3381,7 @@ mars_skin_engine.addRule({
   event: {
     type: "product id",
     params: {
-      id: "6973442228388",
+      id: "6877027401892",
     },
   },
 });
@@ -3544,7 +3544,7 @@ mars_skin_engine.addRule({
   event: {
     type: "product id",
     params: {
-      id: "6973442228388"
+      id: "6877027401892"
     },
   },
 });
@@ -3638,7 +3638,7 @@ mars_skin_engine.addRule({
   event: {
     type: "product id",
     params: {
-      id: "7658065002718"
+      id: "6877027401892"
     },
   },
 });
@@ -3707,7 +3707,7 @@ mars_skin_engine.addRule({
   event: {
     type: "product id",
     params: {
-      id: "6973442228388",
+      id: "6877027401892",
     },
   },
 });
@@ -3870,7 +3870,7 @@ mars_skin_engine.addRule({
   event: {
     type: "product id",
     params: {
-      id: "6973442228388",
+      id: "6877027401892",
     },
   },
 });
