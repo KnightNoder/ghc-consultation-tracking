@@ -146,7 +146,7 @@
 }
 
 .product-header .bmi{
-    background: var(--color-dark);
+    background: var(--border);
     border-radius: 16px;
     width: 25%;
     display: flex;

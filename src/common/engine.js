@@ -6486,7 +6486,7 @@ mars_skin_engine_long.addRule({
     event: {
       type: "product id",
       params: {
-        id: "6791716405412"
+        id: "6741236973732"
       },
     },
   });
@@ -6730,19 +6730,19 @@ mars_skin_engine_long.addRule({
     conditions: {
       all:[
         {
-          fact: "How often do you have trouble getting or keeping an erection during sex?",
+          fact: "How often are you climaxing sooner than you would like during sex?",
           operator: "equal",
-          value: "Occasionally",
+          value: "No issues with ejaculation",
         },
         {
           any:[
             {
-              fact: "How often are you climaxing sooner than you would like during sex?",
+              fact: "How often do you have trouble getting or keeping an erection during sex?",
               operator: "equal",
-              value: "No issues with ejaculation"
+              value: "Occasionally"
             },
             {
-              fact: "How often are you climaxing sooner than you would like during sex?",
+              fact: "How often do you have trouble getting or keeping an erection during sex?",
               operator: "equal",
               value: "Rarely"
             }

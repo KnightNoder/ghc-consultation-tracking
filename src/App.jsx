@@ -3386,7 +3386,7 @@ export default function App() {
           },
           {
             value: "Medium (sometimes feel like doing it)",
-            displayText: "Medium (sometimes feel like doing it)",
+            displayText: "Medium (Sometimes feel like doing it)",
           },
           {
             value: "High (Regularly feel like doing it)",
@@ -5872,7 +5872,7 @@ export default function App() {
           },
           {
             value: "Medium (sometimes feel like doing it)",
-            displayText: "Medium (sometimes feel like doing it)",
+            displayText: "Medium (Sometimes feel like doing it)",
           },
           {
             value: "High (Regularly feel like doing it)",
