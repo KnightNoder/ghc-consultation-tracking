@@ -3312,7 +3312,7 @@ export default function App() {
             displayText: "No beard",
           },
           {
-            value: "Very less",
+            value: "Very less beard",
             displayText: "Very less beard (Only mustaches and chin hair)",
           },
           {
