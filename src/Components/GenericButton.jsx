@@ -27,8 +27,8 @@ const GenericButton = ({
       redirectToCheckout();
     } else {
       if (conditionMet) {
-        navigate("/" + choice);
-        set_url_function("/" + choice);
+        navigate("/pages/ghc-consultation-mars/" + choice);
+        set_url_function("/pages/ghc-consultation-mars/" + choice);
       } else {
         vibrateText();
       }
