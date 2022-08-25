@@ -6969,14 +6969,23 @@ mars_skin_engine_long.addRule({
     },
   })
 
-  // 3 is 4 and  2 is 3 AND 4 is any
+  // 3 is 4 and  2 is 3 or 2 AND 4 is any
   mars_performance_engine_long.addRule({
     conditions: {
       all:[
         {
-          fact: "How often do you have trouble getting or keeping an erection during sex?",
-          operator: "equal",
-          value: "Occasionally",
+          any:[
+            {
+              fact: "How often do you have trouble getting or keeping an erection during sex?",
+              operator: "equal",
+              value: "Occasionally"
+            },
+            {
+              fact: "How often do you have trouble getting or keeping an erection during sex?",
+              operator: "equal",
+              value: "Rarely"
+            }
+          ]
         },
         {
           fact: "How often are you climaxing sooner than you would like during sex?",

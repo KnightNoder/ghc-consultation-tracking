@@ -213,7 +213,7 @@ export default function App() {
         if (category == "weightloss") return "?page=13&type=weightloss";
         if (category == "hair") return "?page=16&type=hair";
         if (category == "beard") return "?page=15&type=beard";
-        if (category == "performance") return "?page=18&type=performance";
+        if (category == "performance") return "?page=17&type=performance";
       }
     }
   };
@@ -5929,7 +5929,7 @@ export default function App() {
         name: "performance page 3",
         type: "category",
         question:
-          "How often are you climaxing sooner than you would like during sex? ",
+          "How often are you climaxing sooner than you would like during sex?",
         clickHandler: choice_clickHandler,
         state_Obj: stateObj,
         proceed_link: "?page=4&type=performance",
@@ -5954,8 +5954,8 @@ export default function App() {
             displayText: "Occasionally",
           },
           {
-            value: "Rarely",
-            displayText: "Rarely",
+            value: "No issues with ejaculation",
+            displayText: "No issues with ejaculation",
           },
         ],
       },
@@ -6321,9 +6321,9 @@ export default function App() {
         inputOptions: [
           {
             placeholder:"Input in days,months or years",
-            heading: "Since how long",
+            heading: "Since how long(ED problem)",
             clickHandler: choice_clickHandler,
-            value: stateObj["Since how long"],
+            value: stateObj["Since how long(ED problem)"],
             invisible: !(stateObj["Do you have observed Erectile dysfunction problem?"] == "Yes")
           },
         ]
@@ -6356,9 +6356,9 @@ export default function App() {
         inputOptions: [
           {
             placeholder:"Input in days,months or years",
-            heading: "Since how long",
+            heading: "Since how long(PE problem)",
             clickHandler: choice_clickHandler,
-            value: stateObj["Since how long"],
+            value: stateObj["Since how long(PE problem)"],
             invisible: !(stateObj["Do you have observed Pre-mature ejactulation problem?"] == "Yes")
           },
         ]
@@ -6366,39 +6366,13 @@ export default function App() {
     ],
     performance17: [
       {
-        name: "performance page 5",
-        type: "category",
-        question:
-          "Do you have observed Premature ejaculation problem?",
-        clickHandler: choice_clickHandler,
-        state_Obj: stateObj,
-        proceed_link: "?page=18&type=performance",
-        back_link: "?page=16&type=performance",
-        conditionMet: true,
-        progress_bar: true,
-        progress_bar_text: "My Performance",
-        progress_step: "100",
-        options: [
-          {
-            value: `Yes`,
-            displayText: `Yes`,
-          },
-          {
-            value: "No",
-            displayText: "No",
-          },
-        ],
-      },
-    ],
-    performance18: [
-      {
         name: "Hair page 15",
         type: "category",
         question: `Have you used performance care products before?`,
         clickHandler: choice_clickHandler,
         state_Obj: stateObj,
         proceed_link: "?appointment=yes",
-        back_link: "?page=17&type=performance",
+        back_link: "?page=16&type=performance",
         conditionMet: true,
         progress_bar: true,
         progress_bar_text: "My Performance",
