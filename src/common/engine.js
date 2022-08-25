@@ -5521,7 +5521,7 @@ mars_skin_engine_long.addRule({
         {        
           fact: 'body_conditions_array',
           operator: 'contains', 
-          value: 'Stretch Marks on the skin',
+          value: 'Stress/Hormonal Imbalance',
         },
         {
           any : [

@@ -40,6 +40,7 @@ const CallBack = ({
     product_id_promise
       .then((response) => {
         product_id = response;
+        console.log(response,'resp')
         if (stateObj["assessment_type"] == "6 mins") {
           var product_id_1 = product_id[0];
           var product_id_2 = product_id[1];
@@ -273,7 +274,7 @@ const CallBack = ({
                 </div>
               </div>
 
-              {(stateObj["assessment_type"] == "6 mins" && title_1 != title_1)? (
+              {(stateObj["assessment_type"] == "6 mins" && title_1 != title_2)? (
                 <div className="product-card">
                   <div className="image-section">
                     <img
