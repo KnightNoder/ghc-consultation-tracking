@@ -5461,6 +5461,14 @@ export default function App() {
           {
             value:
               stateObj[`What best describes your current body condition?`]?.[
+                "Stress/Hormonal Imbalance"
+              ] || 0,
+            displayText: "Stress/Hormonal Imbalance",
+            onChange: checkBoxHandler,
+          },
+          {
+            value:
+              stateObj[`What best describes your current body condition?`]?.[
                 "Stretch Marks on the skin"
               ] || 0,
             displayText: "Stretch Marks on the skin",
