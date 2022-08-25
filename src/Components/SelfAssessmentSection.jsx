@@ -75,8 +75,8 @@ const SelfAssessmentSection = ({ set_url_function, clickHandler }) => {
               className="start-assessment"
               onClick={(e) => {
                 e.preventDefault();
-                navigate("/" + "?category=yes");
-                set_url_function("/" + "?category=yes");
+                navigate("/pages/ghc-consultation/" + "?category=yes");
+                set_url_function("/pages/ghc-consultation/" + "?category=yes");
                 // setAssessmentType("30 sec");
                 clickHandler("assessment_type", "30 sec");
               }}
@@ -125,8 +125,8 @@ const SelfAssessmentSection = ({ set_url_function, clickHandler }) => {
             <div
               className="start-assessment"
               onClick={() => {
-                navigate("/?category=yes");
-                set_url_function("?category=yes");
+                navigate("/pages/ghc-consultation/?category=yes");
+                set_url_function("/pages/ghc-consultation/?category=yes");
                 clickHandler("assessment_type", "6 mins");
               }}
             >
@@ -151,8 +151,8 @@ const SelfAssessmentSection = ({ set_url_function, clickHandler }) => {
             className="submit"
             onClick={() => {
               {
-                navigate("/?category=yes");
-                set_url_function("?category=yes");
+                navigate("/pages/ghc-consultation/?category=yes");
+                set_url_function("/pages/ghc-consultation/?category=yes");
                 clickHandler("assessment_type", "30 sec");
               }
             }}
@@ -173,8 +173,8 @@ const SelfAssessmentSection = ({ set_url_function, clickHandler }) => {
             className="submit"
             onClick={() => {
               {
-                navigate("/" + "?category=yes");
-                set_url_function("/" + "?category=yes");
+                navigate("/pages/ghc-consultation/" + "?category=yes");
+                set_url_function("/pages/ghc-consultation/" + "?category=yes");
                 clickHandler("assessment_type", "6 mins");
               }
             }}

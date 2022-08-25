@@ -31,8 +31,8 @@ const GenericButton = ({
       redirectToCheckout();
     } else {
       if (conditionMet) {
-        navigate("/" + choice);
-        set_url_function("/" + choice);
+        navigate("/pages/ghc-consultation/" + choice);
+        set_url_function("/pages/ghc-consultation/" + choice);
       } else {
         vibrateText();
       }
