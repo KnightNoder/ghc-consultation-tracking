@@ -4268,7 +4268,7 @@ export default function App() {
         state_Obj: stateObj,
         proceed_link: "?page=3&type=beard",
         back_link: "?page=1&type=beard",
-        condition_met: "true",
+        conditionMet: true,
         progress_bar: true,
         progress_bar_text: "My Beard",
         progress_step: "41.5",
