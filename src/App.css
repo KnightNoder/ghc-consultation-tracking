@@ -1,5 +1,5 @@
 
-@font-face {
+/* @font-face {
   font-family: harmonia-reg;
   src: url(fonts/HarmoniaSansProCyr-Regular.ttf);
 }
@@ -13,13 +13,13 @@
 @font-face {
   font-family: harmonia-light;
   src: url(fonts/HarmoniaSansProCyr-Regular.ttf);
-}
+} */
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: harmonia-reg;
+  /* font-family: harmonia-reg; */
 }
 
 .back-button,.proceed-button,.assessment-image, .assessment,.generic-button ,.choice-container,.proceed-container{
@@ -43,11 +43,11 @@
 }
 
 .assessment h5{
-  font-family: harmonia-bold;
+  /* font-family: harmonia-bold; */
 }
 
 .error-text{
-  font-family: harmonia-reg;
+  /* font-family: harmonia-reg; */
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
