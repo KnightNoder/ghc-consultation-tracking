@@ -75,13 +75,8 @@ const SelfAssessmentSection = ({ set_url_function, clickHandler }) => {
               className="start-assessment"
               onClick={(e) => {
                 e.preventDefault();
-                if(process.env.REACT_APP_BRAND == "Mars") {
-                navigate("/pages/ghc-consultation-mars/" + "?category=yes");
-                  set_url_function("/pages/ghc-consultation-mars/" + "?category=yes");
-                } else {
-                  navigate("/pages/ghc-consultation/" + "?category=yes");
-                  set_url_function("/pages/ghc-consultation/" + "?category=yes");
-                }
+                navigate(window.location.pathname  + "?category=yes");
+                set_url_function(window.location.pathname  + "?category=yes");
                 clickHandler("assessment_type", "30 sec");
               }}
             >
@@ -129,13 +124,8 @@ const SelfAssessmentSection = ({ set_url_function, clickHandler }) => {
             <div
               className="start-assessment"
               onClick={() => {
-                if(process.env.REACT_APP_BRAND == "Mars") {
-                  navigate("/pages/ghc-consultation-mars/?category=yes");
-                  set_url_function("/pages/ghc-consultation-mars/?category=yes");
-                } else {
-                  navigate("/pages/ghc-consultation/?category=yes");
-                  set_url_function("/pages/ghc-consultation/?category=yes");
-                }
+                navigate(window.location.pathname + "?category=yes");
+                set_url_function(window.location.pathname  + "?category=yes");
                 clickHandler("assessment_type", "6 mins");
               }}
             >
@@ -160,13 +150,8 @@ const SelfAssessmentSection = ({ set_url_function, clickHandler }) => {
             className="submit"
             onClick={() => {
               {
-                if(process.env.REACT_APP_BRAND == "Mars") {
-                  navigate("/pages/ghc-consultation-mars/?category=yes");
-                  set_url_function("/pages/ghc-consultation-mars/?category=yes");
-                } else {
-                  navigate("/pages/ghc-consultation/?category=yes");
-                  set_url_function("/pages/ghc-consultation/?category=yes");
-                }
+                  navigate(window.location.pathname + "?category=yes");
+                  set_url_function(window.location.pathname  + "?category=yes");
                 clickHandler("assessment_type", "30 sec");
               }
             }}
@@ -187,13 +172,8 @@ const SelfAssessmentSection = ({ set_url_function, clickHandler }) => {
             className="submit"
             onClick={() => {
               {
-                if(process.env.REACT_APP_BRAND == "Mars") {
-                  navigate("/pages/ghc-consultation-mars/" + "?category=yes");
-                  set_url_function("/pages/ghc-consultation-mars/" + "?category=yes");
-                } else {
-                  navigate("/pages/ghc-consultation/" + "?category=yes");
-                  set_url_function("/pages/ghc-consultation/" + "?category=yes");
-                }
+                navigate(window.location.pathname  + "?category=yes");
+                set_url_function(window.location.pathname  + "?category=yes");
                 clickHandler("assessment_type", "6 mins");
               }
             }}

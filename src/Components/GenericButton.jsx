@@ -27,13 +27,8 @@ const GenericButton = ({
       redirectToCheckout();
     } else {
       if (conditionMet) {
-        if(process.env.REACT_APP_BRAND == "Mars") {
-          navigate("/pages/ghc-consultation-mars/" + choice);
-          set_url_function("/pages/ghc-consultation-mars/" + choice);
-        } else {
-          navigate("/pages/ghc-consultation/" + choice);
-          set_url_function("/pages/ghc-consultation/" + choice);
-        }
+        navigate(window.location.pathname + choice);
+        set_url_function(window.location.pathname + choice);
       } else {
         vibrateText();
       }

@@ -137,7 +137,7 @@ const getProductId = (stateObj, assessment_type) => {
   // );
 };
 
-const getSendMailData = (assessment_type, stateObj) => {
+const getSendMailData = (assessment_type, stateObj, productLink = "", productName = "") => {
   const questionnaire = [];
 
   for (let key in stateObj) {
@@ -199,6 +199,8 @@ const getSendMailData = (assessment_type, stateObj) => {
     image: "",
     type: process.env.REACT_APP_BRAND.toLowerCase(),
     user_survey: questionnaire,
+    productLink: productLink,
+    productName: productName
   });
 
   return data;
