@@ -23,7 +23,7 @@ hair_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "What best describes your current hair condition?",
+        fact: "What best describes the current condition of your hair?",
         operator: "equal",
         value: "Receding hairline",
       },
@@ -60,7 +60,7 @@ hair_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "What best describes your current hair condition?",
+        fact: "What best describes the current condition of your hair?",
         operator: "equal",
         value: "Receding hairline",
       },
@@ -97,7 +97,7 @@ hair_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "What best describes your current hair condition?",
+        fact: "What best describes the current condition of your hair?",
         operator: "equal",
         value: "Receding hairline",
       },
@@ -136,7 +136,7 @@ hair_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "What best describes your current hair condition?",
+        fact: "What best describes the current condition of your hair?",
         operator: "equal",
         value: "Thinning at the crown",
       },
@@ -173,7 +173,7 @@ hair_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "What best describes your current hair condition?",
+        fact: "What best describes the current condition of your hair?",
         operator: "equal",
         value: "Thinning at the crown",
       },
@@ -210,7 +210,7 @@ hair_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "What best describes your current hair condition?",
+        fact: "What best describes the current condition of your hair?",
         operator: "equal",
         value: "Thinning at the crown",
       },
@@ -249,7 +249,7 @@ hair_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "What best describes your current hair condition?",
+        fact: "What best describes the current condition of your hair?",
         operator: "equal",
         value: "Overall hair loss/thinning",
       },
@@ -286,7 +286,7 @@ hair_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "What best describes your current hair condition?",
+        fact: "What best describes the current condition of your hair?",
         operator: "equal",
         value: "Overall hair loss/thinning",
       },
@@ -323,7 +323,7 @@ hair_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "What best describes your current hair condition?",
+        fact: "What best describes the current condition of your hair?",
         operator: "equal",
         value: "Overall hair loss/thinning",
       },
@@ -351,7 +351,7 @@ hair_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "What best describes your current hair condition?",
+        fact: "What best describes the current condition of your hair?",
         operator: "equal",
         value: "Overall hair loss/thinning",
       },
@@ -381,7 +381,7 @@ hair_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "What best describes your current hair condition?",
+        fact: "What best describes the current condition of your hair?",
         operator: "equal",
         value: "Receding + Overall thinning",
       },
@@ -409,7 +409,7 @@ hair_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "What best describes your current hair condition?",
+        fact: "What best describes the current condition of your hair?",
         operator: "equal",
         value: "Receding + Overall thinning",
       },
@@ -437,7 +437,7 @@ hair_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "What best describes your current hair condition?",
+        fact: "What best describes the current condition of your hair?",
         operator: "equal",
         value: "Receding + Overall thinning",
       },
@@ -465,7 +465,7 @@ hair_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "What best describes your current hair condition?",
+        fact: "What best describes the current condition of your hair?",
         operator: "equal",
         value: "Receding + Overall thinning",
       },
@@ -493,7 +493,7 @@ hair_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "What best describes your current hair condition?",
+        fact: "What best describes the current condition of your hair?",
         operator: "equal",
         value: "Receding + Overall thinning",
       },
@@ -521,7 +521,7 @@ hair_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "What best describes your current hair condition?",
+        fact: "What best describes the current condition of your hair?",
         operator: "equal",
         value: "Receding + Overall thinning",
       },
@@ -551,7 +551,7 @@ hair_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "What best describes your current hair condition?",
+        fact: "What best describes the current condition of your hair?",
         operator: "equal",
         value: "Receding hairline",
       },
@@ -588,7 +588,7 @@ hair_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "What best describes your current hair condition?",
+        fact: "What best describes the current condition of your hair?",
         operator: "equal",
         value: "Receding hairline",
       },
@@ -625,7 +625,7 @@ hair_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "What best describes your current hair condition?",
+        fact: "What best describes the current condition of your hair?",
         operator: "equal",
         value: "Receding hairline",
       },
@@ -664,7 +664,7 @@ hair_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "What best describes your current hair condition?",
+        fact: "What best describes the current condition of your hair?",
         operator: "equal",
         value: "Thinning at the crown",
       },
@@ -701,7 +701,7 @@ hair_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "What best describes your current hair condition?",
+        fact: "What best describes the current condition of your hair?",
         operator: "equal",
         value: "Thinning at the crown",
       },
@@ -738,7 +738,7 @@ hair_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "What best describes your current hair condition?",
+        fact: "What best describes the current condition of your hair?",
         operator: "equal",
         value: "Thinning at the crown",
       },
@@ -777,7 +777,7 @@ hair_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "What best describes your current hair condition?",
+        fact: "What best describes the current condition of your hair?",
         operator: "equal",
         value: "Overall hair loss/thinning",
       },
@@ -814,7 +814,7 @@ hair_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "What best describes your current hair condition?",
+        fact: "What best describes the current condition of your hair?",
         operator: "equal",
         value: "Overall hair loss/thinning",
       },
@@ -851,7 +851,7 @@ hair_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "What best describes your current hair condition?",
+        fact: "What best describes the current condition of your hair?",
         operator: "equal",
         value: "Overall hair loss/thinning",
       },
@@ -879,7 +879,7 @@ hair_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "What best describes your current hair condition?",
+        fact: "What best describes the current condition of your hair?",
         operator: "equal",
         value: "Overall hair loss/thinning",
       },
@@ -909,7 +909,7 @@ hair_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "What best describes your current hair condition?",
+        fact: "What best describes the current condition of your hair?",
         operator: "equal",
         value: "Receding + Overall thinning",
       },
@@ -937,7 +937,7 @@ hair_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "What best describes your current hair condition?",
+        fact: "What best describes the current condition of your hair?",
         operator: "equal",
         value: "Receding + Overall thinning",
       },
@@ -965,7 +965,7 @@ hair_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "What best describes your current hair condition?",
+        fact: "What best describes the current condition of your hair?",
         operator: "equal",
         value: "Receding + Overall thinning",
       },
@@ -993,7 +993,7 @@ hair_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "What best describes your current hair condition?",
+        fact: "What best describes the current condition of your hair?",
         operator: "equal",
         value: "Receding + Overall thinning",
       },
@@ -1021,7 +1021,7 @@ hair_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "What best describes your current hair condition?",
+        fact: "What best describes the current condition of your hair?",
         operator: "equal",
         value: "Receding + Overall thinning",
       },
@@ -1049,7 +1049,7 @@ hair_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "What best describes your current hair condition?",
+        fact: "What best describes the current condition of your hair?",
         operator: "equal",
         value: "Receding + Overall thinning",
       },
@@ -1079,7 +1079,7 @@ skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Vitamin C",
       },
@@ -1102,7 +1102,7 @@ skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Vitamin C",
       },
@@ -1125,7 +1125,7 @@ skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Vitamin C",
       },
@@ -1148,7 +1148,7 @@ skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Vitamin C",
       },
@@ -1171,7 +1171,7 @@ skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Vitamin C",
       },
@@ -1194,7 +1194,7 @@ skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Vitamin C",
       },
@@ -1217,7 +1217,7 @@ skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Vitamin C",
       },
@@ -1242,7 +1242,7 @@ skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "None",
       },
@@ -1265,7 +1265,7 @@ skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "None",
       },
@@ -1288,7 +1288,7 @@ skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "None",
       },
@@ -1311,7 +1311,7 @@ skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "None",
       },
@@ -1334,7 +1334,7 @@ skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "None",
       },
@@ -1357,7 +1357,7 @@ skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "None",
       },
@@ -1380,7 +1380,7 @@ skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "None",
       },
@@ -1405,7 +1405,7 @@ skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Salicylic Acid",
       },
@@ -1428,7 +1428,7 @@ skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Salicylic Acid",
       },
@@ -1451,7 +1451,7 @@ skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Salicylic Acid",
       },
@@ -1474,7 +1474,7 @@ skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Salicylic Acid",
       },
@@ -1497,7 +1497,7 @@ skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Salicylic Acid",
       },
@@ -1520,7 +1520,7 @@ skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Salicylic Acid",
       },
@@ -1543,7 +1543,7 @@ skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Salicylic Acid",
       },
@@ -1568,7 +1568,7 @@ skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Retinol",
       },
@@ -1591,7 +1591,7 @@ skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Retinol",
       },
@@ -1614,7 +1614,7 @@ skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Retinol",
       },
@@ -1637,7 +1637,7 @@ skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Retinol",
       },
@@ -1660,7 +1660,7 @@ skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Retinol",
       },
@@ -1683,7 +1683,7 @@ skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Retinol",
       },
@@ -1706,7 +1706,7 @@ skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Retinol",
       },
@@ -1731,7 +1731,7 @@ skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Kojic Acid",
       },
@@ -1754,7 +1754,7 @@ skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Kojic Acid",
       },
@@ -1777,7 +1777,7 @@ skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Kojic Acid",
       },
@@ -1800,7 +1800,7 @@ skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Kojic Acid",
       },
@@ -1823,7 +1823,7 @@ skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Kojic Acid",
       },
@@ -1846,7 +1846,7 @@ skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Kojic Acid",
       },
@@ -1869,7 +1869,7 @@ skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Kojic Acid",
       },
@@ -1894,7 +1894,7 @@ skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Niacinamide",
       },
@@ -1917,7 +1917,7 @@ skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Niacinamide",
       },
@@ -1940,7 +1940,7 @@ skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Niacinamide",
       },
@@ -1963,7 +1963,7 @@ skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Niacinamide",
       },
@@ -1986,7 +1986,7 @@ skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Niacinamide",
       },
@@ -2009,7 +2009,7 @@ skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Niacinamide",
       },
@@ -2032,7 +2032,7 @@ skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Niacinamide",
       },
@@ -3066,7 +3066,7 @@ mars_skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Vitamin C",
       },
@@ -3089,7 +3089,7 @@ mars_skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Vitamin C",
       },
@@ -3112,7 +3112,7 @@ mars_skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Vitamin C",
       },
@@ -3135,7 +3135,7 @@ mars_skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Vitamin C",
       },
@@ -3158,7 +3158,7 @@ mars_skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Vitamin C",
       },
@@ -3181,7 +3181,7 @@ mars_skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Vitamin C",
       },
@@ -3204,7 +3204,7 @@ mars_skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Vitamin C",
       },
@@ -3229,7 +3229,7 @@ mars_skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "None",
       },
@@ -3252,7 +3252,7 @@ mars_skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "None",
       },
@@ -3275,7 +3275,7 @@ mars_skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "None",
       },
@@ -3298,7 +3298,7 @@ mars_skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "None",
       },
@@ -3321,7 +3321,7 @@ mars_skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "None",
       },
@@ -3344,7 +3344,7 @@ mars_skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "None",
       },
@@ -3367,7 +3367,7 @@ mars_skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "None",
       },
@@ -3392,7 +3392,7 @@ mars_skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Salicylic Acid",
       },
@@ -3415,7 +3415,7 @@ mars_skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Salicylic Acid",
       },
@@ -3438,7 +3438,7 @@ mars_skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Salicylic Acid",
       },
@@ -3461,7 +3461,7 @@ mars_skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Salicylic Acid",
       },
@@ -3484,7 +3484,7 @@ mars_skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Salicylic Acid",
       },
@@ -3507,7 +3507,7 @@ mars_skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Salicylic Acid",
       },
@@ -3530,7 +3530,7 @@ mars_skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Salicylic Acid",
       },
@@ -3555,7 +3555,7 @@ mars_skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Retinol",
       },
@@ -3578,7 +3578,7 @@ mars_skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Retinol",
       },
@@ -3601,7 +3601,7 @@ mars_skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Retinol",
       },
@@ -3624,7 +3624,7 @@ mars_skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Retinol",
       },
@@ -3647,7 +3647,7 @@ mars_skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Retinol",
       },
@@ -3670,7 +3670,7 @@ mars_skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Retinol",
       },
@@ -3693,7 +3693,7 @@ mars_skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Retinol",
       },
@@ -3718,7 +3718,7 @@ mars_skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Kojic Acid",
       },
@@ -3741,7 +3741,7 @@ mars_skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Kojic Acid",
       },
@@ -3764,7 +3764,7 @@ mars_skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Kojic Acid",
       },
@@ -3787,7 +3787,7 @@ mars_skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Kojic Acid",
       },
@@ -3810,7 +3810,7 @@ mars_skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Kojic Acid",
       },
@@ -3833,7 +3833,7 @@ mars_skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Kojic Acid",
       },
@@ -3856,7 +3856,7 @@ mars_skin_engine.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Kojic Acid",
       },
@@ -3884,7 +3884,7 @@ mars_skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Vitamin C",
       },
@@ -3907,7 +3907,7 @@ mars_skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Vitamin C",
       },
@@ -3930,7 +3930,7 @@ mars_skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Vitamin C",
       },
@@ -3953,7 +3953,7 @@ mars_skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Vitamin C",
       },
@@ -3976,7 +3976,7 @@ mars_skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Vitamin C",
       },
@@ -3999,7 +3999,7 @@ mars_skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Vitamin C",
       },
@@ -4022,7 +4022,7 @@ mars_skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Vitamin C",
       },
@@ -4047,7 +4047,7 @@ mars_skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "None",
       },
@@ -4070,7 +4070,7 @@ mars_skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "None",
       },
@@ -4093,7 +4093,7 @@ mars_skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "None",
       },
@@ -4116,7 +4116,7 @@ mars_skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "None",
       },
@@ -4139,7 +4139,7 @@ mars_skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "None",
       },
@@ -4162,7 +4162,7 @@ mars_skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "None",
       },
@@ -4185,7 +4185,7 @@ mars_skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "None",
       },
@@ -4210,7 +4210,7 @@ mars_skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Salicylic Acid",
       },
@@ -4233,7 +4233,7 @@ mars_skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Salicylic Acid",
       },
@@ -4256,7 +4256,7 @@ mars_skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Salicylic Acid",
       },
@@ -4279,7 +4279,7 @@ mars_skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Salicylic Acid",
       },
@@ -4302,7 +4302,7 @@ mars_skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Salicylic Acid",
       },
@@ -4325,7 +4325,7 @@ mars_skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Salicylic Acid",
       },
@@ -4348,7 +4348,7 @@ mars_skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Salicylic Acid",
       },
@@ -4373,7 +4373,7 @@ mars_skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Retinol",
       },
@@ -4396,7 +4396,7 @@ mars_skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Retinol",
       },
@@ -4419,7 +4419,7 @@ mars_skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Retinol",
       },
@@ -4442,7 +4442,7 @@ mars_skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Retinol",
       },
@@ -4465,7 +4465,7 @@ mars_skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Retinol",
       },
@@ -4488,7 +4488,7 @@ mars_skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Retinol",
       },
@@ -4511,7 +4511,7 @@ mars_skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Retinol",
       },
@@ -4536,7 +4536,7 @@ mars_skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Kojic Acid",
       },
@@ -4559,7 +4559,7 @@ mars_skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Kojic Acid",
       },
@@ -4582,7 +4582,7 @@ mars_skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Kojic Acid",
       },
@@ -4605,7 +4605,7 @@ mars_skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Kojic Acid",
       },
@@ -4628,7 +4628,7 @@ mars_skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Kojic Acid",
       },
@@ -4651,7 +4651,7 @@ mars_skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Kojic Acid",
       },
@@ -4674,7 +4674,7 @@ mars_skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Kojic Acid",
       },
@@ -5797,7 +5797,7 @@ mars_skin_engine_long.addRule({
     conditions: {
       all: [
         {
-          fact: "What best describes your current hair condition?",
+          fact: "What best describes the current condition of your hair?",
           operator: "equal",
           value: "Receding hairline",
         },
@@ -5852,7 +5852,7 @@ mars_skin_engine_long.addRule({
     conditions: {
       all: [
         {
-          fact: "What best describes your current hair condition?",
+          fact: "What best describes the current condition of your hair?",
           operator: "equal",
           value: "Thinning at the crown",
         },
@@ -5900,7 +5900,7 @@ mars_skin_engine_long.addRule({
     conditions: {
       all: [
         {
-          fact: "What best describes your current hair condition?",
+          fact: "What best describes the current condition of your hair?",
           operator: "equal",
           value: "Thinning at the crown",
         },
@@ -5941,7 +5941,7 @@ mars_skin_engine_long.addRule({
     conditions: {
       all: [
         {
-          fact: "What best describes your current hair condition?",
+          fact: "What best describes the current condition of your hair?",
           operator: "equal",
           value: "Overall hair loss/thinning",
         },
@@ -5980,7 +5980,7 @@ mars_skin_engine_long.addRule({
     conditions: {
       all: [
         {
-          fact: "What best describes your current hair condition?",
+          fact: "What best describes the current condition of your hair?",
           operator: "equal",
           value: "Overall hair loss/thinning",
         },
@@ -6019,7 +6019,7 @@ mars_skin_engine_long.addRule({
     conditions: {
       all: [
         {
-          fact: "What best describes your current hair condition?",
+          fact: "What best describes the current condition of your hair?",
           operator: "equal",
           value: "Overall hair loss/thinning",
         },
@@ -6060,7 +6060,7 @@ mars_skin_engine_long.addRule({
     conditions: {
       all: [
         {
-          fact: "What best describes your current hair condition?",
+          fact: "What best describes the current condition of your hair?",
           operator: "equal",
           value: "Receding + Overall thinning",
         },
@@ -6116,7 +6116,7 @@ mars_skin_engine_long.addRule({
     conditions: {
       all: [
         {
-          fact: "What best describes your current hair condition?",
+          fact: "What best describes the current condition of your hair?",
           operator: "equal",
           value: "Receding hairline",
         },
@@ -6171,7 +6171,7 @@ mars_skin_engine_long.addRule({
     conditions: {
       all: [
         {
-          fact: "What best describes your current hair condition?",
+          fact: "What best describes the current condition of your hair?",
           operator: "equal",
           value: "Thinning at the crown",
         },
@@ -6219,7 +6219,7 @@ mars_skin_engine_long.addRule({
     conditions: {
       all: [
         {
-          fact: "What best describes your current hair condition?",
+          fact: "What best describes the current condition of your hair?",
           operator: "equal",
           value: "Thinning at the crown",
         },
@@ -6260,7 +6260,7 @@ mars_skin_engine_long.addRule({
     conditions: {
       all: [
         {
-          fact: "What best describes your current hair condition?",
+          fact: "What best describes the current condition of your hair?",
           operator: "equal",
           value: "Overall hair loss/thinning",
         },
@@ -6299,7 +6299,7 @@ mars_skin_engine_long.addRule({
     conditions: {
       all: [
         {
-          fact: "What best describes your current hair condition?",
+          fact: "What best describes the current condition of your hair?",
           operator: "equal",
           value: "Overall hair loss/thinning",
         },
@@ -6338,7 +6338,7 @@ mars_skin_engine_long.addRule({
     conditions: {
       all: [
         {
-          fact: "What best describes your current hair condition?",
+          fact: "What best describes the current condition of your hair?",
           operator: "equal",
           value: "Overall hair loss/thinning",
         },
@@ -6379,7 +6379,7 @@ mars_skin_engine_long.addRule({
     conditions: {
       all: [
         {
-          fact: "What best describes your current hair condition?",
+          fact: "What best describes the current condition of your hair?",
           operator: "equal",
           value: "Receding + Overall thinning",
         },
@@ -7030,8 +7030,8 @@ export const getProductIdFromEngine = async (stateObj) => {
     if (assessment_type == "30 sec") {
       if (category == "skin") {
         let facts = {
-          "Are you allergic to any of the ingredients below?":
-            stateObj["Are you allergic to any of the ingredients below?"],
+          "Are you allergic to any of these ingredients?":
+            stateObj["Are you allergic to any of these ingredients?"],
           "What are you concerned about?":
             stateObj["What are you concerned about?"],
         };
@@ -7043,8 +7043,8 @@ export const getProductIdFromEngine = async (stateObj) => {
       }
       if (category == "hair") {
         let facts = {
-          "What best describes your current hair condition?":
-            stateObj["What best describes your current hair condition?"],
+          "What best describes the current condition of your hair?":
+            stateObj["What best describes the current condition of your hair?"],
           "What results are you looking for?":
             stateObj["What results are you looking for?"],
           "Do you have any upcoming functions in the family in the next 30 days?":
@@ -7059,8 +7059,8 @@ export const getProductIdFromEngine = async (stateObj) => {
         });
       }
       if (category == "weightloss") {
-        const body_conditions_object = stateObj["What best describes your current body condition?"];
-        const past_allergies_object = stateObj["Do you have any past allergic reactions to any of the below components?"];
+        const body_conditions_object = stateObj["What best describes the current condition of your body?"];
+        const past_allergies_object = stateObj["Have you ever had allergic reactions to any of the components below?"];
         const body_conditions = Object.keys(body_conditions_object).filter((x) => body_conditions_object[x] == true)
         const past_allergies = Object.keys(past_allergies_object).filter((x) => past_allergies_object[x] == true)
         let facts = {
@@ -7077,8 +7077,8 @@ export const getProductIdFromEngine = async (stateObj) => {
     } else {
       if (category == "skin") {
         let facts = {
-          "Are you allergic to any of the ingredients below?":
-            stateObj["Are you allergic to any of the ingredients below?"],
+          "Are you allergic to any of these ingredients?":
+            stateObj["Are you allergic to any of these ingredients?"],
           "What are you concerned about?":
             stateObj["What are you concerned about?"],
         };
@@ -7089,8 +7089,8 @@ export const getProductIdFromEngine = async (stateObj) => {
         });
       }
       if (category == "weightloss") {
-        const body_conditions_object = stateObj["What best describes your current body condition?"];
-        const past_allergies_object = stateObj["Do you have any past allergic reactions to any of the below components?"];
+        const body_conditions_object = stateObj["What best describes the current condition of your body?"];
+        const past_allergies_object = stateObj["Have you ever had allergic reactions to any of the components below?"];
         const body_conditions = Object.keys(body_conditions_object).filter((x) => body_conditions_object[x] == true)
         const past_allergies = Object.keys(past_allergies_object).filter((x) => past_allergies_object[x] == true)
         let facts = {
@@ -7105,8 +7105,8 @@ export const getProductIdFromEngine = async (stateObj) => {
       }
       if (category == "hair") {
         let facts = {
-          "What best describes your current hair condition?":
-            stateObj["What best describes your current hair condition?"],
+          "What best describes the current condition of your hair?":
+            stateObj["What best describes the current condition of your hair?"],
           "What results are you looking for?":
             stateObj["What results are you looking for?"],
           "Do you have any upcoming functions in the family in the next 60 days?":
@@ -7126,8 +7126,8 @@ export const getProductIdFromEngine = async (stateObj) => {
     if (assessment_type == "30 sec") {
       if (category == "skin") {
         let facts = {
-          "Are you allergic to any of the ingredients below?":
-            stateObj["Are you allergic to any of the ingredients below?"],
+          "Are you allergic to any of these ingredients?":
+            stateObj["Are you allergic to any of these ingredients?"],
           "What are you concerned about?":
             stateObj["What are you concerned about?"],
         };
@@ -7139,8 +7139,8 @@ export const getProductIdFromEngine = async (stateObj) => {
       }
       if (category == "hair") {
         let facts = {
-          "What best describes your current hair condition?":
-            stateObj["What best describes your current hair condition?"],
+          "What best describes the current condition of your hair?":
+            stateObj["What best describes the current condition of your hair?"],
           "What results are you looking for?":
             stateObj["What results are you looking for?"],
           "Do you have any upcoming functions in the family in the next 60 days?":
@@ -7155,8 +7155,8 @@ export const getProductIdFromEngine = async (stateObj) => {
         });
       }
       if (category == "weightloss") {
-        const body_conditions_object = stateObj["What best describes your current body condition?"];
-        const past_allergies_object = stateObj["Do you have any past allergic reactions to any of the below components?"];
+        const body_conditions_object = stateObj["What best describes the current condition of your body?"];
+        const past_allergies_object = stateObj["Have you ever had allergic reactions to any of the components below?"];
         const body_conditions = Object.keys(body_conditions_object).filter((x) => body_conditions_object[x] == true)
         const past_allergies = Object.keys(past_allergies_object).filter((x) => past_allergies_object[x] == true)
         let facts = {
@@ -7199,8 +7199,8 @@ export const getProductIdFromEngine = async (stateObj) => {
     } else {
       if (category == "skin") {
         let facts = {
-          "Are you allergic to any of the ingredients below?":
-            stateObj["Are you allergic to any of the ingredients below?"],
+          "Are you allergic to any of these ingredients?":
+            stateObj["Are you allergic to any of these ingredients?"],
           "What are you concerned about?":
             stateObj["What are you concerned about?"],
         };
@@ -7211,8 +7211,8 @@ export const getProductIdFromEngine = async (stateObj) => {
         });
       }
       if (category == "weightloss") {
-        const body_conditions_object = stateObj["What best describes your current body condition?"];
-        const past_allergies_object = stateObj["Do you have any past allergic reactions to any of the below components?"];
+        const body_conditions_object = stateObj["What best describes the current condition of your body?"];
+        const past_allergies_object = stateObj["Have you ever had allergic reactions to any of the components below?"];
         const body_conditions = Object.keys(body_conditions_object).filter((x) => body_conditions_object[x] == true)
         const past_allergies = Object.keys(past_allergies_object).filter((x) => past_allergies_object[x] == true)
         let facts = {
@@ -7227,8 +7227,8 @@ export const getProductIdFromEngine = async (stateObj) => {
       }
       if (category == "hair") {
         let facts = {
-          "What best describes your current hair condition?":
-            stateObj["What best describes your current hair condition?"],
+          "What best describes the current condition of your hair?":
+            stateObj["What best describes the current condition of your hair?"],
           "What results are you looking for?":
             stateObj["What results are you looking for?"],
           "Do you have any upcoming functions in the family in the next 60 days?":

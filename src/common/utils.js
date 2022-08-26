@@ -144,6 +144,7 @@ const getSendMailData = (assessment_type, stateObj) => {
     if (
       key == "First Name" ||
       key == "Last Name" ||
+      key == "Name" ||
       key == "Age" ||
       key == "Email" ||
       key == "Phone Number" ||
@@ -183,8 +184,8 @@ const getSendMailData = (assessment_type, stateObj) => {
   }
 
   const data = JSON.stringify({
-    firstName: stateObj["First Name"],
-    lastName: stateObj["Last Name"] || "",
+    firstName: stateObj["Name"],
+    lastName: stateObj["Last Name"],
     age: stateObj["Age"],
     phone: stateObj["Phone Number"],
     email: stateObj["Email"],

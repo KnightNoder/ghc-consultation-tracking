@@ -99,7 +99,7 @@ const CallBack = ({
                 stateObj["assessment_type"] == "30 sec"
                   ? "utm_source=website-consultation&utm_medium=short-consultation&utm_campaign=recommended-product"
                   : "utm_source=website-consultation&utm_medium=long-consultation&utm_campaign=highly-recommended-product";
-              Set_link_1(`${variant_id_1}:1?checkout[shipping_address][first_name]=${stateObj["First Name"]}&
+              Set_link_1(`${variant_id_1}:1?checkout[shipping_address][first_name]=${stateObj["Name"]}&
                    checkout[shipping_address][last_name]=${stateObj["Last Name"]}&
                    checkout[shipping_address][phone]=${stateObj["Phone Number"]}&${utm_tag}`);
               // Set_product_subtext(subtext);
@@ -201,21 +201,21 @@ const CallBack = ({
                 Thank you for filling out the assessment!
               </div>
               {stateObj[
-                "Wasn’t that easy? Would you like a free consultation?"
+                "That was easy, wasn't it? Would you like a free consultation with our health experts for a more in-depth treatment plan?"
               ] == "Yes, please" ? (
                 <div className="designation">
-                  One of our physician’s assistants will call you shortly.
+                  One of our health experts will call you shortly.
                 </div>
               ) : (
                 <div className="designation"> </div>
               )}
               <div className="designation">
                 {stateObj[
-                  "Wasn’t that easy? Would you like a free consultation?"
+                  "That was easy, wasn't it? Would you like a free consultation with our health experts for a more in-depth treatment plan?"
                 ] == "Yes, please"
-                  ? "Meanwhile,"
-                  : ""}{" "}
-                Check out our recommended products.
+                  ? "Meanwhile,check out our recommended products."
+                  : "Check out our recommended products."}
+                
               </div>
             </div>
           </div>

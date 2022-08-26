@@ -289,36 +289,17 @@ export default function App() {
         overlay_screen_text: "Tell me about yourself",
         delay_time: "1000",
         conditionMet:
-          parseInt(stateObj["Age"]) > 0 &&
-          parseInt(stateObj["Age"]) < 200 &&
-          stateObj["First Name"] &&
-          phone_number_check(stateObj["Phone Number"]) &&
-          email_check(stateObj["Email"]),
+          stateObj["Name"] &&
+          phone_number_check(stateObj["Phone Number"]) ,
         inputOptions: [
           {
-            placeholder: "Eg: John",
-            requiredErrorText: "Please enter valid first name",
-            heading: "First Name",
+            placeholder: "Eg: John Doe",
+            requiredErrorText: "Please enter valid name",
+            heading: "Name",
             clickHandler: choice_clickHandler,
             required: "*",
-            value: stateObj["First Name"],
-            validity: stateObj["First Name"],
-          },
-          {
-            placeholder: "Eg: Doe",
-            heading: "Last Name",
-            clickHandler: choice_clickHandler,
-            value: stateObj["Last Name"],
-            validity: "true",
-          },
-          {
-            placeholder: "Eg: johndoe@ghc.health",
-            requiredErrorText: "Please enter valid email",
-            heading: "Email",
-            clickHandler: choice_clickHandler,
-            required: "*",
-            value: stateObj["Email"],
-            validity: email_check(),
+            value: stateObj["Name"],
+            validity: stateObj["Name"],
           },
           {
             placeholder: "Eg: 9876543210",
@@ -331,17 +312,6 @@ export default function App() {
             validity: phone_number_check(),
             inputCheck: input_check,
           },
-          {
-            placeholder: "Eg: 25",
-            requiredErrorText: "Please enter valid age",
-            heading: "Age",
-            clickHandler: choice_clickHandler,
-            value: stateObj["Age"],
-            required: "*",
-            inputMode: "numeric",
-            validity: age_check(),
-            inputCheck: input_check,
-          },
         ],
       },
     ],
@@ -349,7 +319,7 @@ export default function App() {
       {
         name: "hair page 1",
         type: "category",
-        question: "What best describes your current hair condition?",
+        question: "What best describes the current condition of your hair?",
         clickHandler: choice_clickHandler,
         state_Obj: stateObj,
         proceed_link: "?page=2&type=hair",
@@ -508,7 +478,7 @@ export default function App() {
         name: "skin page 2",
         type: "category",
         clickHandler: choice_clickHandler,
-        question: "Describe your skin type",
+        question: "What is your skin type?",
         state_Obj: stateObj,
         proceed_link: "?page=3&type=skin",
         back_link: "?page=1&type=skin",
@@ -540,7 +510,7 @@ export default function App() {
         name: "skin page 3",
         type: "category",
         clickHandler: choice_clickHandler,
-        question: "Are you allergic to any of the ingredients below?",
+        question: "Are you allergic to any of these ingredients?",
         state_Obj: stateObj,
         proceed_link: "?appointment=yes",
         back_link: "?page=2&type=skin",
@@ -677,7 +647,7 @@ export default function App() {
       {
         name: "Weight loss page 5",
         type: "category",
-        question: `Do you have any pre-existing problems?`,
+        question: `Do you have any pre-existing health issues?`,
         clickHandler: choice_clickHandler,
         state_Obj: stateObj,
         proceed_link: "?page=4&type=weightloss",
@@ -686,7 +656,7 @@ export default function App() {
         checkboxOptions: [
           {
             value:
-              stateObj[`Do you have any pre-existing problems?`]?.[
+              stateObj[`Do you have any pre-existing health issues?`]?.[
                 "Cholestrol"
               ] || 0,
             displayText: "Cholestrol",
@@ -694,21 +664,21 @@ export default function App() {
           },
           {
             value:
-              stateObj[`Do you have any pre-existing problems?`]?.["Thyroid"] ||
+              stateObj[`Do you have any pre-existing health issues?`]?.["Thyroid"] ||
               0,
             displayText: "Thyroid",
             onChange: checkBoxHandler,
           },
           {
             value:
-              stateObj[`Do you have any pre-existing problems?`]?.["Heart"] ||
+              stateObj[`Do you have any pre-existing health issues?`]?.["Heart"] ||
               0,
             displayText: "Heart",
             onChange: checkBoxHandler,
           },
           {
             value:
-              stateObj[`Do you have any pre-existing problems?`]?.[
+              stateObj[`Do you have any pre-existing health issues?`]?.[
                 "Diabetes"
               ] || 0,
             displayText: "Diabetes",
@@ -716,14 +686,14 @@ export default function App() {
           },
           {
             value:
-              stateObj[`Do you have any pre-existing problems?`]?.["Kidney"] ||
+              stateObj[`Do you have any pre-existing health issues?`]?.["Kidney"] ||
               0,
             displayText: "Kidney",
             onChange: checkBoxHandler,
           },
           {
             value:
-              stateObj[`Do you have any pre-existing problems?`]?.[
+              stateObj[`Do you have any pre-existing health issues?`]?.[
                 "No such problems"
               ] || 0,
             displayText: "No such problems",
@@ -731,7 +701,7 @@ export default function App() {
           },
           {
             value:
-              stateObj[`Do you have any pre-existing problems?`]?.[
+              stateObj[`Do you have any pre-existing health issues?`]?.[
                 "Others"
               ] || 0,
             displayText: "Others",
@@ -743,9 +713,9 @@ export default function App() {
             heading: "Specify",
             clickHandler: choice_clickHandler,
             value: stateObj["Other problems"],
-            // disable: !Object.keys(stateObj[`Do you have any pre-existing problems?`])?.filter((x) => 
-            // stateObj[`Do you have any pre-existing problems?`][x] == true )?.includes("Others")
-            invisible: !(stateObj[`Do you have any pre-existing problems?`]?.[
+            // disable: !Object.keys(stateObj[`Do you have any pre-existing health issues?`])?.filter((x) => 
+            // stateObj[`Do you have any pre-existing health issues?`][x] == true )?.includes("Others")
+            invisible: !(stateObj[`Do you have any pre-existing health issues?`]?.[
               "Others"] == (true || undefined)) 
           },
         ]
@@ -834,7 +804,7 @@ export default function App() {
         name: "Appointment page",
         type: "category",
         clickHandler: choice_clickHandler,
-        question: "Wasn’t that easy? Would you like a free consultation?",
+        question: "That was easy, wasn't it? Would you like a free consultation with our health experts for a more in-depth treatment plan?",
         state_Obj: stateObj,
         proceed_link: "?recommendation=yes",
         back_link: getBackPage(),
@@ -930,39 +900,20 @@ export default function App() {
         overlay_screen_text: "Tell me about yourself",
         delay_time: "1000",
         conditionMet:
-          parseInt(stateObj["Age"]) > 0 &&
-          parseInt(stateObj["Age"]) < 200 &&
-          stateObj["First Name"] &&
-          phone_number_check(stateObj["Phone Number"]) &&
-          email_check(stateObj["Email"]),
+          stateObj["Name"] &&
+          phone_number_check(stateObj["Phone Number"]),
         progress_bar: true,
         progress_bar_text: getProgressBarText(),
         progress_step: "22",
         inputOptions: [
           {
-            placeholder: "Eg: John",
-            requiredErrorText: "Please enter valid first name",
-            heading: "First Name",
+            placeholder: "Eg: John Doe",
+            requiredErrorText: "Please enter name",
+            heading: "Name",
             clickHandler: choice_clickHandler,
             required: "*",
-            value: stateObj["First Name"],
-            validity: stateObj["First Name"],
-          },
-          {
-            placeholder: "Eg: Doe",
-            heading: "Last Name",
-            clickHandler: choice_clickHandler,
-            value: stateObj["Last Name"],
-            validity: "true",
-          },
-          {
-            placeholder: "Eg: johndoe@ghc.health",
-            requiredErrorText: "Please enter valid email",
-            heading: "Email",
-            clickHandler: choice_clickHandler,
-            required: "*",
-            value: stateObj["Email"],
-            validity: email_check(),
+            value: stateObj["Name"],
+            validity: stateObj["Name"],
           },
           {
             placeholder: "Eg: 9876543210",
@@ -973,17 +924,6 @@ export default function App() {
             value: stateObj["Phone Number"],
             inputMode: "numeric",
             validity: phone_number_check(),
-            inputCheck: input_check,
-          },
-          {
-            placeholder: "Eg: 25",
-            requiredErrorText: "Please enter valid age",
-            heading: "Age",
-            clickHandler: choice_clickHandler,
-            value: stateObj["Age"],
-            required: "*",
-            inputMode: "numeric",
-            validity: age_check(),
             inputCheck: input_check,
           },
         ],
@@ -1042,7 +982,7 @@ export default function App() {
         name: "skin page 2",
         type: "category",
         clickHandler: choice_clickHandler,
-        question: "Describe your skin type",
+        question: "What is your skin type?",
         state_Obj: stateObj,
         proceed_link: "?page=3&type=skin",
         back_link: "?page=1&type=skin",
@@ -1190,7 +1130,7 @@ export default function App() {
         name: "skin page 7",
         type: "category",
         clickHandler: choice_clickHandler,
-        question: "Do you have wrinkles or early signs of ageing pattern?",
+        question: "Do you have wrinkles or early signs of skin aging?",
         state_Obj: stateObj,
         proceed_link: "?page=8&type=skin",
         back_link: "?page=6&type=skin",
@@ -1301,7 +1241,7 @@ export default function App() {
         proceed_link: "?page=11&type=skin",
         back_link: "?page=9&type=skin",
         conditionMet: true,
-        overlay_screen_text: "There is nothing like mom's meals!",
+        overlay_screen_text: "There is nothing like mom's!",
         delay_time: 1000,
         progress_bar: true,
         progress_bar_text: "My Skin",
@@ -1327,7 +1267,7 @@ export default function App() {
         name: "skin page 10",
         type: "category",
         clickHandler: choice_clickHandler,
-        question: "How often do you have junk food?",
+        question: "How often do you eat junk food?",
         state_Obj: stateObj,
         proceed_link: "?page=12&type=skin",
         back_link: "?page=10&type=skin",
@@ -1486,7 +1426,7 @@ export default function App() {
         name: "skin page 3",
         type: "category",
         clickHandler: choice_clickHandler,
-        question: "Are you allergic to any of the ingredients below?",
+        question: "Are you allergic to any of these ingredients?",
         state_Obj: stateObj,
         proceed_link: "?page=17&type=skin",
         back_link: "?page=15&type=skin",
@@ -1524,7 +1464,7 @@ export default function App() {
       {
         name: "Skin page 17",
         type: "category",
-        question: `Do you have any pre-existing problems?`,
+        question: `Do you have any pre-existing health issues?`,
         clickHandler: choice_clickHandler,
         state_Obj: stateObj,
         proceed_link: "?page=18&type=skin",
@@ -1537,7 +1477,7 @@ export default function App() {
         checkboxOptions: [
           {
             value:
-              stateObj[`Do you have any pre-existing problems?`]?.[
+              stateObj[`Do you have any pre-existing health issues?`]?.[
                 "Hypertension"
               ],
             displayText: "Hypertension",
@@ -1545,31 +1485,31 @@ export default function App() {
           },
           {
             value:
-              stateObj[`Do you have any pre-existing problems?`]?.["Thyroid"],
+              stateObj[`Do you have any pre-existing health issues?`]?.["Thyroid"],
             displayText: "Thyroid",
             onChange: checkBoxHandler,
           },
           {
             value:
-              stateObj[`Do you have any pre-existing problems?`]?.["Heart"],
+              stateObj[`Do you have any pre-existing health issues?`]?.["Heart"],
             displayText: "Heart",
             onChange: checkBoxHandler,
           },
           {
             value:
-              stateObj[`Do you have any pre-existing problems?`]?.["Diabetes"],
+              stateObj[`Do you have any pre-existing health issues?`]?.["Diabetes"],
             displayText: "Diabetes",
             onChange: checkBoxHandler,
           },
           {
             value:
-              stateObj[`Do you have any pre-existing problems?`]?.["Kidney"],
+              stateObj[`Do you have any pre-existing health issues?`]?.["Kidney"],
             displayText: "Kidney",
             onChange: checkBoxHandler,
           },
           {
             value:
-              stateObj[`Do you have any pre-existing problems?`]?.[
+              stateObj[`Do you have any pre-existing health issues?`]?.[
                 "Indigestion"
               ],
             displayText: "Indigestion",
@@ -1577,7 +1517,7 @@ export default function App() {
           },
           {
             value:
-              stateObj[`Do you have any pre-existing problems?`]?.[
+              stateObj[`Do you have any pre-existing health issues?`]?.[
                 "Others"
               ],
             displayText: "Others",
@@ -1585,7 +1525,7 @@ export default function App() {
           },
           {
             value:
-              stateObj[`Do you have any pre-existing problems?`]?.[
+              stateObj[`Do you have any pre-existing health issues?`]?.[
                 "No such problems"
               ],
             displayText: "No such problems",
@@ -1597,9 +1537,9 @@ export default function App() {
             heading: "Specify",
             clickHandler: choice_clickHandler,
             value: stateObj["Other problems"],
-            // disable: !Object.keys(stateObj[`Do you have any pre-existing problems?`])?.filter((x) => 
-            // stateObj[`Do you have any pre-existing problems?`][x] == true )?.includes("Others")
-            invisible: !(stateObj[`Do you have any pre-existing problems?`]?.[
+            // disable: !Object.keys(stateObj[`Do you have any pre-existing health issues?`])?.filter((x) => 
+            // stateObj[`Do you have any pre-existing health issues?`][x] == true )?.includes("Others")
+            invisible: !(stateObj[`Do you have any pre-existing health issues?`]?.[
               "Others"] == (true || undefined))
           },
         ]
@@ -1751,7 +1691,7 @@ export default function App() {
       {
         name: "Weight loss page 2",
         type: "category",
-        question: `How often do you eat meals in a day (including tea, coffee, fruits, salads, 
+        question: `How often do you eat in a day (including tea, coffee, fruits, salads, 
           and snacks)`,
         clickHandler: choice_clickHandler,
         state_Obj: stateObj,
@@ -1858,7 +1798,7 @@ export default function App() {
         name: "weightloss page 6",
         type: "category",
         clickHandler: choice_clickHandler,
-        question: "How often do you have junk food?",
+        question: "How often do you eat junk food?",
         state_Obj: stateObj,
         proceed_link: "?page=7&type=weightloss",
         back_link: "?page=5&type=weightloss",
@@ -2094,7 +2034,7 @@ export default function App() {
         ],
       },
     ],
-    weightloss13: [
+    weightloss13:
       {
         name: "Weight loss page 12",
         type: "category",
@@ -2129,12 +2069,11 @@ export default function App() {
           },
         ]
       },
-    ],
     hair1: [
       {
         name: "hair page 1",
         type: "category",
-        question: "What best describes your current hair condition?",
+        question: "What best describes the current condition of your hair?",
         clickHandler: choice_clickHandler,
         state_Obj: stateObj,
         proceed_link: "?page=2&type=hair",
@@ -2323,7 +2262,7 @@ export default function App() {
         name: "skin page 10",
         type: "category",
         clickHandler: choice_clickHandler,
-        question: "How often do you have junk food?",
+        question: "How often do you eat junk food?",
         state_Obj: stateObj,
         proceed_link: "?page=8&type=hair",
         back_link: "?page=6&type=hair",
@@ -2478,7 +2417,7 @@ export default function App() {
         name: "hair page 12",
         type: "category",
         clickHandler: choice_clickHandler,
-        question: "Since when are you facing hair loss?",
+        question: "How long have you been struggling with hair loss?",
         state_Obj: stateObj,
         proceed_link: "?page=13&type=hair",
         back_link: "?page=11&type=hair",
@@ -2507,7 +2446,7 @@ export default function App() {
         name: "hair page 13",
         type: "category",
         clickHandler: choice_clickHandler,
-        question: "How was your hair pattern before hair loss? ",
+        question: "What was your hair structure like before hair loss? ",
         state_Obj: stateObj,
         proceed_link: "?page=14&type=hair",
         back_link: "?page=12&type=hair",
@@ -2535,7 +2474,7 @@ export default function App() {
       {
         name: "Hair page 5",
         type: "category",
-        question: `Do you have any pre-existing problems?`,
+        question: `Do you have any pre-existing health issues?`,
         state_Obj: stateObj,
         proceed_link: "?page=15&type=hair",
         back_link: "?page=13&type=hair",
@@ -2547,7 +2486,7 @@ export default function App() {
         checkboxOptions: [
           {
             value:
-              stateObj[`Do you have any pre-existing problems?`]?.[
+              stateObj[`Do you have any pre-existing health issues?`]?.[
                 "Cholestrol"
               ],
             displayText: "Cholestrol",
@@ -2555,31 +2494,31 @@ export default function App() {
           },
           {
             value:
-              stateObj[`Do you have any pre-existing problems?`]?.["Thyroid"],
+              stateObj[`Do you have any pre-existing health issues?`]?.["Thyroid"],
             displayText: "Thyroid",
             onChange: checkBoxHandler,
           },
           {
             value:
-              stateObj[`Do you have any pre-existing problems?`]?.["Heart"],
+              stateObj[`Do you have any pre-existing health issues?`]?.["Heart"],
             displayText: "Heart",
             onChange: checkBoxHandler,
           },
           {
             value:
-              stateObj[`Do you have any pre-existing problems?`]?.["Diabetes"],
+              stateObj[`Do you have any pre-existing health issues?`]?.["Diabetes"],
             displayText: "Diabetes",
             onChange: checkBoxHandler,
           },
           {
             value:
-              stateObj[`Do you have any pre-existing problems?`]?.["Kidney"],
+              stateObj[`Do you have any pre-existing health issues?`]?.["Kidney"],
             displayText: "Kidney",
             onChange: checkBoxHandler,
           },
           {
             value:
-              stateObj[`Do you have any pre-existing problems?`]?.[
+              stateObj[`Do you have any pre-existing health issues?`]?.[
                 "No such problems"
               ],
             displayText: "No such problems",
@@ -2587,7 +2526,7 @@ export default function App() {
           },
           {
             value:
-              stateObj[`Do you have any pre-existing problems?`]?.[
+              stateObj[`Do you have any pre-existing health issues?`]?.[
                 "Others"
               ],
             displayText: "Others",
@@ -2599,7 +2538,7 @@ export default function App() {
             heading: "Specify",
             clickHandler: choice_clickHandler,
             value: stateObj["Other problems"],
-            invisible: !(stateObj[`Do you have any pre-existing problems?`]?.[
+            invisible: !(stateObj[`Do you have any pre-existing health issues?`]?.[
               "Others"] == (true || undefined))
           },
         ]
@@ -2644,7 +2583,7 @@ export default function App() {
         name: "Appointment page",
         type: "category",
         clickHandler: choice_clickHandler,
-        question: "Wasn’t that easy? Would you like a free consultation?",
+        question: "That was easy, wasn't it? Would you like a free consultation with our health experts for a more in-depth treatment plan?",
         state_Obj: stateObj,
         proceed_link: "?recommendation=yes",
         back_link: getBackPage(),
@@ -2734,6 +2673,7 @@ export default function App() {
         name: "userinfo",
         type: "category",
         question: "Fill up the details below :",
+        clickHandler: clickHandler_clear,
         state_Obj: stateObj,
         set_url_function: { redirect_to_set_query_params },
         proceed_link: `?page=1&type=${stateObj["Select category for consultation"]}`,
@@ -2741,36 +2681,20 @@ export default function App() {
         overlay_screen_text: "Tell me about yourself",
         delay_time: "1000",
         conditionMet:
-          parseInt(stateObj["Age"]) > 0 &&
-          parseInt(stateObj["Age"]) < 200 &&
-          stateObj["First Name"] &&
-          phone_number_check(stateObj["Phone Number"]) &&
-          email_check(stateObj["Email"]),
+          stateObj["Name"] &&
+          phone_number_check(stateObj["Phone Number"]),
+        progress_bar: true,
+        progress_bar_text: getProgressBarText(),
+        progress_step: "22",
         inputOptions: [
           {
-            placeholder: "Eg: John",
-            requiredErrorText: "Please enter valid first name",
-            heading: "First Name",
+            placeholder: "Eg: John Doe",
+            requiredErrorText: "Please enter name",
+            heading: "Name",
             clickHandler: choice_clickHandler,
             required: "*",
-            value: stateObj["First Name"],
-            validity: stateObj["First Name"],
-          },
-          {
-            placeholder: "Eg: Doe",
-            heading: "Last Name",
-            clickHandler: choice_clickHandler,
-            value: stateObj["Last Name"],
-            validity: "true",
-          },
-          {
-            placeholder: "Eg: johndoe@ghc.health",
-            requiredErrorText: "Please enter valid email",
-            heading: "Email",
-            clickHandler: choice_clickHandler,
-            required: "*",
-            value: stateObj["Email"],
-            validity: email_check(),
+            value: stateObj["Name"],
+            validity: stateObj["Name"],
           },
           {
             placeholder: "Eg: 9876543210",
@@ -2783,17 +2707,6 @@ export default function App() {
             validity: phone_number_check(),
             inputCheck: input_check,
           },
-          {
-            placeholder: "Eg: Age",
-            requiredErrorText: "Please enter valid age",
-            heading: "Age",
-            clickHandler: choice_clickHandler,
-            value: stateObj["Age"],
-            required: "*",
-            inputMode: "numeric",
-            validity: age_check(),
-            inputCheck: input_check,
-          },
         ],
       },
     ],
@@ -2801,7 +2714,7 @@ export default function App() {
       {
         name: "hair page 1",
         type: "category",
-        question: "What best describes your current hair condition?",
+        question: "What best describes the current condition of your hair?",
         clickHandler: choice_clickHandler,
         state_Obj: stateObj,
         proceed_link: "?page=2&type=hair",
@@ -2898,7 +2811,7 @@ export default function App() {
       {
         name: "hair page 4",
         type: "category",
-        question: "Do you have any past allergy reactions to medicines?",
+        question: "Have you had a history of allergic reactions to any medicines?",
         clickHandler: choice_clickHandler,
         state_Obj: stateObj,
         proceed_link: "?page=5&type=hair",
@@ -3062,7 +2975,7 @@ export default function App() {
       {
         name: "Weight loss page 5",
         type: "category",
-        question: `Do you have any pre-existing problems?`,
+        question: `Do you have any pre-existing health issues?`,
         clickHandler: choice_clickHandler,
         state_Obj: stateObj,
         proceed_link: "?page=4&type=weightloss",
@@ -3071,7 +2984,7 @@ export default function App() {
         checkboxOptions: [
           {
             value:
-              stateObj[`Do you have any pre-existing problems?`]?.[
+              stateObj[`Do you have any pre-existing health issues?`]?.[
                 "Cholestrol"
               ] || 0,
             displayText: "Cholestrol",
@@ -3079,21 +2992,21 @@ export default function App() {
           },
           {
             value:
-              stateObj[`Do you have any pre-existing problems?`]?.["Thyroid"] ||
+              stateObj[`Do you have any pre-existing health issues?`]?.["Thyroid"] ||
               0,
             displayText: "Thyroid",
             onChange: checkBoxHandler,
           },
           {
             value:
-              stateObj[`Do you have any pre-existing problems?`]?.["Heart"] ||
+              stateObj[`Do you have any pre-existing health issues?`]?.["Heart"] ||
               0,
             displayText: "Heart",
             onChange: checkBoxHandler,
           },
           {
             value:
-              stateObj[`Do you have any pre-existing problems?`]?.[
+              stateObj[`Do you have any pre-existing health issues?`]?.[
                 "Diabetes"
               ] || 0,
             displayText: "Diabetes",
@@ -3101,14 +3014,14 @@ export default function App() {
           },
           {
             value:
-              stateObj[`Do you have any pre-existing problems?`]?.["Kidney"] ||
+              stateObj[`Do you have any pre-existing health issues?`]?.["Kidney"] ||
               0,
             displayText: "Kidney",
             onChange: checkBoxHandler,
           },
           {
             value:
-              stateObj[`Do you have any pre-existing problems?`]?.[
+              stateObj[`Do you have any pre-existing health issues?`]?.[
                 "No such problems"
               ] || 0,
             displayText: "No such problems",
@@ -3116,7 +3029,7 @@ export default function App() {
           },
           {
             value:
-              stateObj[`Do you have any pre-existing problems?`]?.[
+              stateObj[`Do you have any pre-existing health issues?`]?.[
                 "Others"
               ] || 0,
             displayText: "Others",
@@ -3128,9 +3041,9 @@ export default function App() {
             heading: "Specify",
             clickHandler: choice_clickHandler,
             value: stateObj["Other problems"],
-            // disable: !Object.keys(stateObj[`Do you have any pre-existing problems?`])?.filter((x) => 
-            // stateObj[`Do you have any pre-existing problems?`][x] == true )?.includes("Others")
-            invisible: !(stateObj[`Do you have any pre-existing problems?`]?.[
+            // disable: !Object.keys(stateObj[`Do you have any pre-existing health issues?`])?.filter((x) => 
+            // stateObj[`Do you have any pre-existing health issues?`][x] == true )?.includes("Others")
+            invisible: !(stateObj[`Do you have any pre-existing health issues?`]?.[
               "Others"] == (true || undefined)) 
           },
         ]
@@ -3232,7 +3145,7 @@ export default function App() {
         name: "skin page 2",
         type: "category",
         clickHandler: choice_clickHandler,
-        question: "Describe your skin type",
+        question: "What is your skin type?",
         state_Obj: stateObj,
         proceed_link: "?page=3&type=skin",
         back_link: "?page=1&type=skin",
@@ -3261,7 +3174,7 @@ export default function App() {
         name: "skin page 3",
         type: "category",
         clickHandler: choice_clickHandler,
-        question: "Are you allergic to any of the ingredients below?",
+        question: "Are you allergic to any of these ingredients?",
         state_Obj: stateObj,
         proceed_link: "?appointment=yes",
         back_link: "?page=2&type=skin",
@@ -3521,7 +3434,7 @@ export default function App() {
         name: "Appointment page",
         type: "category",
         clickHandler: choice_clickHandler,
-        question: "Wasn’t that easy? Would you like a free consultation?",
+        question: "That was easy, wasn't it? Would you like a free consultation with our health experts for a more in-depth treatment plan?",
         state_Obj: stateObj,
         proceed_link: "?recommendation=yes",
         back_link: getBackPage(),
@@ -3694,7 +3607,7 @@ export default function App() {
       {
         name: "hair page 1",
         type: "category",
-        question: "What best describes your current hair condition?",
+        question: "What best describes the current condition of your hair?",
         clickHandler: choice_clickHandler,
         state_Obj: stateObj,
         proceed_link: "?page=2&type=hair",
@@ -3800,7 +3713,7 @@ export default function App() {
       {
         name: "hair page 4",
         type: "category",
-        question: "Do you have any past allergy reactions to medicines?",
+        question: "Have you had a history of allergic reactions to any medicines?",
         clickHandler: choice_clickHandler,
         state_Obj: stateObj,
         proceed_link: "?page=5&type=hair",
@@ -3921,7 +3834,7 @@ export default function App() {
         name: "hair page 10",
         type: "category",
         clickHandler: choice_clickHandler,
-        question: "How often do you have junk food?",
+        question: "How often do you eat junk food?",
         state_Obj: stateObj,
         proceed_link: "?page=9&type=hair",
         back_link: "?page=7&type=hair",
@@ -4074,7 +3987,7 @@ export default function App() {
         name: "hair page 13",
         type: "category",
         clickHandler: choice_clickHandler,
-        question: "Since when are you facing hair loss?",
+        question: "How long have you been struggling with hair loss?",
         state_Obj: stateObj,
         proceed_link: "?page=14&type=hair",
         back_link: "?page=12&type=hair",
@@ -4103,7 +4016,7 @@ export default function App() {
         name: "hair page 14",
         type: "category",
         clickHandler: choice_clickHandler,
-        question: "How was your hair pattern before hair loss? ",
+        question: "What was your hair structure like before hair loss?",
         state_Obj: stateObj,
         proceed_link: "?page=15&type=hair",
         back_link: "?page=13&type=hair",
@@ -4131,7 +4044,7 @@ export default function App() {
       {
         name: "Hair page 5",
         type: "category",
-        question: `Do you have any pre-existing problems?`,
+        question: `Do you have any pre-existing health issues?`,
         state_Obj: stateObj,
         proceed_link: "?page=16&type=hair",
         back_link: "?page=14&type=hair",
@@ -4142,7 +4055,7 @@ export default function App() {
         checkboxOptions: [
           {
             value:
-              stateObj[`Do you have any pre-existing problems?`]?.[
+              stateObj[`Do you have any pre-existing health issues?`]?.[
                 "Cholestrol"
               ],
             displayText: "Cholestrol",
@@ -4150,31 +4063,31 @@ export default function App() {
           },
           {
             value:
-              stateObj[`Do you have any pre-existing problems?`]?.["Thyroid"],
+              stateObj[`Do you have any pre-existing health issues?`]?.["Thyroid"],
             displayText: "Thyroid",
             onChange: checkBoxHandler,
           },
           {
             value:
-              stateObj[`Do you have any pre-existing problems?`]?.["Heart"],
+              stateObj[`Do you have any pre-existing health issues?`]?.["Heart"],
             displayText: "Heart",
             onChange: checkBoxHandler,
           },
           {
             value:
-              stateObj[`Do you have any pre-existing problems?`]?.["Diabetes"],
+              stateObj[`Do you have any pre-existing health issues?`]?.["Diabetes"],
             displayText: "Diabetes",
             onChange: checkBoxHandler,
           },
           {
             value:
-              stateObj[`Do you have any pre-existing problems?`]?.["Kidney"],
+              stateObj[`Do you have any pre-existing health issues?`]?.["Kidney"],
             displayText: "Kidney",
             onChange: checkBoxHandler,
           },
           {
             value:
-              stateObj[`Do you have any pre-existing problems?`]?.[
+              stateObj[`Do you have any pre-existing health issues?`]?.[
                 "No such problems"
               ],
             displayText: "No such problems",
@@ -4182,7 +4095,7 @@ export default function App() {
           },
           {
             value:
-              stateObj[`Do you have any pre-existing problems?`]?.[
+              stateObj[`Do you have any pre-existing health issues?`]?.[
                 "Others"
               ],
             displayText: "Others",
@@ -4194,7 +4107,7 @@ export default function App() {
             heading: "Specify",
             clickHandler: choice_clickHandler,
             value: stateObj["Other problems"],
-            invisible: !(stateObj[`Do you have any pre-existing problems?`]?.[
+            invisible: !(stateObj[`Do you have any pre-existing health issues?`]?.[
               "Others"] == (true || undefined))
           },
         ]
@@ -4435,7 +4348,7 @@ export default function App() {
         name: "beard page 10",
         type: "category",
         clickHandler: choice_clickHandler,
-        question: "How often do you have junk food?",
+        question: "How often do you eat junk food?",
         state_Obj: stateObj,
         proceed_link: "?page=9&type=beard",
         back_link: "?page=7&type=beard",
@@ -4616,7 +4529,7 @@ export default function App() {
       {
         name: "beard page 5",
         type: "category",
-        question: `Do you have any pre-existing problems?`,
+        question: `Do you have any pre-existing health issues?`,
         state_Obj: stateObj,
         proceed_link: "?page=15&type=beard",
         back_link: "?page=13&type=beard",
@@ -4627,7 +4540,7 @@ export default function App() {
         checkboxOptions: [
           {
             value:
-              stateObj[`Do you have any pre-existing problems?`]?.[
+              stateObj[`Do you have any pre-existing health issues?`]?.[
                 "Cholestrol"
               ],
             displayText: "Cholestrol",
@@ -4635,31 +4548,31 @@ export default function App() {
           },
           {
             value:
-              stateObj[`Do you have any pre-existing problems?`]?.["Thyroid"],
+              stateObj[`Do you have any pre-existing health issues?`]?.["Thyroid"],
             displayText: "Thyroid",
             onChange: checkBoxHandler,
           },
           {
             value:
-              stateObj[`Do you have any pre-existing problems?`]?.["Heart"],
+              stateObj[`Do you have any pre-existing health issues?`]?.["Heart"],
             displayText: "Heart",
             onChange: checkBoxHandler,
           },
           {
             value:
-              stateObj[`Do you have any pre-existing problems?`]?.["Diabetes"],
+              stateObj[`Do you have any pre-existing health issues?`]?.["Diabetes"],
             displayText: "Diabetes",
             onChange: checkBoxHandler,
           },
           {
             value:
-              stateObj[`Do you have any pre-existing problems?`]?.["Kidney"],
+              stateObj[`Do you have any pre-existing health issues?`]?.["Kidney"],
             displayText: "Kidney",
             onChange: checkBoxHandler,
           },
           {
             value:
-              stateObj[`Do you have any pre-existing problems?`]?.[
+              stateObj[`Do you have any pre-existing health issues?`]?.[
                 "No such problems"
               ],
             displayText: "No such problems",
@@ -4667,7 +4580,7 @@ export default function App() {
           },
           {
             value:
-              stateObj[`Do you have any pre-existing problems?`]?.[
+              stateObj[`Do you have any pre-existing health issues?`]?.[
                 "Others"
               ],
             displayText: "Others",
@@ -4679,7 +4592,7 @@ export default function App() {
             heading: "Specify",
             clickHandler: choice_clickHandler,
             value: stateObj["Other problems"],
-            invisible: !(stateObj[`Do you have any pre-existing problems?`]?.[
+            invisible: !(stateObj[`Do you have any pre-existing health issues?`]?.[
               "Others"] == (true || undefined))
           },
         ]
@@ -4772,7 +4685,7 @@ export default function App() {
         name: "skin page 2",
         type: "category",
         clickHandler: choice_clickHandler,
-        question: "Describe your skin type",
+        question: "What is your skin type?",
         state_Obj: stateObj,
         proceed_link: "?page=3&type=skin",
         back_link: "?page=1&type=skin",
@@ -4922,7 +4835,7 @@ export default function App() {
         name: "skin page 7",
         type: "category",
         clickHandler: choice_clickHandler,
-        question: "Do you have wrinkles or early signs of ageing pattern?",
+        question: "Do you have wrinkles or early signs of skin aging?",
         state_Obj: stateObj,
         proceed_link: "?page=8&type=skin",
         back_link: "?page=6&type=skin",
@@ -5033,7 +4946,7 @@ export default function App() {
         proceed_link: "?page=11&type=skin",
         back_link: "?page=9&type=skin",
         conditionMet: true,
-        overlay_screen_text: "There is nothing like mom's meals!",
+        overlay_screen_text: "There is nothing like mom's!",
         delay_time: 1000,
         progress_bar: true,
         progress_bar_text: "My Skin",
@@ -5059,7 +4972,7 @@ export default function App() {
         name: "skin page 10",
         type: "category",
         clickHandler: choice_clickHandler,
-        question: "How often do you have junk food?",
+        question: "How often do you eat junk food?",
         state_Obj: stateObj,
         proceed_link: "?page=12&type=skin",
         back_link: "?page=10&type=skin",
@@ -5218,7 +5131,7 @@ export default function App() {
         name: "skin page 3",
         type: "category",
         clickHandler: choice_clickHandler,
-        question: "Are you allergic to any of the ingredients below?",
+        question: "Are you allergic to any of these ingredients?",
         state_Obj: stateObj,
         proceed_link: "?page=17&type=skin",
         back_link: "?page=15&type=skin",
@@ -5256,7 +5169,7 @@ export default function App() {
       {
         name: "Skin page 17",
         type: "category",
-        question: `Do you have any pre-existing problems?`,
+        question: `Do you have any pre-existing health issues?`,
         clickHandler: choice_clickHandler,
         state_Obj: stateObj,
         proceed_link: "?page=18&type=skin",
@@ -5269,7 +5182,7 @@ export default function App() {
         checkboxOptions: [
           {
             value:
-              stateObj[`Do you have any pre-existing problems?`]?.[
+              stateObj[`Do you have any pre-existing health issues?`]?.[
                 "Cholestrol"
               ],
             displayText: "Cholestrol",
@@ -5277,31 +5190,31 @@ export default function App() {
           },
           {
             value:
-              stateObj[`Do you have any pre-existing problems?`]?.["Thyroid"],
+              stateObj[`Do you have any pre-existing health issues?`]?.["Thyroid"],
             displayText: "Thyroid",
             onChange: checkBoxHandler,
           },
           {
             value:
-              stateObj[`Do you have any pre-existing problems?`]?.["Heart"],
+              stateObj[`Do you have any pre-existing health issues?`]?.["Heart"],
             displayText: "Heart",
             onChange: checkBoxHandler,
           },
           {
             value:
-              stateObj[`Do you have any pre-existing problems?`]?.["Diabetes"],
+              stateObj[`Do you have any pre-existing health issues?`]?.["Diabetes"],
             displayText: "Diabetes",
             onChange: checkBoxHandler,
           },
           {
             value:
-              stateObj[`Do you have any pre-existing problems?`]?.["Kidney"],
+              stateObj[`Do you have any pre-existing health issues?`]?.["Kidney"],
             displayText: "Kidney",
             onChange: checkBoxHandler,
           },
           {
             value:
-              stateObj[`Do you have any pre-existing problems?`]?.[
+              stateObj[`Do you have any pre-existing health issues?`]?.[
                 "No such problems"
               ],
             displayText: "No such problems",
@@ -5309,7 +5222,7 @@ export default function App() {
           },
           {
             value:
-              stateObj[`Do you have any pre-existing problems?`]?.[
+              stateObj[`Do you have any pre-existing health issues?`]?.[
                 "Others"
               ],
             displayText: "Others",
@@ -5321,7 +5234,7 @@ export default function App() {
             heading: "Specify",
             clickHandler: choice_clickHandler,
             value: stateObj["Other problems"],
-            invisible: !(stateObj[`Do you have any pre-existing problems?`]?.[
+            invisible: !(stateObj[`Do you have any pre-existing health issues?`]?.[
               "Others"] == (true || undefined))
           },
         ]
@@ -5481,7 +5394,7 @@ export default function App() {
       {
         name: "Weight loss page 2",
         type: "category",
-        question: `How often do you eat meals in a day (including tea, coffee, fruits, salads, 
+        question: `How often do you eat in a day (including tea, coffee, fruits, salads, 
           and snacks)`,
         clickHandler: choice_clickHandler,
         state_Obj: stateObj,
@@ -5588,7 +5501,7 @@ export default function App() {
         name: "weightloss page 6",
         type: "category",
         clickHandler: choice_clickHandler,
-        question: "How often do you have junk food?",
+        question: "How often do you eat junk food?",
         state_Obj: stateObj,
         proceed_link: "?page=7&type=weightloss",
         back_link: "?page=5&type=weightloss",
@@ -5854,8 +5767,8 @@ export default function App() {
             clickHandler: choice_clickHandler,
             value: stateObj["Healthcare products used"],
             invisible: !(stateObj["Have you used any healthcare/nutritional products before?"] == "Yes")
-            // disable: !Object.keys(stateObj[`Do you have any pre-existing problems?`])?.filter((x) => 
-            // stateObj[`Do you have any pre-existing problems?`][x] == true )?.includes("Others")
+            // disable: !Object.keys(stateObj[`Do you have any pre-existing health issues?`])?.filter((x) => 
+            // stateObj[`Do you have any pre-existing health issues?`][x] == true )?.includes("Others")
           },
         ]
       },
@@ -6091,7 +6004,7 @@ export default function App() {
         name: "performance page 10",
         type: "category",
         clickHandler: choice_clickHandler,
-        question: "How often do you have junk food?",
+        question: "How often do you eat junk food?",
         state_Obj: stateObj,
         proceed_link: "?page=9&type=performance",
         back_link: "?page=7&type=performance",
@@ -6403,7 +6316,7 @@ export default function App() {
         name: "Appointment page",
         type: "category",
         clickHandler: choice_clickHandler,
-        question: "Wasn’t that easy? Would you like a free consultation?",
+        question: "That was easy, wasn't it? Would you like a free consultation with our health experts for a more in-depth treatment plan?",
         state_Obj: stateObj,
         proceed_link: "?recommendation=yes",
         back_link: getBackPage(),
