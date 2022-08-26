@@ -9,6 +9,7 @@ import Recommendation from "./Components/Recommendation";
 import { useNavigate, useParams, useLocation } from "react-router-dom";
 import InputCard from "./Components/InputCard";
 import { useEffect, useState } from "react";
+import posthog from 'posthog-js'
 
 export default function App() {
   const { path } = useParams();
@@ -23,6 +24,7 @@ export default function App() {
   );
 
   useEffect(() => {
+    posthog.init(POSTHOG_KEY, { api_host: 'https://app.posthog.com' })
     Set_query_params(window.location.search);
     document.documentElement.style.setProperty(
       "--border",
