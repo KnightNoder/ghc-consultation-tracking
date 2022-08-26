@@ -7059,7 +7059,7 @@ export const getProductIdFromEngine = async (stateObj) => {
         });
       }
       if (category == "weightloss") {
-        const body_conditions_object = stateObj["What best describes the current condition of your body?"];
+        const body_conditions_object = stateObj["What best describes your current body condition?"];
         const past_allergies_object = stateObj["Have you ever had allergic reactions to any of the components below?"];
         const body_conditions = Object.keys(body_conditions_object).filter((x) => body_conditions_object[x] == true)
         const past_allergies = Object.keys(past_allergies_object).filter((x) => past_allergies_object[x] == true)
@@ -7089,7 +7089,7 @@ export const getProductIdFromEngine = async (stateObj) => {
         });
       }
       if (category == "weightloss") {
-        const body_conditions_object = stateObj["What best describes the current condition of your body?"];
+        const body_conditions_object = stateObj["What best describes your current body condition?"];
         const past_allergies_object = stateObj["Have you ever had allergic reactions to any of the components below?"];
         const body_conditions = Object.keys(body_conditions_object).filter((x) => body_conditions_object[x] == true)
         const past_allergies = Object.keys(past_allergies_object).filter((x) => past_allergies_object[x] == true)
@@ -7155,7 +7155,7 @@ export const getProductIdFromEngine = async (stateObj) => {
         });
       }
       if (category == "weightloss") {
-        const body_conditions_object = stateObj["What best describes the current condition of your body?"];
+        const body_conditions_object = stateObj["What best describes your current body condition?"];
         const past_allergies_object = stateObj["Have you ever had allergic reactions to any of the components below?"];
         const body_conditions = Object.keys(body_conditions_object).filter((x) => body_conditions_object[x] == true)
         const past_allergies = Object.keys(past_allergies_object).filter((x) => past_allergies_object[x] == true)
@@ -7211,7 +7211,7 @@ export const getProductIdFromEngine = async (stateObj) => {
         });
       }
       if (category == "weightloss") {
-        const body_conditions_object = stateObj["What best describes the current condition of your body?"];
+        const body_conditions_object = stateObj["What best describes your current body condition?"];
         const past_allergies_object = stateObj["Have you ever had allergic reactions to any of the components below?"];
         const body_conditions = Object.keys(body_conditions_object).filter((x) => body_conditions_object[x] == true)
         const past_allergies = Object.keys(past_allergies_object).filter((x) => past_allergies_object[x] == true)
