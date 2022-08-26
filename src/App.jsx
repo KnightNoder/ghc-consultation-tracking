@@ -2685,9 +2685,6 @@ export default function App() {
         conditionMet:
           stateObj["Name"] &&
           phone_number_check(stateObj["Phone Number"]),
-        progress_bar: true,
-        progress_bar_text: getProgressBarText(),
-        progress_step: "22",
         inputOptions: [
           {
             placeholder: "Eg: John Doe",
