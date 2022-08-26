@@ -24,7 +24,7 @@ export default function App() {
   );
 
   useEffect(() => {
-    posthog.init(POSTHOG_KEY, { api_host: 'https://app.posthog.com' })
+    posthog.init(process.env.POSTHOG_KEY, { api_host: 'https://app.posthog.com' })
     Set_query_params(window.location.search);
     document.documentElement.style.setProperty(
       "--border",
