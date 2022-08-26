@@ -2814,28 +2814,28 @@ export default function App() {
             displayText: "Receding hairline",
             image_exists: true,
             image:
-              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/hair-one.png?v=1661159739",
+              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/hair-two.png?v=1661159739",
           },
           {
             value: "Thinning at the crown",
             displayText: "Thinning at the crown",
             image_exists: true,
             image:
-              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/hair-two.png?v=1661159739",
+              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/hair-four.png?v=1661159718",
           },
           {
             value: "Overall hair loss/thinning",
             displayText: "Overall hair loss/thinning",
             image_exists: true,
             image:
-              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/hair-three.png?v=1661159739",
+              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/hair-one.png?v=1661159739",
           },
           {
             value: "Receding + Overall thinning",
             displayText: "Receding + Overall thinning",
             image_exists: true,
             image:
-              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/hair-two.png?v=1661159739",
+              "https://cdn.shopify.com/s/files/1/0607/6029/3588/files/hair-three.png?v=1661159739",
           },
         ],
       },

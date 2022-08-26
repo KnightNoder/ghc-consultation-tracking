@@ -6847,7 +6847,7 @@ mars_skin_engine_long.addRule({
     event: {
       type: "product id",
       params: {
-        id: ["6607101493412","6791716405412"]
+        id: ["6607101493412","6607101493412"]
       },
     },
   })
@@ -6969,7 +6969,7 @@ mars_skin_engine_long.addRule({
     },
   })
 
-  // 3 is 4 and  2 is 3 or 2 AND 4 is any
+  // 3 is 4 and  2 is 3 or 4 AND 4 is any
   mars_performance_engine_long.addRule({
     conditions: {
       all:[
