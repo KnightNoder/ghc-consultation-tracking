@@ -3056,6 +3056,823 @@ weightloss_engine.addRule({
     },
   });
 
+//skin long
+
+// None
+
+skin_engine_long.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "None",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Open pores",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7602721095902", "7451599274206"],
+    },
+  },
+});
+
+skin_engine_long.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "None",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Pigmentation",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7602716573918", "7658065002718"],
+    },
+  },
+});
+
+skin_engine_long.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "None",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Active Acne",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7489917878494", "7489915977950"],
+    },
+  },
+});
+
+skin_engine_long.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "None",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Aging",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7602723160286", "7679711412446"],
+    },
+  },
+});
+
+skin_engine_long.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "None",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Dark circles",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7602723160286", "7602712576222"],
+    },
+  },
+});
+
+skin_engine_long.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "None",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Spots & Marks",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7602716573918", "7602716573918"],
+    },
+  },
+});
+
+skin_engine_long.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "None",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Dull Skin",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7602721095902", "7530240245982"],
+    },
+  },
+});
+
+// Skin- Vit C
+
+skin_engine_long.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "Vitamin C",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Open pores",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7451599274206", "7451599274206"],
+    },
+  },
+});
+
+skin_engine_long.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "Vitamin C",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Pigmentation",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7602716573918", "7658065002718"],
+    },
+  },
+});
+
+skin_engine_long.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "Vitamin C",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Active Acne",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7489917878494", "7489915977950"],
+    },
+  },
+});
+
+skin_engine_long.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "Vitamin C",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Aging",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7602723160286", "7515411415262"],
+    },
+  },
+});
+
+skin_engine_long.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "Vitamin C",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Dark circles",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7602723160286", "7515411415262"],
+    },
+  },
+});
+
+skin_engine_long.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "Vitamin C",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Spots & Marks",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7602716573918", "7602716573918"],
+    },
+  },
+});
+
+skin_engine_long.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "Vitamin C",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Dull Skin",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7451599274206", "7530237690078"],
+    },
+  },
+});
+
+// Salicylic acid
+
+skin_engine_long.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "Salicylic Acid",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Open pores",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7602721095902", "7451599274206"],
+    },
+  },
+});
+
+skin_engine_long.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "Salicylic Acid",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Pigmentation",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7602716573918", "7658065002718"],
+    },
+  },
+});
+
+skin_engine_long.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "Salicylic Acid",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Active Acne",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7451599274206", "7451599274206"],
+    },
+  },
+});
+
+skin_engine_long.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "Salicylic Acid",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Aging",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7602723160286", "7679711412446"],
+    },
+  },
+});
+
+skin_engine_long.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "Salicylic Acid",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Dark circles",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7602723160286", "7602712576222"],
+    },
+  },
+});
+
+skin_engine_long.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "Salicylic Acid",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Spots & Marks",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7658065002718", "7602716573918"],
+    },
+  },
+});
+
+skin_engine_long.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "Salicylic Acid",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Dull Skin",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7602721095902", "7530240245982"],
+    },
+  },
+});
+
+// Retinol
+
+skin_engine_long.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "Retinol",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Open pores",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7602721095902","7451599274206"],
+    },
+  },
+});
+
+skin_engine_long.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "Retinol",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Pigmentation",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7602716573918", "7658065002718"],
+    },
+  },
+});
+
+skin_engine_long.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "Retinol",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Active Acne",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7489917878494", "7489915977950"],
+    },
+  },
+});
+
+skin_engine_long.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "Retinol",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Aging",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7602723160286", "7530240245982"],
+    },
+  },
+});
+
+skin_engine_long.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "Retinol",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Dark circles",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7602723160286", "7530241163486"],
+    },
+  },
+});
+
+skin_engine_long.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "Retinol",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Spots & Marks",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7602716573918", "7602716573918"],
+    },
+  },
+});
+
+skin_engine_long.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "Retinol",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Dull Skin",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7602721095902", "7530240245982"],
+    },
+  },
+});
+
+// Kojic Acid
+
+skin_engine_long.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "Kojic Acid",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Open pores",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7602721095902", "7451599274206"],
+    },
+  },
+});
+
+skin_engine_long.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "Kojic Acid",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Pigmentation",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7489916272862", "7658089087198"],
+    },
+  },
+});
+
+skin_engine_long.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "Kojic Acid",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Active Acne",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7489917550814", "7602716573918"],
+    },
+  },
+});
+
+skin_engine_long.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "Kojic Acid",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Aging",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7602723160286", "7679711412446"],
+    },
+  },
+});
+
+skin_engine_long.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "Kojic Acid",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Dark circles",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7602723160286", "7602712576222"],
+    },
+  },
+});
+
+skin_engine_long.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "Kojic Acid",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Spots & Marks",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7602721095902", "7602716573918"],
+    },
+  },
+});
+
+skin_engine_long.addRule({
+  conditions: {
+    all: [
+      {
+        fact: "Are you allergic to any of the ingredients below?",
+        operator: "equal",
+        value: "Kojic Acid",
+      },
+      {
+        fact: "What are you concerned about?",
+        operator: "equal",
+        value: "Dull Skin",
+      },
+    ],
+  },
+  event: {
+    type: "product id",
+    params: {
+      id: ["7602721095902", "7530240245982"],
+    },
+  },
+});
+
 
 // Mars recommendation
 
@@ -7109,9 +7926,9 @@ export const getProductIdFromEngine = async (stateObj) => {
             stateObj["What best describes the current condition of your hair?"],
           "What results are you looking for?":
             stateObj["What results are you looking for?"],
-          "Do you have any upcoming functions in the family in the next 60 days?":
+          "Do you have any upcoming functions in the family in the next 30 days?":
             stateObj[
-              "Do you have any upcoming functions in the family in the next 60 days?"
+              "Do you have any upcoming functions in the family in the next 30 days?"
             ],
         };
         await hair_engine_long.run(facts).then(({ events }) => {

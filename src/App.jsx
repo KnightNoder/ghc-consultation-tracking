@@ -727,7 +727,7 @@ export default function App() {
       {
         name: "Weight loss page 4",
         type: "category",
-        question: `Do you have any past allergic reactions to any of the below components?`,
+        question: `Have you ever had allergic reactions to any of the components below?`,
         clickHandler: choice_clickHandler,
         state_Obj: stateObj,
         proceed_link: "?appointment=yes",
@@ -739,7 +739,7 @@ export default function App() {
           {
             value:
               stateObj[
-                `Do you have any past allergic reactions to any of the below components?`
+                `Have you ever had allergic reactions to any of the components below?`
               ]?.["Glucosamine"] || 0,
             displayText: `Glucosamine`,
             onChange: checkBoxHandler,
@@ -747,7 +747,7 @@ export default function App() {
           {
             value:
               stateObj[
-                `Do you have any past allergic reactions to any of the below components?`
+                `Have you ever had allergic reactions to any of the components below?`
               ]?.["Chondroitin"] || 0,
             displayText: `Chondroitin`,
             onChange: checkBoxHandler,
@@ -755,7 +755,7 @@ export default function App() {
           {
             value:
               stateObj[
-                `Do you have any past allergic reactions to any of the below components?`
+                `Have you ever had allergic reactions to any of the components below?`
               ]?.["Methylsulfonylmethane(MSM)"] || 0,
             displayText: `Methylsulfonylmethane(MSM)`,
             onChange: checkBoxHandler,
@@ -763,7 +763,7 @@ export default function App() {
           {
             value:
               stateObj[
-                `Do you have any past allergic reactions to any of the below components?`
+                `Have you ever had allergic reactions to any of the components below?`
               ]?.["None"] || 0,
             displayText: `None`,
             onChange: checkBoxHandler,
@@ -1991,7 +1991,7 @@ export default function App() {
       {
         name: "Weight loss page 4",
         type: "category",
-        question: `Do you have any past allergic reactions to any of the below components?`,
+        question: `Have you ever had allergic reactions to any of the components below?`,
         clickHandler: choice_clickHandler,
         state_Obj: stateObj,
         proceed_link: "?page=13&type=weightloss",
@@ -2004,7 +2004,7 @@ export default function App() {
           {
             value:
               stateObj[
-                `Do you have any past allergic reactions to any of the below components?`
+                `Have you ever had allergic reactions to any of the components below?`
               ]?.["Glucosamine"] || 0,
             displayText: `Glucosamine`,
             onChange: checkBoxHandler,
@@ -2012,7 +2012,7 @@ export default function App() {
           {
             value:
               stateObj[
-                `Do you have any past allergic reactions to any of the below components?`
+                `Have you ever had allergic reactions to any of the components below?`
               ]?.["Chondroitin"] || 0,
             displayText: `Chondroitin`,
             onChange: checkBoxHandler,
@@ -2020,7 +2020,7 @@ export default function App() {
           {
             value:
               stateObj[
-                `Do you have any past allergic reactions to any of the below components?`
+                `Have you ever had allergic reactions to any of the components below?`
               ]?.["Methylsulfonylmethane(MSM)"] || 0,
             displayText: `Methylsulfonylmethane(MSM)`,
             onChange: checkBoxHandler,
@@ -2028,7 +2028,7 @@ export default function App() {
           {
             value:
               stateObj[
-                `Do you have any past allergic reactions to any of the below components?`
+                `Have you ever had allergic reactions to any of the components below?`
               ]?.["None"] || 0,
             displayText: `None`,
             onChange: checkBoxHandler,
@@ -2036,9 +2036,9 @@ export default function App() {
         ],
       },
     ],
-    weightloss13:
+    weightloss13: [
       {
-        name: "Weight loss page 12",
+        name: "Weight loss page 13",
         type: "category",
         question: `Have you used any healthcare/nutritional products before?`,
         clickHandler: choice_clickHandler,
@@ -2071,6 +2071,7 @@ export default function App() {
           },
         ]
       },
+    ],
     hair1: [
       {
         name: "hair page 1",
@@ -3052,7 +3053,7 @@ export default function App() {
       {
         name: "Weight loss page 4",
         type: "category",
-        question: `Do you have any past allergic reactions to any of the below components?`,
+        question: `Have you ever had allergic reactions to any of the components below?`,
         clickHandler: choice_clickHandler,
         state_Obj: stateObj,
         proceed_link: "?appointment=yes",
@@ -3064,7 +3065,7 @@ export default function App() {
           {
             value:
               stateObj[
-                `Do you have any past allergic reactions to any of the below components?`
+                `Have you ever had allergic reactions to any of the components below?`
               ]?.["Glucosamine"] || 0,
             displayText: `Glucosamine`,
             onChange: checkBoxHandler,
@@ -3072,7 +3073,7 @@ export default function App() {
           {
             value:
               stateObj[
-                `Do you have any past allergic reactions to any of the below components?`
+                `Have you ever had allergic reactions to any of the components below?`
               ]?.["Chondroitin"] || 0,
             displayText: `Chondroitin`,
             onChange: checkBoxHandler,
@@ -3080,7 +3081,7 @@ export default function App() {
           {
             value:
               stateObj[
-                `Do you have any past allergic reactions to any of the below components?`
+                `Have you ever had allergic reactions to any of the components below?`
               ]?.["Methylsulfonylmethane(MSM)"] || 0,
             displayText: `Methylsulfonylmethane(MSM)`,
             onChange: checkBoxHandler,
@@ -3088,7 +3089,7 @@ export default function App() {
           {
             value:
               stateObj[
-                `Do you have any past allergic reactions to any of the below components?`
+                `Have you ever had allergic reactions to any of the components below?`
               ]?.["None"] || 0,
             displayText: `None`,
             onChange: checkBoxHandler,
@@ -5691,7 +5692,7 @@ export default function App() {
       {
         name: "Weight loss page 4",
         type: "category",
-        question: `Do you have any past allergic reactions to any of the below components?`,
+        question: `Have you ever had allergic reactions to any of the components below?`,
         clickHandler: choice_clickHandler,
         state_Obj: stateObj,
         proceed_link: "?page=13&type=weightloss",
@@ -5704,7 +5705,7 @@ export default function App() {
           {
             value:
               stateObj[
-                `Do you have any past allergic reactions to any of the below components?`
+                `Have you ever had allergic reactions to any of the components below?`
               ]?.["Glucosamine"] || 0,
             displayText: `Glucosamine`,
             onChange: checkBoxHandler,
@@ -5712,7 +5713,7 @@ export default function App() {
           {
             value:
               stateObj[
-                `Do you have any past allergic reactions to any of the below components?`
+                `Have you ever had allergic reactions to any of the components below?`
               ]?.["Chondroitin"] || 0,
             displayText: `Chondroitin`,
             onChange: checkBoxHandler,
@@ -5720,7 +5721,7 @@ export default function App() {
           {
             value:
               stateObj[
-                `Do you have any past allergic reactions to any of the below components?`
+                `Have you ever had allergic reactions to any of the components below?`
               ]?.["Methylsulfonylmethane(MSM)"] || 0,
             displayText: `Methylsulfonylmethane(MSM)`,
             onChange: checkBoxHandler,
@@ -5728,7 +5729,7 @@ export default function App() {
           {
             value:
               stateObj[
-                `Do you have any past allergic reactions to any of the below components?`
+                `Have you ever had allergic reactions to any of the components below?`
               ]?.["None"] || 0,
             displayText: `None`,
             onChange: checkBoxHandler,
