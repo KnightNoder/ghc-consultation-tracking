@@ -1243,7 +1243,7 @@ export default function App() {
         proceed_link: "?page=11&type=skin",
         back_link: "?page=9&type=skin",
         conditionMet: true,
-        overlay_screen_text: "There is nothing like mom's!",
+        overlay_screen_text: "There is nothing like mom's meals!",
         delay_time: 1000,
         progress_bar: true,
         progress_bar_text: "My Skin",
