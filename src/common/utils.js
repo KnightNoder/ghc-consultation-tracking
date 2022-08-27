@@ -154,7 +154,8 @@ const getSendMailData = (assessment_type, stateObj, productLink = "", productNam
     ) {
     } else {
       if (key == "Do you have any pre-existing problems?" || key == "What best describes your current body condition?" 
-      || key == "Do you have any past allergic reactions to any of the below components?"){
+      || key == "Do you have any past allergic reactions to any of the below components?"  ||
+      key == "Have you ever had allergic reactions to any of the components below?"){
         let problems = Object.keys(
           stateObj[key]
         );

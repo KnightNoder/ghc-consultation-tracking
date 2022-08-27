@@ -3064,7 +3064,7 @@ skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "None",
       },
@@ -3087,7 +3087,7 @@ skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "None",
       },
@@ -3110,7 +3110,7 @@ skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "None",
       },
@@ -3133,7 +3133,7 @@ skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "None",
       },
@@ -3156,7 +3156,7 @@ skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "None",
       },
@@ -3179,7 +3179,7 @@ skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "None",
       },
@@ -3202,7 +3202,7 @@ skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "None",
       },
@@ -3227,7 +3227,7 @@ skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Vitamin C",
       },
@@ -3250,7 +3250,7 @@ skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Vitamin C",
       },
@@ -3273,7 +3273,7 @@ skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Vitamin C",
       },
@@ -3296,7 +3296,7 @@ skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Vitamin C",
       },
@@ -3319,7 +3319,7 @@ skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Vitamin C",
       },
@@ -3342,7 +3342,7 @@ skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Vitamin C",
       },
@@ -3365,7 +3365,7 @@ skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Vitamin C",
       },
@@ -3390,7 +3390,7 @@ skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Salicylic Acid",
       },
@@ -3413,7 +3413,7 @@ skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Salicylic Acid",
       },
@@ -3436,7 +3436,7 @@ skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Salicylic Acid",
       },
@@ -3459,7 +3459,7 @@ skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Salicylic Acid",
       },
@@ -3482,7 +3482,7 @@ skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Salicylic Acid",
       },
@@ -3505,7 +3505,7 @@ skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Salicylic Acid",
       },
@@ -3528,7 +3528,7 @@ skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Salicylic Acid",
       },
@@ -3553,7 +3553,7 @@ skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Retinol",
       },
@@ -3576,7 +3576,7 @@ skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Retinol",
       },
@@ -3599,7 +3599,7 @@ skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Retinol",
       },
@@ -3622,7 +3622,7 @@ skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Retinol",
       },
@@ -3645,7 +3645,7 @@ skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Retinol",
       },
@@ -3668,7 +3668,7 @@ skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Retinol",
       },
@@ -3691,7 +3691,7 @@ skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Retinol",
       },
@@ -3716,7 +3716,7 @@ skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Kojic Acid",
       },
@@ -3739,7 +3739,7 @@ skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Kojic Acid",
       },
@@ -3762,7 +3762,7 @@ skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Kojic Acid",
       },
@@ -3785,7 +3785,7 @@ skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Kojic Acid",
       },
@@ -3808,7 +3808,7 @@ skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Kojic Acid",
       },
@@ -3831,7 +3831,7 @@ skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Kojic Acid",
       },
@@ -3854,7 +3854,7 @@ skin_engine_long.addRule({
   conditions: {
     all: [
       {
-        fact: "Are you allergic to any of the ingredients below?",
+        fact: "Are you allergic to any of these ingredients?",
         operator: "equal",
         value: "Kojic Acid",
       },
