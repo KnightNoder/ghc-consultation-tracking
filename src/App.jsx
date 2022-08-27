@@ -869,7 +869,6 @@ export default function App() {
         required: "*",
         placeholder: "Eg: 24",
         requiredErrorText: "Please enter valid age to proceed",
-        conditionMet: true,
         progress_bar: true,
         progress_bar_text: getProgressBarText(),
         progress_step: "11",
