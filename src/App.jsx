@@ -3542,40 +3542,21 @@ export default function App() {
         back_link: "?category=yes",
         overlay_screen_text: "Tell me about yourself",
         delay_time: "1000",
-        conditionMet:
-          parseInt(stateObj["Age"]) > 0 &&
-          parseInt(stateObj["Age"]) < 200 &&
-          stateObj["First Name"] &&
-          phone_number_check(stateObj["Phone Number"]) &&
-          email_check(stateObj["Email"]),
         progress_bar: true,
         progress_bar_text: getProgressBarText(),
         progress_step: "22",
+        conditionMet:
+          stateObj["Name"] &&
+          phone_number_check(stateObj["Phone Number"]),
         inputOptions: [
           {
-            placeholder: "Eg: John",
-            requiredErrorText: "Please enter valid first name",
-            heading: "First Name",
+            placeholder: "Eg: John Doe",
+            requiredErrorText: "Please enter name",
+            heading: "Name",
             clickHandler: choice_clickHandler,
             required: "*",
-            value: stateObj["First Name"],
-            validity: stateObj["First Name"],
-          },
-          {
-            placeholder: "Eg: Doe",
-            heading: "Last Name",
-            clickHandler: choice_clickHandler,
-            value: stateObj["Last Name"],
-            validity: "true",
-          },
-          {
-            placeholder: "Eg: johndoe@ghc.health",
-            requiredErrorText: "Please enter valid email",
-            heading: "Email",
-            clickHandler: choice_clickHandler,
-            required: "*",
-            value: stateObj["Email"],
-            validity: email_check(),
+            value: stateObj["Name"],
+            validity: stateObj["Name"],
           },
           {
             placeholder: "Eg: 9876543210",
@@ -3586,17 +3567,6 @@ export default function App() {
             value: stateObj["Phone Number"],
             inputMode: "numeric",
             validity: phone_number_check(),
-            inputCheck: input_check,
-          },
-          {
-            placeholder: "Eg: Age",
-            requiredErrorText: "Please enter valid age",
-            heading: "Age",
-            clickHandler: choice_clickHandler,
-            value: stateObj["Age"],
-            required: "*",
-            inputMode: "numeric",
-            validity: age_check(),
             inputCheck: input_check,
           },
         ],
