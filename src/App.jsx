@@ -2718,7 +2718,6 @@ export default function App() {
         state_Obj: stateObj,
         proceed_link: "?page=2&type=hair",
         back_link: "?userinfo=yes",
-        conditionMet: true,
         required: "true",
         options: [
           {
