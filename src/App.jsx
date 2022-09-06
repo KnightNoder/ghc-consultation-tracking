@@ -2718,7 +2718,6 @@ export default function App() {
         state_Obj: stateObj,
         proceed_link: "?page=2&type=hair",
         back_link: "?userinfo=yes",
-        conditionMet: true,
         required: "true",
         options: [
           {
@@ -3581,7 +3580,6 @@ export default function App() {
         state_Obj: stateObj,
         proceed_link: "?page=2&type=hair",
         back_link: "?userinfo=yes",
-        conditionMet: true,
         required: "true",
         progress_bar: true,
         progress_bar_text: "My Hair",
@@ -4915,7 +4913,7 @@ export default function App() {
         proceed_link: "?page=11&type=skin",
         back_link: "?page=9&type=skin",
         conditionMet: true,
-        overlay_screen_text: "There is nothing like mom's!",
+        overlay_screen_text: "There is nothing like mom's meals!",
         delay_time: 1000,
         progress_bar: true,
         progress_bar_text: "My Skin",
