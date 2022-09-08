@@ -99,7 +99,7 @@ const CallBack = ({
                 stateObj["assessment_type"] == "30 sec"
                   ? "utm_source=website-consultation&utm_medium=short-consultation&utm_campaign=recommended-product"
                   : "utm_source=website-consultation&utm_medium=long-consultation&utm_campaign=highly-recommended-product";
-              const product_link_temp = `${variant_id_1}:1?checkout[shipping_address][first_name]=${stateObj["Name"]}&checkout[shipping_address][last_name]=${stateObj["Last Name"]}&checkout[shipping_address][phone]=${stateObj["Phone Number"]}&${utm_tag}`
+              const product_link_temp = `${variant_id_1}:1?checkout[shipping_address][first_name]=${stateObj["Name"]}&checkout[shipping_address][phone]=${stateObj["Phone Number"]}&${utm_tag}`
               Set_link_1(product_link_temp);
               // Set_product_subtext(subtext);
               Set_title_1(product_title_1);
@@ -120,9 +120,7 @@ const CallBack = ({
                 const img_src_2 = product_recommended_2[0]["images"][0]["src"];
                 const variant_id_2 =
                   product_recommended_2[0]["variants"][0]["id"];
-                Set_link_2(`${variant_id_2}:1?checkout[shipping_address][first_name]=${stateObj[""]}&checkout[shipping_address][last_name]=${stateObj[""]}&checkout[shipping_address][phone]=${stateObj[""]}&product_link_temputm_source=website-consultation&utm_medium=long-consultation&utm_campaign=recommended-product`);
-                // checkout[contact_email]=${stateObj[""]}
-                // Set_product_subtext(subtext)
+                Set_link_2(`${variant_id_2}:1?checkout[shipping_address][first_name]=${stateObj["Name"]}&checkout[shipping_address][phone]=${stateObj["Phone Number"]}&${utm_tag}`);
                 Set_title_2(product_title_2);
                 Set_image_2(img_src_2);
                 Set_price_2(product_price_2);
