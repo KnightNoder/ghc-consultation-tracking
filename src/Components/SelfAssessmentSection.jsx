@@ -157,6 +157,7 @@ const SelfAssessmentSection = ({ set_url_function, clickHandler }) => {
               set_url_function(window.location.pathname  + "?category=yes");
               clickHandler("assessment_type", "30 sec");
             }}
+            id="start-short-consultation"
           >
             Start Assessment
           </button>
@@ -178,6 +179,7 @@ const SelfAssessmentSection = ({ set_url_function, clickHandler }) => {
               set_url_function(window.location.pathname  + "?category=yes");
               clickHandler("assessment_type", "6 mins");
             }}
+            id="start-long-consultation"
           >
             Start Assessment
           </button>
