@@ -99,7 +99,7 @@ const CallBack = ({
                 stateObj["assessment_type"] == "30 sec"
                   ? "utm_source=website-consultation&utm_medium=short-consultation&utm_campaign=recommended-product"
                   : "utm_source=website-consultation&utm_medium=long-consultation&utm_campaign=highly-recommended-product";
-              const product_link_temp = `${variant_id_1}:1?checkout[shipping_address][first_name]=${stateObj["Name"]}&checkout[shipping_address][phone]=${stateObj["Phone Number"]}&${utm_tag}`
+              const product_link_temp = `${variant_id_1}:1?checkout[shipping_address][first_name]=${stateObj["Name"].trim().replace(/\s/g, '+')}&checkout[shipping_address][phone]=${stateObj["Phone Number"].trim().replace(/\s/g, '')}&${utm_tag}`
               Set_link_1(product_link_temp);
               // Set_product_subtext(subtext);
               Set_title_1(product_title_1);
