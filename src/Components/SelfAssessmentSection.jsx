@@ -124,7 +124,8 @@ const SelfAssessmentSection = ({ set_url_function, clickHandler }) => {
             </div>
             <button
               className="start-assessment"
-              onClick={() => {
+              onClick={(e) => {
+                e.preventDefault();
                 navigate(window.location.pathname + "?category=yes");
                 set_url_function(window.location.pathname  + "?category=yes");
                 clickHandler("assessment_type", "6 mins");
@@ -148,18 +149,17 @@ const SelfAssessmentSection = ({ set_url_function, clickHandler }) => {
           <div className="content">
             Get recommended products that suit your concerns
           </div>
-          <div
-            className="submit"
-            onClick={() => {
-              {
-                  navigate(window.location.pathname + "?category=yes");
-                  set_url_function(window.location.pathname  + "?category=yes");
-                clickHandler("assessment_type", "30 sec");
-              }
+          <button
+            className="submit start-assessment-mobile"
+            onClick={(e) => {
+              e.preventDefault();
+              navigate(window.location.pathname + "?category=yes");
+              set_url_function(window.location.pathname  + "?category=yes");
+              clickHandler("assessment_type", "30 sec");
             }}
           >
             Start Assessment
-          </div>
+          </button>
         </div>
         <div className="assessment-card-small">
           <div className="bottom-heading">
@@ -170,18 +170,17 @@ const SelfAssessmentSection = ({ set_url_function, clickHandler }) => {
           <div className="content">
             Get a free Doctor’s consultation and Personalized Treatment Plan
           </div>
-          <div
-            className="submit"
-            onClick={() => {
-              {
-                navigate(window.location.pathname  + "?category=yes");
-                set_url_function(window.location.pathname  + "?category=yes");
-                clickHandler("assessment_type", "6 mins");
-              }
+          <button
+            className="submit start-assessment-mobile"
+            onClick={(e) => {
+              e.preventDefault();
+              navigate(window.location.pathname  + "?category=yes");
+              set_url_function(window.location.pathname  + "?category=yes");
+              clickHandler("assessment_type", "6 mins");
             }}
           >
             Start Assessment
-          </div>
+          </button>
         </div>
       </div>
     </>

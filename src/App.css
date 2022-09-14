@@ -369,7 +369,12 @@ img {
     height: 300px;
   }
 
+  .start-assessment-mobile{
+    border: none;
+  }
+
   .start-assessment{
+    border: none;
     flex: 2 1;
     width: 100%;
     background: var(--border) ;
