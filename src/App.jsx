@@ -295,7 +295,7 @@ export default function App() {
           phone_number_check(stateObj["Phone Number"]) ,
         inputOptions: [
           {
-            placeholder: "Eg: John Doe",
+            placeholder: "Eg: Jane Doe",
             requiredErrorText: "Please enter valid name",
             heading: "Name",
             clickHandler: choice_clickHandler,
@@ -908,7 +908,7 @@ export default function App() {
         progress_step: "22",
         inputOptions: [
           {
-            placeholder: "Eg: John Doe",
+            placeholder: "Eg: Jane Doe",
             requiredErrorText: "Please enter name",
             heading: "Name",
             clickHandler: choice_clickHandler,
