@@ -71,7 +71,7 @@ const SelfAssessmentSection = ({ set_url_function, clickHandler }) => {
                 <div className="report-text"></div>
               </div>
             </div>
-            <div
+            <button
               className="start-assessment"
               onClick={(e) => {
                 e.preventDefault();
@@ -79,9 +79,10 @@ const SelfAssessmentSection = ({ set_url_function, clickHandler }) => {
                 set_url_function(window.location.pathname  + "?category=yes");
                 clickHandler("assessment_type", "30 sec");
               }}
+              id="start-short-consultation"
             >
               Start Assessment
-            </div>
+            </button>
           </div>
           <div className="assessment-card">
             <div className="time-section">
@@ -121,16 +122,17 @@ const SelfAssessmentSection = ({ set_url_function, clickHandler }) => {
                 </div> */}
               </div>
             </div>
-            <div
+            <button
               className="start-assessment"
               onClick={() => {
                 navigate(window.location.pathname + "?category=yes");
                 set_url_function(window.location.pathname  + "?category=yes");
                 clickHandler("assessment_type", "6 mins");
               }}
+              id="start-long-consultation"
             >
               Start Assessment
-            </div>
+            </button>
           </div>
         </div>
       </div>
