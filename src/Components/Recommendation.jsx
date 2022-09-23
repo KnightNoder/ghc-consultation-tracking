@@ -128,7 +128,7 @@ const CallBack = ({
               }
               const data = getSendMailData(stateObj["assessment_type"], stateObj, product_link_temp, product_title_1);
               console.log(data,'mail data');
-              const sendMail = async () => {
+              const SendWhatsappMessage = async () => {
                 const config = {
                   method: "post",
                   url: `https://${process.env.REACT_APP_SEND_MAIL_API_BASE_URL}/api/device/consultation`,
@@ -146,7 +146,7 @@ const CallBack = ({
                   });
               };
               if(window.localStorage.getItem('visit_number') == 1){
-                sendMail();
+                SendWhatsappMessage();
               }
             })
             .catch((error) => {
