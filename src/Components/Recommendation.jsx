@@ -145,7 +145,9 @@ const CallBack = ({
                     console.log(error);
                   });
               };
-              sendMail();
+              if(window.localStorage.getItem('visit_number') == 1){
+                sendMail();
+              }
             })
             .catch((error) => {
               console.log(error);
