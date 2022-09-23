@@ -67,9 +67,11 @@ export default function App() {
       fields = allPages.userinfo;
       Set_builder_fields(fields);
     } else if (queryParams.get("appointment")) {
+      window.localStorage.setItem('visit_number',0);
       fields = allPages.appointment;
       Set_builder_fields(fields);
     } else if (queryParams.get("recommendation")) {
+      window.localStorage.setItem('visit_number',parseInt(window.localStorage.getItem('visit_number'))+1);
       fields = allPages.recommendation;
       Set_builder_fields(fields);
     } else {
