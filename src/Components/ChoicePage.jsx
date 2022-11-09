@@ -32,6 +32,9 @@ const ChoicePage = ({
   progress_step,
 }) => {
   const [display_overlay_text, Set_display_overlay_text] = useState(true);
+  const assessment_type = state_Obj["assessment_type"] == "30 sec" ? "short" : "long"
+  const category = state_Obj["Select category for consultation"];
+  const tracking_id= assessment_type+"-"+category+"-"+"button";
   if(required_check){
     state_Obj[question] = state_Obj[question] ? state_Obj[question] : {}; 
   }
@@ -183,6 +186,7 @@ const ChoicePage = ({
               backLink={back_link}
               set_url_function={set_url_function}
               directNavigate={directNavigate}
+              id={tracking_id}
             />
           </div>
         </div>
@@ -198,6 +202,7 @@ const ChoicePage = ({
           backLink={back_link}
           set_url_function={set_url_function}
           directNavigate={directNavigate}
+          id={tracking_id}
         />
       </div>
     </>
