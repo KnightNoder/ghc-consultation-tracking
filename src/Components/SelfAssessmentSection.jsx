@@ -71,22 +71,18 @@ const SelfAssessmentSection = ({ set_url_function, clickHandler }) => {
                 <div className="report-text"></div>
               </div>
             </div>
-            <div
+            <button
               className="start-assessment"
               onClick={(e) => {
                 e.preventDefault();
-                if(process.env.REACT_APP_BRAND == "Mars") {
-                navigate("/pages/ghc-consultation-mars/" + "?category=yes");
-                  set_url_function("/pages/ghc-consultation-mars/" + "?category=yes");
-                } else {
-                  navigate("/pages/ghc-consultation/" + "?category=yes");
-                  set_url_function("/pages/ghc-consultation/" + "?category=yes");
-                }
+                navigate(window.location.pathname  + "?category=yes");
+                set_url_function(window.location.pathname  + "?category=yes");
                 clickHandler("assessment_type", "30 sec");
               }}
+              id="start-short-consultation"
             >
               Start Assessment
-            </div>
+            </button>
           </div>
           <div className="assessment-card">
             <div className="time-section">
@@ -126,21 +122,18 @@ const SelfAssessmentSection = ({ set_url_function, clickHandler }) => {
                 </div> */}
               </div>
             </div>
-            <div
+            <button
               className="start-assessment"
-              onClick={() => {
-                if(process.env.REACT_APP_BRAND == "Mars") {
-                  navigate("/pages/ghc-consultation-mars/?category=yes");
-                  set_url_function("/pages/ghc-consultation-mars/?category=yes");
-                } else {
-                  navigate("/pages/ghc-consultation/?category=yes");
-                  set_url_function("/pages/ghc-consultation/?category=yes");
-                }
+              onClick={(e) => {
+                e.preventDefault();
+                navigate(window.location.pathname + "?category=yes");
+                set_url_function(window.location.pathname  + "?category=yes");
                 clickHandler("assessment_type", "6 mins");
               }}
+              id="start-long-consultation"
             >
               Start Assessment
-            </div>
+            </button>
           </div>
         </div>
       </div>
@@ -156,23 +149,18 @@ const SelfAssessmentSection = ({ set_url_function, clickHandler }) => {
           <div className="content">
             Get recommended products that suit your concerns
           </div>
-          <div
-            className="submit"
-            onClick={() => {
-              {
-                if(process.env.REACT_APP_BRAND == "Mars") {
-                  navigate("/pages/ghc-consultation-mars/?category=yes");
-                  set_url_function("/pages/ghc-consultation-mars/?category=yes");
-                } else {
-                  navigate("/pages/ghc-consultation/?category=yes");
-                  set_url_function("/pages/ghc-consultation/?category=yes");
-                }
-                clickHandler("assessment_type", "30 sec");
-              }
+          <button
+            className="submit start-assessment-mobile"
+            onClick={(e) => {
+              e.preventDefault();
+              navigate(window.location.pathname + "?category=yes");
+              set_url_function(window.location.pathname  + "?category=yes");
+              clickHandler("assessment_type", "30 sec");
             }}
+            id="start-short-consultation"
           >
             Start Assessment
-          </div>
+          </button>
         </div>
         <div className="assessment-card-small">
           <div className="bottom-heading">
@@ -183,23 +171,18 @@ const SelfAssessmentSection = ({ set_url_function, clickHandler }) => {
           <div className="content">
             Get a free Doctor’s consultation and Personalized Treatment Plan
           </div>
-          <div
-            className="submit"
-            onClick={() => {
-              {
-                if(process.env.REACT_APP_BRAND == "Mars") {
-                  navigate("/pages/ghc-consultation-mars/" + "?category=yes");
-                  set_url_function("/pages/ghc-consultation-mars/" + "?category=yes");
-                } else {
-                  navigate("/pages/ghc-consultation/" + "?category=yes");
-                  set_url_function("/pages/ghc-consultation/" + "?category=yes");
-                }
-                clickHandler("assessment_type", "6 mins");
-              }
+          <button
+            className="submit start-assessment-mobile"
+            onClick={(e) => {
+              e.preventDefault();
+              navigate(window.location.pathname  + "?category=yes");
+              set_url_function(window.location.pathname  + "?category=yes");
+              clickHandler("assessment_type", "6 mins");
             }}
+            id="start-long-consultation"
           >
             Start Assessment
-          </div>
+          </button>
         </div>
       </div>
     </>

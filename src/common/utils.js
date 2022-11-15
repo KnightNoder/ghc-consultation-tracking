@@ -137,7 +137,7 @@ const getProductId = (stateObj, assessment_type) => {
   // );
 };
 
-const getSendMailData = (assessment_type, stateObj) => {
+const getSendMailData = (assessment_type, stateObj, productLink = "", productName = "") => {
   const questionnaire = [];
 
   for (let key in stateObj) {
@@ -153,8 +153,9 @@ const getSendMailData = (assessment_type, stateObj) => {
       key == "Select category for consultation"
     ) {
     } else {
-      if (key == "Do you have any pre-existing problems?" || key == "What best describes your current body condition?" 
-      || key == "Do you have any past allergic reactions to any of the below components?"){
+      if (key == "Do you have any pre-existing health issues?" || key == "What best describes your current body condition?" 
+      || key == "Do you have any past allergic reactions to any of the below components?"  ||
+      key == "Have you ever had allergic reactions to any of the components below?"){
         let problems = Object.keys(
           stateObj[key]
         );
@@ -199,6 +200,8 @@ const getSendMailData = (assessment_type, stateObj) => {
     image: "",
     type: process.env.REACT_APP_BRAND.toLowerCase(),
     user_survey: questionnaire,
+    productLink: productLink,
+    productName: productName
   });
 
   return data;

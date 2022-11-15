@@ -67,9 +67,11 @@ export default function App() {
       fields = allPages.userinfo;
       Set_builder_fields(fields);
     } else if (queryParams.get("appointment")) {
+      window.localStorage.setItem('visit_number',0);
       fields = allPages.appointment;
       Set_builder_fields(fields);
     } else if (queryParams.get("recommendation")) {
+      window.localStorage.setItem('visit_number',parseInt(window.localStorage.getItem('visit_number'))+1);
       fields = allPages.recommendation;
       Set_builder_fields(fields);
     } else {
@@ -295,7 +297,7 @@ export default function App() {
           phone_number_check(stateObj["Phone Number"]) ,
         inputOptions: [
           {
-            placeholder: "Eg: John Doe",
+            placeholder: "Eg: Jane Doe",
             requiredErrorText: "Please enter valid name",
             heading: "Name",
             clickHandler: choice_clickHandler,
@@ -727,7 +729,7 @@ export default function App() {
       {
         name: "Weight loss page 4",
         type: "category",
-        question: `Do you have any past allergic reactions to any of the below components?`,
+        question: `Have you ever had allergic reactions to any of the components below?`,
         clickHandler: choice_clickHandler,
         state_Obj: stateObj,
         proceed_link: "?appointment=yes",
@@ -739,7 +741,7 @@ export default function App() {
           {
             value:
               stateObj[
-                `Do you have any past allergic reactions to any of the below components?`
+                `Have you ever had allergic reactions to any of the components below?`
               ]?.["Glucosamine"] || 0,
             displayText: `Glucosamine`,
             onChange: checkBoxHandler,
@@ -747,7 +749,7 @@ export default function App() {
           {
             value:
               stateObj[
-                `Do you have any past allergic reactions to any of the below components?`
+                `Have you ever had allergic reactions to any of the components below?`
               ]?.["Chondroitin"] || 0,
             displayText: `Chondroitin`,
             onChange: checkBoxHandler,
@@ -755,7 +757,7 @@ export default function App() {
           {
             value:
               stateObj[
-                `Do you have any past allergic reactions to any of the below components?`
+                `Have you ever had allergic reactions to any of the components below?`
               ]?.["Methylsulfonylmethane(MSM)"] || 0,
             displayText: `Methylsulfonylmethane(MSM)`,
             onChange: checkBoxHandler,
@@ -763,7 +765,7 @@ export default function App() {
           {
             value:
               stateObj[
-                `Do you have any past allergic reactions to any of the below components?`
+                `Have you ever had allergic reactions to any of the components below?`
               ]?.["None"] || 0,
             displayText: `None`,
             onChange: checkBoxHandler,
@@ -869,7 +871,6 @@ export default function App() {
         required: "*",
         placeholder: "Eg: 24",
         requiredErrorText: "Please enter valid age to proceed",
-        conditionMet: true,
         progress_bar: true,
         progress_bar_text: getProgressBarText(),
         progress_step: "11",
@@ -909,7 +910,7 @@ export default function App() {
         progress_step: "22",
         inputOptions: [
           {
-            placeholder: "Eg: John Doe",
+            placeholder: "Eg: Jane Doe",
             requiredErrorText: "Please enter name",
             heading: "Name",
             clickHandler: choice_clickHandler,
@@ -1243,7 +1244,7 @@ export default function App() {
         proceed_link: "?page=11&type=skin",
         back_link: "?page=9&type=skin",
         conditionMet: true,
-        overlay_screen_text: "There is nothing like mom's!",
+        overlay_screen_text: "There is nothing like mom's meals!",
         delay_time: 1000,
         progress_bar: true,
         progress_bar_text: "My Skin",
@@ -1991,7 +1992,7 @@ export default function App() {
       {
         name: "Weight loss page 4",
         type: "category",
-        question: `Do you have any past allergic reactions to any of the below components?`,
+        question: `Have you ever had allergic reactions to any of the components below?`,
         clickHandler: choice_clickHandler,
         state_Obj: stateObj,
         proceed_link: "?page=13&type=weightloss",
@@ -2004,7 +2005,7 @@ export default function App() {
           {
             value:
               stateObj[
-                `Do you have any past allergic reactions to any of the below components?`
+                `Have you ever had allergic reactions to any of the components below?`
               ]?.["Glucosamine"] || 0,
             displayText: `Glucosamine`,
             onChange: checkBoxHandler,
@@ -2012,7 +2013,7 @@ export default function App() {
           {
             value:
               stateObj[
-                `Do you have any past allergic reactions to any of the below components?`
+                `Have you ever had allergic reactions to any of the components below?`
               ]?.["Chondroitin"] || 0,
             displayText: `Chondroitin`,
             onChange: checkBoxHandler,
@@ -2020,7 +2021,7 @@ export default function App() {
           {
             value:
               stateObj[
-                `Do you have any past allergic reactions to any of the below components?`
+                `Have you ever had allergic reactions to any of the components below?`
               ]?.["Methylsulfonylmethane(MSM)"] || 0,
             displayText: `Methylsulfonylmethane(MSM)`,
             onChange: checkBoxHandler,
@@ -2028,7 +2029,7 @@ export default function App() {
           {
             value:
               stateObj[
-                `Do you have any past allergic reactions to any of the below components?`
+                `Have you ever had allergic reactions to any of the components below?`
               ]?.["None"] || 0,
             displayText: `None`,
             onChange: checkBoxHandler,
@@ -2036,9 +2037,9 @@ export default function App() {
         ],
       },
     ],
-    weightloss13:
+    weightloss13: [
       {
-        name: "Weight loss page 12",
+        name: "Weight loss page 13",
         type: "category",
         question: `Have you used any healthcare/nutritional products before?`,
         clickHandler: choice_clickHandler,
@@ -2071,6 +2072,7 @@ export default function App() {
           },
         ]
       },
+    ],
     hair1: [
       {
         name: "hair page 1",
@@ -2685,9 +2687,6 @@ export default function App() {
         conditionMet:
           stateObj["Name"] &&
           phone_number_check(stateObj["Phone Number"]),
-        progress_bar: true,
-        progress_bar_text: getProgressBarText(),
-        progress_step: "22",
         inputOptions: [
           {
             placeholder: "Eg: John Doe",
@@ -2721,7 +2720,6 @@ export default function App() {
         state_Obj: stateObj,
         proceed_link: "?page=2&type=hair",
         back_link: "?userinfo=yes",
-        conditionMet: true,
         required: "true",
         options: [
           {
@@ -3055,7 +3053,7 @@ export default function App() {
       {
         name: "Weight loss page 4",
         type: "category",
-        question: `Do you have any past allergic reactions to any of the below components?`,
+        question: `Have you ever had allergic reactions to any of the components below?`,
         clickHandler: choice_clickHandler,
         state_Obj: stateObj,
         proceed_link: "?appointment=yes",
@@ -3067,7 +3065,7 @@ export default function App() {
           {
             value:
               stateObj[
-                `Do you have any past allergic reactions to any of the below components?`
+                `Have you ever had allergic reactions to any of the components below?`
               ]?.["Glucosamine"] || 0,
             displayText: `Glucosamine`,
             onChange: checkBoxHandler,
@@ -3075,7 +3073,7 @@ export default function App() {
           {
             value:
               stateObj[
-                `Do you have any past allergic reactions to any of the below components?`
+                `Have you ever had allergic reactions to any of the components below?`
               ]?.["Chondroitin"] || 0,
             displayText: `Chondroitin`,
             onChange: checkBoxHandler,
@@ -3083,7 +3081,7 @@ export default function App() {
           {
             value:
               stateObj[
-                `Do you have any past allergic reactions to any of the below components?`
+                `Have you ever had allergic reactions to any of the components below?`
               ]?.["Methylsulfonylmethane(MSM)"] || 0,
             displayText: `Methylsulfonylmethane(MSM)`,
             onChange: checkBoxHandler,
@@ -3091,7 +3089,7 @@ export default function App() {
           {
             value:
               stateObj[
-                `Do you have any past allergic reactions to any of the below components?`
+                `Have you ever had allergic reactions to any of the components below?`
               ]?.["None"] || 0,
             displayText: `None`,
             onChange: checkBoxHandler,
@@ -3545,40 +3543,21 @@ export default function App() {
         back_link: "?category=yes",
         overlay_screen_text: "Tell me about yourself",
         delay_time: "1000",
-        conditionMet:
-          parseInt(stateObj["Age"]) > 0 &&
-          parseInt(stateObj["Age"]) < 200 &&
-          stateObj["First Name"] &&
-          phone_number_check(stateObj["Phone Number"]) &&
-          email_check(stateObj["Email"]),
         progress_bar: true,
         progress_bar_text: getProgressBarText(),
         progress_step: "22",
+        conditionMet:
+          stateObj["Name"] &&
+          phone_number_check(stateObj["Phone Number"]),
         inputOptions: [
           {
-            placeholder: "Eg: John",
-            requiredErrorText: "Please enter valid first name",
-            heading: "First Name",
+            placeholder: "Eg: John Doe",
+            requiredErrorText: "Please enter name",
+            heading: "Name",
             clickHandler: choice_clickHandler,
             required: "*",
-            value: stateObj["First Name"],
-            validity: stateObj["First Name"],
-          },
-          {
-            placeholder: "Eg: Doe",
-            heading: "Last Name",
-            clickHandler: choice_clickHandler,
-            value: stateObj["Last Name"],
-            validity: "true",
-          },
-          {
-            placeholder: "Eg: johndoe@ghc.health",
-            requiredErrorText: "Please enter valid email",
-            heading: "Email",
-            clickHandler: choice_clickHandler,
-            required: "*",
-            value: stateObj["Email"],
-            validity: email_check(),
+            value: stateObj["Name"],
+            validity: stateObj["Name"],
           },
           {
             placeholder: "Eg: 9876543210",
@@ -3589,17 +3568,6 @@ export default function App() {
             value: stateObj["Phone Number"],
             inputMode: "numeric",
             validity: phone_number_check(),
-            inputCheck: input_check,
-          },
-          {
-            placeholder: "Eg: Age",
-            requiredErrorText: "Please enter valid age",
-            heading: "Age",
-            clickHandler: choice_clickHandler,
-            value: stateObj["Age"],
-            required: "*",
-            inputMode: "numeric",
-            validity: age_check(),
             inputCheck: input_check,
           },
         ],
@@ -3614,7 +3582,6 @@ export default function App() {
         state_Obj: stateObj,
         proceed_link: "?page=2&type=hair",
         back_link: "?userinfo=yes",
-        conditionMet: true,
         required: "true",
         progress_bar: true,
         progress_bar_text: "My Hair",
@@ -4948,7 +4915,7 @@ export default function App() {
         proceed_link: "?page=11&type=skin",
         back_link: "?page=9&type=skin",
         conditionMet: true,
-        overlay_screen_text: "There is nothing like mom's!",
+        overlay_screen_text: "There is nothing like mom's meals!",
         delay_time: 1000,
         progress_bar: true,
         progress_bar_text: "My Skin",
@@ -5694,7 +5661,7 @@ export default function App() {
       {
         name: "Weight loss page 4",
         type: "category",
-        question: `Do you have any past allergic reactions to any of the below components?`,
+        question: `Have you ever had allergic reactions to any of the components below?`,
         clickHandler: choice_clickHandler,
         state_Obj: stateObj,
         proceed_link: "?page=13&type=weightloss",
@@ -5707,7 +5674,7 @@ export default function App() {
           {
             value:
               stateObj[
-                `Do you have any past allergic reactions to any of the below components?`
+                `Have you ever had allergic reactions to any of the components below?`
               ]?.["Glucosamine"] || 0,
             displayText: `Glucosamine`,
             onChange: checkBoxHandler,
@@ -5715,7 +5682,7 @@ export default function App() {
           {
             value:
               stateObj[
-                `Do you have any past allergic reactions to any of the below components?`
+                `Have you ever had allergic reactions to any of the components below?`
               ]?.["Chondroitin"] || 0,
             displayText: `Chondroitin`,
             onChange: checkBoxHandler,
@@ -5723,7 +5690,7 @@ export default function App() {
           {
             value:
               stateObj[
-                `Do you have any past allergic reactions to any of the below components?`
+                `Have you ever had allergic reactions to any of the components below?`
               ]?.["Methylsulfonylmethane(MSM)"] || 0,
             displayText: `Methylsulfonylmethane(MSM)`,
             onChange: checkBoxHandler,
@@ -5731,7 +5698,7 @@ export default function App() {
           {
             value:
               stateObj[
-                `Do you have any past allergic reactions to any of the below components?`
+                `Have you ever had allergic reactions to any of the components below?`
               ]?.["None"] || 0,
             displayText: `None`,
             onChange: checkBoxHandler,

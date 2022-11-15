@@ -27,8 +27,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "local:mars-prod-win": "copy .env.mars.production .env /Y && react-scripts start",
-    "local:saturn-prod-win": "copy .env.saturn.production .env /Y && react-scripts start",
+    "local:mars-prod-win": "copy .env.mars.staging .env /Y && react-scripts start",
+    "local:saturn-prod-win": "copy .env.saturn.staging .env /Y && react-scripts start",
     "local:mars-prod-linux": "cp .env.mars.production .env && react-scripts start",
     "local:saturn-prod-linux": "cp .env.saturn.production .env && react-scripts start",
     "local:staging-win": "copy .env.staging .env /Y && react-scripts start",
@@ -39,5 +39,17 @@
     "build:saturn-prod-linux": "cp .env.saturn.production .env.production && react-scripts build"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }

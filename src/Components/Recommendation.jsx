@@ -38,7 +38,7 @@ const CallBack = ({
     let category = "";
     const product_id_promise = getProductIdFromEngine(stateObj);
     product_id_promise
-      .then((response) => {
+      .then(async(response) => {
         product_id = response;
         console.log(response,'resp')
         if (stateObj["assessment_type"] == "6 mins") {
@@ -99,9 +99,8 @@ const CallBack = ({
                 stateObj["assessment_type"] == "30 sec"
                   ? "utm_source=website-consultation&utm_medium=short-consultation&utm_campaign=recommended-product"
                   : "utm_source=website-consultation&utm_medium=long-consultation&utm_campaign=highly-recommended-product";
-              Set_link_1(`${variant_id_1}:1?checkout[shipping_address][first_name]=${stateObj["Name"]}&
-                   checkout[shipping_address][last_name]=${stateObj["Last Name"]}&
-                   checkout[shipping_address][phone]=${stateObj["Phone Number"]}&${utm_tag}`);
+              const product_link_temp = `${variant_id_1}:1?checkout[shipping_address][first_name]=${stateObj["Name"].trim().replace(/\s/g, '+')}&checkout[shipping_address][phone]=${stateObj["Phone Number"].trim().replace(/\s/g, '')}&${utm_tag}`
+              Set_link_1(product_link_temp);
               // Set_product_subtext(subtext);
               Set_title_1(product_title_1);
               Set_image_1(img_src_1);
@@ -121,16 +120,33 @@ const CallBack = ({
                 const img_src_2 = product_recommended_2[0]["images"][0]["src"];
                 const variant_id_2 =
                   product_recommended_2[0]["variants"][0]["id"];
-                Set_link_2(`${variant_id_2}:1?checkout[shipping_address][first_name]=${stateObj[""]}&
-                   checkout[shipping_address][last_name]=${stateObj[""]}&
-                   checkout[shipping_address][phone]=${stateObj[""]}&
-                   utm_source=website-consultation&utm_medium=long-consultation&utm_campaign=recommended-product`);
-                // checkout[contact_email]=${stateObj[""]}
-                // Set_product_subtext(subtext)
+                Set_link_2(`${variant_id_2}:1?checkout[shipping_address][first_name]=${stateObj["Name"]}&checkout[shipping_address][phone]=${stateObj["Phone Number"]}&${utm_tag}`);
                 Set_title_2(product_title_2);
                 Set_image_2(img_src_2);
                 Set_price_2(product_price_2);
                 Set_compare_at_price_2(compare_price_2);
+              }
+              const data = getSendMailData(stateObj["assessment_type"], stateObj, product_link_temp, product_title_1);
+              console.log(data,'mail data');
+              const SendWhatsappMessage = async () => {
+                const config = {
+                  method: "post",
+                  url: `https://${process.env.REACT_APP_SEND_MAIL_API_BASE_URL}/api/device/consultation`,
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                  data: data,
+                };
+                axios(config)
+                  .then((response) => {
+                    console.log("success");
+                  })
+                  .catch(function (error) {
+                    console.log(error);
+                  });
+              };
+              if(window.localStorage.getItem('visit_number') == 1){
+                SendWhatsappMessage();
               }
             })
             .catch((error) => {
@@ -138,28 +154,7 @@ const CallBack = ({
             });
         };
 
-        getData();
-
-        const data = getSendMailData(stateObj["assessment_type"], stateObj);
-        console.log(data,'mail data');
-        const sendMail = async () => {
-          const config = {
-            method: "post",
-            url: `https://${process.env.REACT_APP_SEND_MAIL_API_BASE_URL}/api/device/consultation`,
-            headers: {
-              "Content-Type": "application/json",
-            },
-            data: data,
-          };
-          axios(config)
-            .then((response) => {
-              console.log("success");
-            })
-            .catch(function (error) {
-              console.log(error);
-            });
-        };
-        sendMail();
+        await getData();
       })
       .catch((error) => {
         console.log(error, "error");
