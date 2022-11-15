@@ -176,7 +176,6 @@
     display: flex;
     margin: 5% 0 0 5%;
     /* height: 300px; */
-    height: 330px;
     background: #FFFFFF;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
     border-radius: 16px
@@ -375,6 +374,8 @@
 
     .product-card .details .price {
         font-size: 16px;
+        margin-bottom: 5%;
+
     }
 
     .strike-text{
@@ -385,7 +386,7 @@
     .reco-1{
         position: absolute;
         top: 0px;
-        height: 6%;
+        height: 9%;
         width: 55%;
         display: flex;
         align-items: center;
@@ -465,6 +466,10 @@
     .product-card .details .price {
         flex: 1;
         /* border: solid 1px; */
+    }
+
+    .product-card{
+        height: 330px;
     }
 }
 
