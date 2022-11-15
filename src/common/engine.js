@@ -5118,7 +5118,7 @@ mars_weightloss_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["6679222288548", "6674119065764"],
+      id: ["6774754902180", "6674119065764"],
     },
   },
 });
@@ -5161,7 +5161,7 @@ mars_weightloss_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["6774754902180", "6766304428196"],
+      id: ["6774754902180", "6774754902180"],
     },
   },
 });
@@ -5388,7 +5388,7 @@ mars_weightloss_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7684225794296", "7684225794296"],
+      id: ["6774754902180", "6766304428196"],
     },
   },
 });
@@ -5455,7 +5455,7 @@ mars_weightloss_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7716616175864", "7716616175864"],
+      id: ["7716620992760", "7716620992760"],
     },
   },
 });
