@@ -255,13 +255,6 @@
     text-align: center;
 }
 
-.product-card .details .heading,
-.product-card .details .subtext,
-.product-card .details .price {
-    flex: 1;
-    /* border: solid 1px; */
-}
-
 .product-card .details .subtext{
     font-style: normal;
     font-weight: 400;
@@ -288,7 +281,6 @@
     }
 
     .product-card {
-        height: 540px;
         margin: 5% 10%;
         position: relative;
     }
@@ -465,6 +457,14 @@
     .strike-text{
         font-size: 16px;
         color: black
+    }
+
+    
+    .product-card .details .heading,
+    .product-card .details .subtext,
+    .product-card .details .price {
+        flex: 1;
+        /* border: solid 1px; */
     }
 }
 
