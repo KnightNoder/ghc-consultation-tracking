@@ -15,6 +15,7 @@ const ProceedTemplate = ({
   productNavigate,
   productLink,
   set_url_function,
+  id
 }) => {
   return (
     <div className="proceed-container">
@@ -29,7 +30,7 @@ const ProceedTemplate = ({
           vibrate={vibrate}
           vibrateText={vibrateText}
           set_url_function={set_url_function}
-          id="generic-back-button"
+          id={`back-${id}`}
         />
       </div>
       <div className="proceed-button">
@@ -42,7 +43,7 @@ const ProceedTemplate = ({
           vibrate={vibrate}
           vibrateText={vibrateText}
           set_url_function={set_url_function}
-          id="generic-proceed-button"
+          id={`proceed-${id}`}
         />
       </div>
     </div>

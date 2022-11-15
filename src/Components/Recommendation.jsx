@@ -76,7 +76,7 @@ const CallBack = ({
         const getData = async () => {
           var config = {
             method: "get",
-            url: `https://${process.env.REACT_APP_GET_PRODUCTS_BASE_URL}/${category}/products.json`,
+            url: `https://${process.env.REACT_APP_GET_PRODUCTS_BASE_URL}/${category}/products.json?limit=250`,
             headers: {
               "Content-Type": "application/json",
             },
