@@ -1,7 +1,6 @@
 
 .recommendation-section {
     display: flex;
-    height: 400px;
     margin-top: 3%;
 }
 
@@ -14,7 +13,6 @@
 }
 
 .recommendation-section{
-    height: 600px
 }
 
 .doctor-info {
