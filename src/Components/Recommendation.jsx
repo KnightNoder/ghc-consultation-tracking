@@ -10,6 +10,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from 'react-responsive-carousel';
 const { sendMail, getSendMailData } = require("../common/utils");
 const { getProductIdFromEngine } = require("../common/engine");
+const { getProductIdFromUSAEngine } = require("../common/usa-engine");
 const axios = require("axios");
 
 const CallBack = ({
@@ -36,7 +37,7 @@ const CallBack = ({
   useEffect(() => {
     var product_id = "";
     let category = "";
-    const product_id_promise = getProductIdFromEngine(stateObj);
+    const product_id_promise = process.env.REACT_APP_COUNTRY == 'USA' ? getProductIdFromUSAEngine(stateObj) : getProductIdFromEngine(stateObj);
     product_id_promise
       .then(async(response) => {
         product_id = response;
@@ -146,7 +147,31 @@ const CallBack = ({
                   });
               };
               if(window.localStorage.getItem('visit_number') == 1){
-                SendWhatsappMessage();
+                let form_id;
+                if(process.env.REACT_APP_COUNTRY == 'USA'){
+                  if(process.env.REACT_APP_BRAND == 'Saturn'){
+                    form_id='7GFSmWCB';
+                  } else {
+                    form_id='sTiDC50k';
+                  }
+                  const config = {
+                    method: "post",
+                    url: `https://submit-form.com/${form_id}`,
+                    headers: {
+                      "Content-Type": "application/json",
+                    },
+                    data: data,
+                  };
+                  axios(config)
+                    .then((response) => {
+                      console.log("success");
+                    })
+                    .catch(function (error) {
+                      console.log(error);
+                    });
+                } else {
+                  SendWhatsappMessage();
+                }
               }
             })
             .catch((error) => {
