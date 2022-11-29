@@ -37,7 +37,9 @@ const CallBack = ({
   useEffect(() => {
     var product_id = "";
     let category = "";
+    console.log(process.env.REACT_APP_COUNTRY == 'USA' ,'usa test');
     const product_id_promise = process.env.REACT_APP_COUNTRY == 'USA' ? getProductIdFromUSAEngine(stateObj) : getProductIdFromEngine(stateObj);
+    console.log(stateObj["Select category for consultation"] == "hair",'category hair true');
     product_id_promise
       .then(async(response) => {
         product_id = response;
@@ -60,7 +62,13 @@ const CallBack = ({
           category = "wellness";
         }
         if (stateObj["Select category for consultation"] == "hair") {
-          category = (process.env.REACT_APP_BRAND == 'Saturn') ? "hair-products" : "hair-1"
+          console.log('in hair');
+          console.log(process.env.REACT_APP_COUNTRY,'country');
+          if(process.env.REACT_APP_COUNTRY == 'USA'){
+            category='hair';
+          } else {
+            category = (process.env.REACT_APP_BRAND == 'Saturn') ? "hair-products" : "hair-1"
+          }
         }
         if (stateObj["Select category for consultation"] == "skin") {
           category = "skin";
