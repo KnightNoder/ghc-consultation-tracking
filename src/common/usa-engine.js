@@ -71,7 +71,7 @@ hair_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["8024703762746", "8024703762746"],
+      id: ["8024703762746", "8024673681722"],
     },
   },
 });
@@ -89,7 +89,7 @@ hair_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["8024703762746", "8024703762746"],
+      id: ["8024703762746", "8024673681722"],
     },
   },
 });
@@ -1611,7 +1611,7 @@ weightloss_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["8024718967098", "8024718967098"],
+      id: ["8024718967098", "8024710906170"],
     },
   },
 });
@@ -1663,7 +1663,7 @@ weightloss_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["8024718967098", "8024718967098"],
+      id: ["8024718967098", "8024710906170"],
     },
   },
 });
@@ -1710,7 +1710,7 @@ weightloss_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["8024718967098", "8024718967098"],
+      id: ["8024718967098", "8024710906170"],
     },
   },
 });
@@ -1747,7 +1747,7 @@ weightloss_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["8024718967098", "8024718967098"],
+      id: ["8024718967098", "8024710906170"],
     },
   },
 });
@@ -1790,7 +1790,7 @@ weightloss_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["8024718967098", "8024718967098"],
+      id: ["8024718967098", "8024710906170"],
     },
   },
 });
@@ -1857,7 +1857,7 @@ weightloss_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["8024718967098", "8024718967098"],
+      id: ["8024718967098", "8024710906170"],
     },
   },
 });
@@ -1899,7 +1899,7 @@ weightloss_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["8024718967098", "8024718967098"],
+      id: ["8024718967098", "8024710906170"],
     },
   },
 });
@@ -1951,7 +1951,7 @@ weightloss_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["8024718967098", "8024718967098"],
+      id: ["8024718967098", "8024710906170"],
     },
   },
 });
@@ -2007,7 +2007,7 @@ weightloss_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["8024718967098", "8024718967098"],
+      id: ["8024718967098", "8024710906170"],
     },
   },
 });
@@ -2073,7 +2073,7 @@ weightloss_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["8024718967098", "8024718967098"],
+      id: ["8024718967098", "8024710906170"],
     },
   },
 });
@@ -2100,7 +2100,7 @@ skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["8024738103610", "8024738103610"],
+      id: ["8024738103610", "8024735908154"],
     },
   },
 });
@@ -2123,7 +2123,7 @@ skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["8024738103610", "8024738103610"],
+      id: ["8024738103610", "8024735908154"],
     },
   },
 });
@@ -2146,7 +2146,7 @@ skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["8024738103610", "8024738103610"],
+      id: ["8024738103610", "8024735908154"],
     },
   },
 });
@@ -2169,7 +2169,7 @@ skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["8024738103610", "8024738103610"],
+      id: ["8024738103610", "8024735908154"],
     },
   },
 });
@@ -2192,7 +2192,7 @@ skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["8024738103610", "8024738103610"],
+      id: ["8024738103610", "8024735908154"],
     },
   },
 });
@@ -2215,7 +2215,7 @@ skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["8024738103610", "8024738103610"],
+      id: ["8024738103610", "8024735908154"],
     },
   },
 });
@@ -2238,7 +2238,7 @@ skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["8024738103610", "8024738103610"],
+      id: ["8024738103610", "8024735908154"],
     },
   },
 });
@@ -2263,7 +2263,7 @@ skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["8024738103610", "8024738103610"],
+      id: ["8024738103610", "8024735908154"],
     },
   },
 });
@@ -2286,7 +2286,7 @@ skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["8024738103610", "8024738103610"],
+      id: ["8024738103610", "8024735908154"],
     },
   },
 });
@@ -2309,7 +2309,7 @@ skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["8024738103610", "8024738103610"],
+      id: ["8024738103610", "8024735908154"],
     },
   },
 });
@@ -2332,7 +2332,7 @@ skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["8024738103610", "8024738103610"],
+      id: ["8024738103610", "8024735908154"],
     },
   },
 });
@@ -2355,7 +2355,7 @@ skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["8024738103610", "8024738103610"],
+      id: ["8024738103610", "8024735908154"],
     },
   },
 });
@@ -2378,7 +2378,7 @@ skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["8024738103610", "8024738103610"],
+      id: ["8024738103610", "8024735908154"],
     },
   },
 });
@@ -2401,7 +2401,7 @@ skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["8024738103610", "8024738103610"],
+      id: ["8024738103610", "8024735908154"],
     },
   },
 });
@@ -2426,7 +2426,7 @@ skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["8024738103610", "8024738103610"],
+      id: ["8024738103610", "8024735908154"],
     },
   },
 });
@@ -2449,7 +2449,7 @@ skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["8024738103610", "8024738103610"],
+      id: ["8024738103610", "8024735908154"],
     },
   },
 });
@@ -2472,7 +2472,7 @@ skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["8024738103610", "8024738103610"],
+      id: ["8024738103610", "8024735908154"],
     },
   },
 });
@@ -2495,7 +2495,7 @@ skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["8024738103610", "8024738103610"],
+      id: ["8024738103610", "8024735908154"],
     },
   },
 });
@@ -2518,7 +2518,7 @@ skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["8024738103610", "8024738103610"],
+      id: ["8024738103610", "8024735908154"],
     },
   },
 });
@@ -2541,7 +2541,7 @@ skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["8024738103610", "8024738103610"],
+      id: ["8024738103610", "8024735908154"],
     },
   },
 });
@@ -2564,7 +2564,7 @@ skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["8024738103610", "8024738103610"],
+      id: ["8024738103610", "8024735908154"],
     },
   },
 });
@@ -2589,7 +2589,7 @@ skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["8024738103610", "8024738103610"],
+      id: ["8024738103610", "8024735908154"],
     },
   },
 });
@@ -2612,7 +2612,7 @@ skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["8024738103610", "8024738103610"],
+      id: ["8024738103610", "8024735908154"],
     },
   },
 });
@@ -2635,7 +2635,7 @@ skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["8024738103610", "8024738103610"],
+      id: ["8024738103610", "8024735908154"],
     },
   },
 });
@@ -2658,7 +2658,7 @@ skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["8024738103610", "8024738103610"],
+      id: ["8024738103610", "8024735908154"],
     },
   },
 });
@@ -2681,7 +2681,7 @@ skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["8024738103610", "8024738103610"],
+      id: ["8024738103610", "8024735908154"],
     },
   },
 });
@@ -2704,7 +2704,7 @@ skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["8024738103610", "8024738103610"],
+      id: ["8024738103610", "8024735908154"],
     },
   },
 });
@@ -2727,7 +2727,7 @@ skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["8024738103610", "8024738103610"],
+      id: ["8024738103610", "8024735908154"],
     },
   },
 });
@@ -2752,7 +2752,7 @@ skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["8024738103610", "8024738103610"],
+      id: ["8024738103610", "8024735908154"],
     },
   },
 });
@@ -2775,7 +2775,7 @@ skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["8024738103610", "8024738103610"],
+      id: ["8024738103610", "8024735908154"],
     },
   },
 });
@@ -2798,7 +2798,7 @@ skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["8024738103610", "8024738103610"],
+      id: ["8024738103610", "8024735908154"],
     },
   },
 });
@@ -2821,7 +2821,7 @@ skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["8024738103610", "8024738103610"],
+      id: ["8024738103610", "8024735908154"],
     },
   },
 });
@@ -2844,7 +2844,7 @@ skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["8024738103610", "8024738103610"],
+      id: ["8024738103610", "8024735908154"],
     },
   },
 });
@@ -2867,7 +2867,7 @@ skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["8024738103610", "8024738103610"],
+      id: ["8024738103610", "8024735908154"],
     },
   },
 });
@@ -2890,7 +2890,7 @@ skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["8024738103610", "8024738103610"],
+      id: ["8024738103610", "8024735908154"],
     },
   },
 });
@@ -3736,7 +3736,7 @@ mars_skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7745997504661", "7745997504661"],
+      id: ["7745997504661", "7697465802901"],
     },
   },
 });
@@ -3759,7 +3759,7 @@ mars_skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7745997504661", "7745997504661"],
+      id: ["7745997504661", "7697465802901"],
     },
   },
 });
@@ -3782,7 +3782,7 @@ mars_skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7745997504661", "7745997504661"],
+      id: ["7745997504661", "7697465802901"],
     },
   },
 });
@@ -3805,7 +3805,7 @@ mars_skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7745997504661", "7745997504661"],
+      id: ["7745997504661", "7697465802901"],
     },
   },
 });
@@ -3828,7 +3828,7 @@ mars_skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7745997504661", "7745997504661"],
+      id: ["7745997504661", "7697465802901"],
     },
   },
 });
@@ -3851,7 +3851,7 @@ mars_skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7745997504661", "7745997504661"],
+      id: ["7745997504661", "7697465802901"],
     },
   },
 });
@@ -3874,7 +3874,7 @@ mars_skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7745997504661", "7745997504661"],
+      id: ["7745997504661", "7697465802901"],
     },
   },
 });
@@ -3899,7 +3899,7 @@ mars_skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7745997504661", "7745997504661"],
+      id: ["7745997504661", "7697465802901"],
     },
   },
 });
@@ -3922,7 +3922,7 @@ mars_skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7745997504661", "7745997504661"],
+      id: ["7745997504661", "7697465802901"],
     },
   },
 });
@@ -3945,7 +3945,7 @@ mars_skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7745997504661", "7745997504661"],
+      id: ["7745997504661", "7697465802901"],
     },
   },
 });
@@ -3968,7 +3968,7 @@ mars_skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7745997504661", "7745997504661"],
+      id: ["7745997504661", "7697465802901"],
     },
   },
 });
@@ -3991,7 +3991,7 @@ mars_skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7745997504661", "7745997504661"],
+      id: ["7745997504661", "7697465802901"],
     },
   },
 });
@@ -4014,7 +4014,7 @@ mars_skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7745997504661", "7745997504661"],
+      id: ["7745997504661", "7697465802901"],
     },
   },
 });
@@ -4037,7 +4037,7 @@ mars_skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7745997504661", "7745997504661"],
+      id: ["7745997504661", "7697465802901"],
     },
   },
 });
@@ -4062,7 +4062,7 @@ mars_skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7745997504661", "7745997504661"],
+      id: ["7745997504661", "7697465802901"],
     },
   },
 });
@@ -4085,7 +4085,7 @@ mars_skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7745997504661", "7745997504661"],
+      id: ["7745997504661", "7697465802901"],
     },
   },
 });
@@ -4108,7 +4108,7 @@ mars_skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7745997504661", "7745997504661"],
+      id: ["7745997504661", "7697465802901"],
     },
   },
 });
@@ -4131,7 +4131,7 @@ mars_skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7745997504661", "7745997504661"],
+      id: ["7745997504661", "7697465802901"],
     },
   },
 });
@@ -4154,7 +4154,7 @@ mars_skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7745997504661", "7745997504661"],
+      id: ["7745997504661", "7697465802901"],
     },
   },
 });
@@ -4177,7 +4177,7 @@ mars_skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7745997504661", "7745997504661"],
+      id: ["7745997504661", "7697465802901"],
     },
   },
 });
@@ -4200,7 +4200,7 @@ mars_skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7745997504661", "7745997504661"],
+      id: ["7745997504661", "7697465802901"],
     },
   },
 });
@@ -4225,7 +4225,7 @@ mars_skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7745997504661", "7745997504661"],
+      id: ["7745997504661", "7697465802901"],
     },
   },
 });
@@ -4248,7 +4248,7 @@ mars_skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7745997504661", "7745997504661"],
+      id: ["7745997504661", "7697465802901"],
     },
   },
 });
@@ -4271,7 +4271,7 @@ mars_skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7745997504661", "7745997504661"],
+      id: ["7745997504661", "7697465802901"],
     },
   },
 });
@@ -4294,7 +4294,7 @@ mars_skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7745997504661", "7745997504661"],
+      id: ["7745997504661", "7697465802901"],
     },
   },
 });
@@ -4317,7 +4317,7 @@ mars_skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7745997504661", "7745997504661"],
+      id: ["7745997504661", "7697465802901"],
     },
   },
 });
@@ -4340,7 +4340,7 @@ mars_skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7745997504661", "7745997504661"],
+      id: ["7745997504661", "7697465802901"],
     },
   },
 });
@@ -4363,7 +4363,7 @@ mars_skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7745997504661", "7745997504661"],
+      id: ["7745997504661", "7697465802901"],
     },
   },
 });
@@ -4388,7 +4388,7 @@ mars_skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7745997504661", "7745997504661"],
+      id: ["7745997504661", "7697465802901"],
     },
   },
 });
@@ -4411,7 +4411,7 @@ mars_skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7745997504661", "7745997504661"],
+      id: ["7745997504661", "7697465802901"],
     },
   },
 });
@@ -4434,7 +4434,7 @@ mars_skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7745997504661", "7745997504661"],
+      id: ["7745997504661", "7697465802901"],
     },
   },
 });
@@ -4457,7 +4457,7 @@ mars_skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7745997504661", "7745997504661"],
+      id: ["7745997504661", "7697465802901"],
     },
   },
 });
@@ -4480,7 +4480,7 @@ mars_skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7745997504661", "7745997504661"],
+      id: ["7745997504661", "7697465802901"],
     },
   },
 });
@@ -4503,7 +4503,7 @@ mars_skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7745997504661", "7745997504661"],
+      id: ["7745997504661", "7697465802901"],
     },
   },
 });
@@ -4526,7 +4526,7 @@ mars_skin_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7745997504661", "7745997504661"],
+      id: ["7745997504661", "7697465802901"],
     },
   },
 });
@@ -5118,7 +5118,7 @@ mars_weightloss_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7697470750869", "7697470750869"],
+      id: ["7697470750869", "7697482612885"],
     },
   },
 });
@@ -5161,7 +5161,7 @@ mars_weightloss_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7697470750869", "7697470750869"],
+      id: ["7697470750869", "7697482612885"],
     },
   },
 });
@@ -5209,7 +5209,7 @@ mars_weightloss_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7697470750869", "7697470750869"],
+      id: ["7697470750869", "7697482612885"],
     },
   },
 });
@@ -5261,7 +5261,7 @@ mars_weightloss_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7697470750869", "7697470750869"],
+      id: ["7697470750869", "7697482612885"],
     },
   },
 });
@@ -5308,7 +5308,7 @@ mars_weightloss_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7697470750869", "7697470750869"],
+      id: ["7697470750869", "7697482612885"],
     },
   },
 });
@@ -5345,7 +5345,7 @@ mars_weightloss_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7697470750869", "7697470750869"],
+      id: ["7697470750869", "7697482612885"],
     },
   },
 });
@@ -5388,7 +5388,7 @@ mars_weightloss_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7697470750869", "7697470750869"],
+      id: ["7697470750869", "7697482612885"],
     },
   },
 });
@@ -5455,7 +5455,7 @@ mars_weightloss_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7697470750869", "7697470750869"],
+      id: ["7697470750869", "7697482612885"],
     },
   },
 });
@@ -5497,7 +5497,7 @@ mars_weightloss_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7697470750869", "7697470750869"],
+      id: ["7697470750869", "7697482612885"],
     },
   },
 });
@@ -5549,7 +5549,7 @@ mars_weightloss_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7697470750869", "7697470750869"],
+      id: ["7697470750869", "7697482612885"],
     },
   },
 });
@@ -5620,7 +5620,7 @@ mars_weightloss_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7697470750869", "7697470750869"],
+      id: ["7697470750869", "7697482612885"],
     },
   },
 });
@@ -5985,7 +5985,7 @@ mars_hair_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7697489952917", "7697489952917"],
+      id: ["7697489952917", "7697465507989"],
     },
   },
 });
@@ -6034,7 +6034,7 @@ mars_hair_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7697489952917", "7697489952917"],
+      id: ["7697489952917", "7697465507989"],
     },
   },
 });
@@ -6072,7 +6072,7 @@ mars_hair_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7697489952917", "7697489952917"],
+      id: ["7697489952917", "7697465507989"],
     },
   },
 });
@@ -6112,7 +6112,7 @@ mars_hair_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7697489952917", "7697489952917"],
+      id: ["7697489952917", "7697465507989"],
     },
   },
 });
@@ -6150,7 +6150,7 @@ mars_hair_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7697489952917", "7697489952917"],
+      id: ["7697489952917", "7697465507989"],
     },
   },
 });
@@ -6188,7 +6188,7 @@ mars_hair_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7697489952917", "7697489952917"],
+      id: ["7697489952917", "7697465507989"],
     },
   },
 });
@@ -6242,7 +6242,7 @@ mars_hair_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7697489952917", "7697489952917"],
+      id: ["7697489952917", "7697465507989"],
     },
   },
 });
@@ -6327,7 +6327,7 @@ mars_beard_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7697477861525", "7697477861525"],
+      id: ["7697477861525", "7697478942869"],
     },
   },
 });
@@ -6346,7 +6346,7 @@ mars_beard_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7697477861525", "7697477861525"],
+      id: ["7697477861525", "7697478942869"],
     },
   },
 });
@@ -6634,7 +6634,7 @@ mars_performance_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7697480974485", "7697480974485"],
+      id: ["7697480974485", "7697481433237"],
     },
   },
 });
@@ -6666,7 +6666,7 @@ mars_performance_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7697480974485", "7697480974485"],
+      id: ["7697480974485", "7697481433237"],
     },
   },
 });
@@ -6708,7 +6708,7 @@ mars_performance_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7697480974485", "7697480974485"],
+      id: ["7697480974485", "7697481433237"],
     },
   },
 });
@@ -6740,7 +6740,7 @@ mars_performance_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7697480974485", "7697480974485"],
+      id: ["7697480974485", "7697481433237"],
     },
   },
 });
@@ -6783,7 +6783,7 @@ mars_performance_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7697480974485", "7697480974485"],
+      id: ["7697480974485", "7697481433237"],
     },
   },
 });
@@ -6835,7 +6835,7 @@ mars_performance_engine_long.addRule({
   event: {
     type: "product id",
     params: {
-      id: ["7697480974485", "7697480974485"],
+      id: ["7697480974485", "7697481433237"],
     },
   },
 });
