@@ -321,12 +321,12 @@ const CallBack = ({
                       {title_2}
                     </div>
                     <div className="price">
-                    {process.env.REACT_APP_COUNTRY == 'USA'} ? $ : Rs.
+                    {process.env.REACT_APP_COUNTRY == 'USA' ? "$" : "Rs."}
                       {price_2}{" "}
                       {compare_at_price_2 ? (
                         <span className="strike-text">
                           &nbsp;&nbsp;<strike>
-                          {process.env.REACT_APP_COUNTRY == 'USA'} ? $ : Rs.
+                          {process.env.REACT_APP_COUNTRY == 'USA' ? "$" : "Rs."}
                           {compare_at_price_2}</strike>
                         </span>
                       ) : null}
@@ -396,12 +396,12 @@ const CallBack = ({
                     {title_2}
                   </div>
                   <div className="price">
-                    {process.env.REACT_APP_COUNTRY == 'USA'} ? $ : Rs.
+                  {process.env.REACT_APP_COUNTRY == 'USA' ? "$" : "Rs."}
                     {price_2}{" "}
                     {compare_at_price_2 ? (
                       <span className="strike-text">
                         &nbsp;&nbsp;<strike>
-                        {process.env.REACT_APP_COUNTRY == 'USA'} ? $ : Rs.
+                        {process.env.REACT_APP_COUNTRY == 'USA' ? "$" : "Rs."}
                         {compare_at_price_2}</strike>
                       </span>
                     ) : null}
