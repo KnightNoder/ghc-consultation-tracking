@@ -52,7 +52,11 @@ const CallBack = ({
         if (stateObj["Select category for consultation"] == "weightloss") {
           var weight = parseInt(stateObj["Weight"]);
           var height = parseInt(stateObj["Height"]);
-          var BMI = parseInt((weight * 10000) / (height * height));
+          if(process.env.REACT_APP_COUNTRY == 'USA'){
+            var BMI = parseInt((weight*0.45*10000) / (height * height))
+          } else {
+            var BMI = parseInt((weight * 10000) / (height * height));
+          }
           Set_bmi(BMI);
         }
 
@@ -154,9 +158,9 @@ const CallBack = ({
                 let form_id;
                 if(process.env.REACT_APP_COUNTRY == 'USA'){
                   if(process.env.REACT_APP_BRAND == 'Saturn'){
-                    form_id='7GFSmWCB';
+                    form_id=process.env.REACT_APP_SATURN_FORM_SUBMIT_ID;
                   } else {
-                    form_id='sTiDC50k';
+                    form_id=process.env.REACT_APP_MARS_FORM_SUBMIT_ID
                   }
                   const config = {
                     method: "post",
@@ -274,10 +278,13 @@ const CallBack = ({
                     {title_1}
                   </div>
                   <div className="price">
-                    Rs.{price_1}{" "}
+                    {process.env.REACT_APP_COUNTRY == 'USA' ? "$" : "Rs."}
+                    {price_1}{" "}
                     {compare_at_price_1 ? (
                       <span className="strike-text">
-                        &nbsp;&nbsp;<strike>Rs.{compare_at_price_1}</strike>
+                      &nbsp;&nbsp;<strike>
+                      {process.env.REACT_APP_COUNTRY == 'USA' ? "$" : "Rs."} 
+                      {compare_at_price_1}</strike>
                       </span>
                     ) : null}
                   </div>
@@ -314,10 +321,13 @@ const CallBack = ({
                       {title_2}
                     </div>
                     <div className="price">
-                      Rs.{price_2}{" "}
+                    {process.env.REACT_APP_COUNTRY == 'USA'} ? $ : Rs.
+                      {price_2}{" "}
                       {compare_at_price_2 ? (
                         <span className="strike-text">
-                          &nbsp;&nbsp;<strike>Rs.{compare_at_price_2}</strike>
+                          &nbsp;&nbsp;<strike>
+                          {process.env.REACT_APP_COUNTRY == 'USA'} ? $ : Rs.
+                          {compare_at_price_2}</strike>
                         </span>
                       ) : null}
                     </div>
@@ -345,10 +355,13 @@ const CallBack = ({
                   {title_1}
                 </div>
                 <div className="price">
-                  Rs.{price_1}{" "}
+                  {process.env.REACT_APP_COUNTRY == 'USA' ? "$" : "Rs."}
+                  {price_1}{" "}
                   {compare_at_price_1 ? (
                     <span className="strike-text">
-                      &nbsp;&nbsp;<strike>Rs.{compare_at_price_1}</strike>
+                      &nbsp;&nbsp;<strike>
+                      {process.env.REACT_APP_COUNTRY == 'USA' ? "$" : "Rs."}
+                      {compare_at_price_1}</strike>
                     </span>
                   ) : null}
                 </div>
@@ -383,10 +396,13 @@ const CallBack = ({
                     {title_2}
                   </div>
                   <div className="price">
-                    Rs.{price_2}{" "}
+                    {process.env.REACT_APP_COUNTRY == 'USA'} ? $ : Rs.
+                    {price_2}{" "}
                     {compare_at_price_2 ? (
                       <span className="strike-text">
-                        &nbsp;&nbsp;<strike>Rs.{compare_at_price_2}</strike>
+                        &nbsp;&nbsp;<strike>
+                        {process.env.REACT_APP_COUNTRY == 'USA'} ? $ : Rs.
+                        {compare_at_price_2}</strike>
                       </span>
                     ) : null}
                   </div>
