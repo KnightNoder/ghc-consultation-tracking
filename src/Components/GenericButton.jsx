@@ -22,7 +22,7 @@ const GenericButton = ({
       set_url_function("/" + parseInt(navigateTo));
     } else if (productNavigate) {
       const redirectToCheckout = async () => {
-          window.open(`https://${process.env.REACT_APP_CART_LINK}/cart/${productLink}`);
+          window.open(`https://${window.location.host}/cart/${productLink}`);
       };
       redirectToCheckout();
     } else {

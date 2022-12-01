@@ -10,6 +10,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from 'react-responsive-carousel';
 const { sendMail, getSendMailData } = require("../common/utils");
 const { getProductIdFromEngine } = require("../common/engine");
+const { getProductIdFromUSAEngine } = require("../common/usa-engine");
 const axios = require("axios");
 
 const CallBack = ({
@@ -36,7 +37,7 @@ const CallBack = ({
   useEffect(() => {
     var product_id = "";
     let category = "";
-    const product_id_promise = getProductIdFromEngine(stateObj);
+    const product_id_promise = process.env.REACT_APP_COUNTRY == 'USA' ? getProductIdFromUSAEngine(stateObj) : getProductIdFromEngine(stateObj);
     product_id_promise
       .then(async(response) => {
         product_id = response;
@@ -51,7 +52,11 @@ const CallBack = ({
         if (stateObj["Select category for consultation"] == "weightloss") {
           var weight = parseInt(stateObj["Weight"]);
           var height = parseInt(stateObj["Height"]);
-          var BMI = parseInt((weight * 10000) / (height * height));
+          if(process.env.REACT_APP_COUNTRY == 'USA'){
+            var BMI = parseInt((weight*0.45*10000) / (height * height))
+          } else {
+            var BMI = parseInt((weight * 10000) / (height * height));
+          }
           Set_bmi(BMI);
         }
 
@@ -59,7 +64,11 @@ const CallBack = ({
           category = "wellness";
         }
         if (stateObj["Select category for consultation"] == "hair") {
-          category = (process.env.REACT_APP_BRAND == 'Saturn') ? "hair-products" : "hair-1"
+          if(process.env.REACT_APP_COUNTRY == 'USA'){
+            category='hair';
+          } else {
+            category = (process.env.REACT_APP_BRAND == 'Saturn') ? "hair-products" : "hair-1"
+          }
         }
         if (stateObj["Select category for consultation"] == "skin") {
           category = "skin";
@@ -146,7 +155,31 @@ const CallBack = ({
                   });
               };
               if(window.localStorage.getItem('visit_number') == 1){
-                SendWhatsappMessage();
+                let form_id;
+                if(process.env.REACT_APP_COUNTRY == 'USA'){
+                  if(process.env.REACT_APP_BRAND == 'Saturn'){
+                    form_id=process.env.REACT_APP_SATURN_FORM_SUBMIT_ID;
+                  } else {
+                    form_id=process.env.REACT_APP_MARS_FORM_SUBMIT_ID
+                  }
+                  const config = {
+                    method: "post",
+                    url: `https://submit-form.com/${form_id}`,
+                    headers: {
+                      "Content-Type": "application/json",
+                    },
+                    data: data,
+                  };
+                  axios(config)
+                    .then((response) => {
+                      console.log("success");
+                    })
+                    .catch(function (error) {
+                      console.log(error);
+                    });
+                } else {
+                  SendWhatsappMessage();
+                }
               }
             })
             .catch((error) => {
@@ -245,10 +278,13 @@ const CallBack = ({
                     {title_1}
                   </div>
                   <div className="price">
-                    Rs.{price_1}{" "}
+                    {process.env.REACT_APP_COUNTRY == 'USA' ? "$" : "Rs."}
+                    {price_1}{" "}
                     {compare_at_price_1 ? (
                       <span className="strike-text">
-                        &nbsp;&nbsp;<strike>Rs.{compare_at_price_1}</strike>
+                      &nbsp;&nbsp;<strike>
+                      {process.env.REACT_APP_COUNTRY == 'USA' ? "$" : "Rs."} 
+                      {compare_at_price_1}</strike>
                       </span>
                     ) : null}
                   </div>
@@ -285,10 +321,13 @@ const CallBack = ({
                       {title_2}
                     </div>
                     <div className="price">
-                      Rs.{price_2}{" "}
+                    {process.env.REACT_APP_COUNTRY == 'USA' ? "$" : "Rs."}
+                      {price_2}{" "}
                       {compare_at_price_2 ? (
                         <span className="strike-text">
-                          &nbsp;&nbsp;<strike>Rs.{compare_at_price_2}</strike>
+                          &nbsp;&nbsp;<strike>
+                          {process.env.REACT_APP_COUNTRY == 'USA' ? "$" : "Rs."}
+                          {compare_at_price_2}</strike>
                         </span>
                       ) : null}
                     </div>
@@ -316,10 +355,13 @@ const CallBack = ({
                   {title_1}
                 </div>
                 <div className="price">
-                  Rs.{price_1}{" "}
+                  {process.env.REACT_APP_COUNTRY == 'USA' ? "$" : "Rs."}
+                  {price_1}{" "}
                   {compare_at_price_1 ? (
                     <span className="strike-text">
-                      &nbsp;&nbsp;<strike>Rs.{compare_at_price_1}</strike>
+                      &nbsp;&nbsp;<strike>
+                      {process.env.REACT_APP_COUNTRY == 'USA' ? "$" : "Rs."}
+                      {compare_at_price_1}</strike>
                     </span>
                   ) : null}
                 </div>
@@ -354,10 +396,13 @@ const CallBack = ({
                     {title_2}
                   </div>
                   <div className="price">
-                    Rs.{price_2}{" "}
+                  {process.env.REACT_APP_COUNTRY == 'USA' ? "$" : "Rs."}
+                    {price_2}{" "}
                     {compare_at_price_2 ? (
                       <span className="strike-text">
-                        &nbsp;&nbsp;<strike>Rs.{compare_at_price_2}</strike>
+                        &nbsp;&nbsp;<strike>
+                        {process.env.REACT_APP_COUNTRY == 'USA' ? "$" : "Rs."}
+                        {compare_at_price_2}</strike>
                       </span>
                     ) : null}
                   </div>
