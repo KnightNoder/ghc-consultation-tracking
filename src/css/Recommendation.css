@@ -1,7 +1,6 @@
 
 .recommendation-section {
     display: flex;
-    height: 400px;
     margin-top: 3%;
 }
 
@@ -14,7 +13,6 @@
 }
 
 .recommendation-section{
-    height: 600px
 }
 
 .doctor-info {
@@ -26,12 +24,10 @@
 }
 
 .doctor-info2 {
-    flex: 3;
     background: #FFFFFF;
     border: 1px solid #D4DAE1;
     box-sizing: border-box;
     border-radius: 16px;
-    height: 450px
 }
 
 .details .image-section{
@@ -135,10 +131,9 @@
     font-style: normal;
     font-weight: 600;
     line-height: 26px;
-    color: #003660;
+    color: #333333;
     /* border: solid 1px; */
     margin-top: 3%;
-    margin-bottom: 2%;
 }
 
 .product-header, .product-info .product-header h3 {
@@ -176,7 +171,6 @@
     display: flex;
     margin: 5% 0 0 5%;
     /* height: 300px; */
-    height: 330px;
     background: #FFFFFF;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
     border-radius: 16px
@@ -255,13 +249,6 @@
     text-align: center;
 }
 
-.product-card .details .heading,
-.product-card .details .subtext,
-.product-card .details .price {
-    flex: 1;
-    /* border: solid 1px; */
-}
-
 .product-card .details .subtext{
     font-style: normal;
     font-weight: 400;
@@ -288,8 +275,7 @@
     }
 
     .product-card {
-        height: 540px;
-        margin: 5% 10%;
+        margin: 3% 14%;
         position: relative;
     }
 
@@ -299,8 +285,7 @@
     }
 
     .doctor-info2{
-        height: 400px;
-        margin: 0 10%;
+        margin: 0 9%;
     }
 
     .logo {
@@ -325,7 +310,7 @@
     }
 
     .product-info h3  {
-        margin: 10% 0 0 10%;
+        margin: 10% 0 0 14%;
     }
 
     .product-card .image-section .image{
@@ -354,7 +339,7 @@
     }
 
     .doctor-info2 .details2{
-        margin: 8% 0 0 0%;
+        margin: 8% 0 0 7%;
     }
 
     .product-card .details{
@@ -368,7 +353,7 @@
     }
 
     .details .heading, .details .price{
-        margin-left: 5%;
+        margin-left: 7%;
         margin-right: 5%;
         text-align: left; 
     }
@@ -383,6 +368,8 @@
 
     .product-card .details .price {
         font-size: 16px;
+        margin-bottom: 5%;
+
     }
 
     .strike-text{
@@ -393,7 +380,7 @@
     .reco-1{
         position: absolute;
         top: 0px;
-        height: 6%;
+        height: 9%;
         width: 55%;
         display: flex;
         align-items: center;
@@ -424,9 +411,23 @@
     .product-header{
         margin-top: 3%;
     }
+
+    .product-info .product-header h3{
+
+    }
 } 
 
 @media only screen and (min-width: 600px) {
+
+    .product-info .product-header h3 {
+        margin-bottom: 2%;
+    }
+
+    .doctor-info2 {
+        flex: 3;
+        height: 450px
+    }
+
     .hidden-h3{
         display: none;
     }
@@ -465,6 +466,18 @@
     .strike-text{
         font-size: 16px;
         color: black
+    }
+
+    
+    .product-card .details .heading,
+    .product-card .details .subtext,
+    .product-card .details .price {
+        flex: 1;
+        /* border: solid 1px; */
+    }
+
+    .product-card{
+        height: 330px;
     }
 }
 

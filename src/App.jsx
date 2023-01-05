@@ -67,9 +67,11 @@ export default function App() {
       fields = allPages.userinfo;
       Set_builder_fields(fields);
     } else if (queryParams.get("appointment")) {
+      window.localStorage.setItem('visit_number',0);
       fields = allPages.appointment;
       Set_builder_fields(fields);
     } else if (queryParams.get("recommendation")) {
+      window.localStorage.setItem('visit_number',parseInt(window.localStorage.getItem('visit_number'))+1);
       fields = allPages.recommendation;
       Set_builder_fields(fields);
     } else {
@@ -85,14 +87,20 @@ export default function App() {
   const phone_number_check = () => {
     let number = stateObj["Phone Number"];
     if (number) {
+      if(process.env.REACT_APP_COUNTRY == 'USA'){
+        if(number.length == 10){
+          return true;
+        }
+      }
       if (
         number.length == 10 &&
         (number.startsWith("6") ||
           number.startsWith("7") ||
           number.startsWith("8") ||
           number.startsWith("9"))
-      )
+      ){
         return true;
+      }
     }
   };
 
@@ -569,7 +577,7 @@ export default function App() {
           },
           {
             heading: "Weight",
-            placeholder: "Weight(in Kgs)",
+            placeholder: process.env.REACT_APP_COUNTRY != 'USA' ? "Weight(in Kgs)" : "Weight(in Pounds)",
             requiredErrorText: "Please enter valid weight to proceed",
             value: stateObj["Weight"],
             inputMode: "numeric",
@@ -1609,7 +1617,7 @@ export default function App() {
           },
           {
             heading: "Weight",
-            placeholder: "Weight(in Kgs)",
+            placeholder: process.env.REACT_APP_COUNTRY != 'USA' ? "Weight(in Kgs)" : "Weight(in Pounds)",
             requiredErrorText: "Please enter valid weight to proceed",
             value: stateObj["Weight"],
             inputMode: "numeric",
@@ -2761,7 +2769,7 @@ export default function App() {
         proceed_link: "?page=3&type=hair",
         back_link: "?page=1&type=hair",
         delay_time: 1000,
-        overlay_screen_text: ` Hair loss affects 60.5 % of the total Men population in India`,
+        overlay_screen_text:  ` Hair loss affects 60.5 % of the total Men population in World`,
         required: "true",
         options: [
           {
@@ -2883,7 +2891,7 @@ export default function App() {
           },
           {
             heading: "Weight",
-            placeholder: "Weight(in Kgs)",
+            placeholder: process.env.REACT_APP_COUNTRY != 'USA' ? "Weight(in Kgs)" : "Weight(in Pounds)",
             requiredErrorText: "Please enter valid weight to proceed",
             value: stateObj["Weight"],
             inputMode: "numeric",
@@ -3626,7 +3634,7 @@ export default function App() {
         proceed_link: "?page=3&type=hair",
         back_link: "?page=1&type=hair",
         delay_time: 1000,
-        overlay_screen_text: `Hair loss affects 60.5 % of the total Men population in India`,
+        overlay_screen_text: `Hair loss affects 60.5 % of the total Men population in World`,
         required: "true",
         progress_bar: true,
         progress_bar_text: "My Hair",
@@ -5270,7 +5278,7 @@ export default function App() {
           },
           {
             heading: "Weight",
-            placeholder: "Weight(in Kgs)",
+            placeholder: process.env.REACT_APP_COUNTRY != 'USA' ? "Weight(in Kgs)" : "Weight(in Pounds)",
             requiredErrorText: "Please enter valid weight to proceed",
             value: stateObj["Weight"],
             inputMode: "numeric",
