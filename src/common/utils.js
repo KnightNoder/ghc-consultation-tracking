@@ -210,7 +210,7 @@ const getSendMailData = (assessment_type, stateObj, productLink = "", productNam
   return data;
 };
 
-const createDummyLead = async () => {
+const createDummyLead =  () => {
   const state_object =  JSON.parse(window.localStorage.getItem("stateObj"));
   console.log(state_object,'state obj')
   const data = {
@@ -235,6 +235,6 @@ const createDummyLead = async () => {
     data: data,
   };
 
-  const response = await axios(config);
+  const response = axios(config);
 }
 module.exports = { getProductId, getSendMailData,createDummyLead };
