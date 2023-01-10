@@ -1,4 +1,4 @@
-const { default: axios } = require("axios");
+const axios = require("axios");
 
 const getProductId = (stateObj, assessment_type) => {
   // const hair_current_condition = window.localStorage.getItem(
