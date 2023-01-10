@@ -1,6 +1,6 @@
 import "../css/GenericButton.css";
 import { useNavigate } from "react-router-dom";
-import { createDummyLead } from '../common/utils';
+const { createDummyLead } = require("../common/utils");
 
 const GenericButton = ({
   text,
