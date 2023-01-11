@@ -197,7 +197,7 @@ export function getSendMailData (assessment_type, stateObj, productLink = "", pr
       stateObj["Select category for consultation"] == "weightloss"
         ? "Wellness"
         : stateObj["Select category for consultation"],
-    booking: stateObj["Wasn’t that easy? Would you like a free consultation?"] == "Yes, please" ? 
+    booking: stateObj["That was easy, wasn't it? Would you like a free consultation with our health experts for a more in-depth treatment plan?"] == "Yes, please" ? 
     "Free consultation" : "Free recommendation",
     image: "",
     type: process.env.REACT_APP_BRAND.toLowerCase(),
