@@ -1,6 +1,6 @@
 const axios = require("axios");
 
-const getProductId = (stateObj, assessment_type) => {
+export function getProductId (stateObj, assessment_type) {
   // const hair_current_condition = window.localStorage.getItem(
   //   "hair_current_condition"
   // );
@@ -139,7 +139,7 @@ const getProductId = (stateObj, assessment_type) => {
   // );
 };
 
-const getSendMailData = (assessment_type, stateObj, productLink = "", productName = "") => {
+export function getSendMailData (assessment_type, stateObj, productLink = "", productName = "") {
   const questionnaire = [];
 
   for (let key in stateObj) {
@@ -210,7 +210,7 @@ const getSendMailData = (assessment_type, stateObj, productLink = "", productNam
   return data;
 };
 
-const createDummyLead =  () => {
+export async function createDummyLead () {
   const state_object =  JSON.parse(window.localStorage.getItem("stateObj"));
   console.log(state_object,'state obj')
   const data = {
@@ -228,13 +228,28 @@ const createDummyLead =  () => {
 }
   const config = {
     method: "post",
-    url: `https://${process.env.REACT_APP_SEND_MAIL_API_BASE_URL}/api/device/consultation`,
+    url: `http://${process.env.REACT_APP_SEND_MAIL_API_BASE_URL}/api/device/consultation`,
     headers: {
       "Content-Type": "application/json",
     },
     data: data,
   };
 
-  const response = axios(config);
+//   await fetch(`https://${process.env.REACT_APP_SEND_MAIL_API_BASE_URL}/api/device/consultation`, {
+//   method: 'POST', // or 'PUT'
+//   headers: {
+//     'Content-Type': 'application/json',
+//   },
+//   body: JSON.stringify(data),
+// })
+//   .then((response) => response.json())
+//   .then((data) => {
+//     console.log('Success:', data);
+//   })
+//   .catch((error) => {
+//     console.error('Error:', error);
+//   });
+
+  const response = await axios(config);
+  console.log(response,'resp')
 }
-module.exports = { getProductId, getSendMailData,createDummyLead };
